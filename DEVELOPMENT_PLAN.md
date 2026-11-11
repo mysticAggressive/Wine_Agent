@@ -848,7 +848,8 @@ File: `agent/search_route.py`. Needs task 1.3.
 ### Task 6.1 — A\* on the street graph
 1. `load_graph(path)`: `ox.load_graphml`, handle the `.gz` variant if task 1.3 made one.
 2. `nearest_node(graph, lat, lon)`: use `ox.distance.nearest_nodes(G, X=lon, Y=lat)`.
-   Note the argument order: X is longitude.
+   Note the argument order: X is longitude. *(Implemented as an equivalent vectorised
+   haversine over all nodes: OSMnx needs scikit-learn for unprojected graphs.)*
 3. `astar(graph, start_node, goal_node) -> (path_nodes, length_m, nodes_expanded)`:
    our own implementation following AIMA's `astar_search` (best-first graph search on
    `f = g + h`), using `heapq` with a counter tie-breaker and a `best_g` dict.
@@ -1067,8 +1068,8 @@ Tick a box in the same commit that finishes the task.
 - [x] 5.1 Wine CSP
 - [x] 5.2 Scoring
 - [x] 5.3 Recommender
-- [ ] 6.1 A\* routing
-- [ ] 6.2 Multi-stop route (optional)
+- [x] 6.1 A\* routing
+- [x] 6.2 Multi-stop route (optional)
 - [ ] 7.1 App shell and caching
 - [ ] 7.2 Preference panel
 - [ ] 7.3 Map
