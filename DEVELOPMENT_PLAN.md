@@ -176,6 +176,7 @@ networkx>=3.3
 pandas>=2.2
 opening-hours-py>=2.0
 requests>=2.32
+osmium>=4.0          # data scripts only: reads OSM extracts (task 1.2/1.3 fallback)
 ```
 
 `requirements-dev.txt`: `pytest>=8`, `ruff>=0.6`.
@@ -539,6 +540,15 @@ Files: `data/fetch_osm.py`, `data/venues_madrid.json`.
    a valid kind, coordinates within 4 100 m of the centre; ids unique; at least 20
    shops (if not, widen the shop tag list and note it here).
 
+**Fallback when no Overpass server answers** (used for the committed file, 2026-11-11:
+overpass-api.de and geofabrik were unreachable from the build environment and the
+public mirrors timed out). `python data/osm_extract.py` downloads the daily
+Comunidad de Madrid extract from `download.openstreetmap.fr` (MD5-checked), and
+`python data/fetch_osm.py --from-pbf cache/osm_extract/comunidad_de_madrid.osm.pbf`
+reads from it the same elements the query above returns (same tags, `around`
+radius and `out center` centres), then runs steps 2–7 unchanged. The JSON records
+`"retrieved_via"`. `--split N` and `--endpoint URL` remain for Overpass retries.
+
 **Done when:** the JSON is committed and tests pass.
 
 ### Task 1.3 — Fetch the walking street graph
@@ -559,6 +569,12 @@ Files: `data/fetch_graph.py`, `data/madrid_walk.graphml`.
    handle both. Never commit a file over 95 MB (GitHub rejects 100 MB).
 4. Test (`tests/test_graph_file.py`): the graph loads, has more than 5 000 nodes, every
    edge has a numeric `length`, every node has `x` and `y`.
+
+**Fallback:** `python data/fetch_graph.py --from-pbf <extract>` replaces only OSMnx's
+Overpass download step with the same ways and nodes read from the extract (see 1.2);
+OSMnx's own walk filter, buffering, truncation and simplification still build the
+graph. The committed graph was built this way; at 4 300 m it exceeded 50 MB, so step
+3 reduced the radius to 4 000 m (the bounding square still covers the venue circle).
 
 **Done when:** the graph file is committed and the test passes.
 
@@ -1036,9 +1052,9 @@ Tick a box in the same commit that finishes the task.
 
 - [x] 0.1 Repository skeleton
 - [x] 1.1 Wine dataset cleaned
-- [ ] 1.2 Venues fetched from OpenStreetMap
-- [ ] 1.3 Walking graph fetched
-- [ ] 1.4 Derived inventory built
+- [x] 1.2 Venues fetched from OpenStreetMap
+- [x] 1.3 Walking graph fetched
+- [x] 1.4 Derived inventory built
 - [x] 2.1 Models
 - [x] 2.2 Preferences
 - [x] 2.3 Data loaders and test fixtures
@@ -1048,9 +1064,9 @@ Tick a box in the same commit that finishes the task.
 - [x] 4.1 CSP representation
 - [x] 4.2 Node consistency and AC-3
 - [x] 4.3 Backtracking with MRV, LCV, forward checking
-- [ ] 5.1 Wine CSP
-- [ ] 5.2 Scoring
-- [ ] 5.3 Recommender
+- [x] 5.1 Wine CSP
+- [x] 5.2 Scoring
+- [x] 5.3 Recommender
 - [ ] 6.1 A\* routing
 - [ ] 6.2 Multi-stop route (optional)
 - [ ] 7.1 App shell and caching
@@ -1070,7 +1086,7 @@ Tick a box in the same commit that finishes the task.
 
 | Risk | What to do |
 |---|---|
-| Overpass is rate-limited or down | Retry with back-off, then the mirror (task 1.2). The data is cached in the repo, so this only matters on a refresh. |
+| Overpass is rate-limited or down | Retry with back-off, then the mirrors (task 1.2); `--split` for timeouts; finally the regional-extract route (`--from-pbf`, tasks 1.2/1.3). The data is cached in the repo, so this only matters on a refresh. |
 | Restaurant markup leaves few wines under a low budget (only 18 wines cost ≤ €25 at 2.5×) | Default budget is €50; the zero-result relaxation hints (task 5.3) tell the user what to loosen. |
 | Few venues have `opening_hours` | The `unknown` state (3.6) keeps them visible with a badge. |
 | Graph file too large for git | Task 1.3 step 3. |
