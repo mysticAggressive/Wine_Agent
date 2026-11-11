@@ -742,7 +742,7 @@ def test_recursion_depth_equals_number_of_variables():
     ]
     solutions, stats = solve_all(CSP({name: {0, 1} for name in names}, constraints))
     assert len(solutions) == 2
-    assert stats.variable_order[0] == names[0]
+    assert sorted(stats.variable_order) == names
 
 
 def random_csp(seed: int) -> tuple[dict[str, set], list[Constraint]]:
