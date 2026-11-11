@@ -1,0 +1,210 @@
+{
+  "dishes": [
+    {
+      "dish_id": "jamon_iberico",
+      "label": "Jamón ibérico",
+      "styles": {"fortified": 0.75, "red": 0.7, "sparkling": 0.7},
+      "body": [3, 4],
+      "acidity": [3, 3],
+      "type_bonus": ["Sherry", "Mencia"],
+      "why": "Dry, saline sherry or a supple red cuts the ham's nutty fat without masking it."
+    },
+    {
+      "dish_id": "tapas",
+      "label": "Mixed tapas",
+      "styles": {"sparkling": 1.0, "white": 0.9, "red": 0.8, "fortified": 0.75, "unknown": 0.6},
+      "body": [2, 4],
+      "acidity": [3, 3],
+      "type_bonus": ["Cava", "Sherry", "Verdejo"],
+      "why": "Bubbles and fresh acidity cleanse the palate between fried and salty bites."
+    },
+    {
+      "dish_id": "grilled_red_meat",
+      "label": "Grilled red meat",
+      "styles": {"red": 0.9, "fortified": 0.2},
+      "body": [4, 5],
+      "acidity": [2, 3],
+      "type_bonus": ["Ribera Del Duero Red", "Toro Red", "Rioja Red"],
+      "why": "Tannin and body stand up to charred, fatty meat."
+    },
+    {
+      "dish_id": "roast_lamb",
+      "label": "Roast lamb",
+      "styles": {"red": 0.9},
+      "body": [5, 5],
+      "acidity": [3, 3],
+      "type_bonus": ["Ribera Del Duero Red", "Toro Red", "Tempranillo"],
+      "why": "A powerful, structured Tempranillo matches the richness of roast lamb."
+    },
+    {
+      "dish_id": "cocido_stew",
+      "label": "Stew (cocido)",
+      "styles": {"red": 0.9, "fortified": 0.4},
+      "body": [4, 4],
+      "acidity": [3, 3],
+      "type_bonus": ["Rioja Red", "Mencia", "Grenache"],
+      "why": "A juicy, medium-weight red refreshes a slow-cooked stew without overpowering it."
+    },
+    {
+      "dish_id": "paella",
+      "label": "Paella",
+      "styles": {"white": 0.9, "sparkling": 0.8, "red": 0.55},
+      "body": [3, 4],
+      "acidity": [3, 3],
+      "type_bonus": ["Rioja White", "Verdejo", "Mencia"],
+      "why": "A textured, fresh white echoes saffron rice and lifts its seafood or chicken."
+    },
+    {
+      "dish_id": "shellfish",
+      "label": "Shellfish",
+      "styles": {"white": 0.9, "sparkling": 0.85, "fortified": 0.7},
+      "body": [2, 3],
+      "acidity": [3, 3],
+      "type_bonus": ["Albarino", "Verdejo", "Cava"],
+      "why": "High acidity and a light body lift briny shellfish."
+    },
+    {
+      "dish_id": "white_fish",
+      "label": "White fish",
+      "styles": {"white": 0.9, "sparkling": 0.8},
+      "body": [3, 3],
+      "acidity": [3, 3],
+      "type_bonus": ["Verdejo", "Sauvignon Blanc", "Rioja White"],
+      "why": "A crisp, unoaked white respects the delicate flesh of white fish."
+    },
+    {
+      "dish_id": "oily_fish",
+      "label": "Oily fish",
+      "styles": {"white": 0.9, "sparkling": 0.8, "fortified": 0.7, "red": 0.55},
+      "body": [3, 4],
+      "acidity": [3, 3],
+      "type_bonus": ["Albarino", "Chardonnay", "Sherry", "Mencia"],
+      "why": "Bright acidity and some weight cut through the oil of sardines, tuna or bonito."
+    },
+    {
+      "dish_id": "poultry",
+      "label": "Poultry",
+      "styles": {"white": 0.9, "red": 0.8, "sparkling": 0.7},
+      "body": [3, 4],
+      "acidity": [2, 3],
+      "type_bonus": ["Chardonnay", "Rioja White", "Mencia"],
+      "why": "A rounded white or a soft red matches the mild, savoury flavour of roast poultry."
+    },
+    {
+      "dish_id": "pork",
+      "label": "Pork",
+      "styles": {"red": 0.9, "white": 0.6},
+      "body": [4, 4],
+      "acidity": [2, 3],
+      "type_bonus": ["Grenache", "Monastrell", "Montsant Red", "Mencia"],
+      "why": "A fruity, medium-bodied red balances the sweetness and fat of pork."
+    },
+    {
+      "dish_id": "mushrooms_vegetables",
+      "label": "Mushrooms and vegetables",
+      "styles": {"red": 0.9, "white": 0.8, "sparkling": 0.6},
+      "body": [3, 4],
+      "acidity": [3, 3],
+      "type_bonus": ["Mencia", "Rioja Red", "Rioja White"],
+      "why": "Earthy, moderate wines mirror the umami of mushrooms and grilled vegetables."
+    },
+    {
+      "dish_id": "salad",
+      "label": "Salad",
+      "styles": {"white": 0.9, "sparkling": 0.8},
+      "body": [2, 3],
+      "acidity": [3, 3],
+      "type_bonus": ["Verdejo", "Sauvignon Blanc"],
+      "why": "A herbal, high-acid white keeps pace with vinaigrette and raw greens."
+    },
+    {
+      "dish_id": "cured_cheese",
+      "label": "Cured cheese (manchego)",
+      "styles": {"red": 0.9, "fortified": 0.8, "white": 0.5},
+      "body": [4, 5],
+      "acidity": [2, 3],
+      "type_bonus": ["Tempranillo", "Rioja Red", "Sherry"],
+      "why": "A structured Tempranillo or a nutty sherry matches the salt and fat of aged sheep's cheese."
+    },
+    {
+      "dish_id": "blue_cheese",
+      "label": "Blue cheese",
+      "styles": {"fortified": 1.0, "red": 0.4},
+      "body": [5, 5],
+      "acidity": [1, 3],
+      "type_bonus": ["Pedro Ximenez"],
+      "why": "A sweet, dense wine tames the salt and pungency of blue cheese."
+    },
+    {
+      "dish_id": "spicy_food",
+      "label": "Spicy food",
+      "styles": {"white": 0.9, "sparkling": 0.85, "red": 0.5},
+      "body": [2, 3],
+      "acidity": [2, 3],
+      "type_bonus": ["Albarino", "Cava", "Mencia"],
+      "why": "Light, fruity, low-tannin wines cool chilli heat where heavy reds would amplify it."
+    },
+    {
+      "dish_id": "chocolate_dessert",
+      "label": "Chocolate dessert",
+      "styles": {"fortified": 1.0, "red": 0.3},
+      "body": [5, 5],
+      "acidity": [1, 2],
+      "type_bonus": ["Pedro Ximenez"],
+      "why": "A sweet, dense wine matches the richness of chocolate."
+    },
+    {
+      "dish_id": "fruit_cream_dessert",
+      "label": "Fruit or cream dessert",
+      "styles": {"sparkling": 1.0, "fortified": 0.8, "white": 0.6},
+      "body": [2, 3],
+      "acidity": [2, 3],
+      "type_bonus": ["Cava", "Pedro Ximenez"],
+      "why": "Light bubbles or a sweet fortified wine lift fruit and cream without weighing them down."
+    }
+  ],
+  "cuisine_to_dishes": {
+    "spanish": ["jamon_iberico", "tapas", "grilled_red_meat", "roast_lamb", "cocido_stew", "paella", "shellfish", "white_fish", "oily_fish", "poultry", "pork", "mushrooms_vegetables", "salad", "cured_cheese"],
+    "regional": ["jamon_iberico", "tapas", "grilled_red_meat", "roast_lamb", "cocido_stew", "paella", "shellfish", "white_fish", "oily_fish", "poultry", "pork", "mushrooms_vegetables", "salad", "cured_cheese"],
+    "tapas": ["tapas", "jamon_iberico", "cured_cheese", "shellfish", "oily_fish", "mushrooms_vegetables"],
+    "mediterranean": ["white_fish", "oily_fish", "shellfish", "paella", "salad", "mushrooms_vegetables", "roast_lamb", "cured_cheese"],
+    "seafood": ["shellfish", "white_fish", "oily_fish", "paella", "salad"],
+    "fish": ["shellfish", "white_fish", "oily_fish", "paella", "salad"],
+    "italian": ["mushrooms_vegetables", "cured_cheese", "poultry", "pork", "salad", "shellfish"],
+    "pizza": ["mushrooms_vegetables", "cured_cheese", "pork", "salad"],
+    "burger": ["grilled_red_meat", "poultry", "salad"],
+    "american": ["grilled_red_meat", "poultry", "pork", "salad"],
+    "steak_house": ["grilled_red_meat", "roast_lamb", "pork", "poultry", "salad"],
+    "argentinian": ["grilled_red_meat", "roast_lamb", "pork", "poultry", "salad"],
+    "barbecue": ["grilled_red_meat", "roast_lamb", "pork", "poultry", "salad"],
+    "grill": ["grilled_red_meat", "roast_lamb", "pork", "poultry", "salad"],
+    "japanese": ["oily_fish", "white_fish", "shellfish", "mushrooms_vegetables"],
+    "sushi": ["oily_fish", "white_fish", "shellfish", "mushrooms_vegetables"],
+    "ramen": ["pork", "poultry", "mushrooms_vegetables", "spicy_food"],
+    "noodle": ["pork", "poultry", "mushrooms_vegetables", "spicy_food"],
+    "chinese": ["spicy_food", "poultry", "pork", "shellfish", "mushrooms_vegetables"],
+    "asian": ["spicy_food", "poultry", "pork", "shellfish", "mushrooms_vegetables"],
+    "thai": ["spicy_food", "poultry", "pork", "shellfish", "mushrooms_vegetables"],
+    "vietnamese": ["spicy_food", "poultry", "pork", "shellfish", "mushrooms_vegetables"],
+    "korean": ["spicy_food", "grilled_red_meat", "pork", "poultry", "mushrooms_vegetables"],
+    "indian": ["spicy_food", "poultry", "roast_lamb", "mushrooms_vegetables"],
+    "mexican": ["spicy_food", "pork", "poultry", "grilled_red_meat", "mushrooms_vegetables"],
+    "peruvian": ["white_fish", "shellfish", "spicy_food", "poultry"],
+    "latin_american": ["grilled_red_meat", "pork", "poultry", "spicy_food", "white_fish"],
+    "french": ["poultry", "grilled_red_meat", "white_fish", "shellfish", "mushrooms_vegetables", "cured_cheese", "blue_cheese", "chocolate_dessert", "fruit_cream_dessert"],
+    "greek": ["roast_lamb", "salad", "oily_fish", "mushrooms_vegetables", "cured_cheese"],
+    "lebanese": ["roast_lamb", "poultry", "salad", "mushrooms_vegetables", "spicy_food"],
+    "turkish": ["roast_lamb", "poultry", "salad", "spicy_food"],
+    "kebab": ["roast_lamb", "poultry", "salad", "spicy_food"],
+    "chicken": ["poultry", "salad"],
+    "sandwich": ["jamon_iberico", "cured_cheese", "pork", "poultry", "salad"],
+    "vegetarian": ["mushrooms_vegetables", "salad", "spicy_food", "fruit_cream_dessert"],
+    "vegan": ["mushrooms_vegetables", "salad", "spicy_food", "fruit_cream_dessert"],
+    "international": ["tapas", "grilled_red_meat", "poultry", "white_fish", "mushrooms_vegetables", "salad", "cured_cheese", "fruit_cream_dessert"],
+    "coffee_shop": ["chocolate_dessert", "fruit_cream_dessert", "jamon_iberico", "cured_cheese"],
+    "breakfast": ["jamon_iberico", "cured_cheese", "fruit_cream_dessert"],
+    "dessert": ["chocolate_dessert", "fruit_cream_dessert"],
+    "ice_cream": ["chocolate_dessert", "fruit_cream_dessert"],
+    "_default": ["tapas", "cured_cheese", "jamon_iberico", "grilled_red_meat", "poultry", "white_fish", "mushrooms_vegetables", "salad"]
+  }
+}

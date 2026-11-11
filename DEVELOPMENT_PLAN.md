@@ -10,7 +10,7 @@ base, and know when it is finished.
    shared data contracts. Every task depends on them.
 2. Pick the lowest-numbered task whose dependencies are done (section 5 has the order).
 3. Do exactly what the task lists, run its acceptance checks, then tick it off in
-   section 14.
+   section 16.
 4. Do not change a contract in section 4 without updating this file in the same commit.
 
 ---
@@ -24,8 +24,8 @@ pairs wine to food, and shows ranked results with a walking route on a live map.
 The recommendation engine is a **Constraint Satisfaction Problem** solved with
 backtracking, forward checking, arc consistency (AC-3) and MRV + LCV ordering. The
 ranking formula is an **evaluation function** `Eval(s) = Σ wᵢ·fᵢ`. The route is found
-with **A\***. An optional "sommelier vs. you" mode uses **minimax with alpha-beta
-pruning**.
+with **A\***. A "sommelier vs. you" mode uses **minimax with alpha-beta pruning**; the
+owner has confirmed it is in scope.
 
 The three things the grading rubric looks for, and where each lives:
 
@@ -60,14 +60,14 @@ The three things the grading rubric looks for, and where each lives:
 9. **One task = one commit** (or a few small ones), message format
    `task 4.2: implement AC-3`.
 10. **Attribution.** The app footer and README must show
-    "© OpenStreetMap contributors" (ODbL requirement) and credit the Kaggle dataset.
+    "© OpenStreetMap contributors" (ODbL requirement) and credit the Kaggle dataset (fedesoriano, "Spanish Wine Quality Dataset").
 
 ---
 
 ## 3. Decisions already made
 
-These fill gaps the brief leaves open. Treat them as settled unless the project owner
-says otherwise. Items marked **OWNER CHECK** are assumptions the owner should confirm.
+These fill gaps the brief leaves open. The project owner has confirmed all of them,
+including the three assumptions marked **CONFIRMED** below. Treat them as settled.
 
 ### 3.1 Scope of the map
 - Centre point: Puerta del Sol, `(40.4168, -3.7038)`.
@@ -75,7 +75,7 @@ says otherwise. Items marked **OWNER CHECK** are assumptions the owner should co
 - Travel mode: walking (`network_type="walk"`).
 - The user's start point defaults to Puerta del Sol and can be changed (task 7.2).
 
-### 3.2 Which wines a venue carries — **OWNER CHECK**
+### 3.2 Which wines a venue carries — **CONFIRMED**
 No free data source says which Madrid venue stocks which wine. We therefore build a
 **derived inventory**: a deterministic assignment of dataset wines to venues, seeded by
 the venue's OSM id (task 1.4). It is reproducible, committed to the repo, and labelled
@@ -83,16 +83,33 @@ the venue's OSM id (task 1.4). It is reproducible, committed to the repo, and la
 to work on. If the owner has real wine lists for some venues, they replace rows in
 `data/inventory.csv` and nothing else changes.
 
-### 3.3 Prices at restaurants and bars — **OWNER CHECK**
+### 3.3 Prices at restaurants and bars — **CONFIRMED**
 The dataset price is a retail bottle price in euros. The price at a venue is
 `retail × markup`, with markup `1.0` for shops, `2.0` for bars and pubs, `2.5` for
 restaurants. The markups live in `agent/config.py`. The budget constraint applies to
-the price at the venue.
+the price at the venue. Because the dataset is expensive (see 3.4), the default budget
+is €50, not the €25 in the brief's example.
 
-### 3.4 Tasting notes
-The brief mentions tasting notes, but the named dataset has none. Its columns are
-`winery, wine, year, rating, num_reviews, country, region, price, type, body, acidity`.
-Taste matching therefore uses `body`, `acidity`, `type`, `region` and `rating`.
+### 3.4 The wine dataset
+The owner supplied the file; it is committed at `data/raw/wines_SPA.csv` and may be
+redistributed in this repo. Measured facts (do not re-derive, but task 1.1 asserts
+them):
+
+- 7 500 rows, 11 columns: `winery, wine, year, rating, num_reviews, country, region,
+  price, type, body, acidity`. `country` is always `Espana`.
+- Only **2 024** distinct `(winery, wine, year)` combinations; the rest are repeats.
+- 480 wineries, 76 regions. The biggest regions are Ribera del Duero, Rioja, Priorato
+  and Toro.
+- `year` is text: 288 rows are `"N.V."` and 2 are blank.
+- Missing values: `type` 545 rows, `body` and `acidity` 1 169 rows each.
+- `type` has 21 values (listed in task 1.1). **There is no rosé.**
+- `body` runs 2–5 (mostly 4 and 5). `acidity` runs 1–3, and over 80% of wines are 3,
+  so it cannot drive a user control. It is used inside the pairing rules only.
+- `rating` runs only 4.2–4.9, so it is a weak tie-breaker.
+- `price` runs €4.99–€3 119, median about €54. Of the 2 024 wines, 320 cost ≤ €25,
+  793 cost ≤ €40 and 1 124 cost ≤ €60 at retail.
+- There are no tasting notes, although the brief mentions them. Taste matching uses
+  `body`; the wine's `region` and `type` are shown in every result as its origin.
 
 ### 3.5 The food side
 - A fixed list of **dishes** lives in `data/pairing_rules.json` (task 3.1). Each dish
@@ -100,7 +117,7 @@ Taste matching therefore uses `body`, `acidity`, `type`, `region` and `rating`.
 - Which dishes a venue can serve comes from its real OSM `cuisine` tag, through a
   cuisine → dishes map in the same file. Shops can "serve" every dish (the user is
   cooking at home). A restaurant with no `cuisine` tag gets the `spanish` dish set, and
-  the venue is flagged `cuisine_assumed = true`. **OWNER CHECK**
+  the venue is flagged `cuisine_assumed = true`. **CONFIRMED**
 
 ### 3.6 Opening hours
 - Parsed from the OSM `opening_hours` tag with the `opening-hours-py` package.
@@ -133,7 +150,7 @@ Soft preferences (the evaluation function), each feature in `[0, 1]`:
 
 | Feature | Formula |
 |---|---|
-| `taste` | `1 − (0.6·|body − want_body|/3 + 0.4·|acidity − want_acidity|/2)` |
+| `taste` | `1 − |body − want_body| / 3` |
 | `quality` | `(rating − min_rating) / (max_rating − min_rating)` over the cleaned dataset |
 | `price_fit` | `1 − price_at_venue / budget`, clipped to `[0, 1]` |
 | `pairing` | pairing score from the pairing engine |
@@ -159,7 +176,6 @@ networkx>=3.3
 pandas>=2.2
 opening-hours-py>=2.0
 requests>=2.32
-kagglehub>=0.3
 ```
 
 `requirements-dev.txt`: `pytest>=8`, `ruff>=0.6`.
@@ -193,14 +209,13 @@ Wine_Agent/                      (repo root)
     scoring.py                   evaluation function
     recommend.py                 one entry point: recommend(prefs) -> RecommendationResult
     search_route.py              A* routing
-    minimax.py                   optional sommelier game
+    minimax.py                   sommelier-vs-you game
   data/
-    fetch_wines.py               downloads the Kaggle CSV
     clean_wines.py               raw CSV -> wines.csv
     fetch_osm.py                 Overpass -> venues_madrid.json
     fetch_graph.py               OSMnx -> madrid_walk.graphml
     build_inventory.py           venues + wines -> inventory.csv
-    raw/wines_SPA.csv            raw download (see task 1.1 about committing it)
+    raw/wines_SPA.csv            raw dataset from the owner (committed)
     wines.csv                    cleaned wines (committed)
     venues_madrid.json           cached venues (committed)
     inventory.csv                derived inventory (committed)
@@ -222,67 +237,80 @@ Wine_Agent/                      (repo root)
 from dataclasses import dataclass, field
 from enum import Enum
 
+
 class Style(str, Enum):
-    RED = "red"; WHITE = "white"; ROSE = "rose"
-    SPARKLING = "sparkling"; FORTIFIED = "fortified"; UNKNOWN = "unknown"
+    RED = "red"
+    WHITE = "white"  # the dataset has no rosé
+    SPARKLING = "sparkling"
+    FORTIFIED = "fortified"
+    UNKNOWN = "unknown"
+
 
 class VenueKind(str, Enum):
-    SHOP = "shop"              # OSM shop=wine, shop=alcohol
+    SHOP = "shop"  # OSM shop=wine, shop=alcohol
     RESTAURANT = "restaurant"  # OSM amenity=restaurant
-    BAR = "bar"                # OSM amenity=bar, amenity=pub
+    BAR = "bar"  # OSM amenity=bar, amenity=pub
+
 
 class OpenState(str, Enum):
-    OPEN = "open"; CLOSED = "closed"; UNKNOWN = "unknown"
+    OPEN = "open"
+    CLOSED = "closed"
+    UNKNOWN = "unknown"
+
 
 @dataclass(frozen=True)
 class Wine:
-    wine_id: str          # "w0001" …, stable across runs
+    wine_id: str  # "w0001" …, stable across runs
     winery: str
     name: str
-    year: int | None      # None for non-vintage
+    year: int | None  # None for non-vintage
     rating: float
     num_reviews: int
     region: str
-    retail_price: float   # euros
-    wine_type: str        # original `type` column, "" if missing
+    retail_price: float  # euros
+    wine_type: str  # original `type` column, "" if missing
     style: Style
-    body: int             # 1–5
-    acidity: int          # 1–3
-    imputed: bool         # True if body or acidity was filled in
+    body: int  # 2–5 in this dataset
+    acidity: int  # 1–3
+    imputed: bool  # True if body or acidity was filled in
+
 
 @dataclass(frozen=True)
 class Venue:
-    venue_id: str         # "node/123456" or "way/123456"
+    venue_id: str  # "node/123456" or "way/123456"
     name: str
     kind: VenueKind
     lat: float
     lon: float
-    address: str          # "" if OSM has none
-    opening_hours: str    # raw OSM tag, "" if missing
-    cuisines: tuple[str, ...]   # lower-case, split on ";"
+    address: str  # "" if OSM has none
+    opening_hours: str  # raw OSM tag, "" if missing
+    cuisines: tuple[str, ...]  # lower-case, split on ";"
     cuisine_assumed: bool
     website: str
 
-@dataclass(frozen=True)
-class Dish:
-    dish_id: str          # "grilled_red_meat"
-    label: str            # "Grilled red meat"
 
 @dataclass(frozen=True)
-class Candidate:          # one CSP solution
+class Dish:
+    dish_id: str  # "grilled_red_meat"
+    label: str  # "Grilled red meat"
+
+
+@dataclass(frozen=True)
+class Candidate:  # one CSP solution
     wine_id: str
     venue_id: str
     dish_id: str
     price_at_venue: float
     distance_m: float
-    features: dict[str, float]   # taste, quality, price_fit, pairing, distance
-    score: float                 # Eval
-    reasons: tuple[str, ...]     # human-readable "why" lines
+    features: dict[str, float]  # taste, quality, price_fit, pairing, distance
+    score: float  # Eval
+    reasons: tuple[str, ...]  # human-readable "why" lines
+
 
 @dataclass
 class Diagnostics:
     initial_domain_sizes: dict[str, int]
-    pruned_by_constraint: dict[str, int]     # constraint id -> values removed
+    pruned_by_constraint: dict[str, int]  # constraint id -> values removed
     domain_sizes_after_node_consistency: dict[str, int]
     domain_sizes_after_ac3: dict[str, int]
     ac3_revisions: int
@@ -290,13 +318,14 @@ class Diagnostics:
     backtracks: int
     forward_check_prunes: int
     solutions_found: int
-    variable_order: list[str]                # order MRV picked
+    variable_order: list[str]  # order MRV picked
     elapsed_ms: float
-    relaxation_hints: list[str]              # filled when there are 0 solutions
+    relaxation_hints: list[str]  # filled when there are 0 solutions
+
 
 @dataclass
 class RecommendationResult:
-    candidates: list[Candidate]              # ranked, best first
+    candidates: list[Candidate]  # ranked, best first
     diagnostics: Diagnostics
 ```
 
@@ -305,19 +334,18 @@ class RecommendationResult:
 ```python
 @dataclass(frozen=True)
 class Preferences:
-    styles: frozenset[Style]            # empty = any style
-    budget_eur: float                   # > 0
-    venue_kinds: frozenset[VenueKind]   # empty = any kind
-    dish_id: str | None                 # None = let the agent choose the dish
-    want_body: int                      # 1–5
-    want_acidity: int                   # 1–3
+    styles: frozenset[Style]  # empty = any style
+    budget_eur: float  # > 0
+    venue_kinds: frozenset[VenueKind]  # empty = any kind
+    dish_id: str | None  # None = let the agent choose the dish
+    want_body: int  # 2–5
     user_lat: float
     user_lon: float
-    max_distance_m: float               # 200–4000
-    at_time: datetime                   # timezone-aware, Europe/Madrid
-    open_only: bool                     # apply the open_now constraint
+    max_distance_m: float  # 200–4000
+    at_time: datetime  # timezone-aware, Europe/Madrid
+    open_only: bool  # apply the open_now constraint
     exclude_unknown_hours: bool
-    weights: dict[str, float]           # keys = the five feature names
+    weights: dict[str, float]  # keys = the five feature names
     top_k: int = 10
 ```
 
@@ -373,7 +401,7 @@ Phase 0  scaffolding
    │
 Phase 2  models + preferences + loaders ──────────────┐
    │                                                  │
-   ├── Phase 1  data pipeline (1.1→1.2, 1.3, 1.4)     │   (1.1–1.3 can start with phase 0)
+   ├── Phase 1  data pipeline (1.1, 1.2, 1.3 → 1.4)   │   (1.1–1.3 can start with phase 0)
    ├── Phase 3  pairing                               │
    ├── Phase 4  generic CSP solver  (needs nothing but phase 0)
    └── Phase 6  routing             (needs 1.3)
@@ -382,7 +410,7 @@ Phase 5  wine CSP + scoring + recommend   (needs 1, 2, 3, 4)
             │
 Phase 7  Streamlit app                    (needs 5, 6)
             │
-Phase 8  optional minimax                 (needs 5)
+Phase 8  minimax: sommelier vs. you       (needs 5, 7)
 Phase 9  README, demo script, final QA    (needs everything)
 ```
 
@@ -405,9 +433,10 @@ phase 1, phase 3, phase 4, and phase 6 (after 1.3). They touch disjoint files.
 5. Write `agent/config.py`:
    ```python
    from pathlib import Path
+
    ROOT = Path(__file__).resolve().parent.parent
    DATA = ROOT / "data"
-   CENTER = (40.4168, -3.7038)        # Puerta del Sol
+   CENTER = (40.4168, -3.7038)  # Puerta del Sol
    RADIUS_M = 4000
    TIMEZONE = "Europe/Madrid"
    MARKUP = {"shop": 1.0, "bar": 2.0, "restaurant": 2.5}
@@ -429,47 +458,48 @@ fresh virtual environment, `pytest` runs (0 tests is fine), `ruff check .` is cl
 All scripts in this phase are run by hand, once. Their outputs are committed. Each
 script prints a short summary (row counts, what was dropped) when it finishes.
 
-### Task 1.1 — Fetch and clean the wine dataset
-Files: `data/fetch_wines.py`, `data/clean_wines.py`, `data/wines.csv`.
+### Task 1.1 — Clean the wine dataset
+Files: `data/clean_wines.py`, `data/wines.csv`. Input: `data/raw/wines_SPA.csv`
+(already committed; no download step).
 
-1. `fetch_wines.py`: call
-   `kagglehub.dataset_download("fedesoriano/spanish-wine-quality-dataset")` and copy
-   `wines_SPA.csv` to `data/raw/wines_SPA.csv`. If the download asks for credentials,
-   stop and print instructions: download the CSV from the Kaggle page by hand and place
-   it at that path. Do not put credentials in the repo.
-2. Before committing the raw file, read the licence on the Kaggle dataset page. If it
-   does not allow redistribution, add `data/raw/` to `.gitignore` and commit only the
-   cleaned `wines.csv` if that is allowed; if neither is, document the manual download
-   step in the README and stop for owner input.
-3. Open the raw CSV and print, for every column: dtype, null count, and the unique
-   values for `type`, `body`, `acidity`, `country`. Paste this summary into the top
-   docstring of `clean_wines.py`. The cleaning rules below assume the columns listed in
-   3.4; if the file differs, adapt and note the change in this plan.
-4. `clean_wines.py` does, in order:
-   1. Strip whitespace from all text columns.
-   2. `year`: convert to integer; `"N.V."` or blank becomes empty (None).
-   3. Drop rows with a missing or non-positive `price`.
-   4. Drop exact duplicates on `(winery, wine, year)`, keeping the row with the most
-      `num_reviews`.
-   5. `type`: fill missing with `""`.
-   6. `style`: derive from `type` with an explicit dictionary in the script. Build the
-      dictionary from the actual unique values found in step 3. Guide: names containing
-      "Red", and red grapes (Tempranillo, Grenache, Mencia, Monastrell, Syrah, Cabernet
-      Sauvignon …) → `red`; names containing "White", and white grapes (Albarino,
-      Verdejo, Chardonnay, Sauvignon Blanc …) → `white`; Cava, Sparkling → `sparkling`;
-      Sherry, Pedro Ximenez → `fortified`; rosé names → `rose`; `""` → `unknown`.
-      The script must raise an error on any `type` value that is not in the dictionary,
-      so nothing is silently mis-styled.
-   7. `body`, `acidity`: where missing, fill with the median for that `type`, or the
-      global median if the type has none; round to an integer; set `imputed = True`.
-   8. Sort by `(winery, wine, year)` and assign `wine_id` = `w0001`, `w0002`, ….
-   9. Write `data/wines.csv` with columns exactly matching the `Wine` dataclass.
-5. Tests (`tests/test_clean_wines.py`), run against the committed `wines.csv`:
-   no null in any column except `year`; `wine_id` unique; every `style` is a valid
-   `Style`; `body` in 1–5; `acidity` in 1–3; `retail_price > 0`.
+`clean_wines.py` does, in order:
 
-**Done when:** `wines.csv` is committed, tests pass, and the script's printed summary
-(rows in, rows out, rows per style, rows imputed) is pasted into the commit message.
+1. Read the CSV with `year` as text. Assert the 11 column names from 3.4 and stop with
+   a clear error if they differ.
+2. Strip whitespace from all text columns.
+3. `year`: `"N.V."` or blank becomes empty (None); everything else an integer.
+4. Drop rows with a missing or non-positive `price` (none are expected).
+5. Drop duplicates on `(winery, wine, year)`, keeping the row with the most
+   `num_reviews`, then the lowest `price`. Expect 2 024 rows to remain.
+6. `type`: fill missing with `""`.
+7. `style`: derive from `type` with this exact dictionary. Raise an error on any value
+   not in it, so nothing is silently mis-styled.
+
+   | Style | `type` values |
+   |---|---|
+   | `red` | Ribera Del Duero Red, Rioja Red, Priorat Red, Red, Toro Red, Tempranillo, Grenache, Monastrell, Mencia, Montsant Red, Syrah, Cabernet Sauvignon |
+   | `white` | Rioja White, Albarino, Verdejo, Chardonnay, Sauvignon Blanc |
+   | `sparkling` | Cava, Sparkling |
+   | `fortified` | Sherry, Pedro Ximenez |
+   | `unknown` | `""` (missing) |
+
+   Wines with style `unknown` stay in the data. They pass the `style` constraint only
+   when the user accepts any style.
+8. `body`, `acidity`: where missing, fill with the median for that `type`, or the
+   global median if the type has none; round to an integer; set `imputed = True`.
+9. Round `price` to 2 decimals and rename it `retail_price`; rename `wine` to `name`
+   and `type` to `wine_type`; drop `country`.
+10. Sort by `(winery, name, year)` and assign `wine_id` = `w0001`, `w0002`, ….
+11. Write `data/wines.csv` with columns exactly matching the `Wine` dataclass.
+12. Print a summary: rows in, rows out, rows per style, rows imputed.
+
+Tests (`tests/test_clean_wines.py`), run against the committed `wines.csv`: 2 024
+rows; no null in any column except `year`; `wine_id` unique; every `style` is a valid
+`Style`; `body` in 2–5; `acidity` in 1–3; `retail_price > 0`; running the script twice
+gives identical bytes.
+
+**Done when:** `wines.csv` is committed, tests pass, and the printed summary is pasted
+into the commit message.
 
 ### Task 1.2 — Fetch Madrid venues from OpenStreetMap
 Files: `data/fetch_osm.py`, `data/venues_madrid.json`.
@@ -563,10 +593,10 @@ results table. Test: dataclasses construct, enums round-trip from their string v
 
 ### Task 2.2 — `agent/preferences.py`
 1. Implement `Preferences` from 4.3.
-2. `default_preferences(now: datetime) -> Preferences`: any style, budget 25, any venue
-   kind, no dish, body 3, acidity 2, user at `CENTER`, max distance 2 000 m,
+2. `default_preferences(now: datetime) -> Preferences`: any style, budget 50, any venue
+   kind, no dish, body 4, user at `CENTER`, max distance 2 000 m,
    `open_only=True`, `exclude_unknown_hours=False`, all weights 5, `top_k=10`.
-3. `validate`: budget > 0; body 1–5; acidity 1–3; distance 200–4 000; `at_time` is
+3. `validate`: budget > 0; body 2–5; distance 200–4 000; `at_time` is
    timezone-aware; weights has exactly the five feature keys, each 0–10; `top_k` 1–50;
    user position within 4 500 m of `CENTER`.
 4. Tests: defaults validate clean; each rule has one failing case.
@@ -578,7 +608,7 @@ results table. Test: dataclasses construct, enums round-trip from their string v
 2. `load_all() -> AgentData`.
 3. The loaders must work on the small fixtures in `tests/conftest.py` (pass a path).
 4. Write `tests/conftest.py` with a hand-made miniature world used by all later tests:
-   5 wines (2 red, 1 white, 1 sparkling, 1 fortified, prices 8–60), 4 venues (2 shops,
+   5 wines (2 red, 1 white, 1 sparkling, 1 fortified, retail prices 8–60), 4 venues (2 shops,
    1 restaurant with `cuisine=spanish`, 1 bar; one venue with hours that are closed on
    Mondays, one with no hours), 3 dishes, and an inventory linking them so that at
    least one, but not every, combination is valid.
@@ -608,7 +638,7 @@ Structure:
     {
       "dish_id": "grilled_red_meat",
       "label": "Grilled red meat",
-      "styles": {"red": 1.0, "rose": 0.4},
+      "styles": {"red": 1.0, "fortified": 0.2},
       "body": [4, 5],
       "acidity": [2, 3],
       "type_bonus": ["Ribera Del Duero Red", "Toro Red", "Rioja Red"],
@@ -761,8 +791,9 @@ constraints from 3.7.
 1. `features(...)` implements the table in 3.7. `min_rating`/`max_rating` are computed
    once from the wine data and passed in `ctx`.
 2. `evaluate(features, weights)` implements the weighted mean, with the all-zero rule.
-3. `reasons(wine, venue, dish, features, prefs) -> tuple[str, ...]`: 3–5 short lines,
-   e.g. `"€18.50 — 26% under your €25 budget"`, `"650 m away (about 8 min walk)"`,
+3. `reasons(wine, venue, dish, features, prefs) -> tuple[str, ...]`: 4–6 short lines,
+   e.g. `"€38.50 — 23% under your €50 budget"`, `"From Ribera del Duero (Ribera Del
+   Duero Red)"`, `"650 m away (about 8 min walk)"`,
    the pairing reason, `"Rated 4.5 by 1,200 reviewers"`, and
    `"Hours unknown — check before you go"` when relevant.
 4. Tests: each feature hits 0 and 1 at its extremes; raising one weight never lowers
@@ -830,7 +861,8 @@ order, concatenating A\* legs. Skip unless time allows.
 ## 13. Phase 7 — Streamlit app
 
 Run with `streamlit run app.py`. Layout: wide mode; sidebar = preference panel; main
-area = map on top, then tabs "Results", "Why these picks", "Solver diagnostics".
+area = map on top, then tabs "Results", "Why these picks", "Solver diagnostics",
+"Sommelier vs. you" (the last one is added in phase 8).
 
 ### Task 7.1 — App shell and caching
 1. `st.set_page_config(page_title="Madrid Wine Agent", layout="wide")`.
@@ -846,12 +878,11 @@ area = map on top, then tabs "Results", "Why these picks", "Solver diagnostics".
 
 | Widget | Type | Maps to |
 |---|---|---|
-| Wine style | `st.multiselect` (Red, White, Rosé, Sparkling, Fortified) | `styles` |
-| Budget per bottle (€) | `st.slider` 5–150, default 25 | `budget_eur` |
+| Wine style | `st.multiselect` (Red, White, Sparkling, Fortified) | `styles` |
+| Budget per bottle (€) | `st.slider` 10–300 step 5, default 50 | `budget_eur` |
 | Where | `st.radio`: Anywhere / Shop / Restaurant or bar | `venue_kinds` |
 | Food | `st.selectbox`: "Surprise me" + dish labels | `dish_id` |
-| Body | `st.select_slider` Light … Full (1–5) | `want_body` |
-| Acidity | `st.select_slider` Soft / Medium / Crisp (1–3) | `want_acidity` |
+| Body | `st.select_slider` Light / Medium / Full / Very full (2–5) | `want_body` |
 | Starting point | `st.selectbox` of landmarks (Puerta del Sol, Plaza Mayor, Atocha, Retiro, Gran Vía–Callao, Malasaña–Plaza Dos de Mayo, Chamberí–Plaza de Olavide, Lavapiés) with fixed coordinates in `config.py`, plus "Clicked on map" | `user_lat/lon` |
 | Max walking distance | `st.slider` 200–4000 m step 100 | `max_distance_m` |
 | Open only | `st.checkbox`, default on | `open_only` |
@@ -872,7 +903,7 @@ item. When a map click sets the start point, store it in `st.session_state`.
    shows the distance constraint visually.
 4. One marker per recommended venue, numbered by rank (`folium.DivIcon`), colour by
    kind (shop / restaurant / bar). Popup HTML: venue name, kind, address, open state,
-   then for each recommended wine there: wine name, year, price, score, and the
+   then for each recommended wine there: wine name, winery, region, year, price, score, and the
    `reasons` lines. Escape all text with `html.escape` — venue names come from OSM.
 5. A checkbox "Show venues the agent ruled out" adds small grey `CircleMarker`s for
    venues removed by a constraint, with the tooltip naming the constraint. Cap at 300
@@ -887,7 +918,7 @@ item. When a map click sets the start point, store it in `st.session_state`.
 
 ### Task 7.4 — Results and diagnostics (`ui/results_view.py`)
 **Tab "Results"**
-- `st.dataframe` of the ranked candidates: rank, wine, winery, year, style, venue,
+- `st.dataframe` of the ranked candidates: rank, wine, winery, region, year, style, venue,
   kind, dish, price, distance, score (as a `ProgressColumn`). Single-row selection
   (`on_select="rerun"`, `selection_mode="single-row"`) sets which venue the route goes
   to.
@@ -922,11 +953,11 @@ item. When a map click sets the start point, store it in `st.session_state`.
 
 ---
 
-## 14. Phase 8 — Optional: "Sommelier vs. you" (minimax + alpha-beta)
+## 14. Phase 8 — "Sommelier vs. you" (minimax + alpha-beta)
 
-Do this only after phases 0–7 are finished and working.
+Required (confirmed by the owner). Start after phases 0–7 work.
 
-File: `agent/minimax.py`, plus a fourth tab in the UI.
+Files: `agent/minimax.py`, `ui/sommelier_view.py`, `tests/test_minimax.py`.
 
 **The game.** A three-ply, zero-sum game played over the solutions the CSP already
 found:
@@ -942,7 +973,7 @@ upsell you can hold it to in the worst case; the UI presents the venue with the
 **lowest** minimax value as the "sommelier-proof" pick, alongside the sommelier's
 preferred line of play.
 
-Tasks:
+### Task 8.1 — Game search
 1. `minimax(node)` and `alphabeta(node, alpha, beta)` written generically over a
    `Game` interface (`actions`, `result`, `is_terminal`, `utility`, `to_move`),
    following aima-python `games.py`. Both count the nodes they visit.
@@ -950,8 +981,17 @@ Tasks:
 3. Tests: on a hand-built tree with known value (use the textbook 3×3 example,
    value 3) both functions return it; alpha-beta always returns the same value as
    minimax on 50 seeded random trees; alpha-beta visits ≤ the nodes minimax visits.
-4. UI tab: the chosen line of play, the game value, and
-   `Minimax visited N nodes, alpha-beta visited M (X% fewer)`.
+4. Edge cases: fewer than 8 venues uses however many there are; no solutions returns
+   `None` and the tab shows the same relaxation hints as the results tab.
+
+### Task 8.2 — UI tab (`ui/sommelier_view.py`)
+1. A short explanation of the game in two sentences.
+2. A table with one row per venue: its minimax value, the dish you would choose, the
+   wine the sommelier would then choose, and its price.
+3. Highlight the "sommelier-proof" venue (lowest value) and the sommelier's favourite
+   (highest value).
+4. `st.metric` pair: `Minimax visited N nodes` and `Alpha-beta visited M (X% fewer)`.
+5. Add an `AppTest` check that the tab renders with default preferences.
 
 ---
 
@@ -969,7 +1009,7 @@ order); project layout; how to run tests.
 `docs/DEMO.md`: a 5-minute walkthrough with exact clicks, each tied to a rubric item
 and a technique:
 1. Defaults → ranked results and a route (A\*).
-2. Drop the budget to €10 → domains shrink; show the prune chart (forward checking /
+2. Drop the budget to €15 → domains shrink; show the prune chart (forward checking /
    node consistency).
 3. Choose "Shellfish" + "Restaurant" → show a restaurant removed by AC-3 because none
    of its wines fit.
@@ -977,7 +1017,8 @@ and a technique:
 5. Move the weight sliders → ranking reorders; show the score breakdown (evaluation
    function).
 6. Impossible request → relaxation hints.
-7. (If built) the sommelier tab (minimax, alpha-beta).
+7. The sommelier tab: the sommelier-proof pick and the node counts (minimax,
+   alpha-beta).
 
 ### Task 9.3 — Final checks
 1. Fresh clone, fresh virtual environment, install, `pytest`, `ruff check .`, run the
@@ -985,8 +1026,7 @@ and a technique:
 2. Run the app with the network off; only map tiles may fail.
 3. Confirm no file in the repo exceeds 50 MB and no credentials are committed.
 4. Confirm the attribution footer and the "simulated inventory" note are visible.
-5. Read every **OWNER CHECK** item in section 3 and confirm the owner has answered it,
-   or that the README states the assumption.
+5. Confirm the README states each **CONFIRMED** assumption from section 3 plainly.
 
 ---
 
@@ -994,20 +1034,20 @@ and a technique:
 
 Tick a box in the same commit that finishes the task.
 
-- [ ] 0.1 Repository skeleton
-- [ ] 1.1 Wine dataset fetched and cleaned
+- [x] 0.1 Repository skeleton
+- [x] 1.1 Wine dataset cleaned
 - [ ] 1.2 Venues fetched from OpenStreetMap
 - [ ] 1.3 Walking graph fetched
 - [ ] 1.4 Derived inventory built
-- [ ] 2.1 Models
-- [ ] 2.2 Preferences
-- [ ] 2.3 Data loaders and test fixtures
-- [ ] 2.4 Opening hours
-- [ ] 3.1 Pairing rules file
-- [ ] 3.2 Pairing engine
-- [ ] 4.1 CSP representation
-- [ ] 4.2 Node consistency and AC-3
-- [ ] 4.3 Backtracking with MRV, LCV, forward checking
+- [x] 2.1 Models
+- [x] 2.2 Preferences
+- [x] 2.3 Data loaders and test fixtures
+- [x] 2.4 Opening hours
+- [x] 3.1 Pairing rules file
+- [x] 3.2 Pairing engine
+- [x] 4.1 CSP representation
+- [x] 4.2 Node consistency and AC-3
+- [x] 4.3 Backtracking with MRV, LCV, forward checking
 - [ ] 5.1 Wine CSP
 - [ ] 5.2 Scoring
 - [ ] 5.3 Recommender
@@ -1018,7 +1058,8 @@ Tick a box in the same commit that finishes the task.
 - [ ] 7.3 Map
 - [ ] 7.4 Results and diagnostics
 - [ ] 7.5 Front-end checks
-- [ ] 8 Sommelier vs. you (optional)
+- [x] 8.1 Minimax and alpha-beta game search
+- [ ] 8.2 Sommelier vs. you tab
 - [ ] 9.1 README
 - [ ] 9.2 Demo script
 - [ ] 9.3 Final checks
@@ -1030,8 +1071,7 @@ Tick a box in the same commit that finishes the task.
 | Risk | What to do |
 |---|---|
 | Overpass is rate-limited or down | Retry with back-off, then the mirror (task 1.2). The data is cached in the repo, so this only matters on a refresh. |
-| Kaggle download needs a login | Manual download to `data/raw/` (task 1.1). |
-| The dataset's columns or `type` values differ from what this plan assumes | Task 1.1 step 3 inspects the file first; the cleaner fails loudly on unknown values. Update section 3.4 if needed. |
+| Restaurant markup leaves few wines under a low budget (only 18 wines cost ≤ €25 at 2.5×) | Default budget is €50; the zero-result relaxation hints (task 5.3) tell the user what to loosen. |
 | Few venues have `opening_hours` | The `unknown` state (3.6) keeps them visible with a badge. |
 | Graph file too large for git | Task 1.3 step 3. |
 | AC-3 or search is slow on real data | Index-backed `has_support` (4.1, 5.1); performance test in 5.3. |
