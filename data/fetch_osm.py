@@ -38,6 +38,9 @@ RAW_CACHE_PATH = ROOT / "cache" / "overpass_venues_raw.json"
 OVERPASS_URLS = (
     "https://overpass-api.de/api/interpreter",
     "https://overpass.kumi.systems/api/interpreter",
+    # Further public Overpass instances, tried when the two above are unreachable.
+    "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+    "https://overpass.private.coffee/api/interpreter",
 )
 USER_AGENT = "madrid-wine-agent/0.1 (course project)"
 REQUEST_TIMEOUT_S = 180
@@ -61,6 +64,67 @@ QUERY = f"""[out:json][timeout:120];
 );
 out center tags;
 """
+
+# Tag clauses of QUERY, used one at a time by the --split fallback.
+TAG_CLAUSES = (
+    f'["shop"~"^({"|".join(SHOP_TAGS)})$"]',
+    f'["amenity"~"^({"|".join(AMENITY_KIND)})$"]',
+)
+METRES_PER_DEG_LAT = 111_320.0
+
+
+def tile_bboxes(n: int) -> list[tuple[float, float, float, float]]:
+    """Split the bounding box of the search circle into ``n x n`` tiles.
+
+    Returns ``(south, west, north, east)`` tuples. Neighbouring tiles share an edge;
+    an element on the edge may come back twice and is merged by id.
+    """
+    lat0, lon0 = CENTER
+    dlat = RADIUS_M / METRES_PER_DEG_LAT
+    dlon = RADIUS_M / (METRES_PER_DEG_LAT * math.cos(math.radians(lat0)))
+    south, west = lat0 - dlat, lon0 - dlon
+    step_lat, step_lon = 2 * dlat / n, 2 * dlon / n
+    return [
+        (
+            round(south + i * step_lat, 6),
+            round(west + j * step_lon, 6),
+            round(south + (i + 1) * step_lat, 6),
+            round(west + (j + 1) * step_lon, 6),
+        )
+        for i in range(n)
+        for j in range(n)
+    ]
+
+
+def split_queries(n: int) -> list[str]:
+    """QUERY cut into one query per tag clause and tile, each still limited to the circle.
+
+    Together they return exactly the elements of QUERY (with repeats on tile edges).
+    """
+    queries = []
+    for clause in TAG_CLAUSES:
+        for s, w, n_, e in tile_bboxes(n):
+            queries.append(
+                "[out:json][timeout:120];\n"
+                f"nwr{clause}(around:{RADIUS_M},{CENTER[0]},{CENTER[1]})({s},{w},{n_},{e});\n"
+                "out center tags;\n"
+            )
+    return queries
+
+
+def merge_payloads(payloads: list[dict[str, Any]]) -> dict[str, Any]:
+    """Merge Overpass payloads, keeping each ``(type, id)`` once, in first-seen order."""
+    seen: set[tuple[str, int]] = set()
+    elements: list[dict[str, Any]] = []
+    for payload in payloads:
+        for element in payload["elements"]:
+            key = (element["type"], element["id"])
+            if key not in seen:
+                seen.add(key)
+                elements.append(element)
+    merged = {k: v for k, v in payloads[0].items() if k != "elements"} if payloads else {}
+    merged["elements"] = elements
+    return merged
 
 
 def haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -97,7 +161,7 @@ def _try_once(url: str, query: str) -> tuple[dict[str, Any] | None, str]:
     return payload, ""
 
 
-def fetch_overpass(query: str = QUERY) -> dict[str, Any]:
+def fetch_overpass(query: str = QUERY, urls: tuple[str, ...] = OVERPASS_URLS) -> dict[str, Any]:
     """Run the Overpass query, with back-off and a mirror, and return the JSON payload.
 
     Each endpoint gets one attempt plus up to four retries (10 s, 20 s, 40 s, 80 s).
@@ -105,7 +169,7 @@ def fetch_overpass(query: str = QUERY) -> dict[str, Any]:
     status moves straight on to the mirror.
     """
     problems: list[str] = []
-    for url in OVERPASS_URLS:
+    for url in urls:
         for attempt in range(len(RETRY_WAITS_S) + 1):
             payload, problem = _try_once(url, query)
             if payload is not None:
@@ -225,9 +289,7 @@ def build_document(payload: dict[str, Any], fetched_at: str) -> tuple[dict[str, 
     before = kind_counts(venues)
     if before["restaurant"] > MAX_RESTAURANTS:
         venues = [
-            v
-            for v in venues
-            if v["kind"] != "restaurant" or v["opening_hours"] or v["cuisines"]
+            v for v in venues if v["kind"] != "restaurant" or v["opening_hours"] or v["cuisines"]
         ]
         filter_note = {
             "rule": (
@@ -296,13 +358,51 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="rebuild from the cached raw Overpass response instead of fetching",
     )
+    parser.add_argument(
+        "--endpoint",
+        action="append",
+        metavar="URL",
+        help="Overpass interpreter URL to use instead of the built-in list (repeatable)",
+    )
+    parser.add_argument(
+        "--split",
+        type=int,
+        default=0,
+        metavar="N",
+        help="send the query in pieces (per tag clause and N x N tiles) and merge them; "
+        "use when servers time out on the full query",
+    )
+    parser.add_argument(
+        "--from-pbf",
+        type=Path,
+        metavar="PATH",
+        help="read a regional .osm.pbf extract (see data/osm_extract.py) instead of "
+        "querying Overpass; gives the same elements the query would",
+    )
     args = parser.parse_args(argv)
 
-    if args.offline:
+    if args.from_pbf:
+        from data.osm_extract import osm_timestamp, venues_payload
+
+        payload = venues_payload(args.from_pbf)
+        fetched_at = osm_timestamp(args.from_pbf) or datetime.now(UTC).strftime(
+            "%Y-%m-%dT%H:%M:%SZ"
+        )
+        print(f"Read {len(payload['elements'])} elements from {args.from_pbf.name}")
+    elif args.offline:
         cached = json.loads(RAW_CACHE_PATH.read_text(encoding="utf-8"))
         payload, fetched_at = cached["payload"], cached["fetched_at"]
     else:
-        payload = fetch_overpass()
+        urls = tuple(args.endpoint or OVERPASS_URLS)
+        if args.split > 0:
+            parts = split_queries(args.split)
+            payloads = []
+            for i, query in enumerate(parts, 1):
+                print(f"Part {i}/{len(parts)}")
+                payloads.append(fetch_overpass(query, urls))
+            payload = merge_payloads(payloads)
+        else:
+            payload = fetch_overpass(urls=urls)
         fetched_at = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
         RAW_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
         RAW_CACHE_PATH.write_text(
@@ -311,9 +411,13 @@ def main(argv: list[str] | None = None) -> int:
         )
 
     document, stats = build_document(payload, fetched_at)
-    OUT_PATH.write_text(
-        json.dumps(document, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"
-    )
+    retrieved_via = f"regional extract {args.from_pbf.name}" if args.from_pbf else "Overpass API"
+    document = {
+        **{k: v for k, v in document.items() if k != "venues"},
+        "retrieved_via": retrieved_via,
+        "venues": document["venues"],
+    }
+    OUT_PATH.write_text(json.dumps(document, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print_summary(document, stats)
     print(f"Wrote {OUT_PATH}")
     return 0
