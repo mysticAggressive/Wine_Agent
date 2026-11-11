@@ -1,6 +1,6 @@
 """Shared data models. See DEVELOPMENT_PLAN.md section 4.2."""
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum
 
 
@@ -118,6 +118,8 @@ class Diagnostics:
     variable_order: list[str]  # order MRV picked
     elapsed_ms: float
     relaxation_hints: list[str]  # filled when there are 0 solutions
+    # venue_id -> id of the constraint that ruled the venue out (node consistency, AC-3)
+    venue_exclusions: dict[str, str] = field(default_factory=dict)
 
 
 @dataclass
