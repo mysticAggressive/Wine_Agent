@@ -1043,8 +1043,8 @@ Tick a box in the same commit that finishes the task.
 - [x] 2.2 Preferences
 - [x] 2.3 Data loaders and test fixtures
 - [x] 2.4 Opening hours
-- [ ] 3.1 Pairing rules file
-- [ ] 3.2 Pairing engine
+- [x] 3.1 Pairing rules file
+- [x] 3.2 Pairing engine
 - [x] 4.1 CSP representation
 - [x] 4.2 Node consistency and AC-3
 - [x] 4.3 Backtracking with MRV, LCV, forward checking
