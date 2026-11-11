@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from enum import Enum
 
 
-class Style(str, Enum):
+class Style(str, Enum):  # noqa: UP042 - contract 4.2
     """Wine style derived from the dataset's ``type`` column."""
 
     RED = "red"
@@ -14,7 +14,7 @@ class Style(str, Enum):
     UNKNOWN = "unknown"
 
 
-class VenueKind(str, Enum):
+class VenueKind(str, Enum):  # noqa: UP042 - contract 4.2
     """Kind of venue, from its OpenStreetMap tags."""
 
     SHOP = "shop"  # OSM shop=wine, shop=alcohol
@@ -22,7 +22,7 @@ class VenueKind(str, Enum):
     BAR = "bar"  # OSM amenity=bar, amenity=pub
 
 
-class OpenState(str, Enum):
+class OpenState(str, Enum):  # noqa: UP042 - contract 4.2
     """Whether a venue is open at a given time."""
 
     OPEN = "open"

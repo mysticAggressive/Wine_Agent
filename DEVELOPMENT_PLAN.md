@@ -10,7 +10,7 @@ base, and know when it is finished.
    shared data contracts. Every task depends on them.
 2. Pick the lowest-numbered task whose dependencies are done (section 5 has the order).
 3. Do exactly what the task lists, run its acceptance checks, then tick it off in
-   section 14.
+   section 16.
 4. Do not change a contract in section 4 without updating this file in the same commit.
 
 ---
@@ -1035,14 +1035,14 @@ and a technique:
 Tick a box in the same commit that finishes the task.
 
 - [x] 0.1 Repository skeleton
-- [ ] 1.1 Wine dataset cleaned
+- [x] 1.1 Wine dataset cleaned
 - [ ] 1.2 Venues fetched from OpenStreetMap
 - [ ] 1.3 Walking graph fetched
 - [ ] 1.4 Derived inventory built
-- [ ] 2.1 Models
-- [ ] 2.2 Preferences
-- [ ] 2.3 Data loaders and test fixtures
-- [ ] 2.4 Opening hours
+- [x] 2.1 Models
+- [x] 2.2 Preferences
+- [x] 2.3 Data loaders and test fixtures
+- [x] 2.4 Opening hours
 - [ ] 3.1 Pairing rules file
 - [ ] 3.2 Pairing engine
 - [ ] 4.1 CSP representation

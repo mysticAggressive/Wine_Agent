@@ -232,9 +232,7 @@ class CSP:
         for constraint in self.constraints:
             for var in constraint.scope:
                 if var not in self.domains:
-                    raise ValueError(
-                        f"constraint {constraint.id!r} names unknown variable {var!r}"
-                    )
+                    raise ValueError(f"constraint {constraint.id!r} names unknown variable {var!r}")
                 self._on[var].append(constraint)
             if len(constraint.scope) == 1:
                 self._unary[constraint.scope[0]].append(constraint)
