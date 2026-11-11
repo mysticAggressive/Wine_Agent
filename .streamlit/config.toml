@@ -1,0 +1,8 @@
+# Serve ./static at /app/static so the map's JavaScript and CSS (Leaflet & co.,
+# vendored under static/vendor) load without internet access. Only map tiles
+# need the network (DEVELOPMENT_PLAN.md rule 2).
+[server]
+enableStaticServing = true
+
+[browser]
+gatherUsageStats = false
