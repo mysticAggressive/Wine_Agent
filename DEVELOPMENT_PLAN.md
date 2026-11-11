@@ -1058,7 +1058,7 @@ Tick a box in the same commit that finishes the task.
 - [ ] 7.3 Map
 - [ ] 7.4 Results and diagnostics
 - [ ] 7.5 Front-end checks
-- [ ] 8.1 Minimax and alpha-beta game search
+- [x] 8.1 Minimax and alpha-beta game search
 - [ ] 8.2 Sommelier vs. you tab
 - [ ] 9.1 README
 - [ ] 9.2 Demo script
