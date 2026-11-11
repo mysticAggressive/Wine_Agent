@@ -237,67 +237,80 @@ Wine_Agent/                      (repo root)
 from dataclasses import dataclass, field
 from enum import Enum
 
+
 class Style(str, Enum):
-    RED = "red"; WHITE = "white"      # the dataset has no rosé
-    SPARKLING = "sparkling"; FORTIFIED = "fortified"; UNKNOWN = "unknown"
+    RED = "red"
+    WHITE = "white"  # the dataset has no rosé
+    SPARKLING = "sparkling"
+    FORTIFIED = "fortified"
+    UNKNOWN = "unknown"
+
 
 class VenueKind(str, Enum):
-    SHOP = "shop"              # OSM shop=wine, shop=alcohol
+    SHOP = "shop"  # OSM shop=wine, shop=alcohol
     RESTAURANT = "restaurant"  # OSM amenity=restaurant
-    BAR = "bar"                # OSM amenity=bar, amenity=pub
+    BAR = "bar"  # OSM amenity=bar, amenity=pub
+
 
 class OpenState(str, Enum):
-    OPEN = "open"; CLOSED = "closed"; UNKNOWN = "unknown"
+    OPEN = "open"
+    CLOSED = "closed"
+    UNKNOWN = "unknown"
+
 
 @dataclass(frozen=True)
 class Wine:
-    wine_id: str          # "w0001" …, stable across runs
+    wine_id: str  # "w0001" …, stable across runs
     winery: str
     name: str
-    year: int | None      # None for non-vintage
+    year: int | None  # None for non-vintage
     rating: float
     num_reviews: int
     region: str
-    retail_price: float   # euros
-    wine_type: str        # original `type` column, "" if missing
+    retail_price: float  # euros
+    wine_type: str  # original `type` column, "" if missing
     style: Style
-    body: int             # 2–5 in this dataset
-    acidity: int          # 1–3
-    imputed: bool         # True if body or acidity was filled in
+    body: int  # 2–5 in this dataset
+    acidity: int  # 1–3
+    imputed: bool  # True if body or acidity was filled in
+
 
 @dataclass(frozen=True)
 class Venue:
-    venue_id: str         # "node/123456" or "way/123456"
+    venue_id: str  # "node/123456" or "way/123456"
     name: str
     kind: VenueKind
     lat: float
     lon: float
-    address: str          # "" if OSM has none
-    opening_hours: str    # raw OSM tag, "" if missing
-    cuisines: tuple[str, ...]   # lower-case, split on ";"
+    address: str  # "" if OSM has none
+    opening_hours: str  # raw OSM tag, "" if missing
+    cuisines: tuple[str, ...]  # lower-case, split on ";"
     cuisine_assumed: bool
     website: str
 
-@dataclass(frozen=True)
-class Dish:
-    dish_id: str          # "grilled_red_meat"
-    label: str            # "Grilled red meat"
 
 @dataclass(frozen=True)
-class Candidate:          # one CSP solution
+class Dish:
+    dish_id: str  # "grilled_red_meat"
+    label: str  # "Grilled red meat"
+
+
+@dataclass(frozen=True)
+class Candidate:  # one CSP solution
     wine_id: str
     venue_id: str
     dish_id: str
     price_at_venue: float
     distance_m: float
-    features: dict[str, float]   # taste, quality, price_fit, pairing, distance
-    score: float                 # Eval
-    reasons: tuple[str, ...]     # human-readable "why" lines
+    features: dict[str, float]  # taste, quality, price_fit, pairing, distance
+    score: float  # Eval
+    reasons: tuple[str, ...]  # human-readable "why" lines
+
 
 @dataclass
 class Diagnostics:
     initial_domain_sizes: dict[str, int]
-    pruned_by_constraint: dict[str, int]     # constraint id -> values removed
+    pruned_by_constraint: dict[str, int]  # constraint id -> values removed
     domain_sizes_after_node_consistency: dict[str, int]
     domain_sizes_after_ac3: dict[str, int]
     ac3_revisions: int
@@ -305,13 +318,14 @@ class Diagnostics:
     backtracks: int
     forward_check_prunes: int
     solutions_found: int
-    variable_order: list[str]                # order MRV picked
+    variable_order: list[str]  # order MRV picked
     elapsed_ms: float
-    relaxation_hints: list[str]              # filled when there are 0 solutions
+    relaxation_hints: list[str]  # filled when there are 0 solutions
+
 
 @dataclass
 class RecommendationResult:
-    candidates: list[Candidate]              # ranked, best first
+    candidates: list[Candidate]  # ranked, best first
     diagnostics: Diagnostics
 ```
 
@@ -320,18 +334,18 @@ class RecommendationResult:
 ```python
 @dataclass(frozen=True)
 class Preferences:
-    styles: frozenset[Style]            # empty = any style
-    budget_eur: float                   # > 0
-    venue_kinds: frozenset[VenueKind]   # empty = any kind
-    dish_id: str | None                 # None = let the agent choose the dish
-    want_body: int                      # 2–5
+    styles: frozenset[Style]  # empty = any style
+    budget_eur: float  # > 0
+    venue_kinds: frozenset[VenueKind]  # empty = any kind
+    dish_id: str | None  # None = let the agent choose the dish
+    want_body: int  # 2–5
     user_lat: float
     user_lon: float
-    max_distance_m: float               # 200–4000
-    at_time: datetime                   # timezone-aware, Europe/Madrid
-    open_only: bool                     # apply the open_now constraint
+    max_distance_m: float  # 200–4000
+    at_time: datetime  # timezone-aware, Europe/Madrid
+    open_only: bool  # apply the open_now constraint
     exclude_unknown_hours: bool
-    weights: dict[str, float]           # keys = the five feature names
+    weights: dict[str, float]  # keys = the five feature names
     top_k: int = 10
 ```
 
@@ -419,9 +433,10 @@ phase 1, phase 3, phase 4, and phase 6 (after 1.3). They touch disjoint files.
 5. Write `agent/config.py`:
    ```python
    from pathlib import Path
+
    ROOT = Path(__file__).resolve().parent.parent
    DATA = ROOT / "data"
-   CENTER = (40.4168, -3.7038)        # Puerta del Sol
+   CENTER = (40.4168, -3.7038)  # Puerta del Sol
    RADIUS_M = 4000
    TIMEZONE = "Europe/Madrid"
    MARKUP = {"shop": 1.0, "bar": 2.0, "restaurant": 2.5}
@@ -1019,7 +1034,7 @@ and a technique:
 
 Tick a box in the same commit that finishes the task.
 
-- [ ] 0.1 Repository skeleton
+- [x] 0.1 Repository skeleton
 - [ ] 1.1 Wine dataset cleaned
 - [ ] 1.2 Venues fetched from OpenStreetMap
 - [ ] 1.3 Walking graph fetched
