@@ -168,7 +168,7 @@ solver returns the top `k` by `Eval` (default `k = 10`), with at most
 `requirements.txt` (minimum versions; these were current when the plan was written):
 
 ```
-streamlit>=1.40
+streamlit>=1.50
 streamlit-folium>=0.25
 folium>=0.19
 osmnx>=2.0
@@ -848,7 +848,8 @@ File: `agent/search_route.py`. Needs task 1.3.
 ### Task 6.1 — A\* on the street graph
 1. `load_graph(path)`: `ox.load_graphml`, handle the `.gz` variant if task 1.3 made one.
 2. `nearest_node(graph, lat, lon)`: use `ox.distance.nearest_nodes(G, X=lon, Y=lat)`.
-   Note the argument order: X is longitude.
+   Note the argument order: X is longitude. *(Implemented as an equivalent vectorised
+   haversine over all nodes: OSMnx needs scikit-learn for unprojected graphs.)*
 3. `astar(graph, start_node, goal_node) -> (path_nodes, length_m, nodes_expanded)`:
    our own implementation following AIMA's `astar_search` (best-first graph search on
    `f = g + h`), using `heapq` with a counter tie-breaker and a `best_g` dict.
@@ -929,6 +930,11 @@ item. When a map click sets the start point, store it in `st.session_state`.
 7. Render with `st_folium(m, height=520, use_container_width=True,
    returned_objects=["last_clicked", "last_object_clicked"])`. Limiting
    `returned_objects` stops the app re-running on every pan and zoom.
+   *As built:* only `last_clicked` is returned (marker clicks then do not re-run the
+   app, so popups stay open); the view is set with `st_folium(center=, zoom=)` from
+   `view_for`, because `fit_bounds` is not applied reliably inside streamlit-folium;
+   Folium's Leaflet/Bootstrap/Font Awesome files are vendored under `static/vendor`
+   and served by Streamlit (`.streamlit/config.toml`), so only tiles need the network.
 8. Under the map, one line: `Route to <venue>: 850 m, about 11 min on foot — A*
    expanded 412 nodes`.
 
@@ -960,7 +966,9 @@ item. When a map click sets the start point, store it in `st.session_state`.
 ### Task 7.5 — Front-end checks
 1. `streamlit.testing.v1.AppTest` smoke test: the app runs with defaults without an
    exception and renders a dataframe; setting the budget to its minimum shows the
-   warning instead of crashing.
+   warning instead of crashing. *(With the real data a €10 budget still has answers —
+   cheap shop wines — so the test combines minimum budget, fortified, restaurant or
+   bar and 200 m.)*
 2. Manual check list (run through it and record the result in the pull request):
    change each widget once and confirm the table and map update; click a table row and
    confirm the route moves; open a popup; switch every solver technique off and confirm
@@ -1067,15 +1075,15 @@ Tick a box in the same commit that finishes the task.
 - [x] 5.1 Wine CSP
 - [x] 5.2 Scoring
 - [x] 5.3 Recommender
-- [ ] 6.1 A\* routing
-- [ ] 6.2 Multi-stop route (optional)
-- [ ] 7.1 App shell and caching
-- [ ] 7.2 Preference panel
-- [ ] 7.3 Map
-- [ ] 7.4 Results and diagnostics
-- [ ] 7.5 Front-end checks
+- [x] 6.1 A\* routing
+- [x] 6.2 Multi-stop route (optional)
+- [x] 7.1 App shell and caching
+- [x] 7.2 Preference panel
+- [x] 7.3 Map
+- [x] 7.4 Results and diagnostics
+- [x] 7.5 Front-end checks
 - [x] 8.1 Minimax and alpha-beta game search
-- [ ] 8.2 Sommelier vs. you tab
+- [x] 8.2 Sommelier vs. you tab
 - [ ] 9.1 README
 - [ ] 9.2 Demo script
 - [ ] 9.3 Final checks
