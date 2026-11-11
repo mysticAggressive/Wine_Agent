@@ -54,6 +54,33 @@ def configure(overpass_url: str, subquery_area_m2: float) -> None:
     ox.settings.http_user_agent = "madrid-wine-agent/0.1 (course project)"
 
 
+def use_extract(pbf: Path) -> None:
+    """Make OSMnx read its network data from a ``.osm.pbf`` extract, not Overpass.
+
+    Only OSMnx's download step is replaced: for each polygon it would query, it gets
+    the elements ``way<walk filter>(poly); >; out;`` would return (see
+    ``data/osm_extract.network_payload``). Buffering, truncation, simplification and
+    the walk filter itself are OSMnx's own, so the graph is the one an online fetch
+    of the same OSM data gives.
+    """
+    from osmnx import _overpass
+
+    from data.osm_extract import network_payload
+
+    def download_from_extract(polygon, network_type, custom_filter):
+        if custom_filter is None:
+            filters = [_overpass._get_network_filter(network_type)]
+        elif isinstance(custom_filter, str):
+            filters = [custom_filter]
+        else:
+            filters = list(custom_filter)
+        west, south, east, north = polygon.bounds
+        for way_filter in filters:
+            yield network_payload(pbf, (south, west, north, east), way_filter)
+
+    _overpass._download_overpass_network = download_from_extract
+
+
 def fetch(dist_m: float):
     """Download, simplify and keep the largest strongly connected component."""
     graph = ox.graph_from_point(CENTER, dist=dist_m, network_type="walk", simplify=True)
@@ -74,8 +101,16 @@ def main(argv: list[str] | None = None) -> int:
         default=SUBQUERY_AREA_M2 / 1e6,
         help="largest area OSMnx sends in one Overpass query",
     )
+    parser.add_argument(
+        "--from-pbf",
+        type=Path,
+        metavar="PATH",
+        help="read a regional .osm.pbf extract (see data/osm_extract.py) instead of Overpass",
+    )
     args = parser.parse_args(argv)
     configure(args.overpass_url, args.subquery_area_km2 * 1e6)
+    if args.from_pbf:
+        use_extract(args.from_pbf)
 
     dist = RADIUS_M + EXTRA_M
     graph = fetch(dist)

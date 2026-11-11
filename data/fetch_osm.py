@@ -372,9 +372,24 @@ def main(argv: list[str] | None = None) -> int:
         help="send the query in pieces (per tag clause and N x N tiles) and merge them; "
         "use when servers time out on the full query",
     )
+    parser.add_argument(
+        "--from-pbf",
+        type=Path,
+        metavar="PATH",
+        help="read a regional .osm.pbf extract (see data/osm_extract.py) instead of "
+        "querying Overpass; gives the same elements the query would",
+    )
     args = parser.parse_args(argv)
 
-    if args.offline:
+    if args.from_pbf:
+        from data.osm_extract import osm_timestamp, venues_payload
+
+        payload = venues_payload(args.from_pbf)
+        fetched_at = osm_timestamp(args.from_pbf) or datetime.now(UTC).strftime(
+            "%Y-%m-%dT%H:%M:%SZ"
+        )
+        print(f"Read {len(payload['elements'])} elements from {args.from_pbf.name}")
+    elif args.offline:
         cached = json.loads(RAW_CACHE_PATH.read_text(encoding="utf-8"))
         payload, fetched_at = cached["payload"], cached["fetched_at"]
     else:
@@ -396,6 +411,12 @@ def main(argv: list[str] | None = None) -> int:
         )
 
     document, stats = build_document(payload, fetched_at)
+    retrieved_via = f"regional extract {args.from_pbf.name}" if args.from_pbf else "Overpass API"
+    document = {
+        **{k: v for k, v in document.items() if k != "venues"},
+        "retrieved_via": retrieved_via,
+        "venues": document["venues"],
+    }
     OUT_PATH.write_text(json.dumps(document, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print_summary(document, stats)
     print(f"Wrote {OUT_PATH}")
