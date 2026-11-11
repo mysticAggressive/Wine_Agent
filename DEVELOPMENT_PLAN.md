@@ -1045,9 +1045,9 @@ Tick a box in the same commit that finishes the task.
 - [x] 2.4 Opening hours
 - [ ] 3.1 Pairing rules file
 - [ ] 3.2 Pairing engine
-- [ ] 4.1 CSP representation
-- [ ] 4.2 Node consistency and AC-3
-- [ ] 4.3 Backtracking with MRV, LCV, forward checking
+- [x] 4.1 CSP representation
+- [x] 4.2 Node consistency and AC-3
+- [x] 4.3 Backtracking with MRV, LCV, forward checking
 - [ ] 5.1 Wine CSP
 - [ ] 5.2 Scoring
 - [ ] 5.3 Recommender
