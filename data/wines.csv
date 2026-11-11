@@ -1,0 +1,2025 @@
+wine_id,winery,name,year,rating,num_reviews,region,retail_price,wine_type,style,body,acidity,imputed
+w0001,A Coroa,200 Cestos Godello,2020,4.3,33,Valdeorras,23.7,,unknown,4,3,True
+w0002,AGE,Fuenmayor Gran Reserva,1959,4.3,29,Rioja,230.0,Rioja Red,red,4,3,False
+w0003,Aalto,Blanco de Parcela,2019,4.3,80,Ribera del Duero,41.9,Verdejo,white,3,3,True
+w0004,Aalto,PS (Pagos Seleccionados) Ribera del Duero,2011,4.5,2207,Ribera del Duero,64.0,Ribera Del Duero Red,red,5,3,False
+w0005,Aalto,PS (Pagos Seleccionados) Ribera del Duero,2015,4.5,2858,Ribera del Duero,172.5,Ribera Del Duero Red,red,5,3,False
+w0006,Aalto,PS (Pagos Seleccionados) Ribera del Duero,2016,4.5,4411,Ribera del Duero,78.65,Ribera Del Duero Red,red,5,3,False
+w0007,Aalto,PS (Pagos Seleccionados) Ribera del Duero,2017,4.6,3383,Ribera del Duero,116.19,Ribera Del Duero Red,red,5,3,False
+w0008,Aalto,PS (Pagos Seleccionados) Ribera del Duero,2018,4.6,3239,Ribera del Duero,89.3,Ribera Del Duero Red,red,5,3,False
+w0009,Aalto,PS (Pagos Seleccionados) Ribera del Duero,2019,4.6,1108,Ribera del Duero,76.95,Ribera Del Duero Red,red,5,3,False
+w0010,Aalto,Tinto,2012,4.3,2844,Ribera del Duero,26.9,Ribera Del Duero Red,red,5,3,True
+w0011,Aalto,Tinto,2016,4.3,1884,Ribera del Duero,65.9,Ribera Del Duero Red,red,5,3,False
+w0012,Aalto,Tinto,2017,4.4,1561,Ribera del Duero,51.53,Ribera Del Duero Red,red,5,3,False
+w0013,Aalto,Tinto,2018,4.5,1864,Ribera del Duero,33.25,Ribera Del Duero Red,red,5,3,False
+w0014,Aalto,Tinto,2019,4.4,1018,Ribera del Duero,33.0,Ribera Del Duero Red,red,5,3,False
+w0015,Abadal,3.9,2016,4.2,441,Pla de Bages,22.95,Red,red,4,3,False
+w0016,Abadal,3.9,2017,4.3,345,Pla de Bages,20.65,Red,red,4,3,False
+w0017,Abadal,3.9,2018,4.3,56,Pla de Bages,21.3,Red,red,4,3,False
+w0018,Abadia Retuerta,Cuvee Palomar,2017,4.6,30,Sardon de Duero,58.9,Red,red,4,3,False
+w0019,Abadia Retuerta,Le Domaine Blanco de Guarda,2014,4.3,190,Sardon de Duero,123.82,,unknown,4,3,True
+w0020,Abadia Retuerta,Le Domaine Blanco de Guarda,2016,4.3,327,Sardon de Duero,36.95,,unknown,4,3,True
+w0021,Abadia Retuerta,Le Domaine Blanco de Guarda,2018,4.3,309,Sardon de Duero,34.1,,unknown,4,3,True
+w0022,Abadia Retuerta,Le Domaine Blanco de Guarda,2019,4.4,334,Sardon de Duero,32.58,,unknown,4,3,True
+w0023,Abadia Retuerta,Le Domaine Blanco de Guarda,2020,4.4,99,Sardon de Duero,33.8,,unknown,4,3,True
+w0024,Abadia Retuerta,Pago Garduna,2009,4.5,132,Castilla y Leon,73.6,Syrah,red,4,3,False
+w0025,Abadia Retuerta,Pago Garduna,2015,4.3,299,Castilla y Leon,75.0,Syrah,red,4,3,True
+w0026,Abadia Retuerta,Pago Garduna,2016,4.5,186,Castilla y Leon,71.85,Syrah,red,4,3,False
+w0027,Abadia Retuerta,Pago Negralada,2009,4.4,165,Sardon de Duero,73.6,Tempranillo,red,4,2,False
+w0028,Abadia Retuerta,Pago Negralada,2013,4.4,189,Sardon de Duero,64.99,Tempranillo,red,4,2,False
+w0029,Abadia Retuerta,Pago Negralada,2014,4.4,726,Sardon de Duero,91.57,Tempranillo,red,4,2,False
+w0030,Abadia Retuerta,Pago Negralada,2015,4.3,474,Sardon de Duero,67.82,Tempranillo,red,4,2,False
+w0031,Abadia Retuerta,Pago Negralada,2016,4.4,152,Sardon de Duero,63.95,Tempranillo,red,4,2,False
+w0032,Abadia Retuerta,Pago Valdebellon,2010,4.3,191,Sardon de Duero,55.0,Cabernet Sauvignon,red,4,3,False
+w0033,Abadia Retuerta,Pago Valdebellon,2014,4.3,237,Sardon de Duero,64.5,Cabernet Sauvignon,red,4,3,False
+w0034,Abadia Retuerta,Pago Valdebellon,2015,4.3,569,Sardon de Duero,67.45,Cabernet Sauvignon,red,4,3,False
+w0035,Abadia Retuerta,Pago Valdebellon,2016,4.4,60,Sardon de Duero,65.9,Cabernet Sauvignon,red,4,3,False
+w0036,Abadia Retuerta,Petit Verdot,2004,4.5,31,Sardon de Duero,160.81,Red,red,4,3,False
+w0037,Abadia Retuerta,Petit Verdot,2014,4.5,249,Sardon de Duero,176.98,Red,red,4,3,False
+w0038,Abadia Retuerta,Petit Verdot,2015,4.5,286,Sardon de Duero,107.9,Red,red,4,3,False
+w0039,Abadia Retuerta,Petit Verdot,2016,4.4,26,Sardon de Duero,115.9,Red,red,4,3,False
+w0040,Abadia Retuerta,Seleccion Especial,2014,4.2,5178,Sardon de Duero,49.85,Red,red,4,3,False
+w0041,Abadia Retuerta,Seleccion Especial,2015,4.3,5152,Sardon de Duero,24.95,Red,red,4,3,False
+w0042,Abadia Retuerta,Seleccion Especial,2016,4.3,7293,Sardon de Duero,17.48,Red,red,4,3,False
+w0043,Abadia Retuerta,Seleccion Especial,2017,4.4,3093,Sardon de Duero,25.5,Red,red,4,3,True
+w0044,Abadia Retuerta,Seleccion Especial,2018,4.4,68,Sardon de Duero,27.6,Red,red,4,3,False
+w0045,Abel Mendoza Monge,5V Blanco,2019,4.4,68,Rioja,37.98,Rioja White,white,3,3,False
+w0046,Abel Mendoza Monge,Grano a Grano Graciano - Garnacha,2016,4.5,29,Rioja,55.14,Grenache,red,5,3,False
+w0047,Abel Mendoza Monge,Grano a Grano Tempranillo,2016,4.3,65,Rioja,120.13,Rioja Red,red,4,3,False
+w0048,Abel Mendoza Monge,Malvasia,2017,4.3,72,Rioja,31.5,Rioja White,white,3,3,False
+w0049,Acustic Celler,Etern Vinyes Molt Velles,2016,4.6,26,Priorato,42.5,Priorat Red,red,4,3,False
+w0050,Adama Wines,Tinto,2007,4.5,55,Ribera del Duero,32.0,Ribera Del Duero Red,red,5,3,False
+w0051,Adama Wines,Tinto,2009,4.5,229,Ribera del Duero,39.0,Ribera Del Duero Red,red,5,3,False
+w0052,Adama Wines,Tinto,2010,4.5,79,Ribera del Duero,35.0,Ribera Del Duero Red,red,5,3,False
+w0053,Adama Wines,Tinto,2011,4.5,110,Ribera del Duero,39.0,Ribera Del Duero Red,red,5,3,False
+w0054,Adega Familiar Eladio Pineiro,Envidiacochina (Tete de Cuvee),2019,4.2,438,Rias Baixas,18.46,Albarino,white,3,3,False
+w0055,Agusti Torello Mata,Cava Kripta Gran Reserva Brut Nature,2006,4.3,155,Cava,87.39,Cava,sparkling,2,3,True
+w0056,Agusti Torello Mata,Cava Kripta Gran Reserva Brut Nature,2008,4.4,1269,Cava,52.5,Cava,sparkling,2,3,False
+w0057,Agusti Torello Mata,Cava Kripta Gran Reserva Brut Nature,2010,4.4,245,Cava,47.52,Cava,sparkling,2,3,False
+w0058,Agusti Torello Mata,Cava Kripta Gran Reserva Brut Nature,2011,4.4,298,Cava,55.95,Cava,sparkling,2,3,False
+w0059,Agusti Torello Mata,Cava Kripta Gran Reserva Brut Nature,2013,4.5,49,Cava,53.7,Cava,sparkling,2,3,False
+w0060,Albamar,Alma de Mar Albarino,2019,4.3,49,Rias Baixas,27.5,Albarino,white,3,3,False
+w0061,Albet i Noya,Marti Reserva Penedes,2015,4.4,49,Penedes,35.15,Red,red,4,3,False
+w0062,Albet i Noya,Marti Reserva Penedes,2016,4.4,39,Penedes,33.8,Red,red,4,3,False
+w0063,Algueira,Anadelia,2015,4.3,31,Ribeira Sacra,38.5,,unknown,4,3,True
+w0064,Alion,Ribera del Duero,1995,4.5,226,Ribera del Duero,193.0,Ribera Del Duero Red,red,5,3,False
+w0065,Alion,Ribera del Duero,1996,4.4,259,Ribera del Duero,141.0,Ribera Del Duero Red,red,5,3,False
+w0066,Alion,Ribera del Duero,2000,4.3,456,Ribera del Duero,98.0,Ribera Del Duero Red,red,5,3,False
+w0067,Alion,Ribera del Duero,2001,4.4,681,Ribera del Duero,190.0,Ribera Del Duero Red,red,5,3,False
+w0068,Alion,Ribera del Duero,2003,4.5,1236,Ribera del Duero,164.0,Ribera Del Duero Red,red,5,3,False
+w0069,Alion,Ribera del Duero,2004,4.4,1121,Ribera del Duero,140.84,Ribera Del Duero Red,red,5,3,False
+w0070,Alion,Ribera del Duero,2005,4.4,1166,Ribera del Duero,169.0,Ribera Del Duero Red,red,5,3,False
+w0071,Alion,Ribera del Duero,2006,4.4,1514,Ribera del Duero,119.7,Ribera Del Duero Red,red,5,3,False
+w0072,Alion,Ribera del Duero,2007,4.4,2053,Ribera del Duero,96.0,Ribera Del Duero Red,red,5,3,False
+w0073,Alion,Ribera del Duero,2009,4.4,6395,Ribera del Duero,189.0,Ribera Del Duero Red,red,5,3,True
+w0074,Alion,Ribera del Duero,2013,4.5,7435,Ribera del Duero,73.0,Ribera Del Duero Red,red,5,3,False
+w0075,Alion,Ribera del Duero,2014,4.5,7237,Ribera del Duero,56.27,Ribera Del Duero Red,red,5,3,False
+w0076,Alion,Ribera del Duero,2015,4.5,5365,Ribera del Duero,75.0,Ribera Del Duero Red,red,5,3,False
+w0077,Alion,Ribera del Duero,2016,4.6,4516,Ribera del Duero,79.8,Ribera Del Duero Red,red,5,3,False
+w0078,Alion,Ribera del Duero,2017,4.6,2208,Ribera del Duero,79.9,Ribera Del Duero Red,red,5,3,False
+w0079,Alion,Ribera del Duero,2018,4.5,128,Ribera del Duero,78.38,Ribera Del Duero Red,red,5,3,False
+w0080,Allende,Aurus,1998,4.4,37,Rioja,245.25,Rioja Red,red,4,3,False
+w0081,Allende,Aurus,2001,4.3,53,Rioja,140.0,Rioja Red,red,4,3,False
+w0082,Allende,Aurus,2004,4.3,94,Rioja,148.65,Rioja Red,red,4,3,False
+w0083,Allende,Aurus,2005,4.6,95,Rioja,136.0,Rioja Red,red,4,3,False
+w0084,Allende,Aurus,2011,4.3,29,Rioja,211.92,Rioja Red,red,4,3,False
+w0085,Allende,Calvario Rioja,2002,4.5,61,Rioja,95.0,Rioja Red,red,4,3,False
+w0086,Allende,Calvario Rioja,2004,4.3,150,Rioja,90.0,Rioja Red,red,4,3,True
+w0087,Allende,Calvario Rioja,2006,4.3,279,Rioja,53.35,Rioja Red,red,4,3,True
+w0088,Allende,Calvario Rioja,2008,4.4,195,Rioja,87.3,Rioja Red,red,4,3,False
+w0089,Allende,Calvario Rioja,2009,4.5,194,Rioja,125.97,Rioja Red,red,4,3,False
+w0090,Allende,Calvario Rioja,2010,4.4,92,Rioja,125.97,Rioja Red,red,4,3,False
+w0091,Allende,Gaminde,2016,4.3,62,Rioja,43.8,Rioja Red,red,4,3,False
+w0092,Allende,Martires Rioja,2015,4.4,50,Rioja,91.5,Rioja White,white,3,3,False
+w0093,Allende,Martires Rioja,2017,4.4,33,Rioja,139.63,Rioja White,white,3,3,False
+w0094,Alonso & Pedrajo,Suane Blanco,2017,4.3,32,Rioja,23.9,Rioja White,white,3,3,False
+w0095,Alonso del Yerro,Maria Ribera del Duero,2015,4.4,75,Ribera del Duero,54.9,Ribera Del Duero Red,red,5,3,False
+w0096,Alonso del Yerro,Maria Ribera del Duero,2016,4.4,78,Ribera del Duero,53.9,Ribera Del Duero Red,red,5,3,False
+w0097,Alta Alella,Blanc de Neu,2016,4.3,45,Alella,16.99,Sparkling,sparkling,2,3,False
+w0098,Alta Alella,Dolc Mataro,2017,4.3,92,Alella,16.5,,unknown,4,3,True
+w0099,Alta Alella,Dolc Mataro,2018,4.4,72,Alella,17.95,,unknown,4,3,True
+w0100,Alta Alella,Orbus,2016,4.3,100,Alella,24.95,Syrah,red,4,3,False
+w0101,Altanza,Club Rioja Reserva,2012,4.3,36,Rioja,20.95,Rioja Red,red,4,3,False
+w0102,Altanza,Coleccion Roberto Amillo Amontillado,,4.3,29,Jerez Amontillado,39.9,Sherry,fortified,4,3,False
+w0103,Altanza,Coleccion Roberto Amillo Palo Cortado,,4.3,27,Jerez-Xeres-Sherry,47.7,Sherry,fortified,4,3,False
+w0104,Altanza,Lealtanza Coleccion de Artistas Espanoles Sorolla,2010,4.4,316,Rioja,34.9,Rioja Red,red,4,3,False
+w0105,Alto Moncayo,Aquilon Garnacha,2011,4.7,123,Campo de Borja,108.9,Grenache,red,5,3,False
+w0106,Alto Moncayo,Aquilon Garnacha,2014,4.4,134,Campo de Borja,100.0,Grenache,red,5,3,False
+w0107,Alto Moncayo,Aquilon Garnacha,2015,4.6,105,Campo de Borja,120.9,Grenache,red,5,3,False
+w0108,Alto Moncayo,Aquilon Garnacha,2016,4.6,58,Campo de Borja,120.9,Grenache,red,5,3,False
+w0109,Alto Moncayo,Garnacha,2014,4.3,1544,Campo de Borja,36.94,Grenache,red,5,3,False
+w0110,Alto Moncayo,Garnacha,2016,4.4,1226,Campo de Borja,33.95,Grenache,red,5,3,False
+w0111,Alto Moncayo,Garnacha,2017,4.5,1503,Campo de Borja,44.27,Grenache,red,5,3,False
+w0112,Alto Moncayo,Garnacha,2018,4.4,915,Campo de Borja,38.95,Grenache,red,5,3,False
+w0113,Alto Moncayo,Veraton Garnacha,2014,4.2,1627,Campo de Borja,19.94,Grenache,red,5,3,False
+w0114,Alto Moncayo,Veraton Garnacha,2018,4.2,1343,Campo de Borja,21.6,Grenache,red,5,3,False
+w0115,Altos de Rioja,Altos R Pigeage,2016,4.3,63,Rioja,29.95,Rioja Red,red,4,3,False
+w0116,Altos de Rioja,Altos R Pigeage Graciano,2016,4.3,25,Rioja,35.0,Rioja Red,red,4,3,False
+w0117,Altos de Rioja,Altos R Pigeage Nacido en Barrica Blanco,2019,4.4,27,Rioja,29.92,Rioja White,white,3,3,True
+w0118,Altos del Enebro,Finca La Herradura,2014,4.3,49,Ribera del Duero,68.0,Ribera Del Duero Red,red,5,3,False
+w0119,Altos del Terral,Cuvee Julia Ribera del Duero,2011,4.5,35,Ribera del Duero,157.0,Ribera Del Duero Red,red,5,3,False
+w0120,Alvaro Domecq,1730 Amontillado,,4.3,29,Jerez Amontillado,34.65,Sherry,fortified,4,3,False
+w0121,Alvaro Domecq,1730 Pedro Ximenez,,4.4,234,Jerez Pedro Ximenes (PX),39.35,Sherry,fortified,4,3,False
+w0122,Alvaro Palacios,Finca Dofi,1997,4.3,60,Priorato,170.0,Priorat Red,red,4,3,False
+w0123,Alvaro Palacios,Finca Dofi,1999,4.4,64,Priorato,75.0,Priorat Red,red,4,3,False
+w0124,Alvaro Palacios,Finca Dofi,2000,4.3,202,Priorato,88.0,Priorat Red,red,4,3,False
+w0125,Alvaro Palacios,Finca Dofi,2003,4.3,99,Priorato,90.6,Priorat Red,red,4,3,False
+w0126,Alvaro Palacios,Finca Dofi,2006,4.5,207,Priorato,75.0,Priorat Red,red,4,3,False
+w0127,Alvaro Palacios,Finca Dofi,2007,4.3,209,Priorato,80.0,Priorat Red,red,4,3,False
+w0128,Alvaro Palacios,Finca Dofi,2009,4.3,384,Priorato,85.0,Priorat Red,red,4,3,False
+w0129,Alvaro Palacios,Finca Dofi,2010,4.3,263,Priorato,85.0,Priorat Red,red,4,3,True
+w0130,Alvaro Palacios,Finca Dofi,2011,4.3,613,Priorato,80.0,Priorat Red,red,4,3,False
+w0131,Alvaro Palacios,Finca Dofi,2012,4.3,814,Priorato,80.0,Priorat Red,red,4,3,False
+w0132,Alvaro Palacios,Finca Dofi,2013,4.3,605,Priorato,80.0,Priorat Red,red,4,3,False
+w0133,Alvaro Palacios,Finca Dofi,2014,4.2,671,Priorato,59.95,Priorat Red,red,4,3,False
+w0134,Alvaro Palacios,Finca Dofi,2015,4.2,865,Priorato,52.5,Priorat Red,red,4,3,False
+w0135,Alvaro Palacios,Finca Dofi,2016,4.4,639,Priorato,52.5,Priorat Red,red,4,3,False
+w0136,Alvaro Palacios,Finca Dofi,2017,4.3,522,Priorato,99.9,Priorat Red,red,4,3,False
+w0137,Alvaro Palacios,Finca Dofi,2018,4.3,292,Priorato,84.9,Priorat Red,red,4,3,True
+w0138,Alvaro Palacios,Finca Dofi,2019,4.4,82,Priorato,84.55,Priorat Red,red,4,3,False
+w0139,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,1995,4.6,122,Priorato,1372.14,Priorat Red,red,4,3,False
+w0140,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,1996,4.6,150,Priorato,1372.14,Priorat Red,red,4,3,False
+w0141,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,1997,4.6,127,Priorato,1080.0,Priorat Red,red,4,3,False
+w0142,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,1998,4.7,171,Priorato,1372.14,Priorat Red,red,4,3,False
+w0143,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,1999,4.6,164,Priorato,980.0,Priorat Red,red,4,3,False
+w0144,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,2000,4.7,132,Priorato,1422.96,Priorat Red,red,4,3,False
+w0145,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,2001,4.6,65,Priorato,945.0,Priorat Red,red,4,3,False
+w0146,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,2003,4.5,46,Priorato,1372.14,Priorat Red,red,4,3,False
+w0147,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,2004,4.8,87,Priorato,1410.26,Priorat Red,red,4,3,False
+w0148,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,2005,4.7,67,Priorato,1410.26,Priorat Red,red,4,3,False
+w0149,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,2008,4.8,40,Priorato,1021.21,Priorat Red,red,4,3,False
+w0150,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,2010,4.6,60,Priorato,2750.0,Priorat Red,red,4,3,False
+w0151,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,2011,4.6,27,Priorato,2750.0,Priorat Red,red,4,3,False
+w0152,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,2014,4.6,30,Priorato,1660.0,Priorat Red,red,4,3,False
+w0153,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,2015,4.7,82,Priorato,1252.35,Priorat Red,red,4,3,False
+w0154,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,2016,4.7,28,Priorato,919.6,Priorat Red,red,4,3,False
+w0155,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,2017,4.8,31,Priorato,992.2,Priorat Red,red,4,3,False
+w0156,Alvaro Palacios,L'Ermita Velles Vinyes Priorat,2018,4.8,26,Priorato,1094.9,Priorat Red,red,4,3,False
+w0157,Alvaro Palacios,La Baixada,2018,4.4,31,Priorato,239.5,Priorat Red,red,4,3,False
+w0158,Alvaro Palacios,Les Aubaguetes Priorat,2015,4.5,99,Priorato,302.5,Priorat Red,red,4,3,False
+w0159,Alvaro Palacios,Les Aubaguetes Priorat,2016,4.6,59,Priorato,355.95,Priorat Red,red,4,3,False
+w0160,Alvaro Palacios,Les Terrasses Laderas de Pizarra,2016,4.2,970,Priorato,32.25,Priorat Red,red,4,3,False
+w0161,Alvaro Palacios,Les Terrasses Velles Vinyes Priorat,2017,4.2,1016,Priorato,85.9,Priorat Red,red,4,3,False
+w0162,Alvaro Palacios,Quinon de Valmira,2015,4.7,102,Rioja,527.26,Rioja Red,red,4,3,False
+w0163,Alvaro Palacios,Quinon de Valmira,2016,4.5,88,Rioja,415.0,Rioja Red,red,4,3,False
+w0164,Alvaro Palacios,Vi de Vila Gratallops,2014,4.2,647,Priorato,55.0,Priorat Red,red,4,3,False
+w0165,Alvaro Palacios,Vi de Vila Gratallops,2015,4.2,648,Priorato,60.0,Priorat Red,red,4,3,False
+w0166,Alvaro Palacios,Vi de Vila Gratallops,2016,4.3,461,Priorato,48.75,Priorat Red,red,4,3,False
+w0167,Alvaro Palacios,Vi de Vila Gratallops,2017,4.3,463,Priorato,54.9,Priorat Red,red,4,3,False
+w0168,Alvaro Palacios,Vi de Vila Gratallops,2018,4.3,344,Priorato,53.95,Priorat Red,red,4,3,False
+w0169,Alvaro Palacios,Vi de Vila Gratallops,2019,4.4,105,Priorato,54.5,Priorat Red,red,4,3,False
+w0170,Alvear,Abuelo Diego Palo Cortado,,4.7,42,Montilla-Moriles,114.28,Pedro Ximenez,fortified,5,1,False
+w0171,Alvear,Solera 1830 Pedro Ximenez,,4.5,171,Montilla-Moriles,114.5,Pedro Ximenez,fortified,5,1,False
+w0172,Amos Baneres,Diables,2018,4.5,31,Penedes,38.75,,unknown,4,3,True
+w0173,Anayon,Carinena Parcela 15 Vinas Viejas,2017,4.4,28,Carinena,54.9,Red,red,4,3,False
+w0174,Anayon,Garnacha Parcela 81 Vinas Viejas,2017,4.5,28,Carinena,54.9,Red,red,4,3,False
+w0175,Anibal de Otero,Vina Centenaria Mencia,2014,4.3,52,Bierzo,38.0,Mencia,red,3,3,False
+w0176,Anima Negra,An,2016,4.2,513,Mallorca,139.9,Red,red,4,3,False
+w0177,Anima Negra,An,2017,4.3,740,Mallorca,39.98,Red,red,4,3,False
+w0178,Anima Negra,An,2018,4.4,436,Mallorca,38.3,Red,red,4,3,True
+w0179,Anima Negra,Son Negre,2004,4.6,27,Mallorca,374.35,Red,red,4,3,False
+w0180,Anima Negra,Son Negre,2005,4.5,42,Mallorca,200.0,Red,red,4,3,False
+w0181,Anima Negra,Son Negre,2007,4.6,51,Mallorca,282.65,Red,red,4,3,False
+w0182,Anima Negra,Son Negre,2010,4.4,63,Mallorca,235.95,Red,red,4,3,False
+w0183,Anima Negra,Son Negre,2011,4.5,121,Mallorca,228.9,Red,red,4,3,False
+w0184,Anima Negra,Son Negre,2016,4.5,81,Mallorca,164.9,Red,red,4,3,False
+w0185,Antidoto,La Hormiga de Antidoto,2018,4.3,293,Ribera del Duero,45.0,Ribera Del Duero Red,red,5,3,True
+w0186,Antidoto,La Hormiga de Antidoto,2019,4.4,336,Ribera del Duero,26.63,Ribera Del Duero Red,red,5,3,False
+w0187,Antidoto,Le Rose,2018,4.3,28,Ribera del Duero,49.0,,unknown,4,3,True
+w0188,Arid,Eolic Sauvignon Blanc,2016,4.3,38,Penedes,11.65,Sauvignon Blanc,white,3,3,False
+w0189,Arinzano,Gran Vino Blanco,2004,4.3,108,Arinzano,52.95,Chardonnay,white,4,3,False
+w0190,Arinzano,Gran Vino Blanco,2014,4.3,131,Arinzano,112.76,Chardonnay,white,4,3,False
+w0191,Arinzano,Gran Vino Blanco,2016,4.3,95,Arinzano,65.25,Chardonnay,white,4,3,False
+w0192,Artadi,El Carretil,2010,4.4,117,Vino de Espana,295.3,Tempranillo,red,4,2,False
+w0193,Artadi,El Carretil,2012,4.5,88,Vino de Espana,165.0,Tempranillo,red,4,2,False
+w0194,Artadi,El Carretil,2014,4.4,86,Vino de Espana,143.51,Tempranillo,red,4,2,False
+w0195,Artadi,El Carretil,2015,4.5,66,Vino de Espana,143.51,Tempranillo,red,4,2,False
+w0196,Artadi,El Carretil,2016,4.4,66,Vino de Espana,155.0,Tempranillo,red,4,2,False
+w0197,Artadi,El Carretil,2017,4.6,32,Vino de Espana,176.89,Tempranillo,red,4,2,False
+w0198,Artadi,Grandes Anadas Rioja,1994,4.4,43,Rioja,180.0,Rioja Red,red,4,3,False
+w0199,Artadi,Grandes Anadas Rioja,1998,4.5,66,Rioja,467.65,Rioja Red,red,4,3,False
+w0200,Artadi,Grandes Anadas Rioja,1999,4.3,111,Rioja,265.0,Rioja Red,red,4,3,False
+w0201,Artadi,Grandes Anadas Rioja,2001,4.5,103,Rioja,391.65,Rioja Red,red,4,3,False
+w0202,Artadi,La Morera de San Lazaro,2016,4.3,36,Vino de Espana,80.0,Tempranillo,red,4,2,False
+w0203,Artadi,La Poza de Ballesteros,2009,4.6,42,Vino de Espana,187.5,Tempranillo,red,4,2,False
+w0204,Artadi,La Poza de Ballesteros,2010,4.5,74,Vino de Espana,99.35,Tempranillo,red,4,2,False
+w0205,Artadi,La Poza de Ballesteros,2013,4.4,112,Vino de Espana,101.01,Tempranillo,red,4,2,False
+w0206,Artadi,La Poza de Ballesteros,2014,4.4,119,Vino de Espana,104.0,Tempranillo,red,4,2,False
+w0207,Artadi,La Poza de Ballesteros,2015,4.4,161,Vino de Espana,95.9,Tempranillo,red,4,2,False
+w0208,Artadi,La Poza de Ballesteros,2016,4.3,60,Vino de Espana,93.26,Tempranillo,red,4,2,False
+w0209,Artadi,Pagos Viejos,2001,4.3,189,Vino de Espana,130.0,Tempranillo,red,4,2,False
+w0210,Artadi,Pagos Viejos,2004,4.4,262,Vino de Espana,57.11,Tempranillo,red,4,2,False
+w0211,Artadi,Pagos Viejos,2006,4.4,442,Vino de Espana,90.5,Tempranillo,red,4,2,True
+w0212,Artadi,Pagos Viejos,2013,4.3,193,Vino de Espana,62.5,Tempranillo,red,4,2,False
+w0213,Artadi,Quintanilla,2016,4.3,35,Vino de Espana,65.9,Tempranillo,red,4,2,False
+w0214,Artadi,Valdegines,2016,4.2,398,Vino de Espana,48.96,Tempranillo,red,4,2,True
+w0215,Artadi,Valdegines,2017,4.3,223,Vino de Espana,43.95,Tempranillo,red,4,2,False
+w0216,Artadi,Valdegines,2018,4.4,155,Vino de Espana,42.35,Tempranillo,red,4,2,False
+w0217,Artadi,Valdegines,2019,4.5,30,Vino de Espana,40.0,Tempranillo,red,4,2,False
+w0218,Artadi,Vina El Pison,1995,4.7,39,Vino de Espana,397.0,Tempranillo,red,4,2,False
+w0219,Artadi,Vina El Pison,1999,4.4,98,Vino de Espana,419.85,Tempranillo,red,4,2,False
+w0220,Artadi,Vina El Pison,2001,4.4,85,Vino de Espana,340.0,Tempranillo,red,4,2,False
+w0221,Artadi,Vina El Pison,2005,4.6,142,Vino de Espana,325.0,Tempranillo,red,4,2,False
+w0222,Artadi,Vina El Pison,2006,4.6,274,Vino de Espana,391.5,Tempranillo,red,4,2,False
+w0223,Artadi,Vina El Pison,2007,4.4,154,Vino de Espana,495.0,Tempranillo,red,4,2,False
+w0224,Artadi,Vina El Pison,2009,4.6,113,Vino de Espana,445.0,Tempranillo,red,4,2,False
+w0225,Artadi,Vina El Pison,2010,4.6,169,Vino de Espana,519.55,Tempranillo,red,4,2,False
+w0226,Artadi,Vina El Pison,2011,4.6,165,Vino de Espana,511.9,Tempranillo,red,4,2,False
+w0227,Artadi,Vina El Pison,2012,4.6,159,Vino de Espana,280.0,Tempranillo,red,4,2,False
+w0228,Artadi,Vina El Pison,2013,4.5,137,Vino de Espana,253.47,Tempranillo,red,4,2,False
+w0229,Artadi,Vina El Pison,2014,4.6,124,Vino de Espana,275.0,Tempranillo,red,4,2,False
+w0230,Artadi,Vina El Pison,2015,4.6,122,Vino de Espana,241.55,Tempranillo,red,4,2,False
+w0231,Artadi,Vina El Pison,2016,4.4,77,Vino de Espana,385.0,Tempranillo,red,4,2,False
+w0232,Artadi,Vina El Pison,2017,4.6,41,Vino de Espana,304.54,Tempranillo,red,4,2,False
+w0233,Artadi,Vina El Pison,2018,4.9,31,Vino de Espana,313.5,Tempranillo,red,4,2,False
+w0234,Arzuaga,Amaya Arzuaga (Coleccion),2015,4.3,77,Ribera del Duero,51.2,Ribera Del Duero Red,red,5,3,False
+w0235,Arzuaga,Amaya Arzuaga (Coleccion),2016,4.6,123,Ribera del Duero,64.9,Ribera Del Duero Red,red,5,3,False
+w0236,Arzuaga,Gran Arzuaga Ribera del Duero,2004,4.6,105,Ribera del Duero,157.4,Ribera Del Duero Red,red,5,3,False
+w0237,Arzuaga,Gran Reserva Ribera del Duero,2009,4.4,516,Ribera del Duero,76.3,Ribera Del Duero Red,red,5,3,True
+w0238,Arzuaga,Gran Reserva Ribera del Duero,2014,4.3,140,Ribera del Duero,62.56,Ribera Del Duero Red,red,5,3,False
+w0239,Arzuaga,Gran Reserva Ribera del Duero,2015,4.5,205,Ribera del Duero,80.98,Ribera Del Duero Red,red,5,3,False
+w0240,Arzuaga,Reserva Especial Ribera del Duero,2015,4.5,187,Ribera del Duero,51.5,Ribera Del Duero Red,red,5,3,False
+w0241,Arzuaga,Reserva Especial Ribera del Duero,2016,4.6,83,Ribera del Duero,54.5,Ribera Del Duero Red,red,5,3,False
+w0242,Arzuaga,Reserva Ribera del Duero,2014,4.3,641,Ribera del Duero,33.9,Ribera Del Duero Red,red,5,3,False
+w0243,Arzuaga,Reserva Ribera del Duero,2016,4.4,1087,Ribera del Duero,26.24,Ribera Del Duero Red,red,5,3,False
+w0244,Arzuaga,Reserva Ribera del Duero,2017,4.5,477,Ribera del Duero,31.8,Ribera Del Duero Red,red,5,3,False
+w0245,Arzuaga,Reserva Ribera del Duero,2018,4.4,128,Ribera del Duero,32.15,Ribera Del Duero Red,red,5,3,False
+w0246,Arzuaga,Ribera del Duero Crianza,2016,4.2,4091,Ribera del Duero,19.16,Ribera Del Duero Red,red,5,3,False
+w0247,Arzuaga,Ribera del Duero Crianza,2017,4.2,3354,Ribera del Duero,15.45,Ribera Del Duero Red,red,5,3,False
+w0248,Arzuaga,Ribera del Duero Crianza,2018,4.3,3524,Ribera del Duero,19.01,Ribera Del Duero Red,red,5,3,True
+w0249,Arzuaga,Ribera del Duero Crianza,2019,4.2,806,Ribera del Duero,18.5,Ribera Del Duero Red,red,5,3,False
+w0250,Aster,Finca El Otero,2014,4.2,1267,Ribera del Duero,28.75,Ribera Del Duero Red,red,5,3,False
+w0251,Aster,Finca El Otero,2016,4.3,411,Ribera del Duero,26.9,Ribera Del Duero Red,red,5,3,False
+w0252,Astrales,Christina Ribera del Duero,2016,4.4,142,Ribera del Duero,50.76,Ribera Del Duero Red,red,5,3,False
+w0253,Astrales,Christina Ribera del Duero,2017,4.3,77,Ribera del Duero,38.0,Ribera Del Duero Red,red,5,3,False
+w0254,Atalaya,Alaya Tierra (Old Vines Vieilles Vignes),2017,4.4,1948,Almansa,19.6,Grenache,red,5,3,False
+w0255,Atalaya,Alaya Tierra (Old Vines Vieilles Vignes),2018,4.4,1158,Almansa,24.8,Grenache,red,5,3,False
+w0256,Atalaya,Alaya Tierra (Old Vines Vieilles Vignes),2019,4.4,787,Almansa,27.39,Grenache,red,5,3,False
+w0257,Atalaya,La Atalaya del Camino,2017,4.2,2022,Almansa,11.8,Red,red,4,3,False
+w0258,Atalaya,La Atalaya del Camino,2019,4.2,1048,Almansa,11.66,Red,red,4,3,False
+w0259,Atlan & Artisan,8 Vents Mallorca,2019,4.3,47,Mallorca,18.9,Red,red,4,3,False
+w0260,Atlan & Artisan,Epistem No. 3,2016,4.3,38,Yecla,18.9,Red,red,4,3,False
+w0261,Atlantida,Blanco,2019,4.3,48,Cadiz,17.7,,unknown,4,3,True
+w0262,Attis,Attis Embaixador Albarino,2018,4.3,43,Rias Baixas,21.89,Albarino,white,3,3,False
+w0263,Ausas,Interpretacion,2016,4.4,618,Ribera del Duero,45.15,Ribera Del Duero Red,red,5,3,False
+w0264,Ausas,Interpretacion,2017,4.4,514,Ribera del Duero,45.3,Ribera Del Duero Red,red,5,3,True
+w0265,Ausas,Interpretacion,2018,4.4,389,Ribera del Duero,41.0,Ribera Del Duero Red,red,5,3,True
+w0266,Avancia,Godello,2019,4.3,375,Valdeorras,23.4,,unknown,4,3,True
+w0267,Avancia,Godello,2020,4.3,42,Valdeorras,24.77,,unknown,4,3,True
+w0268,Avgvstvs,Antigues Reserves,2000,4.3,72,Penedes,27.45,Red,red,4,3,False
+w0269,Avgvstvs,Reserva Trajanvs,2016,4.4,64,Penedes,21.5,Red,red,4,3,False
+w0270,Azpilicueta,Felix Azpilicueta Coleccion Privada,2019,4.4,41,Rioja,18.0,Rioja Red,red,4,3,False
+w0271,Baigorri,De Garage Rioja,2005,4.4,37,Rioja,40.0,Rioja Red,red,4,3,False
+w0272,Baigorri,De Garage Rioja,2017,4.3,55,Rioja,32.0,Rioja Red,red,4,3,False
+w0273,Baigorri,Rioja B70,2014,4.4,52,Rioja,104.5,Rioja Red,red,4,3,False
+w0274,Balandro,Las Botas Palo Cortado Horizontal,,4.3,67,Manzanilla,37.0,Sherry,fortified,4,3,False
+w0275,Baluarte,Muscat,2020,4.2,842,Navarra,5.5,,unknown,4,3,True
+w0276,Barahonda,Summum Monastrell,2017,4.2,682,Yecla,15.95,Monastrell,red,5,3,False
+w0277,Barahonda,Summum Monastrell,2019,4.3,50,Yecla,13.99,Monastrell,red,5,3,False
+w0278,Barahonda,Zona Zepa Monastrell,2015,4.4,26,Yecla,59.9,Monastrell,red,5,3,False
+w0279,Barbadillo,Reliquia Palo Cortado Sherry,,4.7,58,Jerez Palo Cortado,380.0,Sherry,fortified,4,3,False
+w0280,Barco del Corneta,La Silleria,2017,4.4,34,Castilla y Leon,24.5,,unknown,4,3,True
+w0281,Belondrade,Belondrade y Lurton,2015,4.3,1230,Rueda,32.7,Verdejo,white,3,3,False
+w0282,Belondrade,Belondrade y Lurton,2018,4.5,1192,Rueda,32.85,Verdejo,white,3,3,False
+w0283,Belondrade,Belondrade y Lurton,2019,4.5,961,Rueda,37.7,Verdejo,white,3,3,False
+w0284,Belondrade,Belondrade y Lurton,2020,4.5,184,Rueda,38.9,Verdejo,white,3,3,False
+w0285,Benjamin de Rothschild - Vega Sicilia,Macan,2010,4.4,1519,Rioja,216.0,Rioja Red,red,4,3,False
+w0286,Benjamin de Rothschild - Vega Sicilia,Macan,2014,4.5,1910,Rioja,58.95,Rioja Red,red,4,3,False
+w0287,Benjamin de Rothschild - Vega Sicilia,Macan,2015,4.5,1345,Rioja,68.9,Rioja Red,red,4,3,False
+w0288,Benjamin de Rothschild - Vega Sicilia,Macan,2016,4.5,813,Rioja,64.0,Rioja Red,red,4,3,False
+w0289,Benjamin de Rothschild - Vega Sicilia,Macan,2017,4.6,28,Rioja,69.95,Rioja Red,red,4,3,False
+w0290,Benjamin de Rothschild - Vega Sicilia,Macan Clasico,2014,4.3,2341,Rioja,36.8,Rioja Red,red,4,3,True
+w0291,Benjamin de Rothschild - Vega Sicilia,Macan Clasico,2015,4.3,2241,Rioja,50.41,Rioja Red,red,4,3,True
+w0292,Benjamin de Rothschild - Vega Sicilia,Macan Clasico,2016,4.4,1993,Rioja,37.52,Rioja Red,red,4,3,False
+w0293,Benjamin de Rothschild - Vega Sicilia,Macan Clasico,2017,4.4,560,Rioja,36.9,Rioja Red,red,4,3,False
+w0294,Benjamin de Rothschild - Vega Sicilia,Macan Clasico,2018,4.3,57,Rioja,42.5,Rioja Red,red,4,3,False
+w0295,Berceo,Los Dominios de Berceo Prefiloxerico,2015,4.4,29,Rioja,29.25,Rioja Red,red,4,3,False
+w0296,Beronia,III a.C,2011,4.3,140,Rioja,46.16,Rioja Red,red,4,3,False
+w0297,Beronia,Rioja Gran Reserva,1994,4.5,54,Rioja,61.0,Rioja Red,red,4,3,False
+w0298,Biniagual,Finca Biniagual Veran,2017,4.3,322,Binissalem-Mallorca,26.5,Red,red,4,3,False
+w0299,Binigrau,Nounat,2020,4.2,404,Mallorca,19.9,,unknown,4,3,True
+w0300,Bodega Aida i Luis,Tahulla Moscatel Blanco Seco,2018,4.3,56,Alicante,11.95,,unknown,4,3,True
+w0301,Bodega Campo Eliseo,Campo Eliseo,2009,4.3,175,Toro,48.5,Toro Red,red,5,3,False
+w0302,Bodega Campo Eliseo,Campo Eliseo Blanco,2018,4.3,45,Rueda,27.25,Verdejo,white,3,3,False
+w0303,Bodega Contador (Benjamin Romeo),Coleccion No. 3 Cosecha,2014,4.3,45,Rioja,189.9,Rioja Red,red,4,3,False
+w0304,Bodega Contador (Benjamin Romeo),Contador Rioja,2005,4.7,112,Rioja,1150.0,Rioja Red,red,4,3,False
+w0305,Bodega Contador (Benjamin Romeo),Contador Rioja,2011,4.6,225,Rioja,220.0,Rioja Red,red,4,3,False
+w0306,Bodega Contador (Benjamin Romeo),Contador Rioja,2012,4.7,243,Rioja,213.9,Rioja Red,red,4,3,False
+w0307,Bodega Contador (Benjamin Romeo),Contador Rioja,2014,4.6,157,Rioja,251.99,Rioja Red,red,4,3,False
+w0308,Bodega Contador (Benjamin Romeo),Contador Rioja,2015,4.6,143,Rioja,319.9,Rioja Red,red,4,3,False
+w0309,Bodega Contador (Benjamin Romeo),Contador Rioja,2016,4.5,80,Rioja,317.75,Rioja Red,red,4,3,False
+w0310,Bodega Contador (Benjamin Romeo),La Cueva del Contador Rioja,2004,4.4,94,Rioja,90.0,Rioja Red,red,4,3,False
+w0311,Bodega Contador (Benjamin Romeo),La Cueva del Contador Rioja,2010,4.3,312,Rioja,90.0,Rioja Red,red,4,3,True
+w0312,Bodega Contador (Benjamin Romeo),La Cueva del Contador Rioja,2011,4.4,343,Rioja,90.0,Rioja Red,red,4,3,False
+w0313,Bodega Contador (Benjamin Romeo),La Cueva del Contador Rioja,2012,4.4,222,Rioja,76.5,Rioja Red,red,4,3,False
+w0314,Bodega Contador (Benjamin Romeo),La Cueva del Contador Rioja,2014,4.3,275,Rioja,90.15,Rioja Red,red,4,3,True
+w0315,Bodega Contador (Benjamin Romeo),La Cueva del Contador Rioja,2015,4.4,389,Rioja,73.6,Rioja Red,red,4,3,True
+w0316,Bodega Contador (Benjamin Romeo),La Cueva del Contador Rioja,2016,4.4,252,Rioja,67.9,Rioja Red,red,4,3,False
+w0317,Bodega Contador (Benjamin Romeo),La Cueva del Contador Rioja,2017,4.5,174,Rioja,67.9,Rioja Red,red,4,3,False
+w0318,Bodega Contador (Benjamin Romeo),La Cueva del Contador Rioja,2018,4.3,77,Rioja,67.9,Rioja Red,red,4,3,False
+w0319,Bodega Contador (Benjamin Romeo),La Cueva del Contador Rioja,2019,4.4,31,Rioja,60.61,Rioja Red,red,4,3,False
+w0320,Bodega Contador (Benjamin Romeo),La Vina de Andres Romeo Rioja,2011,4.3,139,Rioja,97.5,Rioja Red,red,4,3,False
+w0321,Bodega Contador (Benjamin Romeo),La Vina de Andres Romeo Rioja,2012,4.4,151,Rioja,99.0,Rioja Red,red,4,3,False
+w0322,Bodega Contador (Benjamin Romeo),Pirata,2014,4.4,44,Rioja,194.0,Rioja White,white,3,3,False
+w0323,Bodega Contador (Benjamin Romeo),Que Bonito Cacareaba Blanco,2018,4.5,170,Rioja,50.34,Rioja White,white,3,3,False
+w0324,Bodega Elias Mora,Toro 2V Premium,2005,4.4,70,Toro,44.0,Toro Red,red,5,3,False
+w0325,Bodega Elias Mora,Toro Gran Elias Mora,2014,4.3,108,Toro,33.5,Toro Red,red,5,3,False
+w0326,Bodega Juan Carlos Sancha,Cerro La Isa Blanco,2018,4.3,31,Rioja,44.9,Rioja White,white,3,3,False
+w0327,Bodega Juan Carlos Sancha,Cerro La Isa Garnacha,2018,4.3,28,Rioja,43.9,Rioja Red,red,4,3,False
+w0328,Bodega Numanthia,Numanthia,2004,4.4,414,Toro,98.0,Toro Red,red,5,3,True
+w0329,Bodega Numanthia,Numanthia,2012,4.3,2453,Toro,99.9,Toro Red,red,5,3,True
+w0330,Bodega Numanthia,Numanthia,2013,4.2,998,Toro,51.19,Toro Red,red,5,3,False
+w0331,Bodega Numanthia,Numanthia,2014,4.3,2241,Toro,46.0,Toro Red,red,5,3,True
+w0332,Bodega Numanthia,Numanthia,2015,4.3,1743,Toro,36.9,Toro Red,red,5,3,False
+w0333,Bodega Numanthia,Numanthia,2016,4.3,345,Toro,39.53,Toro Red,red,5,3,False
+w0334,Bodega Numanthia,Termanthia,2000,4.4,27,Toro,140.0,Toro Red,red,5,3,False
+w0335,Bodega Numanthia,Termanthia,2004,4.7,108,Toro,2814.16,Toro Red,red,5,3,False
+w0336,Bodega Numanthia,Termanthia,2005,4.7,131,Toro,207.11,Toro Red,red,5,3,False
+w0337,Bodega Numanthia,Termanthia,2010,4.5,729,Toro,168.0,Toro Red,red,5,3,False
+w0338,Bodega Numanthia,Termanthia,2011,4.6,790,Toro,205.0,Toro Red,red,5,3,False
+w0339,Bodega Numanthia,Termanthia,2012,4.6,840,Toro,214.0,Toro Red,red,5,3,False
+w0340,Bodega Numanthia,Termanthia,2013,4.5,316,Toro,207.11,Toro Red,red,5,3,False
+w0341,Bodega Numanthia,Termanthia,2014,4.6,147,Toro,210.5,Toro Red,red,5,3,False
+w0342,Bodega Otazu,Altar,2008,4.3,109,Navarra,32.18,Red,red,4,3,False
+w0343,Bodega Otazu,Pago de Otazu Chardonnay Con Crianza,2018,4.3,53,Otazu,28.4,Chardonnay,white,4,3,False
+w0344,Bodega Rento,Tinto,2014,4.4,207,Ribera del Duero,37.13,Ribera Del Duero Red,red,5,3,False
+w0345,Bodega Ribas,Ribas de Cabrera,2018,4.5,94,Mallorca,68.41,Red,red,4,3,False
+w0346,Bodega Ribas,Sio Negre,2019,4.3,53,Mallorca,39.9,Red,red,4,3,False
+w0347,Bodega Sommos,Coleccion Syrah,2017,4.3,133,Somontano,25.89,Syrah,red,4,3,False
+w0348,Bodega Tameran,Malvasia Volcanica,2020,4.3,31,Gran Canaria,31.9,,unknown,4,3,True
+w0349,Bodega Tameran,Marmajuelo,2020,4.3,27,Gran Canaria,29.75,,unknown,4,3,True
+w0350,Bodega Tesalia,ARX Arcos de la Frontera,2018,4.3,215,Andalucia,15.9,Red,red,4,3,False
+w0351,Bodega Tesalia,Arcos de la Frontera,2017,4.3,284,Andalucia,25.9,Red,red,4,3,True
+w0352,Bodega de Bardos,Suprema 30 Meses,2012,4.3,210,Ribera del Duero,24.0,Ribera Del Duero Red,red,5,3,False
+w0353,Bodega de Bardos,Suprema 30 Meses,2016,4.4,406,Ribera del Duero,35.2,Ribera Del Duero Red,red,5,3,True
+w0354,Bodegas 6o Elemento - Vino Sexto Elemento,Respeto,2015,4.6,45,Utiel-Requena,29.35,Red,red,4,3,False
+w0355,Bodegas 6o Elemento - Vino Sexto Elemento,Respeto,2017,4.6,29,Utiel-Requena,29.95,Red,red,4,3,False
+w0356,Bodegas 6o Elemento - Vino Sexto Elemento,Tinto,2017,4.4,319,Valencia,29.95,Red,red,4,3,False
+w0357,Bodegas 6o Elemento - Vino Sexto Elemento,Tinto,2018,4.3,136,Valencia,19.9,Red,red,4,3,False
+w0358,Bodegas 6o Elemento - Vino Sexto Elemento,Tinto,2019,4.4,33,Valencia,20.95,Red,red,4,3,False
+w0359,Bodegas Amaren,Angeles de Amaren Tempranillo - Graciano,2015,4.2,832,Rioja,19.38,Rioja Red,red,4,3,False
+w0360,Bodegas Amaren,Carraquintana de Amaren,2017,4.5,29,Rioja Alavesa,56.5,Rioja Red,red,4,3,False
+w0361,Bodegas Amaren,El Cristo de Samaniego,2017,4.4,47,Rioja Alavesa,42.9,Rioja Red,red,4,3,False
+w0362,Bodegas Amaren,El Regollar,2016,4.7,49,Rioja,77.9,Rioja Red,red,4,3,False
+w0363,Bodegas Amaren,Garnacha,2014,4.3,32,Rioja,38.0,Grenache,red,5,3,False
+w0364,Bodegas Amaren,Graciano,2012,4.3,26,Rioja,68.0,Rioja Red,red,4,3,False
+w0365,Bodegas Amaren,Tempranillo Reserva,2002,4.3,112,Rioja,28.0,Rioja Red,red,4,3,False
+w0366,Bodegas Amaren,Tempranillo Reserva,2010,4.4,542,Rioja,26.9,Rioja Red,red,4,3,False
+w0367,Bodegas Aragonesas,Fagus de Coto de Hayas Garnacha,2017,4.3,398,Aragon,21.02,Grenache,red,5,3,False
+w0368,Bodegas Aragonesas,Galiano Seleccion Especial,2013,4.6,28,Campo de Borja,99.95,Red,red,4,3,False
+w0369,Bodegas Arfe,Palo Cortado de la Cruz de 1767,,4.3,66,Jerez-Xeres-Sherry,59.9,Sherry,fortified,4,3,False
+w0370,Bodegas Arrocal,Angel Ribera del Duero,2015,4.3,37,Ribera del Duero,31.9,Ribera Del Duero Red,red,5,3,False
+w0371,Bodegas Asenjo & Manso,Silvanus Edicion Limitada Ribera del Duero,2015,4.4,25,Ribera del Duero,46.0,Ribera Del Duero Red,red,5,3,False
+w0372,Bodegas Ateca,Atteca Armas Garnacha Old Vines,2017,4.3,176,Calatayud,32.9,Grenache,red,5,3,False
+w0373,Bodegas Casa Primicia,Cofradia,2014,4.4,34,Rioja,38.0,Rioja Red,red,4,3,False
+w0374,Bodegas Celler Francisco Castillo - Clos Dominic,Vinyes Altes Porrera,2007,4.5,26,Priorato,69.0,Priorat Red,red,4,3,True
+w0375,Bodegas Celler Francisco Castillo - Clos Dominic,Vinyes Altes Porrera,2009,4.4,34,Priorato,69.0,Priorat Red,red,4,3,False
+w0376,Bodegas Celler Francisco Castillo - Clos Dominic,Vinyes Altes Porrera,2016,4.4,58,Priorato,60.73,Priorat Red,red,4,3,False
+w0377,Bodegas Celler Francisco Castillo - Clos Dominic,Vinyes Altes Porrera,2017,4.4,51,Priorato,33.0,Priorat Red,red,4,3,False
+w0378,Bodegas Clunia,Malbec,2018,4.3,99,Castilla y Leon,24.9,Red,red,4,3,False
+w0379,Bodegas El Nido,Clio,2014,4.4,3089,Jumilla,35.65,Red,red,4,3,True
+w0380,Bodegas El Nido,Clio,2015,4.5,2712,Jumilla,33.2,Red,red,4,3,False
+w0381,Bodegas El Nido,Clio,2016,4.5,2228,Jumilla,31.75,Red,red,4,3,False
+w0382,Bodegas El Nido,Clio,2017,4.5,2220,Jumilla,39.5,Red,red,4,3,False
+w0383,Bodegas El Nido,Clio,2018,4.5,1520,Jumilla,61.85,Red,red,4,3,False
+w0384,Bodegas El Nido,Clio,2019,4.5,550,Jumilla,47.3,Red,red,4,3,False
+w0385,Bodegas El Nido,El Nido,2008,4.7,347,Jumilla,134.19,Red,red,4,3,False
+w0386,Bodegas El Nido,El Nido,2013,4.7,476,Jumilla,145.0,Red,red,4,3,False
+w0387,Bodegas El Nido,El Nido,2014,4.7,511,Jumilla,154.9,Red,red,4,3,False
+w0388,Bodegas El Nido,El Nido,2016,4.7,393,Jumilla,371.78,Red,red,4,3,False
+w0389,Bodegas El Nido,El Nido,2017,4.7,268,Jumilla,154.85,Red,red,4,3,False
+w0390,Bodegas El Nido,El Nido,2018,4.8,217,Jumilla,195.63,Red,red,4,3,False
+w0391,Bodegas El Nido,El Nido,2019,4.7,80,Jumilla,145.9,Red,red,4,3,False
+w0392,Bodegas El Paraguas,Atlantico,2019,4.4,146,Ribeiro,18.99,,unknown,4,3,True
+w0393,Bodegas Estraunza,Solar de Estraunza Reserva,2014,4.3,140,Rioja,9.88,Tempranillo,red,4,2,False
+w0394,Bodegas Faustino,Faustino de Autor Reserva Especial,1994,4.3,76,Rioja,45.0,Rioja Red,red,4,3,False
+w0395,Bodegas Faustino,I Gran Reserva,1964,4.3,454,Rioja,272.0,Rioja Red,red,4,3,False
+w0396,Bodegas Faustino,I Gran Reserva,1968,4.3,28,Rioja,160.0,Rioja Red,red,4,3,False
+w0397,Bodegas Faustino,I Gran Reserva,1970,4.3,449,Rioja,206.91,Rioja Red,red,4,3,False
+w0398,Bodegas Faustino,I Gran Reserva,1982,4.3,298,Rioja,425.0,Rioja Red,red,4,3,True
+w0399,Bodegas Faustino,I Gran Reserva,1994,4.2,2074,Rioja,124.5,Rioja Red,red,4,3,False
+w0400,Bodegas Faustino,Reserva Especial Icon Edition,2014,4.2,519,Rioja,23.89,Rioja Red,red,4,3,False
+w0401,Bodegas Frontaura,Aponte Winemaker's Private Collection Tempranillo,2008,4.4,66,Toro,112.0,Tempranillo,red,4,2,False
+w0402,Bodegas Frontaura,Verdejo,2017,4.4,32,Toro,19.97,Verdejo,white,3,3,False
+w0403,Bodegas Frontonio,El Jardin de las Iguales Vinedo Historico Garnacha,2016,4.4,25,Aragon,195.99,Grenache,red,5,3,False
+w0404,Bodegas Frontonio,La Loma & Los Santos Garnacha Blanca - Macabeo,2018,4.3,41,Valdejalon,40.9,,unknown,4,3,True
+w0405,Bodegas Gama,Octogenarius,2014,4.3,34,Rioja,46.5,Grenache,red,5,3,False
+w0406,Bodegas Gama,Octogenarius,2015,4.3,25,Rioja,36.9,Grenache,red,5,3,False
+w0407,Bodegas Imperiales - Abadia de San Quirce,Finca Helena,2015,4.4,40,Ribera del Duero,59.9,Ribera Del Duero Red,red,5,3,False
+w0408,Bodegas La Horra,Corimbo I,2011,4.2,918,Ribera del Duero,23.4,Ribera Del Duero Red,red,5,3,False
+w0409,Bodegas La Horra,Corimbo I,2013,4.2,915,Ribera del Duero,37.5,Ribera Del Duero Red,red,5,3,False
+w0410,Bodegas La Horra,Corimbo I,2014,4.2,1078,Ribera del Duero,39.0,Ribera Del Duero Red,red,5,3,False
+w0411,Bodegas La Horra,Corimbo I,2015,4.2,412,Ribera del Duero,37.9,Ribera Del Duero Red,red,5,3,True
+w0412,Bodegas Luis Perez,Fino La Barajuela,2016,4.3,44,Andalucia,69.95,,unknown,4,3,True
+w0413,Bodegas Luis Perez,Petit Verdot,2013,4.4,32,Andalucia,52.5,Red,red,4,3,False
+w0414,Bodegas Mas Alta,Artigas,2017,4.2,505,Priorato,20.9,Priorat Red,red,4,3,False
+w0415,Bodegas Mas Alta,Artigas,2019,4.3,136,Priorato,20.4,Priorat Red,red,4,3,False
+w0416,Bodegas Mas Alta,Cirerets,2018,4.4,233,Priorato,40.3,Priorat Red,red,4,3,False
+w0417,Bodegas Mas Alta,Cirerets,2019,4.4,56,Priorato,37.9,Priorat Red,red,4,3,False
+w0418,Bodegas Mas Alta,La Basseta,2013,4.5,132,Priorato,58.0,Priorat Red,red,4,3,False
+w0419,Bodegas Mas Alta,La Basseta,2014,4.3,80,Priorato,58.0,Priorat Red,red,4,3,True
+w0420,Bodegas Mas Alta,La Basseta,2016,4.4,108,Priorato,56.0,Priorat Red,red,4,3,False
+w0421,Bodegas Mas Alta,La Basseta,2017,4.5,75,Priorato,58.95,Priorat Red,red,4,3,False
+w0422,Bodegas Mas Alta,La Creu Alta,2013,4.6,116,Priorato,89.17,Priorat Red,red,4,3,False
+w0423,Bodegas Mas Alta,La Creu Alta,2014,4.6,53,Priorato,86.0,Priorat Red,red,4,3,False
+w0424,Bodegas Mas Alta,La Creu Alta,2015,4.5,73,Priorato,234.98,Priorat Red,red,4,3,False
+w0425,Bodegas Mas Alta,La Creu Alta,2017,4.6,36,Priorato,85.0,Priorat Red,red,4,3,False
+w0426,Bodegas Mas Alta,La Solana Alta,2017,4.4,90,Priorato,63.46,,unknown,4,3,True
+w0427,Bodegas Mas Alta,La Solana Alta,2018,4.4,39,Priorato,43.5,,unknown,4,3,True
+w0428,Bodegas Mauro,Godello Blanco,2015,4.3,135,Bierzo,92.45,,unknown,4,3,True
+w0429,Bodegas Mauro,Godello Blanco,2017,4.3,186,Bierzo,34.5,,unknown,4,3,True
+w0430,Bodegas Mauro,Godello Blanco,2019,4.4,134,Bierzo,37.6,,unknown,4,3,True
+w0431,Bodegas Mauro,Red,2008,4.2,622,Castilla y Leon,55.0,Red,red,4,3,False
+w0432,Bodegas Mauro,Red,2011,4.2,2820,Castilla y Leon,58.26,Red,red,4,3,False
+w0433,Bodegas Mauro,Red,2017,4.3,3587,Castilla y Leon,66.75,Red,red,4,3,True
+w0434,Bodegas Mauro,Red,2018,4.4,3095,Castilla y Leon,31.95,Red,red,4,3,True
+w0435,Bodegas Mauro,Red,2019,4.4,1701,Castilla y Leon,29.45,Red,red,4,3,False
+w0436,Bodegas Mauro,Terreus Paraje de Cueva Baja,2015,4.6,313,Castilla y Leon,94.95,Tempranillo,red,4,2,False
+w0437,Bodegas Mauro,Terreus Paraje de Cueva Baja,2016,4.6,304,Castilla y Leon,89.0,Tempranillo,red,4,2,False
+w0438,Bodegas Mauro,Terreus Paraje de Cueva Baja,2017,4.7,251,Castilla y Leon,66.07,Tempranillo,red,4,2,False
+w0439,Bodegas Mauro,Terreus Paraje de Cueva Baja,2018,4.6,128,Castilla y Leon,88.05,Tempranillo,red,4,2,False
+w0440,Bodegas Mauro,Terreus Paraje de Cueva Baja,2019,4.7,33,Castilla y Leon,86.9,Tempranillo,red,4,2,False
+w0441,Bodegas Mauro,VS,2014,4.4,1064,Castilla y Leon,178.0,Tempranillo,red,4,2,False
+w0442,Bodegas Mauro,VS,2015,4.4,995,Castilla y Leon,60.95,Tempranillo,red,4,2,False
+w0443,Bodegas Mauro,VS,2016,4.4,506,Castilla y Leon,56.5,Tempranillo,red,4,2,True
+w0444,Bodegas Mauro,VS,2017,4.5,318,Castilla y Leon,56.5,Tempranillo,red,4,2,False
+w0445,Bodegas Mauro,VS,2018,4.6,136,Castilla y Leon,58.9,Tempranillo,red,4,2,False
+w0446,Bodegas Monte La Reina,Castillo de Monte la Reina Cuvee Privee,2015,4.4,75,Toro,14.65,Toro Red,red,5,3,False
+w0447,Bodegas Naluar & Acediano,Acediano,2014,4.5,87,Ribera del Duero,74.0,Ribera Del Duero Red,red,5,3,False
+w0448,Bodegas Naluar & Acediano,Acediano,2015,4.5,104,Ribera del Duero,52.0,Ribera Del Duero Red,red,5,3,False
+w0449,Bodegas Naluar & Acediano,Acediano,2016,4.4,104,Ribera del Duero,42.0,Ribera Del Duero Red,red,5,3,False
+w0450,Bodegas Naluar & Acediano,Acediano,2018,4.3,120,Ribera del Duero,35.0,Ribera Del Duero Red,red,5,3,False
+w0451,Bodegas Ochoa,Vendimia Tardia Moscatel,2019,4.3,91,Navarra,10.76,,unknown,4,3,True
+w0452,Bodegas Ochoa,Vendimia Tardia Moscatel,2020,4.3,32,Navarra,13.75,,unknown,4,3,True
+w0453,Bodegas Olarra,Cerro Anon Rioja Gran Reserva,2015,4.3,258,Rioja,12.9,Rioja Red,red,4,3,False
+w0454,Bodegas Reyes,Teofilo Reyes Crianza,2018,4.3,35,Ribera del Duero,11.94,Ribera Del Duero Red,red,5,3,False
+w0455,Bodegas Reyes,Teofilo Reyes Crianza,2019,4.3,38,Ribera del Duero,14.71,Ribera Del Duero Red,red,5,3,False
+w0456,Bodegas Roda,Cirsion Rioja,2000,4.7,87,Rioja,175.0,Rioja Red,red,4,3,False
+w0457,Bodegas Roda,Cirsion Rioja,2007,4.6,242,Rioja,145.0,Rioja Red,red,4,3,False
+w0458,Bodegas Roda,Cirsion Rioja,2012,4.6,231,Rioja,173.38,Rioja Red,red,4,3,False
+w0459,Bodegas Roda,Cirsion Rioja,2016,4.5,353,Rioja,175.57,Rioja Red,red,4,3,False
+w0460,Bodegas Roda,Cirsion Rioja,2017,4.6,90,Rioja,149.9,Rioja Red,red,4,3,False
+w0461,Bodegas Roda,Roda I Reserva Rioja,2000,4.3,137,Rioja,85.0,Rioja Red,red,4,3,False
+w0462,Bodegas Roda,Roda I Reserva Rioja,2001,4.3,202,Rioja,91.0,Rioja Red,red,4,3,False
+w0463,Bodegas Roda,Roda I Reserva Rioja,2005,4.4,783,Rioja,93.0,Rioja Red,red,4,3,False
+w0464,Bodegas Roda,Roda I Reserva Rioja,2008,4.3,1330,Rioja,39.22,Rioja Red,red,4,3,False
+w0465,Bodegas Roda,Roda I Reserva Rioja,2009,4.4,2228,Rioja,43.5,Rioja Red,red,4,3,False
+w0466,Bodegas Roda,Roda I Reserva Rioja,2010,4.4,2133,Rioja,24.7,Rioja Red,red,4,3,False
+w0467,Bodegas Roda,Roda I Reserva Rioja,2011,4.4,1949,Rioja,43.95,Rioja Red,red,4,3,False
+w0468,Bodegas Roda,Roda I Reserva Rioja,2012,4.4,1853,Rioja,43.5,Rioja Red,red,4,3,False
+w0469,Bodegas Roda,Roda I Reserva Rioja,2015,4.4,1463,Rioja,39.95,Rioja Red,red,4,3,False
+w0470,Bodegas Roda,Roda I Reserva Rioja,2016,4.4,1039,Rioja,35.9,Rioja Red,red,4,3,False
+w0471,Bodegas Roda,Roda I Reserva Rioja,2017,4.4,71,Rioja,45.95,Rioja Red,red,4,3,False
+w0472,Bodegas Roda,Roda Reserva Rioja,2004,4.3,452,Rioja,81.35,Rioja Red,red,4,3,False
+w0473,Bodegas Roda,Roda Reserva Rioja,2012,4.2,2375,Rioja,28.4,Rioja Red,red,4,3,False
+w0474,Bodegas Roda,Roda Reserva Rioja,2013,4.2,1931,Rioja,30.35,Rioja Red,red,4,3,False
+w0475,Bodegas Roda,Roda Reserva Rioja,2014,4.2,1645,Rioja,59.9,Rioja Red,red,4,3,False
+w0476,Bodegas Roda,Roda Reserva Rioja,2015,4.2,2478,Rioja,55.47,Rioja Red,red,4,3,False
+w0477,Bodegas Roda,Roda Reserva Rioja,2017,4.2,834,Rioja,25.5,Rioja Red,red,4,3,False
+w0478,Bodegas Roda,Roda Reserva Rioja,2018,4.3,108,Rioja,24.51,Rioja Red,red,4,3,False
+w0479,Bodegas San Roman,Cartago Paraje de Pozo,2014,4.6,153,Toro,61.69,Toro Red,red,5,3,False
+w0480,Bodegas San Roman,Cartago Paraje de Pozo,2015,4.7,137,Toro,78.9,Toro Red,red,5,3,False
+w0481,Bodegas San Roman,Cartago Paraje de Pozo,2016,4.5,42,Toro,77.5,Toro Red,red,5,3,False
+w0482,Bodegas San Roman,Malvasia,2017,4.3,51,Castilla,41.5,,unknown,4,3,True
+w0483,Bodegas San Roman,Tinto,2012,4.3,1824,Toro,190.0,Toro Red,red,5,3,False
+w0484,Bodegas San Roman,Tinto,2015,4.3,1846,Toro,33.66,Toro Red,red,5,3,False
+w0485,Bodegas San Roman,Tinto,2016,4.3,1749,Toro,26.9,Toro Red,red,5,3,False
+w0486,Bodegas San Roman,Tinto,2017,4.4,1339,Toro,36.0,Toro Red,red,5,3,False
+w0487,Bodegas San Roman,Tinto,2018,4.3,693,Toro,25.9,Toro Red,red,5,3,False
+w0488,Bodegas Tierra,El Belisario,2016,4.4,47,Rioja,39.9,Tempranillo,red,4,2,False
+w0489,Bodegas Tradicion,Amontillado Tradicion Vors 30 Years,,4.4,825,Jerez Amontillado,59.9,Sherry,fortified,4,3,False
+w0490,Bodegas Tradicion,Cream Tradicion Vos 20 Years,,4.4,527,Jerez Cream,57.9,Sherry,fortified,4,3,True
+w0491,Bodegas Tradicion,Oloroso Tradicion Vors 30 Years,,4.3,590,Jerez Oloroso,58.9,Sherry,fortified,4,3,False
+w0492,Bodegas Tradicion,Palo Cortado Tradicion Vors 30 Years Sherry,,4.4,941,Jerez Palo Cortado,82.5,Sherry,fortified,4,3,False
+w0493,Bodegas Tradicion,Pedro Ximenez Tradicion 20 Years Old Vos,,4.5,854,Jerez Pedro Ximenes (PX),68.9,Pedro Ximenez,fortified,5,1,False
+w0494,Bodegas Urium,Amontillado V.O.R.S,,4.3,110,Jerez Amontillado,50.0,Sherry,fortified,4,3,False
+w0495,Bodegas Valdelana,Seda de Oro Reserva,2016,4.5,29,Rioja,69.0,Rioja Red,red,4,3,False
+w0496,Bodegas Valduero,Finca Azaya Premium,2015,4.3,128,Castilla y Leon,23.44,Ribera Del Duero Red,red,5,3,False
+w0497,Bodegas Valduero,Ribera Del Duero Gran Reserva,2010,4.3,187,Ribera del Duero,62.8,Ribera Del Duero Red,red,5,3,False
+w0498,Bodegas Valduero,Ribera Del Duero Gran Reserva 12 Anos,1999,4.8,68,Ribera del Duero,999.0,Ribera Del Duero Red,red,5,3,False
+w0499,Bodegas Valduero,Ribera Del Duero Reserva,2012,4.2,852,Ribera del Duero,30.0,Ribera Del Duero Red,red,5,3,False
+w0500,Bodegas Valduero,Ribera Del Duero Reserva Premium 6 Anos,2011,4.5,500,Ribera del Duero,48.7,Ribera Del Duero Red,red,5,3,False
+w0501,Bodegas Valduero,Ribera Del Duero Reserva Premium 6 Anos,2012,4.5,406,Ribera del Duero,59.0,Ribera Del Duero Red,red,5,3,False
+w0502,Bodegas Valduero,Ribera Del Duero Reserva Premium 6 Anos,2014,4.5,53,Ribera del Duero,49.9,Ribera Del Duero Red,red,5,3,False
+w0503,Bodegas Valduero,Ribera del Duero Una Cepa I,2014,4.3,1362,Ribera del Duero,46.95,Ribera Del Duero Red,red,5,3,False
+w0504,Bodegas Valduero,Ribera del Duero Una Cepa I,2015,4.3,1645,Ribera del Duero,25.95,Ribera Del Duero Red,red,5,3,False
+w0505,Bodegas Valduero,Ribera del Duero Una Cepa I,2016,4.4,1372,Ribera del Duero,28.9,Ribera Del Duero Red,red,5,3,False
+w0506,Bodegas Valduero,Ribera del Duero Una Cepa I,2017,4.5,194,Ribera del Duero,26.5,Ribera Del Duero Red,red,5,3,False
+w0507,Bodegas Valduero,Tierra Alta En 2 Maderas,2017,4.2,557,Ribera del Duero,19.9,Ribera Del Duero Red,red,5,3,False
+w0508,Bodegas Valduero,Tierra Alta de 2 Cotas Reserva,2014,4.3,407,Ribera del Duero,30.5,Ribera Del Duero Red,red,5,3,False
+w0509,Bodegas Valduero,Tierra Alta de 2 Racimos Gran Reserva,2011,4.6,85,Ribera del Duero,82.5,Ribera Del Duero Red,red,5,3,False
+w0510,Bodegas Vilano,Crianza,2019,4.3,64,Ribera del Duero,9.99,Ribera Del Duero Red,red,5,3,False
+w0511,Bodegas Vilano,La Baraja,2016,4.3,716,Ribera del Duero,24.9,Ribera Del Duero Red,red,5,3,False
+w0512,Bodegas Vilano,Premium,2018,4.4,79,Ribera del Duero,35.0,Ribera Del Duero Red,red,5,3,False
+w0513,Bodegas Vilano,Tinto,2019,4.6,97,Ribera del Duero,43.5,Ribera Del Duero Red,red,5,3,False
+w0514,Bodegas Ximenez-Spinola,Anada Pedro Ximenez,2018,4.4,99,Jerez-Xeres-Sherry,17.5,Pedro Ximenez,fortified,5,1,False
+w0515,Bodegas Ximenez-Spinola,Delicado Cosecha Pedro Ximenez,2017,4.3,172,Jerez Pedro Ximenes (PX),19.9,Pedro Ximenez,fortified,5,1,False
+w0516,Bodegas Ximenez-Spinola,Delicado Cosecha Pedro Ximenez,2019,4.4,147,Jerez Pedro Ximenes (PX),22.35,Pedro Ximenez,fortified,5,1,False
+w0517,Bodegas Ximenez-Spinola,Finest Old Harvest Medium,,4.2,1155,Jerez-Xeres-Sherry,18.87,Pedro Ximenez,fortified,5,1,False
+w0518,Bodegas Ximenez-Spinola,Varietal Fermentacion Lenta,2019,4.3,61,Jerez-Xeres-Sherry,29.9,Pedro Ximenez,fortified,5,1,False
+w0519,Bodegas Y Vinedos Alilian,Camino del Abuelo Vinas Viejas,2013,4.3,36,Ribera del Duero,243.8,Ribera Del Duero Red,red,5,3,False
+w0520,Bodegas Yuste,Conde de Aldama Amontillado,,4.6,46,Jerez-Xeres-Sherry,89.9,Sherry,fortified,4,3,False
+w0521,Bodegas Yzaguirre,Selection 1884 Vermouth Gran Reserva,,4.3,57,Cataluna,27.11,,unknown,4,3,True
+w0522,Bohorquez,Reserva,2009,4.2,442,Ribera del Duero,21.65,Ribera Del Duero Red,red,5,3,False
+w0523,Bordalas Garcia,Gueta-Lupia,2011,4.3,27,Priorato,31.75,Priorat Red,red,4,3,False
+w0524,Bosque de Matasnos,Bosque de Matasnos Etiqueta Blanca,2017,4.2,1093,Ribera del Duero,55.75,Ribera Del Duero Red,red,5,3,False
+w0525,Bosque de Matasnos,Bosque de Matasnos Etiqueta Blanca,2018,4.3,1465,Ribera del Duero,26.9,Ribera Del Duero Red,red,5,3,False
+w0526,Bosque de Matasnos,Bosque de Matasnos Etiqueta Blanca,2019,4.3,260,Ribera del Duero,26.9,Ribera Del Duero Red,red,5,3,True
+w0527,Bosque de Matasnos,Edicion Limitada,2015,4.4,328,Ribera del Duero,32.58,Ribera Del Duero Red,red,5,3,False
+w0528,Bosque de Matasnos,Syrah de Matasnos,2019,4.3,80,Vino de Espana,27.9,Syrah,red,4,3,True
+w0529,Breca,Brega Garnacha,2017,4.3,317,Calatayud,27.9,Grenache,red,5,3,False
+w0530,Briego,Vendimia Seleccionada,2020,4.4,27,Ribera del Duero,7.9,Ribera Del Duero Red,red,5,3,False
+w0531,Buil & Gine,Pleret,2012,4.3,37,Priorato,55.5,Priorat Red,red,4,3,False
+w0532,Ca l'Apotecari,Triaca,2013,4.3,90,Priorato,34.9,Priorat Red,red,4,3,False
+w0533,Cal Batllet - Celler Ripoll Sans,5 Partides Gratallops Vi de La Vila,2014,4.4,58,Priorato,49.6,Priorat Red,red,4,3,False
+w0534,Cal Batllet - Celler Ripoll Sans,Gratallops Escanya-Vella,2018,4.3,40,Priorato,27.1,,unknown,4,3,True
+w0535,Cal Pla,Planots Priorat,2010,4.6,112,Priorato,87.02,Priorat Red,red,4,3,False
+w0536,Cal Pla,Planots Priorat,2013,4.5,46,Priorato,57.0,Priorat Red,red,4,3,False
+w0537,Callejuela,La Casilla Amontillado,,4.3,122,Jerez-Xeres-Sherry,43.95,Sherry,fortified,4,3,False
+w0538,Campillo,Finca Cuesta Clara Raro Reserva,2011,4.3,194,Rioja,32.0,Rioja Red,red,4,3,False
+w0539,Campillo,Finca Cuesta Clara Raro Reserva,2016,4.3,29,Rioja,39.5,Rioja Red,red,4,3,False
+w0540,Campillo,Gran Reserva Rioja,2012,4.2,410,Rioja,22.99,Rioja Red,red,4,3,True
+w0541,Campillo,Reserva Especial Rioja,2010,4.3,95,Rioja,23.95,Rioja Red,red,4,3,False
+w0542,Can Axartell,The Artist,2016,4.4,69,Mallorca,26.84,Red,red,4,3,False
+w0543,Can Bas,Monreal,2015,4.3,48,Penedes,44.1,Red,red,4,3,False
+w0544,Can Rafols dels Caus,El Rocallis,2015,4.3,83,Cataluna,88.0,,unknown,4,3,True
+w0545,Can Rafols dels Caus,El Rocallis,2016,4.3,80,Cataluna,34.5,,unknown,4,3,True
+w0546,Can Xanet,Sibila,2017,4.3,33,Mallorca,32.46,Red,red,4,3,False
+w0547,Capafons-Osso,Mas de Masos,2006,4.3,86,Priorato,39.99,Priorat Red,red,4,3,True
+w0548,Carlos Moro,CM Tinto,2017,4.3,42,Rioja,17.75,Tempranillo,red,4,2,False
+w0549,Carlos Moro,Finca Valmediano Tinta de Toro 16 Meses Barrica,2012,4.3,38,Toro,32.9,Toro Red,red,5,3,False
+w0550,Carlos Moro,Vina Garugele,2015,4.4,32,Rioja,75.8,Rioja Red,red,4,3,False
+w0551,Carlos Serres,Onomastica Rioja Reserva,2014,4.4,28,Rioja,21.88,Rioja Red,red,4,3,False
+w0552,Carmelo Rodero,Crianza,2017,4.2,2050,Ribera del Duero,19.99,Ribera Del Duero Red,red,5,3,False
+w0553,Carmelo Rodero,Crianza,2018,4.2,1070,Ribera del Duero,16.49,Ribera Del Duero Red,red,5,3,False
+w0554,Carmelo Rodero,Crianza,2019,4.3,533,Ribera del Duero,19.95,Ribera Del Duero Red,red,5,3,False
+w0555,Carmelo Rodero,Pago De Valtarrena,2015,4.6,700,Ribera del Duero,49.95,Ribera Del Duero Red,red,5,3,False
+w0556,Carmelo Rodero,Pago De Valtarrena,2016,4.6,200,Ribera del Duero,48.95,Ribera Del Duero Red,red,5,3,False
+w0557,Carmelo Rodero,Pago De Valtarrena,2018,4.6,99,Ribera del Duero,47.5,Ribera Del Duero Red,red,5,3,False
+w0558,Carmelo Rodero,Reserva,2016,4.4,450,Ribera del Duero,32.9,Ribera Del Duero Red,red,5,3,True
+w0559,Carmelo Rodero,Reserva,2017,4.4,217,Ribera del Duero,29.95,Ribera Del Duero Red,red,5,3,False
+w0560,Carmelo Rodero,Reserva,2018,4.4,83,Ribera del Duero,28.9,Ribera Del Duero Red,red,5,3,False
+w0561,Carmelo Rodero,Ribera del Duero TSM,2006,4.5,48,Ribera del Duero,40.83,Ribera Del Duero Red,red,5,3,False
+w0562,Carmelo Rodero,Ribera del Duero TSM,2015,4.4,367,Ribera del Duero,56.75,Ribera Del Duero Red,red,5,3,True
+w0563,Carmelo Rodero,Ribera del Duero TSM,2017,4.5,503,Ribera del Duero,55.35,Ribera Del Duero Red,red,5,3,False
+w0564,Carmelo Rodero,Ribera del Duero TSM,2019,4.3,577,Ribera del Duero,67.5,Ribera Del Duero Red,red,5,3,False
+w0565,Cartoixa de Montsalvat,Montsalvat,2005,4.3,38,Priorato,56.27,Priorat Red,red,4,3,False
+w0566,Cartoixa de Montsalvat,Montsalvat,2007,4.3,54,Priorato,39.71,Priorat Red,red,4,3,False
+w0567,Casa Castillo,Cuvee N Vinas Viejas,2015,4.6,160,Jumilla,73.0,Red,red,4,3,False
+w0568,Casa Castillo,Pie Franco,2016,4.3,200,Jumilla,59.9,Monastrell,red,5,3,False
+w0569,Casa Castillo,Pie Franco,2017,4.4,172,Jumilla,77.98,Monastrell,red,5,3,False
+w0570,Casa Castillo,Pie Franco,2018,4.4,95,Jumilla,69.0,Monastrell,red,5,3,False
+w0571,Casa Rojo,Alexander vs. The Ham Factory,2016,4.2,1573,Ribera del Duero,33.37,Ribera Del Duero Red,red,5,3,False
+w0572,Casa Rojo,Minami,2016,4.4,106,Jumilla,48.9,Monastrell,red,5,3,False
+w0573,Casal de Arman,Finca Misenhora Edicion Limitada,2018,4.6,44,Ribeiro,26.2,,unknown,4,3,True
+w0574,Castano,Casa Cisca Monastrell,2010,4.3,161,Yecla,33.77,Monastrell,red,5,3,True
+w0575,Castano,Casa Cisca Monastrell,2011,4.2,423,Yecla,32.0,Monastrell,red,5,3,False
+w0576,Castano,Casa Cisca Monastrell,2015,4.4,200,Yecla,35.2,Monastrell,red,5,3,False
+w0577,Castano,Casa Cisca Monastrell,2016,4.6,49,Yecla,35.0,Monastrell,red,5,3,False
+w0578,Castell Miquel,Stairway To Heaven Rosado,2020,4.4,34,Mallorca,13.99,,unknown,4,3,True
+w0579,Castell d'Encus,Ekam,2019,4.3,257,Costers del Segre,24.61,,unknown,4,3,True
+w0580,Castell d'Encus,Ekam Essencia,2015,4.4,32,Costers del Segre,43.44,,unknown,4,3,True
+w0581,Castell d'Encus,Saktih,2013,4.6,30,Costers del Segre,195.27,Red,red,4,3,False
+w0582,Castell d'Encus,Saktih,2016,4.5,28,Costers del Segre,132.95,Red,red,4,3,False
+w0583,Castell del Remei,Costers Del Segre 1780,2017,4.3,37,Costers del Segre,22.9,Red,red,4,3,False
+w0584,Castillo Perelada,5 Finques (Fincas) Reserva,2017,4.2,918,Emporda,11.35,Red,red,4,3,False
+w0585,Castillo Perelada,Emporda Aires de Garbet,2017,4.4,98,Emporda,39.22,Red,red,4,3,False
+w0586,Castillo Perelada,Emporda Aires de Garbet,2018,4.4,36,Emporda,38.5,Red,red,4,3,False
+w0587,Castillo Perelada,Emporda Gran Claustro,2015,4.4,63,Emporda,30.86,Red,red,4,3,False
+w0588,Castillo Perelada,Emporda Reserva Especial Don Miguel Mateu,2015,4.3,33,Emporda,15.56,Red,red,4,3,False
+w0589,Castillo Perelada,Finca Garbet,2014,4.6,75,Emporda,99.0,Syrah,red,4,3,False
+w0590,Castillo Perelada,Finca Garbet,2015,4.5,32,Emporda,89.9,Syrah,red,4,3,False
+w0591,Castillo Perelada,Finca Malaveina,2012,4.2,627,Emporda,17.84,Red,red,4,3,False
+w0592,Castillo Perelada,Finca Malaveina,2016,4.2,740,Emporda,25.35,Red,red,4,3,False
+w0593,Castillo Perelada,Finca Malaveina,2017,4.3,687,Emporda,22.5,Red,red,4,3,False
+w0594,Castillo Perelada,Finca Malaveina,2018,4.3,239,Emporda,18.88,Red,red,4,3,False
+w0595,Castillo Perelada,Monastrell - Syrah Finca Espolla,2016,4.2,424,Emporda,13.95,Red,red,4,3,False
+w0596,Castillo de Cuzcurrita,Cerrado del Castillo Rioja,2015,4.4,269,Rioja,47.5,Rioja Red,red,4,3,False
+w0597,Castillo de Cuzcurrita,Cerrado del Castillo Rioja,2016,4.6,47,Rioja,52.95,Rioja Red,red,4,3,False
+w0598,Castillo de Cuzcurrita,Senorio de Cuzcurrita Rioja,2017,4.3,239,Rioja,24.37,Rioja Red,red,4,3,False
+w0599,Cayetano del Pino,Palo Cortado 1/10,,4.4,134,Jerez-Xeres-Sherry,25.0,Sherry,fortified,4,3,False
+w0600,Celler de Capcanes,Cabrida Montsant,2018,4.3,32,Montsant,36.85,Montsant Red,red,4,3,False
+w0601,Celler de Capcanes,Flor de Primavera Peraj Ha'abib,2018,4.3,133,Montsant,27.5,Montsant Red,red,4,3,False
+w0602,Cepa 21,Horcajo,2015,4.6,100,Ribera del Duero,75.3,Ribera Del Duero Red,red,5,3,False
+w0603,Cepa 21,Malabrigo Ribera del Duero,2015,4.3,374,Ribera del Duero,53.5,Ribera Del Duero Red,red,5,3,False
+w0604,Cepa 21,Malabrigo Ribera del Duero,2018,4.4,65,Ribera del Duero,31.5,Ribera Del Duero Red,red,5,3,False
+w0605,Cepas Familiares,Nivel,2018,4.3,28,Ribera del Duero,35.0,Ribera Del Duero Red,red,5,3,False
+w0606,Cerro San Cristobal,Dominio del Verso Red Blend,2018,4.5,27,Condado de Huelva,29.5,Red,red,4,3,True
+w0607,Cervoles,Estrats,2009,4.5,81,Costers del Segre,59.82,Red,red,4,3,False
+w0608,Cervoles,Estrats,2012,4.3,51,Costers del Segre,68.55,Red,red,4,3,False
+w0609,Cervoles,Vinyes Altes de Les Garrigues Vi Blanc,2019,4.3,52,Costers del Segre,25.8,,unknown,4,3,True
+w0610,Chivite,Navarra Coleccion 125 Blanco,2017,4.4,204,Navarra,50.9,Chardonnay,white,4,3,False
+w0611,Chivite,Navarra Coleccion 125 Blanco,2018,4.5,97,Navarra,49.1,Chardonnay,white,4,3,False
+w0612,Chivite,Navarra Reserva Coleccion 125,2015,4.3,211,Navarra,20.5,Red,red,4,3,False
+w0613,Chivite,Navarra Vendimia Tardia Coleccion 125,2018,4.3,39,Navarra,25.95,,unknown,4,3,True
+w0614,Chozas Carrascal,El Cabernet F - Familiar,2017,4.4,80,Utiel-Requena,34.9,Red,red,4,3,False
+w0615,Chozas Carrascal,Las Ocho (8) Tinto,2017,4.2,570,Utiel-Requena,16.77,Red,red,4,3,False
+w0616,Cillar de Silos,Dominio del Pidio,2016,4.4,495,Ribera del Duero,53.91,Ribera Del Duero Red,red,5,3,True
+w0617,Cillar de Silos,Dominio del Pidio,2018,4.4,225,Ribera del Duero,42.75,Ribera Del Duero Red,red,5,3,False
+w0618,Cims de Porrera,Classic,1996,4.4,106,Priorato,217.2,Priorat Red,red,4,3,False
+w0619,Cims de Porrera,Classic,1997,4.3,102,Priorato,119.95,Priorat Red,red,4,3,False
+w0620,Cims de Porrera,Classic,2010,4.3,118,Priorato,43.24,Priorat Red,red,4,3,False
+w0621,Cims de Porrera,Classic,2011,4.3,102,Priorato,39.51,Priorat Red,red,4,3,False
+w0622,Cims de Porrera,Classic,2012,4.4,102,Priorato,49.95,Priorat Red,red,4,3,False
+w0623,Cims de Porrera,Solanes Priorat,2003,4.4,43,Priorato,38.66,Priorat Red,red,4,3,False
+w0624,Clos Erasmus,Daphne Glorian Red,2007,4.7,51,Priorato,202.01,Red,red,4,3,False
+w0625,Clos Erasmus,Laurel,2017,4.3,527,Priorato,46.88,Priorat Red,red,4,3,False
+w0626,Clos Erasmus,Laurel,2018,4.3,397,Priorato,36.57,Priorat Red,red,4,3,False
+w0627,Clos Erasmus,Priorat,1998,4.5,43,Priorato,993.28,Priorat Red,red,4,3,False
+w0628,Clos Erasmus,Priorat,2003,4.6,41,Priorato,993.28,Priorat Red,red,4,3,False
+w0629,Clos Erasmus,Priorat,2006,4.3,72,Priorato,654.31,Priorat Red,red,4,3,False
+w0630,Clos Erasmus,Priorat,2007,4.7,60,Priorato,654.31,Priorat Red,red,4,3,False
+w0631,Clos Erasmus,Priorat,2008,4.6,66,Priorato,654.31,Priorat Red,red,4,3,False
+w0632,Clos Erasmus,Priorat,2012,4.5,69,Priorato,374.66,Priorat Red,red,4,3,False
+w0633,Clos Erasmus,Priorat,2017,4.4,45,Priorato,209.31,Priorat Red,red,4,3,False
+w0634,Clos Erasmus,Priorat,2018,4.5,30,Priorato,225.0,Priorat Red,red,4,3,False
+w0635,Clos Figueras,Clos Figueres,2012,4.3,237,Priorato,49.61,Priorat Red,red,4,3,False
+w0636,Clos Figueras,Clos Figueres,2015,4.3,201,Priorato,70.89,Priorat Red,red,4,3,False
+w0637,Clos Figueras,Clos Figueres,2016,4.3,219,Priorato,57.49,Priorat Red,red,4,3,False
+w0638,Clos Figueras,Clos Figueres,2017,4.4,75,Priorato,53.4,Priorat Red,red,4,3,False
+w0639,Clos Galena,Formiga de Vellut,2018,4.2,558,Priorato,16.2,Priorat Red,red,4,3,False
+w0640,Clos Galena,Galena,2016,4.3,264,Priorato,17.95,Priorat Red,red,4,3,True
+w0641,Clos Galena,Galena,2017,4.4,41,Priorato,19.8,Priorat Red,red,4,3,False
+w0642,Clos Galena,Galena,2018,4.3,54,Priorato,17.9,Priorat Red,red,4,3,False
+w0643,Clos Mogador,Com Tu,2018,4.3,85,Montsant,34.95,Grenache,red,5,3,True
+w0644,Clos Mogador,Manyetes,2017,4.4,61,Priorato,59.9,Priorat Red,red,4,3,False
+w0645,Clos Mogador,Manyetes,2018,4.4,30,Priorato,74.56,Priorat Red,red,4,3,False
+w0646,Clos Mogador,Nelin Priorat,2016,4.3,290,Priorato,36.5,,unknown,4,3,True
+w0647,Clos Mogador,Priorat,1999,4.4,85,Priorato,95.0,Priorat Red,red,4,3,False
+w0648,Clos Mogador,Priorat,2000,4.3,111,Priorato,100.0,Priorat Red,red,4,3,False
+w0649,Clos Mogador,Priorat,2003,4.5,196,Priorato,95.0,Priorat Red,red,4,3,False
+w0650,Clos Mogador,Priorat,2005,4.3,375,Priorato,110.0,Priorat Red,red,4,3,False
+w0651,Clos Mogador,Priorat,2006,4.3,527,Priorato,95.0,Priorat Red,red,4,3,False
+w0652,Clos Mogador,Priorat,2007,4.4,624,Priorato,95.0,Priorat Red,red,4,3,False
+w0653,Clos Mogador,Priorat,2008,4.3,592,Priorato,95.0,Priorat Red,red,4,3,False
+w0654,Clos Mogador,Priorat,2009,4.3,723,Priorato,95.0,Priorat Red,red,4,3,False
+w0655,Clos Mogador,Priorat,2010,4.4,799,Priorato,69.79,Priorat Red,red,4,3,False
+w0656,Clos Mogador,Priorat,2011,4.4,809,Priorato,90.0,Priorat Red,red,4,3,False
+w0657,Clos Mogador,Priorat,2012,4.4,695,Priorato,90.0,Priorat Red,red,4,3,False
+w0658,Clos Mogador,Priorat,2014,4.4,1104,Priorato,175.5,Priorat Red,red,4,3,False
+w0659,Clos Mogador,Priorat,2015,4.5,955,Priorato,146.95,Priorat Red,red,4,3,False
+w0660,Clos Mogador,Priorat,2017,4.5,666,Priorato,65.0,Priorat Red,red,4,3,False
+w0661,Clos Mogador,Priorat,2018,4.5,336,Priorato,61.64,Priorat Red,red,4,3,False
+w0662,Clos Mogador,Priorat,2019,4.5,76,Priorato,63.9,Priorat Red,red,4,3,False
+w0663,Clos Pons,Roc Nu,2011,4.2,420,Costers del Segre,23.95,Red,red,4,3,True
+w0664,Clos d'Agon,Seleccion Especial,2015,4.5,40,Cataluna,93.51,Red,red,4,3,False
+w0665,Clos d'Agon,Tinto,2014,4.3,190,Cataluna,36.5,Red,red,4,3,False
+w0666,Clos d'Agon,Tinto,2015,4.3,184,Cataluna,56.92,Red,red,4,3,False
+w0667,Codorniu,Cava El Tros Nou Pinot Noir,2009,4.4,30,Cava,89.9,Cava,sparkling,2,3,False
+w0668,Collbaix Celler El Moli,Singular Negre,2015,4.4,51,Pla de Bages,27.35,Cabernet Sauvignon,red,4,3,False
+w0669,Comenge,Don Miguel,2016,4.4,51,Ribera del Duero,31.92,Ribera Del Duero Red,red,5,3,False
+w0670,Comenge,Don Miguel Comenge Reserva,2011,4.3,355,Ribera del Duero,38.4,Ribera Del Duero Red,red,5,3,False
+w0671,Comenge,Familia Comenge Reserva,2016,4.3,410,Ribera del Duero,21.3,Ribera Del Duero Red,red,5,3,False
+w0672,Condado de Haza,Alenza Ribera del Duero Gran Reserva,2006,4.3,675,Ribera del Duero,70.0,Ribera Del Duero Red,red,5,3,False
+w0673,Conreria d'Scala Dei,Iugiter,2015,4.3,83,Priorato,25.5,Priorat Red,red,4,3,True
+w0674,Conreria d'Scala Dei,Les Brugueres,2018,4.2,390,Priorato,16.76,Priorat Red,red,4,3,True
+w0675,Conreria d'Scala Dei,Voltons,2015,4.3,64,Priorato,47.0,Priorat Red,red,4,3,False
+w0676,Conreria d'Scala Dei,Voltons,2017,4.4,32,Priorato,51.95,Priorat Red,red,4,3,False
+w0677,Contino,Reserva,1995,4.3,45,Rioja,55.0,Rioja Red,red,4,3,False
+w0678,Contino,Reserva,2016,4.2,392,Rioja,19.98,Rioja Red,red,4,3,True
+w0679,Contino,Rioja Graciano,2011,4.2,395,Rioja,61.94,Rioja Red,red,4,3,True
+w0680,Contino,Rioja Graciano,2015,4.3,220,Rioja,62.5,Rioja Red,red,4,3,False
+w0681,Contino,Rioja Graciano,2016,4.3,174,Rioja,64.75,Rioja Red,red,4,3,False
+w0682,Contino,Rioja Graciano,2017,4.3,111,Rioja,62.9,Rioja Red,red,4,3,False
+w0683,Contino,Rioja Gran Reserva,2008,4.2,732,Rioja,36.0,Rioja Red,red,4,3,False
+w0684,Contino,Rioja Gran Reserva,2009,4.2,731,Rioja,85.8,Rioja Red,red,4,3,False
+w0685,Contino,Rioja Gran Reserva,2011,4.2,490,Rioja,39.5,Rioja Red,red,4,3,False
+w0686,Contino,Rioja Gran Reserva,2014,4.2,624,Rioja,34.5,Rioja Red,red,4,3,False
+w0687,Contino,Rioja Gran Reserva,2015,4.3,453,Rioja,40.45,Rioja Red,red,4,3,False
+w0688,Contino,Rioja Gran Reserva,2016,4.4,267,Rioja,40.45,Rioja Red,red,4,3,False
+w0689,Contino,Vina del Olivo,2001,4.6,60,Rioja,81.0,Rioja Red,red,4,3,False
+w0690,Contino,Vina del Olivo,2004,4.3,74,Rioja,155.0,Rioja Red,red,4,3,False
+w0691,Contino,Vina del Olivo,2007,4.3,272,Rioja,92.0,Rioja Red,red,4,3,True
+w0692,Contino,Vina del Olivo,2011,4.3,260,Rioja,63.95,Rioja Red,red,4,3,False
+w0693,Contino,Vina del Olivo,2015,4.4,159,Rioja,64.0,Rioja Red,red,4,3,False
+w0694,Contino,Vina del Olivo,2016,4.4,224,Rioja,149.5,Rioja Red,red,4,3,False
+w0695,Contino,Vina del Olivo,2017,4.5,203,Rioja,64.5,Rioja Red,red,4,3,False
+w0696,Costers del Priorat,Clos Cypres Vinyes Velles (Old Vines),2015,4.3,111,Priorato,49.0,Priorat Red,red,4,3,False
+w0697,Costers del Siurana,Clos de L'Obac,2005,4.5,493,Priorato,92.87,Priorat Red,red,4,3,False
+w0698,Costers del Siurana,Clos de L'Obac,2009,4.3,51,Priorato,79.9,Priorat Red,red,4,3,False
+w0699,Costers del Siurana,Clos de L'Obac,2010,4.5,121,Priorato,81.3,Priorat Red,red,4,3,False
+w0700,Costers del Siurana,Dolc de L'Obac,2006,4.6,94,Priorato,117.24,,unknown,4,3,True
+w0701,Costers del Siurana,Miserere,2005,4.4,296,Priorato,92.87,Priorat Red,red,4,3,False
+w0702,Costers del Siurana,Miserere,2010,4.5,74,Priorato,78.5,Priorat Red,red,4,3,False
+w0703,Cruz de Alba,Finca Los Hoyales Ribera del Duero,2013,4.3,163,Ribera del Duero,41.28,Ribera Del Duero Red,red,5,3,True
+w0704,Cruz de Alba,Finca Los Hoyales Ribera del Duero,2014,4.4,351,Ribera del Duero,49.9,Ribera Del Duero Red,red,5,3,False
+w0705,Cruz de Alba,Finca Los Hoyales Ribera del Duero,2015,4.5,140,Ribera del Duero,57.0,Ribera Del Duero Red,red,5,3,False
+w0706,Cuentavinas,Alomado,2018,4.3,25,Rioja,46.95,Rioja Red,red,4,3,False
+w0707,Culebron,Fondillon Gran Reserva,1964,4.2,432,Alicante,49.95,,unknown,4,3,True
+w0708,David Moreno,Vobiscum,2015,4.4,28,Rioja,31.99,Rioja Red,red,4,3,False
+w0709,De Moya,Julia,2018,4.3,135,Valencia,17.95,Monastrell,red,5,3,False
+w0710,De Moya,Sofia,2016,4.3,166,Valencia,18.9,Red,red,4,3,True
+w0711,De Moya,Sofia,2017,4.3,82,Valencia,20.5,Red,red,4,3,True
+w0712,De Moya,Sofia,2018,4.3,195,Valencia,15.9,Red,red,4,3,False
+w0713,De Muller,Lo Cabalo Reserva,2015,4.3,171,Priorato,26.9,Priorat Red,red,4,3,True
+w0714,De Muller,Vermouth Reserva,,4.3,129,Tarragona,10.45,,unknown,4,3,True
+w0715,Dehesa de Los Canonigos,Crianza,2017,4.2,520,Ribera del Duero,18.25,Ribera Del Duero Red,red,5,3,False
+w0716,Dehesa de Los Canonigos,Crianza,2018,4.2,528,Ribera del Duero,18.9,Ribera Del Duero Red,red,5,3,False
+w0717,Dehesa de Los Canonigos,Gran Reserva,2001,4.7,31,Ribera del Duero,185.15,Ribera Del Duero Red,red,5,3,False
+w0718,Dehesa de Los Canonigos,Solideo,2015,4.2,592,Ribera del Duero,35.09,Ribera Del Duero Red,red,5,3,False
+w0719,Dehesa del Carrizal,Cabernet Sauvignon,2019,4.5,27,Dehesa del Carrizal,16.9,Cabernet Sauvignon,red,4,3,False
+w0720,Dehesa del Carrizal,Coleccion Privada,2017,4.5,59,Dehesa del Carrizal,26.9,Red,red,4,3,False
+w0721,Dehesa del Carrizal,Petit Verdot,2018,4.5,36,Dehesa del Carrizal,20.15,Red,red,4,3,False
+w0722,Delgado Zuleta,B.Rodriguez La-Cave Quo Vadis?,,4.4,89,Jerez Amontillado,87.9,Sherry,fortified,4,3,False
+w0723,Descendientes de J. Palacios,La Faraona Bierzo (Corullon),2010,4.6,28,Bierzo,3119.08,Red,red,4,3,False
+w0724,Descendientes de J. Palacios,La Faraona Bierzo (Corullon),2015,4.5,36,Bierzo,1373.66,Red,red,4,3,False
+w0725,Descendientes de J. Palacios,La Faraona Bierzo (Corullon),2017,4.8,26,Bierzo,1098.9,Red,red,4,3,False
+w0726,Descendientes de J. Palacios,Las Lamas Bierzo (Corullon),2016,4.3,100,Bierzo,95.25,Mencia,red,3,3,False
+w0727,Descendientes de J. Palacios,Las Lamas Bierzo (Corullon),2017,4.3,44,Bierzo,106.92,Mencia,red,3,3,False
+w0728,Descendientes de J. Palacios,Las Lamas Bierzo (Corullon),2018,4.5,32,Bierzo,120.0,Mencia,red,3,3,False
+w0729,Descendientes de J. Palacios,Moncerbal Bierzo (Corullon),2016,4.6,48,Bierzo,269.95,Mencia,red,3,3,False
+w0730,Descendientes de J. Palacios,Valdafoz Bierzo (Corullon),2011,4.6,38,Bierzo,135.5,Mencia,red,3,3,False
+w0731,Diez Caballero,Reserva Tempranillo,2011,4.2,587,Rioja,20.45,Rioja Red,red,4,3,False
+w0732,Diez Merito,Fino Imperial Amontillado 30 Anos,,4.5,81,Jerez Amontillado,94.9,Sherry,fortified,4,3,False
+w0733,Divina Proporcion,Platon Tinto,2019,4.5,52,Toro,25.9,Toro Red,red,5,3,False
+w0734,Do Ferreiro (Bodegas Gerardo Mendez),Cepas Vellas Rias Baixas Albarino,2019,4.3,172,Rias Baixas,33.95,Albarino,white,3,3,False
+w0735,Do Ferreiro (Bodegas Gerardo Mendez),Cepas Vellas Rias Baixas Albarino,2020,4.4,44,Rias Baixas,26.5,Albarino,white,3,3,False
+w0736,Dominio Fournier,Reserva,2014,4.3,59,Ribera del Duero,23.77,Ribera Del Duero Red,red,5,3,False
+w0737,Dominio de Anza,Diego Magana,2020,4.3,26,Rioja,37.9,Rioja Red,red,4,3,False
+w0738,Dominio de Atauta,Dominio de Atauta,2016,4.2,1159,Ribera del Duero,25.71,Ribera Del Duero Red,red,5,3,False
+w0739,Dominio de Atauta,Dominio de Atauta,2017,4.3,556,Ribera del Duero,25.25,Ribera Del Duero Red,red,5,3,False
+w0740,Dominio de Atauta,Llanos del Almendro Ribera del Duero,2009,4.3,251,Ribera del Duero,107.74,Ribera Del Duero Red,red,5,3,False
+w0741,Dominio de Atauta,Llanos del Almendro Ribera del Duero,2010,4.3,48,Ribera del Duero,95.0,Ribera Del Duero Red,red,5,3,False
+w0742,Dominio de Atauta,Llanos del Almendro Ribera del Duero,2011,4.4,73,Ribera del Duero,115.2,Ribera Del Duero Red,red,5,3,False
+w0743,Dominio de Atauta,Valdegatiles Ribera del Duero,2012,4.6,34,Ribera del Duero,106.35,Ribera Del Duero Red,red,5,3,False
+w0744,Dominio de Atauta,Valdegatiles Ribera del Duero,2013,4.6,29,Ribera del Duero,111.9,Ribera Del Duero Red,red,5,3,False
+w0745,Dominio de Cair,Pendon De La Aguilera,2010,4.5,47,Ribera del Duero,299.29,Ribera Del Duero Red,red,5,3,False
+w0746,Dominio de Cair,Seleccion La Aguilera,2016,4.3,511,Ribera del Duero,15.9,Ribera Del Duero Red,red,5,3,False
+w0747,Dominio de Cair,Tierras de Cair Reserva,2012,4.3,535,Ribera del Duero,38.3,Ribera Del Duero Red,red,5,3,False
+w0748,Dominio de Cair,Tierras de Cair Reserva,2014,4.4,208,Ribera del Duero,37.0,Ribera Del Duero Red,red,5,3,False
+w0749,Dominio de Calogia,Tinto,2019,4.6,114,Ribera del Duero,67.94,Ribera Del Duero Red,red,5,3,False
+w0750,Dominio de Es,Vinas Viejas de Soria Ribera Del Duero,2014,4.3,184,Ribera del Duero,92.24,Ribera Del Duero Red,red,5,3,False
+w0751,Dominio de Es,Vinas Viejas de Soria Ribera Del Duero,2015,4.3,108,Ribera del Duero,92.24,Ribera Del Duero Red,red,5,3,False
+w0752,Dominio de Es,Vinas Viejas de Soria Ribera Del Duero,2017,4.5,103,Ribera del Duero,75.81,Ribera Del Duero Red,red,5,3,False
+w0753,Dominio de Es,Vinas Viejas de Soria Ribera Del Duero,2018,4.5,117,Ribera del Duero,165.0,Ribera Del Duero Red,red,5,3,False
+w0754,Dominio de Es,Vinas Viejas de Soria Ribera Del Duero,2019,4.3,59,Ribera del Duero,75.95,Ribera Del Duero Red,red,5,3,False
+w0755,Dominio de Loalva,Seleccion Especial,2016,4.3,28,Ribera del Duero,32.0,Ribera Del Duero Red,red,5,3,False
+w0756,Dominio de Pingus,Flor de Pingus,2008,4.4,1047,Ribera del Duero,125.0,Ribera Del Duero Red,red,5,3,False
+w0757,Dominio de Pingus,Flor de Pingus,2010,4.5,2551,Ribera del Duero,125.0,Ribera Del Duero Red,red,5,3,False
+w0758,Dominio de Pingus,Flor de Pingus,2012,4.4,2546,Ribera del Duero,125.0,Ribera Del Duero Red,red,5,3,True
+w0759,Dominio de Pingus,Flor de Pingus,2013,4.4,2418,Ribera del Duero,125.0,Ribera Del Duero Red,red,5,3,True
+w0760,Dominio de Pingus,Flor de Pingus,2014,4.5,2710,Ribera del Duero,125.0,Ribera Del Duero Red,red,5,3,False
+w0761,Dominio de Pingus,Flor de Pingus,2015,4.5,2530,Ribera del Duero,125.0,Ribera Del Duero Red,red,5,3,False
+w0762,Dominio de Pingus,Flor de Pingus,2016,4.5,2887,Ribera del Duero,101.94,Ribera Del Duero Red,red,5,3,False
+w0763,Dominio de Pingus,Flor de Pingus,2017,4.5,1094,Ribera del Duero,110.0,Ribera Del Duero Red,red,5,3,False
+w0764,Dominio de Pingus,Flor de Pingus,2018,4.6,1363,Ribera del Duero,129.95,Ribera Del Duero Red,red,5,3,False
+w0765,Dominio de Pingus,Flor de Pingus,2019,4.5,201,Ribera del Duero,118.5,Ribera Del Duero Red,red,5,3,False
+w0766,Dominio de Pingus,PSI,2016,4.2,6163,Ribera del Duero,37.95,Ribera Del Duero Red,red,5,3,False
+w0767,Dominio de Pingus,PSI,2017,4.3,4457,Ribera del Duero,33.9,Ribera Del Duero Red,red,5,3,False
+w0768,Dominio de Pingus,PSI,2018,4.3,4767,Ribera del Duero,29.13,Ribera Del Duero Red,red,5,3,False
+w0769,Dominio de Pingus,PSI,2019,4.2,1355,Ribera del Duero,34.5,Ribera Del Duero Red,red,5,3,False
+w0770,Dominio de Pingus,Pingus,1996,4.6,102,Ribera del Duero,1746.94,Ribera Del Duero Red,red,5,3,False
+w0771,Dominio de Pingus,Pingus,1998,4.6,244,Ribera del Duero,1350.0,Ribera Del Duero Red,red,5,3,False
+w0772,Dominio de Pingus,Pingus,1999,4.7,184,Ribera del Duero,1715.18,Ribera Del Duero Red,red,5,3,False
+w0773,Dominio de Pingus,Pingus,2000,4.6,122,Ribera del Duero,1503.0,Ribera Del Duero Red,red,5,3,False
+w0774,Dominio de Pingus,Pingus,2001,4.7,295,Ribera del Duero,940.0,Ribera Del Duero Red,red,5,3,False
+w0775,Dominio de Pingus,Pingus,2003,4.6,205,Ribera del Duero,1638.95,Ribera Del Duero Red,red,5,3,False
+w0776,Dominio de Pingus,Pingus,2004,4.7,285,Ribera del Duero,1500.0,Ribera Del Duero Red,red,5,3,False
+w0777,Dominio de Pingus,Pingus,2005,4.6,293,Ribera del Duero,1785.96,Ribera Del Duero Red,red,5,3,False
+w0778,Dominio de Pingus,Pingus,2006,4.7,280,Ribera del Duero,1190.0,Ribera Del Duero Red,red,5,3,False
+w0779,Dominio de Pingus,Pingus,2010,4.6,410,Ribera del Duero,1359.75,Ribera Del Duero Red,red,5,3,False
+w0780,Dominio de Pingus,Pingus,2012,4.6,400,Ribera del Duero,890.0,Ribera Del Duero Red,red,5,3,False
+w0781,Dominio de Pingus,Pingus,2013,4.6,323,Ribera del Duero,1198.72,Ribera Del Duero Red,red,5,3,False
+w0782,Dominio de Pingus,Pingus,2014,4.6,172,Ribera del Duero,1595.0,Ribera Del Duero Red,red,5,3,False
+w0783,Dominio de Pingus,Pingus,2015,4.7,203,Ribera del Duero,1250.0,Ribera Del Duero Red,red,5,3,False
+w0784,Dominio de Pingus,Pingus,2016,4.8,145,Ribera del Duero,1280.0,Ribera Del Duero Red,red,5,3,False
+w0785,Dominio de Pingus,Pingus,2017,4.8,52,Ribera del Duero,1150.0,Ribera Del Duero Red,red,5,3,False
+w0786,Dominio de Pingus,Pingus,2018,4.6,47,Ribera del Duero,1250.0,Ribera Del Duero Red,red,5,3,False
+w0787,Dominio de la Vega,Finca la Beata Bobal,2014,4.3,80,Utiel-Requena,33.9,Red,red,4,3,True
+w0788,Dominio del Aguila,Canta la Perdiz,2013,4.5,51,Ribera del Duero,295.0,Ribera Del Duero Red,red,5,3,False
+w0789,Dominio del Aguila,Gran Reserva Penas Aladas,2012,4.5,61,Ribera del Duero,559.02,Ribera Del Duero Red,red,5,3,False
+w0790,Dominio del Aguila,Gran Reserva Penas Aladas,2014,4.6,58,Ribera del Duero,218.9,Ribera Del Duero Red,red,5,3,False
+w0791,Dominio del Aguila,Gran Reserva Penas Aladas,2015,4.6,33,Ribera del Duero,185.3,Ribera Del Duero Red,red,5,3,False
+w0792,Dominio del Aguila,Reserva,2010,4.3,82,Ribera del Duero,65.0,Ribera Del Duero Red,red,5,3,True
+w0793,Dominio del Aguila,Reserva,2016,4.4,778,Ribera del Duero,73.57,Ribera Del Duero Red,red,5,3,False
+w0794,Dominio del Aguila,Reserva,2017,4.4,149,Ribera del Duero,56.95,Ribera Del Duero Red,red,5,3,False
+w0795,Dominio del Aguila,Reserva,2018,4.5,141,Ribera del Duero,59.8,Ribera Del Duero Red,red,5,3,False
+w0796,Dominio del Bendito,El Titan del Bendito,2015,4.6,388,Toro,43.5,Toro Red,red,5,3,False
+w0797,Dominio del Bendito,El Titan del Bendito,2017,4.5,261,Toro,49.5,Toro Red,red,5,3,False
+w0798,Dominio del Bendito,El Titan del Bendito,2018,4.6,111,Toro,49.95,Toro Red,red,5,3,False
+w0799,Dominio del Bendito,La Chispa Negra,2011,4.3,82,Toro,24.0,,unknown,4,3,True
+w0800,Dominio del Bendito,Las Sabias,2017,4.3,270,Toro,22.55,Toro Red,red,5,3,True
+w0801,Dominio do Bibei,Lapola,2017,4.3,241,Ribeira Sacra,21.8,,unknown,4,3,True
+w0802,Dominio do Bibei,Lapola,2019,4.4,196,Ribeira Sacra,20.74,,unknown,4,3,True
+w0803,Edetaria,Finca La Pedrissa,2015,4.3,34,Terra Alta,37.9,Red,red,4,3,False
+w0804,Edra,Merlot - Syrah,2016,4.4,27,Ribera del Gallego-Cinco Villas,11.5,Red,red,4,3,False
+w0805,El Coto,Coto de Imaz Rioja Gran Reserva,2012,4.2,6256,Rioja,16.14,Rioja Red,red,4,3,False
+w0806,El Coto,Coto de Imaz Rioja Gran Reserva,2015,4.2,668,Rioja,15.88,Rioja Red,red,4,3,False
+w0807,El Grillo y La Luna,Grillo,2012,4.3,200,Somontano,32.9,Red,red,4,3,False
+w0808,El Lagar de Isilla,Vendimia Seleccionada,2015,4.3,53,Ribera del Duero,28.83,Ribera Del Duero Red,red,5,3,False
+w0809,El Maestro Sierra,Oloroso Extra Viejo 1/7,,4.3,78,Jerez-Xeres-Sherry,217.8,Sherry,fortified,4,3,False
+w0810,El Maestro Sierra,Palo Cortado,,4.3,119,Jerez Palo Cortado,85.4,Sherry,fortified,4,3,False
+w0811,El Regajal,Galia Clos Santuy,2016,4.5,32,Castilla y Leon,89.0,Red,red,4,3,False
+w0812,El Regajal,Galia Clos Santuy,2017,4.3,28,Castilla y Leon,74.9,Red,red,4,3,False
+w0813,Emilio Hidalgo,Santa Ana Pedro Ximenez 1861,,4.5,36,Jerez-Xeres-Sherry,320.0,Pedro Ximenez,fortified,5,1,False
+w0814,Emilio Moro,Clon De La Familia,2010,4.7,127,Ribera del Duero,317.63,Ribera Del Duero Red,red,5,3,False
+w0815,Emilio Moro,Clon De La Familia,2011,4.6,72,Ribera del Duero,317.63,Ribera Del Duero Red,red,5,3,False
+w0816,Emilio Moro,Clon De La Familia,2015,4.6,39,Ribera del Duero,249.9,Ribera Del Duero Red,red,5,3,False
+w0817,Emilio Moro,La Felisa,2018,4.2,483,Ribera del Duero,26.3,Ribera Del Duero Red,red,5,3,False
+w0818,Emilio Moro,La Revelia Godello,2018,4.2,484,Bierzo,21.95,,unknown,4,3,True
+w0819,Emilio Moro,La Revelia Godello,2019,4.3,37,Bierzo,21.65,,unknown,4,3,True
+w0820,Emilio Moro,Malleolus,2014,4.2,1030,Ribera del Duero,31.95,Ribera Del Duero Red,red,5,3,False
+w0821,Emilio Moro,Malleolus,2016,4.3,3997,Ribera del Duero,37.86,Ribera Del Duero Red,red,5,3,True
+w0822,Emilio Moro,Malleolus,2017,4.3,2936,Ribera del Duero,38.05,Ribera Del Duero Red,red,5,3,True
+w0823,Emilio Moro,Malleolus,2018,4.4,4121,Ribera del Duero,38.61,Ribera Del Duero Red,red,5,3,True
+w0824,Emilio Moro,Malleolus,2019,4.4,1069,Ribera del Duero,28.5,Ribera Del Duero Red,red,5,3,False
+w0825,Emilio Moro,Malleolus de Sanchomartin,2007,4.4,172,Ribera del Duero,195.0,Ribera Del Duero Red,red,5,3,False
+w0826,Emilio Moro,Malleolus de Sanchomartin,2011,4.6,693,Ribera del Duero,125.0,Ribera Del Duero Red,red,5,3,False
+w0827,Emilio Moro,Malleolus de Sanchomartin,2014,4.6,186,Ribera del Duero,119.0,Ribera Del Duero Red,red,5,3,False
+w0828,Emilio Moro,Malleolus de Sanchomartin,2015,4.6,369,Ribera del Duero,99.0,Ribera Del Duero Red,red,5,3,False
+w0829,Emilio Moro,Malleolus de Sanchomartin,2016,4.7,291,Ribera del Duero,116.54,Ribera Del Duero Red,red,5,3,False
+w0830,Emilio Moro,Malleolus de Sanchomartin,2018,4.4,39,Ribera del Duero,119.35,Ribera Del Duero Red,red,5,3,False
+w0831,Emilio Moro,Malleolus de Valderramiro,2011,4.5,719,Ribera del Duero,173.95,Ribera Del Duero Red,red,5,3,False
+w0832,Emilio Moro,Malleolus de Valderramiro,2015,4.6,516,Ribera del Duero,75.0,Ribera Del Duero Red,red,5,3,False
+w0833,Emilio Moro,Malleolus de Valderramiro,2016,4.7,300,Ribera del Duero,84.95,Ribera Del Duero Red,red,5,3,False
+w0834,Emilio Moro,Malleolus de Valderramiro,2018,4.5,82,Ribera del Duero,85.55,Ribera Del Duero Red,red,5,3,False
+w0835,Emilio Moro,Ribera del Duero,2017,4.2,7294,Ribera del Duero,21.2,Ribera Del Duero Red,red,5,3,False
+w0836,Emilio Moro,Ribera del Duero,2018,4.2,7825,Ribera del Duero,19.5,Ribera Del Duero Red,red,5,3,False
+w0837,Emilio Moro,Ribera del Duero,2019,4.2,876,Ribera del Duero,16.95,Ribera Del Duero Red,red,5,3,False
+w0838,Emilio Moro,Vendimia Seleccionada,2019,4.4,77,Ribera del Duero,21.38,Ribera Del Duero Red,red,5,3,False
+w0839,Emilio Rojo,Blanco,2017,4.5,134,Ribeiro,49.95,,unknown,4,3,True
+w0840,Enate,Cabernet,2012,4.3,57,Somontano,23.5,Red,red,4,3,False
+w0841,Enate,Chardonnay Fermentado en Barrica,2018,4.3,603,Somontano,16.9,Chardonnay,white,4,3,False
+w0842,Enate,Chardonnay Fermentado en Barrica,2019,4.3,674,Somontano,15.75,Chardonnay,white,4,3,False
+w0843,Enate,Chardonnay Fermentado en Barrica,2020,4.3,244,Somontano,16.9,Chardonnay,white,4,3,False
+w0844,Enate,Chardonnay Uno,2011,4.5,96,Somontano,200.13,Chardonnay,white,4,3,False
+w0845,Enate,Chardonnay Uno,2012,4.3,53,Somontano,249.95,Chardonnay,white,4,3,False
+w0846,Enate,Reserva Especial,2006,4.5,53,Somontano,65.9,Red,red,4,3,False
+w0847,Enate,Syrah (Shiraz),2016,4.3,175,Somontano,23.5,Syrah,red,4,3,False
+w0848,Enate,Uno Tinto,2010,4.6,28,Somontano,129.9,Red,red,4,3,False
+w0849,Enric Soler,Nun Vinya dels Taus,2017,4.3,62,Penedes,123.75,,unknown,4,3,True
+w0850,Enric Soler,Nun Vinya dels Taus,2018,4.4,59,Penedes,62.7,,unknown,4,3,True
+w0851,Enric Soler,Nun Vinya dels Taus,2019,4.4,35,Penedes,45.39,,unknown,4,3,True
+w0852,Enrique Mendoza,Santa Rosa,2017,4.2,420,Alicante,18.9,Red,red,4,3,True
+w0853,Equipo Navazos,La Bota 69 de Amontillado,,4.3,72,Jerez-Xeres-Sherry,113.72,Sherry,fortified,4,3,False
+w0854,Equipo Navazos,La Bota 78 de Oloroso,,4.7,41,Manzanilla,95.57,Sherry,fortified,4,3,False
+w0855,Equipo Navazos,La Bota 90 de Manzanilla Pasada,,4.4,35,Manzanilla,39.75,Sherry,fortified,4,3,False
+w0856,Es Fangar,Lo Cortinelo.Lo Blanc,2017,4.4,58,Pla i Llevant,27.25,,unknown,4,3,True
+w0857,Espectacle del Montsant,Tinto,2013,4.5,214,Montsant,157.95,Montsant Red,red,4,3,False
+w0858,Espectacle del Montsant,Tinto,2014,4.4,165,Montsant,149.0,Montsant Red,red,4,3,False
+w0859,Espectacle del Montsant,Tinto,2015,4.3,127,Montsant,133.34,Montsant Red,red,4,3,False
+w0860,Espectacle del Montsant,Tinto,2016,4.4,169,Montsant,125.84,Montsant Red,red,4,3,False
+w0861,Espectacle del Montsant,Tinto,2017,4.4,85,Montsant,102.0,Montsant Red,red,4,3,False
+w0862,Espectacle del Montsant,Tinto,2018,4.3,39,Montsant,119.0,Montsant Red,red,4,3,False
+w0863,Espelt,Coma Bruna,2017,4.3,67,Emporda,22.8,Red,red,4,3,False
+w0864,Estones,Coster d'en Fornos,2017,4.3,31,Montsant,40.55,Montsant Red,red,4,3,False
+w0865,Eulogio Pomares,Castineiro Albarino,2017,4.3,111,Rias Baixas,30.75,Albarino,white,3,3,False
+w0866,Eulogio Pomares,Maceracion Con Pieles,2017,4.4,95,Rias Baixas,36.95,Albarino,white,3,3,False
+w0867,Familia Torres,Grans Muralles,2000,4.5,81,Conca de Barbera,125.05,Red,red,4,3,False
+w0868,Familia Torres,Grans Muralles,2014,4.4,292,Conca de Barbera,304.0,Red,red,4,3,False
+w0869,Familia Torres,Grans Muralles,2015,4.5,189,Conca de Barbera,170.5,Red,red,4,3,False
+w0870,Familia Torres,Grans Muralles,2016,4.4,67,Conca de Barbera,123.76,Red,red,4,3,False
+w0871,Familia Torres,Grans Muralles,2017,4.3,52,Conca de Barbera,137.75,Red,red,4,3,False
+w0872,Familia Torres,Mas La Plana Cabernet Sauvignon,2010,4.2,2788,Penedes,48.4,Cabernet Sauvignon,red,4,3,False
+w0873,Familia Torres,Mas La Plana Cabernet Sauvignon,2013,4.3,2911,Penedes,63.33,Cabernet Sauvignon,red,4,3,True
+w0874,Familia Torres,Mas La Plana Cabernet Sauvignon,2015,4.3,1797,Penedes,55.0,Cabernet Sauvignon,red,4,3,False
+w0875,Familia Torres,Mas La Plana Cabernet Sauvignon,2016,4.2,964,Penedes,56.26,Cabernet Sauvignon,red,4,3,False
+w0876,Familia Torres,Milmanda,2015,4.2,473,Conca de Barbera,126.2,Chardonnay,white,4,3,False
+w0877,Familia Torres,Perpetual,2016,4.3,530,Priorato,63.5,Priorat Red,red,4,3,False
+w0878,Familia Torres,Perpetual,2017,4.4,127,Priorato,62.75,Priorat Red,red,4,3,False
+w0879,Familia Torres,Purgatori Costers del Segre,2016,4.2,778,Costers del Segre,38.37,Red,red,4,3,False
+w0880,Familia Torres,Purgatori Costers del Segre,2017,4.2,777,Costers del Segre,25.5,Red,red,4,3,False
+w0881,Familia Torres,Purgatori Costers del Segre,2018,4.3,228,Costers del Segre,27.9,Red,red,4,3,False
+w0882,Familia Torres,Reserva Real,1998,4.3,43,Penedes,213.5,Red,red,4,3,False
+w0883,Familia Torres,Salmos,2016,4.2,3225,Priorato,24.85,Priorat Red,red,4,3,False
+w0884,Familia Torres,Salmos,2017,4.2,1008,Priorato,20.99,Priorat Red,red,4,3,False
+w0885,Familia Torres,San Valentin Parellada,2019,4.3,7401,Cataluna,6.95,,unknown,4,3,True
+w0886,Farina,Campus Gothorum,2017,4.4,35,Toro,41.0,Toro Red,red,5,3,False
+w0887,Federico Paternina,Gran Reserva,1928,4.5,43,Rioja,270.0,Rioja Red,red,4,3,False
+w0888,Fefinanes,Albarino de Fefinanes III Ano,2017,4.4,128,Rias Baixas,35.4,Albarino,white,3,3,False
+w0889,Felix Solis,Mucho Mas Tinto,,4.2,32624,Vino de Espana,4.99,Red,red,4,3,False
+w0890,Fernandez Gao,Oloroso,,4.4,38,Jerez-Xeres-Sherry,59.9,Sherry,fortified,4,3,False
+w0891,Fernandez de Pierola,Vitium Reserva,2010,4.3,171,Rioja,27.8,Rioja Red,red,4,3,True
+w0892,Fernando de Castilla,Antique Palo Cortado,,4.2,519,Jerez Palo Cortado,36.9,Sherry,fortified,4,3,False
+w0893,Ferrer Bobet,Priorat,2018,4.3,68,Priorato,25.88,Priorat Red,red,4,3,False
+w0894,Ferrer Bobet,Priorat Vinyes Velles,2011,4.3,501,Priorato,49.9,Priorat Red,red,4,3,False
+w0895,Ferrer Bobet,Priorat Vinyes Velles,2016,4.3,828,Priorato,33.95,Priorat Red,red,4,3,False
+w0896,Ferrer Bobet,Priorat Vinyes Velles,2017,4.4,575,Priorato,32.65,Priorat Red,red,4,3,False
+w0897,Ferrer Bobet,Priorat Vinyes Velles,2018,4.3,94,Priorato,33.95,Priorat Red,red,4,3,False
+w0898,Ferrer Bobet,Seleccio Especial Vinyes Velles,2013,4.4,185,Priorato,69.9,Priorat Red,red,4,3,False
+w0899,Ferrer Bobet,Seleccio Especial Vinyes Velles,2014,4.3,197,Priorato,64.0,Priorat Red,red,4,3,False
+w0900,Ferrer Bobet,Seleccio Especial Vinyes Velles,2015,4.5,197,Priorato,64.0,Priorat Red,red,4,3,False
+w0901,Ferrer Bobet,Seleccio Especial Vinyes Velles,2016,4.4,123,Priorato,58.9,Priorat Red,red,4,3,False
+w0902,Ferrer Bobet,Seleccio Especial Vinyes Velles,2017,4.4,73,Priorato,64.35,Priorat Red,red,4,3,False
+w0903,Figuero,Milagros de Figuero,2016,4.3,68,Ribera del Duero,34.85,Ribera Del Duero Red,red,5,3,False
+w0904,Figuero,Noble,2015,4.4,38,Ribera del Duero,60.0,Ribera Del Duero Red,red,5,3,False
+w0905,Figuero,Vinas Viejas,2016,4.3,567,Ribera del Duero,16.5,Ribera Del Duero Red,red,5,3,False
+w0906,Figuero,Vinas Viejas,2018,4.4,119,Ribera del Duero,25.1,Ribera Del Duero Red,red,5,3,False
+w0907,Finca Moncloa,Tintilla de Rota,2016,4.7,92,Cadiz,43.13,,unknown,4,3,True
+w0908,Finca Moncloa,Tintilla de Rota,2017,4.6,37,Cadiz,43.1,,unknown,4,3,True
+w0909,Finca Rio Negro,5o Ano,2014,4.3,62,La Mancha,23.39,Red,red,4,3,False
+w0910,Finca Rio Negro,5o Ano,2016,4.3,49,La Mancha,23.9,Red,red,4,3,False
+w0911,Finca Rio Negro,Cerro del Lobo Syrah,2018,4.3,51,Castilla,24.5,Syrah,red,4,3,False
+w0912,Finca Torremilanos,Cyclo,2018,4.3,89,Ribera del Duero,35.15,Ribera Del Duero Red,red,5,3,False
+w0913,Finca Torremilanos,Penalba Lopez Blanco,2019,4.3,57,Castilla y Leon,13.65,,unknown,4,3,True
+w0914,Finca Torremilanos,Torre Albeniz Reserva Ribera del Duero,2016,4.3,419,Ribera del Duero,28.85,Ribera Del Duero Red,red,5,3,False
+w0915,Finca Torremilanos,Torremilanos Coleccion Ribera del Duero,2014,4.4,97,Ribera del Duero,44.0,Ribera Del Duero Red,red,5,3,False
+w0916,Finca Torremilanos,Torremilanos Coleccion Ribera del Duero,2016,4.6,32,Ribera del Duero,40.45,Ribera Del Duero Red,red,5,3,False
+w0917,Finca Valpiedra,Petra de Valpiedra Garnacha,2017,4.4,55,Rioja,32.9,Grenache,red,5,3,False
+w0918,Finca Valpiedra,Rioja Reserva,1994,4.3,34,Rioja,65.0,Rioja Red,red,4,3,False
+w0919,Finca Villacreces,Nebro Ribera del Duero,2009,4.3,107,Ribera del Duero,135.95,Ribera Del Duero Red,red,5,3,False
+w0920,Finca Villacreces,Nebro Ribera del Duero,2011,4.5,69,Ribera del Duero,154.5,Ribera Del Duero Red,red,5,3,False
+w0921,Finca Villacreces,Nebro Ribera del Duero,2013,4.3,53,Ribera del Duero,196.29,Ribera Del Duero Red,red,5,3,False
+w0922,Finca Villacreces,Nebro Ribera del Duero,2015,4.5,37,Ribera del Duero,143.38,Ribera Del Duero Red,red,5,3,False
+w0923,Flor de Chasna,Blanco Afrutado,2020,4.3,30,Abona,11.99,,unknown,4,3,True
+w0924,Fos,Fos Baranda,2017,4.3,87,Rioja,29.9,Rioja Red,red,4,3,True
+w0925,Francisco Barona,Ribera Del Duero,2018,4.5,462,Ribera del Duero,35.85,Ribera Del Duero Red,red,5,3,False
+w0926,Francisco Barona,Ribera Del Duero,2019,4.3,242,Ribera del Duero,30.9,Ribera Del Duero Red,red,5,3,False
+w0927,Francisco Garcia Perez,Adega do Moucho Treixadura,2017,4.6,53,Ribeiro,34.5,,unknown,4,3,True
+w0928,Freixenet,Cava Cuvee De Prestige Trepat,2019,4.4,43,Cava,7.89,Cava,sparkling,2,3,False
+w0929,Galindo San Millan,La Pizca,2016,4.4,35,Toro,26.0,Red,red,4,3,False
+w0930,Gallina de Piel,Manar dos Seixas,2019,4.3,38,Ribeiro,13.5,,unknown,4,3,True
+w0931,Garmon,Ribera del Duero,2014,4.2,1086,Ribera del Duero,37.9,Ribera Del Duero Red,red,5,3,False
+w0932,Garmon,Ribera del Duero,2015,4.2,1308,Ribera del Duero,33.59,Ribera Del Duero Red,red,5,3,False
+w0933,Garmon,Ribera del Duero,2016,4.3,1119,Ribera del Duero,33.59,Ribera Del Duero Red,red,5,3,False
+w0934,Garmon,Ribera del Duero,2017,4.3,598,Ribera del Duero,40.92,Ribera Del Duero Red,red,5,3,False
+w0935,Garmon,Ribera del Duero,2018,4.3,188,Ribera del Duero,33.5,Ribera Del Duero Red,red,5,3,False
+w0936,Godeval,Cepas Vellas Godello,2019,4.3,272,Valdeorras,18.48,,unknown,4,3,True
+w0937,Gomez Cruzado,Cerro Las Cuevas Seleccion Terroir,2019,4.3,26,Rioja,39.89,Rioja Red,red,4,3,False
+w0938,Gomez Cruzado,Montes Obarenes Seleccion Terroir,2015,4.3,122,Rioja,97.35,Rioja White,white,3,3,False
+w0939,Gomez Cruzado,Montes Obarenes Seleccion Terroir,2016,4.4,122,Rioja,42.95,Rioja White,white,3,3,False
+w0940,Gomez Cruzado,Montes Obarenes Seleccion Terroir,2017,4.3,88,Rioja,42.9,Rioja White,white,3,3,False
+w0941,Gomez Cruzado,Pancrudo,2019,4.3,134,Rioja,34.9,Rioja Red,red,4,3,False
+w0942,Gomez Cruzado,Vina Motulleri,2011,4.6,30,Rioja,79.0,Rioja Red,red,4,3,False
+w0943,Gonzalez-Byass,Anada Palo Cortado 1987,1987,4.7,53,Jerez Palo Cortado,400.85,Sherry,fortified,4,3,False
+w0944,Gonzalez-Byass,Anada Palo Cortado 1987,1991,4.5,30,Jerez Palo Cortado,230.0,Sherry,fortified,4,3,False
+w0945,Gonzalez-Byass,Apostoles 30 Years Old Sherry,,4.3,1247,Jerez Palo Cortado,74.0,Sherry,fortified,4,3,False
+w0946,Gonzalez-Byass,Del Duque Amontillado Sherry VORS,,4.2,1016,Jerez Amontillado,77.22,Sherry,fortified,4,3,False
+w0947,Gonzalez-Byass,Matusalem Sherry VORS,,4.3,1452,Jerez Oloroso,63.34,Sherry,fortified,4,3,False
+w0948,Goyo Garcia Viadero,Finca Los Quemados,2016,4.3,35,Ribera del Duero,27.7,Ribera Del Duero Red,red,5,3,False
+w0949,Gramona,Cava Celler Batlle,2006,4.4,201,Cava,51.95,Cava,sparkling,2,3,False
+w0950,Gramona,Cava Celler Batlle,2009,4.4,102,Cava,59.75,Cava,sparkling,2,3,False
+w0951,Gramona,Cava Celler Batlle,2010,4.4,126,Cava,58.3,Cava,sparkling,2,3,False
+w0952,Gramona,Cava Celler Batlle,2011,4.4,59,Cava,59.75,Cava,sparkling,2,3,False
+w0953,Gramona,Cava Enoteca Finca La Plana Brut Nature,2001,4.6,58,Cava,164.66,Cava,sparkling,2,3,False
+w0954,Gramona,Cava Enoteca Finca de L'Origen Brut Nature,2002,4.5,28,Cava,142.0,Cava,sparkling,2,3,False
+w0955,Gramona,Gessami,2019,4.2,1164,Penedes,9.95,,unknown,4,3,True
+w0956,Gramona,Gessami,2020,4.2,692,Penedes,11.2,,unknown,4,3,True
+w0957,Gramona,Savinat Sauvignon Blanc,2019,4.4,41,Penedes,17.9,Sauvignon Blanc,white,3,3,False
+w0958,Gramona,Vi De Glass Gewurztraminer,2017,4.3,35,Cataluna,18.58,,unknown,4,3,True
+w0959,Guilera,Musivari Gran Reserva Brut Nature,2007,4.3,77,Cava,23.22,Sparkling,sparkling,2,3,False
+w0960,Guillem Carol - Cellers Carol Valles,Cava Gran Reserva Familiar Millenium Brut,2011,4.4,27,Cava,29.95,Cava,sparkling,2,3,False
+w0961,Gutierrez de la Vega,Casta Diva Cosecha Miel Moscatel Dulce,2018,4.4,27,Alicante,15.5,,unknown,4,3,True
+w0962,Gutierrez de la Vega,Recondita Armonia Monastrell Dulce,1987,4.7,27,Alicante,81.9,,unknown,4,3,True
+w0963,Gutierrez de la Vega,Recondita Armonia Monastrell Dulce,2018,4.3,38,Alicante,16.45,,unknown,4,3,True
+w0964,Habla,No. 20,2016,4.3,124,Extremadura,23.95,Red,red,4,3,False
+w0965,Habla,No. 23,2017,4.3,26,Extremadura,23.1,Red,red,4,3,False
+w0966,Hacienda Grimon,Finca la Oracion,2017,4.3,88,Rioja,20.45,Rioja Red,red,4,3,True
+w0967,Hacienda Lopez de Haro,Gran Reserva Classica Blanco,2012,4.4,70,Rioja,36.75,Rioja White,white,3,3,False
+w0968,Hacienda Lopez de Haro,Gran Reserva Classica Tinto,2001,4.4,135,Rioja,36.75,Rioja Red,red,4,3,False
+w0969,Hacienda Monasterio,Cosecha,2014,4.3,2990,Ribera del Duero,75.9,Ribera Del Duero Red,red,5,3,True
+w0970,Hacienda Monasterio,Cosecha,2015,4.3,2783,Ribera del Duero,34.95,Ribera Del Duero Red,red,5,3,True
+w0971,Hacienda Monasterio,Cosecha,2016,4.4,3406,Ribera del Duero,37.8,Ribera Del Duero Red,red,5,3,True
+w0972,Hacienda Monasterio,Cosecha,2017,4.4,1266,Ribera del Duero,33.31,Ribera Del Duero Red,red,5,3,False
+w0973,Hacienda Monasterio,Cosecha,2018,4.4,1777,Ribera del Duero,32.5,Ribera Del Duero Red,red,5,3,False
+w0974,Hacienda Monasterio,Cosecha,2019,4.4,523,Ribera del Duero,34.35,Ribera Del Duero Red,red,5,3,True
+w0975,Hacienda Monasterio,Reserva,2011,4.4,1048,Ribera del Duero,78.65,Ribera Del Duero Red,red,5,3,False
+w0976,Hacienda Monasterio,Reserva,2013,4.3,431,Ribera del Duero,53.95,Ribera Del Duero Red,red,5,3,False
+w0977,Hacienda Monasterio,Reserva,2014,4.4,927,Ribera del Duero,109.9,Ribera Del Duero Red,red,5,3,False
+w0978,Hacienda Monasterio,Reserva,2015,4.5,629,Ribera del Duero,53.95,Ribera Del Duero Red,red,5,3,False
+w0979,Hacienda Monasterio,Reserva,2016,4.5,297,Ribera del Duero,55.95,Ribera Del Duero Red,red,5,3,False
+w0980,Hacienda Monasterio,Reserva,2017,4.6,64,Ribera del Duero,50.0,Ribera Del Duero Red,red,5,3,False
+w0981,Hacienda Monasterio,Reserva Especial,2015,4.6,80,Ribera del Duero,79.1,Ribera Del Duero Red,red,5,3,False
+w0982,Hacienda Monasterio,Reserva Especial,2016,4.6,41,Ribera del Duero,85.63,Ribera Del Duero Red,red,5,3,False
+w0983,Hacienda Solano,Finca Cascorrales,2016,4.5,57,Ribera del Duero,64.3,Ribera Del Duero Red,red,5,3,False
+w0984,Hacienda Solano,Pena Lobera,2016,4.6,57,Ribera del Duero,65.95,Ribera Del Duero Red,red,5,3,False
+w0985,Hacienda Solano,Pena Lobera,2018,4.3,25,Ribera del Duero,68.9,Ribera Del Duero Red,red,5,3,False
+w0986,Hacienda Zorita Natural Reserve,Magister,2017,4.3,35,Arribes,35.5,Red,red,4,3,False
+w0987,Harveys,30 Years V.O.R.S Very Old Palo Cortado Blend Medium Sherry,,4.4,35,Jerez Palo Cortado,65.0,Sherry,fortified,4,3,False
+w0988,Harveys,30 Years VORS Pedro Ximenez Sherry,,4.4,159,Jerez Pedro Ximenes (PX),58.95,Sherry,fortified,4,3,False
+w0989,Hermanos Pecina,Finca Iscorta Gran Reserva,2010,4.3,334,Rioja,27.0,Rioja Red,red,4,3,False
+w0990,Hidalgo (La Gitana),Amontillado Napoleon Vinos Viejos 30 Year Old Sherry,,4.3,40,Jerez-Xeres-Sherry,74.9,Sherry,fortified,4,3,False
+w0991,Hispano Suizas,Bassus Pinot Noir,2017,4.2,753,Utiel-Requena,18.95,Red,red,4,3,False
+w0992,Hispano Suizas,Bassus Pinot Noir,2018,4.2,721,Utiel-Requena,19.25,Red,red,4,3,False
+w0993,Huerta de Albala,Taberner No. 1,2011,4.5,38,Cadiz,75.0,Red,red,4,3,False
+w0994,Huerta de Albala,Taberner No. 1,2013,4.6,32,Cadiz,79.9,Red,red,4,3,False
+w0995,Huerta de Albala,Taberner Tierra de Cadiz,2014,4.2,1337,Cadiz,32.0,Syrah,red,4,3,False
+w0996,Huerta de Albala,Taberner Tierra de Cadiz,2015,4.2,1125,Cadiz,17.04,Syrah,red,4,3,False
+w0997,Hugas de Batlle,Falguera,2009,4.3,38,Emporda,53.55,Red,red,4,3,False
+w0998,Imperial,Rioja Gran Reserva,2012,4.3,1615,Rioja,47.9,Rioja Red,red,4,3,False
+w0999,Imperial,Rioja Gran Reserva,2014,4.3,835,Rioja,49.75,Rioja Red,red,4,3,False
+w1000,Imperial,Rioja Gran Reserva,2015,4.4,471,Rioja,49.97,Rioja Red,red,4,3,True
+w1001,Imperial,Rioja Reserva,1982,4.4,41,Rioja,145.0,Rioja Red,red,4,3,False
+w1002,Imperial,Rioja Reserva,2004,4.2,417,Rioja,45.0,Rioja Red,red,4,3,True
+w1003,Imperial,Rioja Reserva,2014,4.2,2364,Rioja,27.6,Rioja Red,red,4,3,False
+w1004,Imperial,Rioja Reserva,2015,4.2,3788,Rioja,19.83,Rioja Red,red,4,3,False
+w1005,Imperial,Rioja Reserva,2016,4.2,2676,Rioja,24.75,Rioja Red,red,4,3,False
+w1006,Imperial,Rioja Reserva,2017,4.3,799,Rioja,25.45,Rioja Red,red,4,3,False
+w1007,Inurrieta,Laderas de Inurrieta,2017,4.3,30,Navarra,26.1,Red,red,4,3,False
+w1008,Jaro,Chafandin,2011,4.3,223,Ribera del Duero,25.65,Ribera Del Duero Red,red,5,3,False
+w1009,Jaro,Chafandin,2015,4.3,290,Ribera del Duero,27.85,Ribera Del Duero Red,red,5,3,True
+w1010,Jaro,Chafandin,2017,4.3,136,Ribera del Duero,26.29,Ribera Del Duero Red,red,5,3,False
+w1011,Jaro,Chafandin,2018,4.4,155,Ribera del Duero,28.95,Ribera Del Duero Red,red,5,3,False
+w1012,Javi Revert,Sensal,2020,4.3,45,Valencia,22.35,Red,red,4,3,False
+w1013,Javier Sanz Viticultor,Singular V Malcorta Verdejo,2020,4.4,168,Rueda,17.49,Verdejo,white,3,3,False
+w1014,Javier Sanz Viticultor,V Dulce de Invierno,2018,4.3,26,Castilla y Leon,17.74,,unknown,4,3,True
+w1015,Jean Leon,Vinya La Scala Gran Reserva Cabernet Sauvignon,2013,4.3,177,Penedes,41.9,Cabernet Sauvignon,red,4,3,False
+w1016,Jesus Madrazo,Seleccion Rioja,2015,4.5,107,Rioja,67.1,Rioja Red,red,4,3,False
+w1017,Jesus Madrazo,Seleccion Rioja,2018,4.4,50,Rioja,32.0,Rioja Red,red,4,3,False
+w1018,Jimenez-Landi,Cantos del Diablo,2016,4.3,26,Mentrida,67.95,Grenache,red,5,3,False
+w1019,Jimenez-Landi,Cantos del Diablo,2017,4.3,33,Mentrida,101.01,Grenache,red,5,3,False
+w1020,Jimenez-Landi,Cantos del Diablo,2018,4.3,38,Mentrida,197.0,Grenache,red,5,3,False
+w1021,Jimenez-Landi,El Reventon Cebreros,2016,4.3,40,Castilla y Leon,67.95,Grenache,red,5,3,False
+w1022,Jimenez-Landi,Las Iruelas El Tiemblo,2018,4.3,26,Castilla y Leon,97.07,Grenache,red,5,3,False
+w1023,Joan Simo,Les Eres Vinyes Velles,2015,4.4,70,Priorato,32.49,Priorat Red,red,4,3,False
+w1024,Joan d'Anguera,Planella,2020,4.4,34,Montsant,16.25,Montsant Red,red,4,3,False
+w1025,Jorge Ordonez,No. 2 Victoria,2017,4.3,232,Malaga,21.4,,unknown,4,3,True
+w1026,Jorge Ordonez,No. 2 Victoria,2018,4.4,64,Malaga,15.9,,unknown,4,3,True
+w1027,Jorge Piernas,Juan Piernas Finca El Paso Malo Monastrell,2017,4.3,74,Murcia,27.9,Monastrell,red,5,3,False
+w1028,Jose Pariente,Finca Las Comas Verdejo,2016,4.3,60,Rueda,29.4,Verdejo,white,3,3,False
+w1029,Jose Pariente,Finca Las Comas Verdejo,2018,4.5,32,Rueda,34.5,Verdejo,white,3,3,False
+w1030,Jose Pariente,Sauvignon Blanc,2021,4.3,83,Rueda,8.9,Sauvignon Blanc,white,3,3,True
+w1031,Jose Pariente,Verdejo Fermentado en Barrica,2020,4.3,53,Rueda,14.5,Verdejo,white,3,3,False
+w1032,Josep Grau Viticultor,Maimo Garnatxa,2018,4.3,88,Montsant,26.9,Grenache,red,5,3,False
+w1033,Josep Grau Viticultor,Territori,2019,4.3,25,Montsant,23.6,Red,red,4,3,False
+w1034,Juan Gil,Bruto,2017,4.5,322,Jumilla,30.7,Monastrell,red,5,3,False
+w1035,Juan Gil,Bruto,2018,4.5,384,Jumilla,37.7,Monastrell,red,5,3,False
+w1036,Juan Gil,Bruto,2019,4.5,104,Jumilla,32.5,Monastrell,red,5,3,False
+w1037,Juan Gil,Jumilla Blue Label,2015,4.2,2271,Jumilla,24.76,Red,red,4,3,False
+w1038,Juan Gil,Jumilla Blue Label,2017,4.2,2135,Jumilla,22.5,Red,red,4,3,False
+w1039,Juan Gil,Jumilla Blue Label,2018,4.2,2234,Jumilla,24.6,Red,red,4,3,False
+w1040,Juan Gil,Jumilla Blue Label,2019,4.4,966,Jumilla,21.95,Red,red,4,3,False
+w1041,Juan Pinero,Amontillado 30 Years Old V.O.R.S Sherry,,4.4,69,Jerez Amontillado,36.9,Sherry,fortified,4,3,False
+w1042,Juan Pinero,Oloroso 30 Years Old V.O.R.S,,4.4,48,Jerez Oloroso,37.9,Sherry,fortified,4,3,False
+w1043,Juve & Camps,Cava Brut Milesime,2017,4.3,80,Cava,24.1,Cava,sparkling,2,3,True
+w1044,Juve & Camps,Cava Gran Reserva La Capella Brut,2010,4.3,46,Cava,75.5,Cava,sparkling,2,3,False
+w1045,La Legua,Capricho,2014,4.6,47,Cigales,27.27,Red,red,4,3,False
+w1046,La Rioja Alta,Gran Reserva 890,1981,4.3,47,Rioja,270.0,Rioja Red,red,4,3,False
+w1047,La Rioja Alta,Gran Reserva 890,1982,4.7,57,Rioja,292.09,Rioja Red,red,4,3,False
+w1048,La Rioja Alta,Gran Reserva 890,1985,4.8,26,Rioja,215.34,Rioja Red,red,4,3,False
+w1049,La Rioja Alta,Gran Reserva 890,1989,4.3,88,Rioja,215.34,Rioja Red,red,4,3,False
+w1050,La Rioja Alta,Gran Reserva 890,1995,4.5,574,Rioja,127.23,Rioja Red,red,4,3,False
+w1051,La Rioja Alta,Gran Reserva 890,2004,4.5,990,Rioja,290.7,Rioja Red,red,4,3,False
+w1052,La Rioja Alta,Gran Reserva 890,2005,4.5,3443,Rioja,125.0,Rioja Red,red,4,3,False
+w1053,La Rioja Alta,Gran Reserva 890,2010,4.5,469,Rioja,149.5,Rioja Red,red,4,3,False
+w1054,La Rioja Alta,Rioja Gran Reserva 904,1964,4.3,76,Rioja,260.0,Rioja Red,red,4,3,False
+w1055,La Rioja Alta,Rioja Gran Reserva 904,1970,4.3,53,Rioja,260.0,Rioja Red,red,4,3,False
+w1056,La Rioja Alta,Rioja Gran Reserva 904,1982,4.4,106,Rioja,145.0,Rioja Red,red,4,3,False
+w1057,La Rioja Alta,Rioja Gran Reserva 904,1987,4.5,57,Rioja,190.0,Rioja Red,red,4,3,False
+w1058,La Rioja Alta,Rioja Gran Reserva 904,1989,4.3,154,Rioja,150.0,Rioja Red,red,4,3,True
+w1059,La Rioja Alta,Rioja Gran Reserva 904,1998,4.3,1528,Rioja,75.0,Rioja Red,red,4,3,False
+w1060,La Rioja Alta,Rioja Gran Reserva 904,2004,4.3,4994,Rioja,29.9,Rioja Red,red,4,3,False
+w1061,La Rioja Alta,Rioja Gran Reserva 904,2007,4.4,4357,Rioja,47.95,Rioja Red,red,4,3,True
+w1062,La Rioja Alta,Rioja Gran Reserva 904,2009,4.4,5109,Rioja,47.5,Rioja Red,red,4,3,True
+w1063,La Rioja Alta,Rioja Gran Reserva 904,2010,4.4,3327,Rioja,61.55,Rioja Red,red,4,3,True
+w1064,La Rioja Alta,Rioja Gran Reserva 904,2011,4.4,4625,Rioja,47.95,Rioja Red,red,4,3,True
+w1065,La Rioja Alta,Vina Alberdi Crianza,2015,4.2,1341,Rioja,11.2,Rioja Red,red,4,3,False
+w1066,La Rioja Alta,Vina Alberdi Crianza,2018,4.2,410,Rioja,13.58,Rioja Red,red,4,3,True
+w1067,La Rioja Alta,Vina Alberdi Reserva,2015,4.2,5802,Rioja,17.02,Rioja Red,red,4,3,False
+w1068,La Rioja Alta,Vina Alberdi Reserva,2016,4.2,3825,Rioja,15.8,Rioja Red,red,4,3,False
+w1069,La Rioja Alta,Vina Arana Gran Reserva,2012,4.3,1471,Rioja,32.55,Rioja Red,red,4,3,False
+w1070,La Rioja Alta,Vina Arana Gran Reserva,2014,4.3,1525,Rioja,24.9,Rioja Red,red,4,3,False
+w1071,La Rioja Alta,Vina Arana Gran Reserva,2015,4.4,28,Rioja,27.9,Rioja Red,red,4,3,False
+w1072,La Rioja Alta,Vina Ardanza Reserva,1985,4.3,72,Rioja,75.0,Rioja Red,red,4,3,False
+w1073,La Rioja Alta,Vina Ardanza Reserva,2000,4.2,883,Rioja,161.0,Rioja Red,red,4,3,False
+w1074,La Rioja Alta,Vina Ardanza Reserva,2007,4.2,9098,Rioja,23.7,Rioja Red,red,4,3,False
+w1075,La Rioja Alta,Vina Ardanza Reserva,2008,4.2,6532,Rioja,33.0,Rioja Red,red,4,3,False
+w1076,La Rioja Alta,Vina Ardanza Reserva,2009,4.3,10273,Rioja,24.38,Rioja Red,red,4,3,False
+w1077,La Rioja Alta,Vina Ardanza Reserva,2010,4.3,783,Rioja,17.16,Rioja Red,red,4,3,False
+w1078,La Rioja Alta,Vina Ardanza Reserva,2012,4.3,9092,Rioja,20.0,Rioja Red,red,4,3,False
+w1079,La Rioja Alta,Vina Ardanza Reserva,2015,4.4,2370,Rioja,23.0,Rioja Red,red,4,3,False
+w1080,La Rioja Alta,Vina Ardanza Reserva Seleccion Especial,2015,4.4,49,Rioja,23.0,Rioja Red,red,4,3,False
+w1081,La Unica,Fourth Edition,,4.4,131,Vino de Espana,40.0,Tempranillo,red,4,2,False
+w1082,La Val,Albarino Sobre Lias,2015,4.3,45,Rias Baixas,23.9,Albarino,white,3,3,False
+w1083,La Vicalanda,Gran Reserva,2010,4.4,239,Rioja,59.25,Rioja Red,red,4,3,False
+w1084,La Vicalanda,Gran Reserva,2015,4.4,55,Rioja,53.8,Rioja Red,red,4,3,False
+w1085,La Vicalanda,Reserva,2014,4.3,818,Rioja,21.5,Rioja Red,red,4,3,False
+w1086,La Vicalanda,Reserva,2015,4.2,420,Rioja,17.5,Rioja Red,red,4,3,True
+w1087,La Vinya del Vuit,La Vinya del Vuit (8),2015,4.5,26,Priorato,73.0,Priorat Red,red,4,3,True
+w1088,Ladairo,Barrica,2018,4.4,32,Monterrei,20.95,Red,red,4,3,False
+w1089,Lagar de Sabariz,A Pita Cega,2015,4.3,30,Galicia,44.8,,unknown,4,3,True
+w1090,Lambuena,Vinas Viejas,2014,4.3,44,Ribera del Duero,37.07,Ribera Del Duero Red,red,5,3,False
+w1091,Lan,A Mano Rioja,2009,4.2,480,Rioja,28.95,Rioja Red,red,4,3,False
+w1092,Lan,A Mano Rioja,2012,4.3,559,Rioja,30.71,Rioja Red,red,4,3,False
+w1093,Lan,A Mano Rioja,2016,4.3,663,Rioja,25.82,Rioja Red,red,4,3,False
+w1094,Lan,A Mano Rioja,2017,4.4,360,Rioja,30.73,Rioja Red,red,4,3,False
+w1095,Lan,A Mano Rioja,2018,4.4,269,Rioja,29.9,Rioja Red,red,4,3,False
+w1096,Lan,Culmen Reserva Rioja,2001,4.4,168,Rioja,69.0,Rioja Red,red,4,3,False
+w1097,Lan,Culmen Reserva Rioja,2011,4.4,798,Rioja,59.9,Rioja Red,red,4,3,False
+w1098,Lan,Culmen Reserva Rioja,2015,4.5,365,Rioja,42.75,Rioja Red,red,4,3,False
+w1099,Lan,Vina Lanciano Reserva,2015,4.2,514,Rioja,14.6,Rioja Red,red,4,3,False
+w1100,Lar de Paula,Tempranillo Reserva,2012,4.3,46,Rioja,14.9,Rioja Red,red,4,3,False
+w1101,Leda,Guarda de Leda Seleccion Tempranillo,2015,4.4,59,Castilla y Leon,37.66,Tempranillo,red,4,2,False
+w1102,Leda,Vinas Viejas Tempranillo,2017,4.3,174,Castilla y Leon,28.38,Tempranillo,red,4,2,False
+w1103,Legaris,Calmo,2014,4.5,43,Ribera del Duero,71.9,Ribera Del Duero Red,red,5,3,False
+w1104,Legaris,La Aguilera,2016,4.4,44,Ribera del Duero,32.5,Ribera Del Duero Red,red,5,3,False
+w1105,Legaris,Moradillo de Roa,2017,4.4,35,Ribera del Duero,29.89,Ribera Del Duero Red,red,5,3,False
+w1106,Llanos Negros,La Time,2000,4.3,94,La Palma,21.95,,unknown,4,3,True
+w1107,Llanos Negros,Los Tabaqueros,2006,4.3,419,La Palma,21.95,,unknown,4,3,True
+w1108,Llopart,Cava Ex-Vite Gran Reserva Brut,2010,4.4,57,Cava,43.5,Cava,sparkling,2,3,False
+w1109,Llopart,Cava Original Brut (Espumos),2008,4.3,81,Cava,62.9,Cava,sparkling,2,3,True
+w1110,Llopart,Cava Original Brut (Espumos),2010,4.4,49,Cava,52.95,Cava,sparkling,2,3,False
+w1111,Loess,Tinto,2019,4.3,26,Ribera del Duero,8.57,Ribera Del Duero Red,red,5,3,False
+w1112,Lopez Cristobal,Bagus Ribera del Duero,2012,4.2,559,Ribera del Duero,54.0,Ribera Del Duero Red,red,5,3,False
+w1113,Lopez Cristobal,Seleccion,2012,4.4,31,Ribera del Duero,35.35,Ribera Del Duero Red,red,5,3,False
+w1114,Los Aguilares,Pago El Espino,2017,4.2,555,Sierras de Malaga,25.35,Red,red,4,3,False
+w1115,Los Aguilares,Pago El Espino,2019,4.4,56,Sierras de Malaga,18.9,Red,red,4,3,False
+w1116,Los Aguilares,Pinot Noir,2020,4.3,25,Sierras de Malaga,33.5,Red,red,4,3,False
+w1117,Los Aguilares,Tadeo Tinto,2014,4.4,215,Sierras de Malaga,33.0,Red,red,4,3,False
+w1118,Losada,Altos de Losada,2017,4.2,676,Bierzo,18.4,Mencia,red,3,3,False
+w1119,Losada,Altos de Losada,2018,4.2,415,Bierzo,17.9,Mencia,red,3,3,True
+w1120,Losada,Altos de Losada,2019,4.3,97,Bierzo,18.35,Mencia,red,3,3,False
+w1121,Losada,Altos de Losada El Cepon,2017,4.3,132,Bierzo,35.9,Mencia,red,3,3,False
+w1122,Losada,La Bienquerida,2015,4.3,100,Bierzo,36.91,Mencia,red,3,3,False
+w1123,Losada,La Bienquerida,2017,4.3,213,Bierzo,37.35,Mencia,red,3,3,False
+w1124,Losada,La Bienquerida,2018,4.4,66,Bierzo,34.55,Mencia,red,3,3,False
+w1125,Losada,La Bienquerida,2019,4.5,41,Bierzo,32.9,Mencia,red,3,3,False
+w1126,Loxera,El Cordero y las Virgenes,2016,4.3,60,Valencia,24.0,Red,red,4,3,False
+w1127,Luis A. Rodriguez Vazquez,A Torna dos Pasas Escolma Ribeiro,2016,4.3,37,Ribeiro,40.75,Red,red,4,3,False
+w1128,Luis A. Rodriguez Vazquez,Vina de Martin Escolma Ribeiro,2016,4.4,85,Ribeiro,37.65,,unknown,4,3,True
+w1129,Luis Canas,Hiru 3 Rioja Racimos,2005,4.3,91,Rioja,118.0,Rioja Red,red,4,3,False
+w1130,Luis Canas,Reserva Seleccion de la Familia,2014,4.3,1022,Rioja,17.07,Rioja Red,red,4,3,False
+w1131,Luis Canas,Reserva Seleccion de la Familia,2016,4.3,1282,Rioja,18.5,Rioja Red,red,4,3,False
+w1132,Luis Canas,Rioja Gran Reserva,2016,4.3,45,Rioja,21.01,Rioja Red,red,4,3,False
+w1133,Lustau,Candela Cream Dulce Sweet,,4.2,405,Jerez-Xeres-Sherry,7.1,Sherry,fortified,4,3,True
+w1134,Lustau,Jerez-Xeres-Sherry 30 Year Old Oloroso VORS,,4.3,135,Jerez-Xeres-Sherry,39.0,Sherry,fortified,4,3,False
+w1135,Lustau,Pedro Ximenez Murillo Seleccion del Centenario,,4.3,481,Jerez-Xeres-Sherry,40.0,Pedro Ximenez,fortified,5,1,False
+w1136,Lustau,Vermut Rojo,,4.2,1058,Jerez-Xeres-Sherry,11.9,,unknown,4,3,True
+w1137,M. Antonio de la Riva,La Riva Fino Balbaina Alta,,4.3,67,Jerez-Xeres-Sherry,47.45,Sherry,fortified,4,3,False
+w1138,Mandia Vell,Pinot Noir,2017,4.3,31,Mallorca,29.38,Red,red,4,3,False
+w1139,Mar de Frades,Rias Baixas Albarino Atlantico,2019,4.2,4610,Rias Baixas,14.95,Albarino,white,3,3,False
+w1140,Mar de Frades,Rias Baixas Albarino Atlantico,2021,4.2,439,Rias Baixas,14.8,Albarino,white,3,3,False
+w1141,Mar de Frades,Rias Baixas Albarino Finca Valinas,2015,4.2,414,Rias Baixas,16.78,Albarino,white,3,3,True
+w1142,Marco Abella,Clos Abella Seleccion Especial,2014,4.4,173,Priorato,43.85,Priorat Red,red,4,3,False
+w1143,Marco Abella,Clos Abella Seleccion Especial,2016,4.3,44,Priorato,43.5,Priorat Red,red,4,3,False
+w1144,Marques de Burgos,8000,2017,4.5,75,Ribera del Duero,29.95,Ribera Del Duero Red,red,5,3,False
+w1145,Marques de Caceres,Gaudium,1994,4.4,159,Rioja,125.0,Rioja Red,red,4,3,False
+w1146,Marques de Caceres,Gaudium,1998,4.3,50,Rioja,60.0,Rioja Red,red,4,3,False
+w1147,Marques de Caceres,Gaudium,2012,4.3,1116,Rioja,36.91,Rioja Red,red,4,3,False
+w1148,Marques de Caceres,Gaudium,2014,4.4,827,Rioja,37.8,Rioja Red,red,4,3,False
+w1149,Marques de Caceres,Gaudium,2015,4.4,561,Rioja,43.86,Rioja Red,red,4,3,False
+w1150,Marques de Caceres,Gaudium,2016,4.5,104,Rioja,34.9,Rioja Red,red,4,3,False
+w1151,Marques de Caceres,Rioja Reserva,1985,4.3,35,Rioja,45.0,Rioja Red,red,4,3,False
+w1152,Marques de Caceres,Rioja Satinela Blanco Semidulce,2020,4.2,630,Rioja,6.99,Rioja White,white,3,3,False
+w1153,Marques de Grinon,AAA,2004,4.5,56,Dominio de Valdepusa,141.2,Red,red,4,3,False
+w1154,Marques de Grinon,AAA,2008,4.6,63,Dominio de Valdepusa,162.38,Red,red,4,3,False
+w1155,Marques de Grinon,Emeritvs (Emeritus),2011,4.3,197,Dominio de Valdepusa,47.0,Red,red,4,3,False
+w1156,Marques de Grinon,Emeritvs (Emeritus),2013,4.5,147,Dominio de Valdepusa,48.9,Red,red,4,3,False
+w1157,Marques de Murrieta,Capellania Reserva,2015,4.2,1301,Rioja,29.15,Rioja White,white,3,3,False
+w1158,Marques de Murrieta,Capellania Reserva,2016,4.3,422,Rioja,32.33,Rioja White,white,3,3,False
+w1159,Marques de Murrieta,Castillo Ygay Gran Reserva Especial Blanco,1986,4.7,425,Rioja,795.0,Rioja White,white,3,3,False
+w1160,Marques de Murrieta,Castillo Ygay Gran Reserva Especial Tinto,1925,4.3,48,Rioja,532.0,Rioja Red,red,4,3,False
+w1161,Marques de Murrieta,Castillo Ygay Gran Reserva Especial Tinto,1942,4.7,27,Rioja,680.0,Rioja Red,red,4,3,False
+w1162,Marques de Murrieta,Castillo Ygay Gran Reserva Especial Tinto,1959,4.4,80,Rioja,940.0,Rioja Red,red,4,3,False
+w1163,Marques de Murrieta,Castillo Ygay Gran Reserva Especial Tinto,1989,4.3,404,Rioja,160.0,Rioja Red,red,4,3,False
+w1164,Marques de Murrieta,Castillo Ygay Gran Reserva Especial Tinto,1994,4.3,216,Rioja,182.0,Rioja Red,red,4,3,False
+w1165,Marques de Murrieta,Castillo Ygay Gran Reserva Especial Tinto,1995,4.3,234,Rioja,145.0,Rioja Red,red,4,3,False
+w1166,Marques de Murrieta,Castillo Ygay Gran Reserva Especial Tinto,1998,4.3,418,Rioja,160.0,Rioja Red,red,4,3,False
+w1167,Marques de Murrieta,Castillo Ygay Gran Reserva Especial Tinto,2004,4.4,1943,Rioja,160.0,Rioja Red,red,4,3,False
+w1168,Marques de Murrieta,Castillo Ygay Gran Reserva Especial Tinto,2005,4.5,3521,Rioja,400.0,Rioja Red,red,4,3,False
+w1169,Marques de Murrieta,Castillo Ygay Gran Reserva Especial Tinto,2009,4.5,3148,Rioja,229.0,Rioja Red,red,4,3,False
+w1170,Marques de Murrieta,Castillo Ygay Gran Reserva Especial Tinto,2010,4.6,2416,Rioja,438.9,Rioja Red,red,4,3,False
+w1171,Marques de Murrieta,Castillo Ygay Gran Reserva Especial Tinto,2011,4.6,85,Rioja,195.0,Rioja Red,red,4,3,False
+w1172,Marques de Murrieta,Dalmau Rioja,1996,4.3,29,Rioja,110.0,Rioja Red,red,4,3,False
+w1173,Marques de Murrieta,Dalmau Rioja,2000,4.5,42,Rioja,48.5,Rioja Red,red,4,3,False
+w1174,Marques de Murrieta,Dalmau Rioja,2001,4.6,59,Rioja,121.0,Rioja Red,red,4,3,False
+w1175,Marques de Murrieta,Dalmau Rioja,2002,4.3,57,Rioja,75.0,Rioja Red,red,4,3,False
+w1176,Marques de Murrieta,Dalmau Rioja,2012,4.3,916,Rioja,67.95,Rioja Red,red,4,3,False
+w1177,Marques de Murrieta,Dalmau Rioja,2013,4.3,912,Rioja,60.95,Rioja Red,red,4,3,False
+w1178,Marques de Murrieta,Dalmau Rioja,2014,4.5,642,Rioja,67.6,Rioja Red,red,4,3,False
+w1179,Marques de Murrieta,Dalmau Rioja,2015,4.5,97,Rioja,75.0,Rioja Red,red,4,3,False
+w1180,Marques de Murrieta,Dalmau Rioja,2016,4.4,550,Rioja,55.33,Rioja Red,red,4,3,False
+w1181,Marques de Murrieta,Dalmau Rioja,2017,4.6,222,Rioja,85.7,Rioja Red,red,4,3,False
+w1182,Marques de Murrieta,Gran Reserva Rioja (Finca Ygay),2010,4.2,645,Rioja,86.95,Rioja Red,red,4,3,False
+w1183,Marques de Murrieta,Gran Reserva Rioja (Finca Ygay),2011,4.3,1118,Rioja,94.95,Rioja Red,red,4,3,False
+w1184,Marques de Murrieta,Gran Reserva Rioja (Finca Ygay),2012,4.3,749,Rioja,39.78,Rioja Red,red,4,3,False
+w1185,Marques de Murrieta,Gran Reserva Rioja (Finca Ygay),2013,4.3,405,Rioja,42.0,Rioja Red,red,4,3,False
+w1186,Marques de Murrieta,Gran Reserva Rioja (Finca Ygay),2014,4.3,685,Rioja,50.0,Rioja Red,red,4,3,False
+w1187,Marques de Murrieta,Reserva Rioja (Finca Ygay),1954,4.6,42,Rioja,210.0,Rioja Red,red,4,3,False
+w1188,Marques de Murrieta,Reserva Rioja (Finca Ygay),2016,4.2,8318,Rioja,23.0,Rioja Red,red,4,3,False
+w1189,Marques de Murrieta,Reserva Rioja (Finca Ygay),2017,4.2,811,Rioja,20.9,Rioja Red,red,4,3,False
+w1190,Marques de Riscal,Baron de Chirel Rioja Reserva,2003,4.4,95,Rioja,77.0,Rioja Red,red,4,3,False
+w1191,Marques de Riscal,Baron de Chirel Rioja Reserva,2005,4.4,667,Rioja,140.0,Rioja Red,red,4,3,False
+w1192,Marques de Riscal,Baron de Chirel Rioja Reserva,2014,4.3,661,Rioja,62.95,Rioja Red,red,4,3,False
+w1193,Marques de Riscal,Baron de Chirel Rioja Reserva,2015,4.4,683,Rioja,69.95,Rioja Red,red,4,3,False
+w1194,Marques de Riscal,Baron de Chirel Rioja Reserva,2016,4.5,163,Rioja,73.62,Rioja Red,red,4,3,False
+w1195,Marques de Riscal,Baron de Chirel Rioja Reserva,2017,4.4,27,Rioja,95.0,Rioja Red,red,4,3,False
+w1196,Marques de Riscal,Baron de Chirel Verdejo Vinas Centenarias,2018,4.3,71,Castilla y Leon,40.5,Verdejo,white,3,3,False
+w1197,Marques de Riscal,Frank Gehry Selection,2001,4.6,124,Rioja,301.0,Tempranillo,red,4,2,False
+w1198,Marques de Riscal,Reserva XR,2015,4.2,778,Rioja,23.0,Rioja Red,red,4,3,False
+w1199,Marques de Riscal,Reserva XR,2016,4.3,676,Rioja,21.24,Rioja Red,red,4,3,False
+w1200,Marques de Riscal,Rioja 150 Aniversario,2010,4.2,1686,Rioja,59.0,Rioja Red,red,4,3,False
+w1201,Marques de Riscal,Rioja Gran Reserva,1996,4.4,36,Rioja,38.12,Rioja Red,red,4,3,False
+w1202,Marques de Riscal,Rioja Gran Reserva,2007,4.2,3101,Rioja,28.43,Rioja Red,red,4,3,False
+w1203,Marques de Riscal,Rioja Gran Reserva,2011,4.2,1319,Rioja,39.5,Rioja Red,red,4,3,False
+w1204,Marques de Riscal,Rioja Gran Reserva,2013,4.3,995,Rioja,39.9,Rioja Red,red,4,3,False
+w1205,Marques de Riscal,Rioja Gran Reserva,2014,4.2,840,Rioja,35.63,Rioja Red,red,4,3,False
+w1206,Marques de Riscal,Rioja Gran Reserva,2015,4.4,485,Rioja,35.1,Rioja Red,red,4,3,True
+w1207,Marques de Riscal,Rioja Gran Reserva,2016,4.3,27,Rioja,46.45,Rioja Red,red,4,3,False
+w1208,Marques de Riscal,Rioja Reserva,1964,4.3,29,Rioja,310.0,Rioja Red,red,4,3,False
+w1209,Marques de Riscal,Rioja Reserva,1994,4.3,296,Rioja,65.0,Rioja Red,red,4,3,True
+w1210,Marques de Riscal,Rioja Reserva,2016,4.2,16505,Rioja,15.9,Rioja Red,red,4,3,False
+w1211,Marques de Tomares,Rioja Gran Reserva,2010,4.3,368,Rioja,25.95,Red,red,4,3,False
+w1212,Marques de Tomares,Rioja Gran Reserva,2014,4.3,62,Rioja,25.95,Red,red,4,3,False
+w1213,Marques de Vargas,Gran Reserva Rioja,2011,4.3,901,Rioja,35.01,Rioja Red,red,4,3,False
+w1214,Marques de Vargas,Hacienda Pradolagar,2015,4.4,1326,Rioja,105.12,Rioja Red,red,4,3,False
+w1215,Marques de Vargas,Reserva Privada Rioja,2014,4.3,1367,Rioja,37.9,Rioja Red,red,4,3,False
+w1216,Marques de Vargas,Reserva Privada Rioja,2015,4.4,746,Rioja,49.67,Rioja Red,red,4,3,False
+w1217,Marques de Vargas,Seleccion Privada,2011,4.4,65,Rioja,68.0,Rioja Red,red,4,3,False
+w1218,Marques de Vargas,Seleccion Privada,2015,4.3,79,Rioja,54.5,Rioja Red,red,4,3,False
+w1219,Marques de la Concordia,Marques de la Concordia VSG Premium (formerly Hacienda de Susar Rioja),2016,4.5,50,Rioja,35.5,Rioja Red,red,4,3,False
+w1220,Marta Mate,Primordium,2012,4.4,40,Ribera del Duero,29.9,Ribera Del Duero Red,red,5,3,False
+w1221,Marti Fabra,Masia Carreras Negre,2018,4.3,149,Emporda,20.59,Red,red,4,3,True
+w1222,Marti Fabra,Masia Carreras Negre,2019,4.3,69,Emporda,11.91,Red,red,4,3,False
+w1223,Martin Codax,Arousa,2019,4.4,44,Vino de Espana,18.99,Albarino,white,3,3,False
+w1224,Martin Codax,Gallaecia Rias Baixes Albarino,2017,4.4,34,Rias Baixas,39.95,Albarino,white,3,3,False
+w1225,Martinet,Cami Pesseroles,2006,4.7,65,Priorato,182.9,Priorat Red,red,4,3,False
+w1226,Martinet,Cami Pesseroles,2007,4.4,112,Priorato,165.85,Priorat Red,red,4,3,False
+w1227,Martinet,Cami Pesseroles,2008,4.4,80,Priorato,152.6,Priorat Red,red,4,3,False
+w1228,Martinet,Cami Pesseroles,2009,4.5,141,Priorato,139.3,Priorat Red,red,4,3,False
+w1229,Martinet,Cami Pesseroles,2010,4.5,113,Priorato,131.85,Priorat Red,red,4,3,False
+w1230,Martinet,Cami Pesseroles,2011,4.4,74,Priorato,126.5,Priorat Red,red,4,3,False
+w1231,Martinet,Cami Pesseroles,2012,4.5,60,Priorato,115.85,Priorat Red,red,4,3,False
+w1232,Martinet,Cami Pesseroles,2013,4.5,32,Priorato,113.2,Priorat Red,red,4,3,False
+w1233,Martinet,Cami Pesseroles,2014,4.5,78,Priorato,82.55,Priorat Red,red,4,3,False
+w1234,Martinet,Cami Pesseroles,2016,4.5,46,Priorato,79.55,Priorat Red,red,4,3,False
+w1235,Martinet,Cami Pesseroles,2017,4.4,42,Priorato,75.5,Priorat Red,red,4,3,False
+w1236,Martinet,Clos Martinet,2002,4.3,70,Priorato,177.45,Priorat Red,red,4,3,False
+w1237,Martinet,Clos Martinet,2003,4.3,135,Priorato,130.5,Priorat Red,red,4,3,False
+w1238,Martinet,Clos Martinet,2004,4.3,249,Priorato,162.5,Priorat Red,red,4,3,False
+w1239,Martinet,Clos Martinet,2005,4.3,461,Priorato,116.05,Priorat Red,red,4,3,False
+w1240,Martinet,Clos Martinet,2006,4.3,192,Priorato,110.0,Priorat Red,red,4,3,False
+w1241,Martinet,Clos Martinet,2007,4.4,177,Priorato,154.37,Priorat Red,red,4,3,False
+w1242,Martinet,Clos Martinet,2008,4.4,220,Priorato,113.2,Priorat Red,red,4,3,False
+w1243,Martinet,Clos Martinet,2010,4.3,218,Priorato,127.2,Priorat Red,red,4,3,False
+w1244,Martinet,Clos Martinet,2011,4.4,249,Priorato,75.92,Priorat Red,red,4,3,False
+w1245,Martinet,Clos Martinet,2012,4.3,178,Priorato,117.3,Priorat Red,red,4,3,False
+w1246,Martinet,Clos Martinet,2013,4.3,189,Priorato,114.6,Priorat Red,red,4,3,False
+w1247,Martinet,Clos Martinet,2014,4.5,230,Priorato,65.0,Priorat Red,red,4,3,False
+w1248,Martinet,Clos Martinet,2015,4.4,296,Priorato,65.4,Priorat Red,red,4,3,False
+w1249,Martinet,Clos Martinet,2017,4.3,222,Priorato,60.45,Priorat Red,red,4,3,False
+w1250,Martinet,Clos Martinet,2018,4.3,125,Priorato,57.5,Priorat Red,red,4,3,False
+w1251,Martinet,Els Escurcons,2014,4.4,143,Priorato,78.49,Priorat Red,red,4,3,False
+w1252,Martinet,Els Escurcons,2015,4.3,122,Priorato,84.95,Priorat Red,red,4,3,False
+w1253,Martinet,Els Escurcons,2018,4.3,61,Priorato,75.5,Priorat Red,red,4,3,False
+w1254,Martinet,Martinet Bru (Garnatxa - Syrah),2019,4.2,897,Priorato,21.9,Priorat Red,red,4,3,False
+w1255,Martinez Lacuesta,Rioja Reserva Especial,1922,4.4,51,Rioja Alta,280.0,Rioja Red,red,4,3,False
+w1256,Mas Bertran,Argila Reserva 3 Anys Brut Nature,2013,4.3,34,Penedes,21.6,Sparkling,sparkling,2,3,False
+w1257,Mas Blanch I Jove,Sao Expressiu,2012,4.4,28,Costers del Segre,34.5,Red,red,4,3,False
+w1258,Mas Doix,1902 Centenary Carignan Priorat,2013,4.7,74,Priorato,447.95,Priorat Red,red,4,3,False
+w1259,Mas Doix,1902 Centenary Carignan Priorat,2015,4.7,94,Priorato,299.0,Priorat Red,red,4,3,False
+w1260,Mas Doix,1902 Centenary Carignan Priorat,2016,4.6,43,Priorato,270.44,Priorat Red,red,4,3,False
+w1261,Mas Doix,1902 Centenary Carignan Priorat,2017,4.6,51,Priorato,259.9,Priorat Red,red,4,3,False
+w1262,Mas Doix,1903 Centenary Grenache,2016,4.6,28,Priorato,299.0,Priorat Red,red,4,3,False
+w1263,Mas Doix,Doix,2002,4.3,49,Priorato,195.52,Priorat Red,red,4,3,False
+w1264,Mas Doix,Doix,2007,4.4,187,Priorato,350.03,Priorat Red,red,4,3,False
+w1265,Mas Doix,Doix,2012,4.3,191,Priorato,82.0,Priorat Red,red,4,3,False
+w1266,Mas Doix,Doix,2013,4.4,164,Priorato,78.38,Priorat Red,red,4,3,False
+w1267,Mas Doix,Doix,2014,4.4,114,Priorato,116.0,Priorat Red,red,4,3,False
+w1268,Mas Doix,Doix,2015,4.4,100,Priorato,95.0,Priorat Red,red,4,3,False
+w1269,Mas Doix,Doix,2016,4.3,83,Priorato,79.9,Priorat Red,red,4,3,True
+w1270,Mas Doix,Doix,2017,4.5,71,Priorato,79.9,Priorat Red,red,4,3,False
+w1271,Mas Llunes,Finca Butaros Vinya Centenaria,2015,4.4,67,Emporda,32.23,Red,red,4,3,False
+w1272,Mas Perinet,Perinet + Plus,2004,4.4,85,Priorato,54.05,Priorat Red,red,4,3,False
+w1273,Mas Que Vinos,La Plazuela,2015,4.3,141,Castilla,44.05,Red,red,4,3,False
+w1274,Mas d'en Gil,Clos Fonta Priorat,2001,4.3,60,Priorato,150.0,Priorat Red,red,4,3,False
+w1275,Mas d'en Gil,Clos Fonta Priorat,2004,4.6,202,Priorato,150.0,Priorat Red,red,4,3,False
+w1276,Mas d'en Gil,Clos Fonta Priorat,2007,4.3,153,Priorato,125.0,Priorat Red,red,4,3,True
+w1277,Mas d'en Gil,Clos Fonta Priorat,2014,4.3,278,Priorato,54.5,Priorat Red,red,4,3,True
+w1278,Mas d'en Gil,Clos Fonta Priorat,2015,4.3,122,Priorato,53.9,Priorat Red,red,4,3,False
+w1279,Mas d'en Gil,Coma Vella Priorat,2014,4.2,576,Priorato,24.8,Priorat Red,red,4,3,False
+w1280,Mas d'en Gil,Gran Buig Priorat,2004,4.6,79,Priorato,272.0,Priorat Red,red,4,3,False
+w1281,Mas de les Pereres,Nunci Negre,2013,4.3,79,Priorato,21.4,Priorat Red,red,4,3,False
+w1282,Mas del Serral,Mas del Serral,2007,4.5,82,Penedes,192.16,Sparkling,sparkling,2,3,False
+w1283,Matarromera,Crianza,2016,4.2,4127,Ribera del Duero,9.76,Ribera Del Duero Red,red,5,3,False
+w1284,Matarromera,Crianza,2017,4.2,1209,Ribera del Duero,16.88,Ribera Del Duero Red,red,5,3,False
+w1285,Matarromera,Gran Reserva,2011,4.2,389,Ribera del Duero,64.5,Ribera Del Duero Red,red,5,3,True
+w1286,Matarromera,Gran Reserva,2014,4.4,52,Ribera del Duero,74.55,Ribera Del Duero Red,red,5,3,False
+w1287,Matarromera,Ribera del Duero Prestigio,2014,4.4,421,Ribera del Duero,41.32,Ribera Del Duero Red,red,5,3,True
+w1288,Matarromera,Ribera del Duero Prestigio,2015,4.5,190,Ribera del Duero,54.01,Ribera Del Duero Red,red,5,3,False
+w1289,Matarromera,Ribera del Duero Prestigio,2016,4.6,45,Ribera del Duero,53.95,Ribera Del Duero Red,red,5,3,False
+w1290,Matarromera,Ribera del Duero Prestigio Pago de las Solanas,2001,4.6,145,Ribera del Duero,245.75,Ribera Del Duero Red,red,5,3,False
+w1291,Matarromera,Ribera del Duero Prestigio Pago de las Solanas,2010,4.5,44,Ribera del Duero,237.0,Ribera Del Duero Red,red,5,3,False
+w1292,Matarromera,Ribera del Duero Reserva,2014,4.3,3660,Ribera del Duero,33.64,Ribera Del Duero Red,red,5,3,True
+w1293,Matarromera,Ribera del Duero Reserva,2015,4.3,3620,Ribera del Duero,36.35,Ribera Del Duero Red,red,5,3,True
+w1294,Matarromera,Ribera del Duero Reserva,2016,4.4,4851,Ribera del Duero,31.5,Ribera Del Duero Red,red,5,3,True
+w1295,Matarromera,Ribera del Duero Reserva,2017,4.4,3456,Ribera del Duero,37.25,Ribera Del Duero Red,red,5,3,True
+w1296,Matsu,El Viejo,2012,4.2,668,Toro,26.95,Toro Red,red,5,3,False
+w1297,Matsu,El Viejo,2016,4.3,2013,Toro,33.95,Toro Red,red,5,3,True
+w1298,Matsu,El Viejo,2017,4.2,518,Toro,33.9,Toro Red,red,5,3,False
+w1299,Matsu,El Viejo,2018,4.4,1438,Toro,32.01,Toro Red,red,5,3,False
+w1300,Matsu,El Viejo,2019,4.2,400,Toro,27.89,Toro Red,red,5,3,True
+w1301,Mauro Estevez,Vino de Autor Ribeiro Blanco,2020,4.3,34,Ribeiro,15.9,,unknown,4,3,True
+w1302,Merum Priorati,Desti,2018,4.4,136,Priorato,29.95,Priorat Red,red,4,3,False
+w1303,Merum Priorati,El Cel,2015,4.4,123,Priorato,59.0,Priorat Red,red,4,3,False
+w1304,Merum Priorati,El Cel,2016,4.4,88,Priorato,64.0,Priorat Red,red,4,3,False
+w1305,Merum Priorati,Inici,2017,4.2,969,Priorato,39.0,Priorat Red,red,4,3,False
+w1306,Mestres,Mas Via Gran Reserva Brut,2002,4.3,29,Cava,76.17,Cava,sparkling,2,3,False
+w1307,Mestres,Mas Via Gran Reserva Brut,2004,4.5,102,Cava,40.33,Cava,sparkling,2,3,False
+w1308,Micro Bio (MicroBio),Respublica Verdejo,2016,4.6,33,Vino de Espana,75.95,Verdejo,white,3,3,False
+w1309,Miguel Merino,Gran Reserva,2000,4.3,25,Rioja,48.81,Rioja Red,red,4,3,False
+w1310,Miguel Merino,La Loma,2017,4.5,69,Rioja Alta,38.9,Rioja Red,red,4,3,False
+w1311,Miguel Merino,La Loma,2018,4.7,29,Rioja Alta,46.0,Rioja Red,red,4,3,False
+w1312,Miguel Merino,Vitola Reserva,2016,4.3,42,Rioja,21.9,Rioja Red,red,4,3,False
+w1313,Milsetentayseis,Tinto,2018,4.5,218,Ribera del Duero,52.9,Ribera Del Duero Red,red,5,3,False
+w1314,Mocen,Seleccion Especial Verdejo,2021,4.3,32,Rueda,6.26,Verdejo,white,3,3,False
+w1315,Monovar,Fondillon,1996,4.4,236,Alicante,73.9,Red,red,4,3,False
+w1316,Monte Real,Gran Reserva,1964,4.5,54,Rioja,140.0,Rioja Red,red,4,3,False
+w1317,Monte Real,Gran Reserva,1978,4.4,45,Rioja,97.0,Rioja Red,red,4,3,False
+w1318,Monte Real,Gran Reserva,1998,4.3,445,Rioja,34.9,Rioja Red,red,4,3,False
+w1319,Monteabellon,Finca Matambres,2016,4.3,170,Ribera del Duero,28.3,Ribera Del Duero Red,red,5,3,True
+w1320,Montecastro,Ribera del Duero Red,2015,4.2,1095,Ribera del Duero,18.9,Ribera Del Duero Red,red,5,3,False
+w1321,Montecastro,Ribera del Duero Red,2017,4.2,433,Ribera del Duero,16.9,Ribera Del Duero Red,red,5,3,False
+w1322,Montecastro,Ribera del Duero Red,2018,4.2,733,Ribera del Duero,18.5,Ribera Del Duero Red,red,5,3,False
+w1323,Morca,Garnacha,2016,4.4,376,Campo de Borja,31.5,Grenache,red,5,3,True
+w1324,Morca,Garnacha,2019,4.5,33,Campo de Borja,29.95,Grenache,red,5,3,False
+w1325,Morca,Godina Garnacha,2019,4.3,370,Campo de Borja,16.25,Grenache,red,5,3,False
+w1326,Morca,Touran,2018,4.7,41,Campo de Borja,93.95,Grenache,red,5,3,False
+w1327,Muga,Aro,2004,4.5,102,Rioja,198.0,Rioja Red,red,4,3,False
+w1328,Muga,Aro,2015,4.5,529,Rioja,169.4,Rioja Red,red,4,3,False
+w1329,Muga,Aro,2016,4.5,222,Rioja,174.91,Rioja Red,red,4,3,False
+w1330,Muga,Prado Enea Gran Reserva,1970,4.3,29,Rioja,120.0,Rioja Red,red,4,3,False
+w1331,Muga,Prado Enea Gran Reserva,1982,4.3,90,Rioja,150.0,Rioja Red,red,4,3,False
+w1332,Muga,Prado Enea Gran Reserva,1985,4.3,75,Rioja,98.0,Rioja Red,red,4,3,False
+w1333,Muga,Prado Enea Gran Reserva,1989,4.4,72,Rioja,140.0,Rioja Red,red,4,3,False
+w1334,Muga,Prado Enea Gran Reserva,1991,4.4,72,Rioja,167.0,Rioja Red,red,4,3,False
+w1335,Muga,Prado Enea Gran Reserva,2006,4.3,3608,Rioja,35.5,Rioja Red,red,4,3,True
+w1336,Muga,Prado Enea Gran Reserva,2009,4.3,2923,Rioja,40.4,Rioja Red,red,4,3,True
+w1337,Muga,Prado Enea Gran Reserva,2011,4.4,3197,Rioja,43.95,Rioja Red,red,4,3,True
+w1338,Muga,Prado Enea Gran Reserva,2014,4.5,1014,Rioja,51.0,Rioja Red,red,4,3,False
+w1339,Muga,Prado Enea Gran Reserva,2015,4.5,72,Rioja,56.95,Rioja Red,red,4,3,False
+w1340,Muga,Seleccion Especial (Reserva),2004,4.2,447,Rioja,65.0,Rioja Red,red,4,3,False
+w1341,Muga,Seleccion Especial (Reserva),2014,4.3,3829,Rioja,34.0,Rioja Red,red,4,3,True
+w1342,Muga,Seleccion Especial (Reserva),2015,4.3,4266,Rioja,28.0,Rioja Red,red,4,3,False
+w1343,Muga,Seleccion Especial (Reserva),2016,4.4,3589,Rioja,27.9,Rioja Red,red,4,3,True
+w1344,Muga,Torre Muga,2005,4.3,468,Rioja,99.9,Rioja Red,red,4,3,False
+w1345,Muga,Torre Muga,2006,4.4,1475,Rioja,66.73,Rioja Red,red,4,3,False
+w1346,Muga,Torre Muga,2011,4.3,900,Rioja,69.95,Rioja Red,red,4,3,False
+w1347,Muga,Torre Muga,2014,4.3,728,Rioja,69.9,Rioja Red,red,4,3,False
+w1348,Muga,Torre Muga,2015,4.4,617,Rioja,58.21,Rioja Red,red,4,3,False
+w1349,Muga,Torre Muga,2016,4.5,838,Rioja,70.5,Rioja Red,red,4,3,False
+w1350,Murua,Veguin de Murua Gran Reserva,2012,4.4,101,Rioja,36.0,Rioja Red,red,4,3,False
+w1351,Murviedro,Sericis Cepas Viejas Monastrell,2017,4.2,745,Valencia,8.95,Monastrell,red,5,3,False
+w1352,Museum,Numerus Clausus,2012,4.4,37,Cigales,59.9,Tempranillo,red,4,2,False
+w1353,Mustiguillo,Finca Terrerazo,2017,4.2,390,El Terrerazo,24.45,Red,red,4,3,True
+w1354,Mustiguillo,Finca Terrerazo,2018,4.3,397,El Terrerazo,22.8,Red,red,4,3,False
+w1355,Mustiguillo,Quincha Corral,2016,4.4,145,El Terrerazo,79.95,Red,red,4,3,False
+w1356,Naia,Naiades,2018,4.3,29,Rueda,19.03,Verdejo,white,3,3,False
+w1357,Navajas,Mirador de Navajas Reserva Rioja,2011,4.3,29,Rioja,28.76,Rioja Red,red,4,3,False
+w1358,Neo,Punta Esencia,2011,4.3,163,Ribera del Duero,32.45,Ribera Del Duero Red,red,5,3,True
+w1359,Neo,Ribera del Duero Tinto,2005,4.3,126,Ribera del Duero,35.0,Ribera Del Duero Red,red,5,3,False
+w1360,Neton,Garnacha Tintorera,2017,4.3,57,Castilla y Leon,13.24,Red,red,4,3,False
+w1361,Nin-Ortiz,Nit de Nin Mas d'en Cacador,2011,4.6,139,Priorato,345.0,Priorat Red,red,4,3,False
+w1362,Nin-Ortiz,Nit de Nin Mas d'en Cacador,2017,4.4,106,Priorato,89.9,Priorat Red,red,4,3,False
+w1363,Nin-Ortiz,Selma de Nin Blanco,2017,4.3,25,Cataluna,56.95,,unknown,4,3,True
+w1364,Noelia Bebelia,Albarino,2019,4.3,150,Rias Baixas,21.5,Albarino,white,3,3,True
+w1365,Olivardots,Vd'O 1 Samso - Pissarra,2012,4.3,46,Emporda,34.95,Red,red,4,3,False
+w1366,Olivier Riviere,Pozo Alto,2016,4.4,48,Rioja,119.95,Rioja Red,red,4,3,False
+w1367,Oller del Mas,Arnau Oller Seleccio de la Familia,2016,4.3,108,Pla de Bages,33.15,Red,red,4,3,False
+w1368,Ontanon,Queiron Mi Lugar,2018,4.3,232,Rioja,21.5,Rioja Red,red,4,3,False
+w1369,Ontanon,Queiron Reserva Vinedos Familiares,2011,4.4,74,Rioja,26.85,Rioja Red,red,4,3,False
+w1370,Orben,Malpuesto,2017,4.3,239,Rioja,30.3,Rioja Red,red,4,3,False
+w1371,Orben,Malpuesto,2018,4.4,158,Rioja,35.5,Rioja Red,red,4,3,False
+w1372,Ordonez,Nisia Las Suertes Verdejo Old Vines,2020,4.3,25,Rueda,16.9,Verdejo,white,3,3,False
+w1373,Ordonez,Vatan Arena Tinta de Toro,2014,4.8,79,Toro,369.05,Toro Red,red,5,3,False
+w1374,Ordonez,Vatan Tinta de Toro,2016,4.3,665,Toro,26.0,Toro Red,red,5,3,False
+w1375,Ordonez,Vatan Tinta de Toro,2017,4.4,498,Toro,55.31,Toro Red,red,5,3,True
+w1376,Ordonez,Vatan Tinta de Toro,2018,4.3,247,Toro,33.6,Toro Red,red,5,3,False
+w1377,Osborne,Amontillado 51-1a 30 Years VORS Sherry,,4.3,89,Jerez-Xeres-Sherry,64.8,Sherry,fortified,4,3,False
+w1378,Osborne,Sibarita Oloroso Jerez-Xeres-Sherry 30 Years V.O.R.S,,4.4,117,Jerez Oloroso,79.9,Sherry,fortified,4,3,False
+w1379,Osborne,Solera BC-200,,4.6,25,Jerez-Xeres-Sherry,197.3,Sherry,fortified,4,3,False
+w1380,Osborne,Solera India Oloroso Rare Sherry,,4.6,74,Jerez-Xeres-Sherry,189.99,Sherry,fortified,4,3,False
+w1381,Osborne,Solera PAP Palo Cortado Rare Sherry,,4.4,41,Jerez-Xeres-Sherry,189.99,Sherry,fortified,4,3,False
+w1382,Ossian,Capitel,2016,4.5,162,Castilla y Leon,144.78,Verdejo,white,3,3,False
+w1383,Ossian,Capitel,2018,4.6,107,Castilla y Leon,50.51,Verdejo,white,3,3,False
+w1384,Ossian,Vinas Viejas Verdejo,2015,4.2,769,Castilla y Leon,30.0,Verdejo,white,3,3,False
+w1385,Ossian,Vinas Viejas Verdejo,2016,4.3,1181,Castilla y Leon,49.0,Verdejo,white,3,3,False
+w1386,Ossian,Vinas Viejas Verdejo,2017,4.3,449,Castilla y Leon,42.0,Verdejo,white,3,3,False
+w1387,Ossian,Vinas Viejas Verdejo,2018,4.3,885,Castilla y Leon,28.18,Verdejo,white,3,3,False
+w1388,Ossian,Vinas Viejas Verdejo,2019,4.4,219,Castilla y Leon,26.9,Verdejo,white,3,3,False
+w1389,Ostatu,Gloria Rioja,2010,4.3,117,Rioja Alavesa,54.52,Rioja Red,red,4,3,False
+w1390,Ostatu,Gloria Rioja,2011,4.4,55,Rioja Alavesa,44.9,Rioja Red,red,4,3,False
+w1391,Ostatu,Laderas Rioja,2014,4.3,81,Rioja Alavesa,31.13,Rioja Red,red,4,3,True
+w1392,Oxer Wines,Kalamity Rioja,2017,4.4,65,Rioja,106.0,Rioja Red,red,4,3,False
+w1393,Oxer Wines,Kalamity Rioja,2018,4.6,46,Rioja,114.95,Rioja Red,red,4,3,False
+w1394,Oxer Wines,Suzzane Rioja,2016,4.3,168,Rioja,37.29,Rioja Red,red,4,3,True
+w1395,Oxer Wines,Suzzane Rioja,2019,4.3,48,Rioja,34.9,Rioja Red,red,4,3,False
+w1396,Paco & Lola,Vintage Albarino,2013,4.3,117,Rias Baixas,24.0,Albarino,white,3,3,False
+w1397,Pago Calzadilla,Gran Calzadilla,2009,4.3,70,Pago Calzadilla,39.95,Red,red,4,3,False
+w1398,Pago Calzadilla,Gran Calzadilla,2010,4.4,37,Pago Calzadilla,34.75,Red,red,4,3,False
+w1399,Pago de Carraovejas,Cuesta de Las Liebres,2010,4.6,405,Ribera del Duero,81.5,Ribera Del Duero Red,red,5,3,False
+w1400,Pago de Carraovejas,Cuesta de Las Liebres,2014,4.7,685,Ribera del Duero,113.18,Ribera Del Duero Red,red,5,3,False
+w1401,Pago de Carraovejas,Cuesta de Las Liebres,2015,4.8,372,Ribera del Duero,166.18,Ribera Del Duero Red,red,5,3,False
+w1402,Pago de Carraovejas,El Anejon,2015,4.7,543,Ribera del Duero,75.1,Ribera Del Duero Red,red,5,3,False
+w1403,Pago de Carraovejas,El Anejon,2016,4.8,454,Ribera del Duero,105.15,Ribera Del Duero Red,red,5,3,False
+w1404,Pago de Carraovejas,Reserva,2014,4.5,1148,Ribera del Duero,69.58,Ribera Del Duero Red,red,5,3,False
+w1405,Pago de Carraovejas,Tinto,2012,4.3,4023,Ribera del Duero,25.8,Ribera Del Duero Red,red,5,3,True
+w1406,Pago de Carraovejas,Tinto,2016,4.5,7529,Ribera del Duero,29.8,Ribera Del Duero Red,red,5,3,False
+w1407,Pago de Carraovejas,Tinto,2017,4.5,4935,Ribera del Duero,121.94,Ribera Del Duero Red,red,5,3,False
+w1408,Pago de Carraovejas,Tinto,2018,4.5,5372,Ribera del Duero,45.0,Ribera Del Duero Red,red,5,3,False
+w1409,Pago de Carraovejas,Tinto,2019,4.5,2144,Ribera del Duero,33.8,Ribera Del Duero Red,red,5,3,False
+w1410,Pago de Larrainzar,Reserva Especial,2014,4.3,49,Navarra,16.9,Red,red,4,3,False
+w1411,Pago de Larrainzar,Rosado de Larrainzar,2020,4.6,39,Navarra,12.0,,unknown,4,3,True
+w1412,Pago de Los Capellanes,Crianza Tinto,2017,4.2,3224,Ribera del Duero,20.95,Ribera Del Duero Red,red,5,3,False
+w1413,Pago de Los Capellanes,Crianza Tinto,2018,4.3,2705,Ribera del Duero,24.5,Ribera Del Duero Red,red,5,3,True
+w1414,Pago de Los Capellanes,Crianza Tinto,2019,4.3,1011,Ribera del Duero,19.45,Ribera Del Duero Red,red,5,3,False
+w1415,Pago de Los Capellanes,Doroteo Edicion Especial 25 Aniversario,2015,4.6,86,Ribera del Duero,59.0,Ribera Del Duero Red,red,5,3,False
+w1416,Pago de Los Capellanes,O Luar do Sil Valdeorras Godello Sobre Lias,2020,4.4,101,Valdeorras,16.39,,unknown,4,3,True
+w1417,Pago de Los Capellanes,Parcela El Nogal Tinto,2014,4.5,1163,Ribera del Duero,40.95,Ribera Del Duero Red,red,5,3,False
+w1418,Pago de Los Capellanes,Parcela El Nogal Tinto,2015,4.5,1393,Ribera del Duero,45.9,Ribera Del Duero Red,red,5,3,False
+w1419,Pago de Los Capellanes,Parcela El Nogal Tinto,2016,4.5,595,Ribera del Duero,42.95,Ribera Del Duero Red,red,5,3,False
+w1420,Pago de Los Capellanes,Parcela El Picon Tinto,2009,4.7,134,Ribera del Duero,154.0,Ribera Del Duero Red,red,5,3,False
+w1421,Pago de Los Capellanes,Parcela El Picon Tinto,2011,4.6,93,Ribera del Duero,135.0,Ribera Del Duero Red,red,5,3,False
+w1422,Pago de Los Capellanes,Parcela El Picon Tinto,2012,4.6,165,Ribera del Duero,89.0,Ribera Del Duero Red,red,5,3,False
+w1423,Pago de Los Capellanes,Parcela El Picon Tinto,2014,4.6,197,Ribera del Duero,109.41,Ribera Del Duero Red,red,5,3,False
+w1424,Pago de Los Capellanes,Parcela El Picon Tinto,2015,4.5,113,Ribera del Duero,148.39,Ribera Del Duero Red,red,5,3,False
+w1425,Pago de Los Capellanes,Parcela El Picon Tinto,2016,4.7,59,Ribera del Duero,134.26,Ribera Del Duero Red,red,5,3,False
+w1426,Pago de Los Capellanes,Reserva Tinto,2014,4.3,1924,Ribera del Duero,48.64,Ribera Del Duero Red,red,5,3,True
+w1427,Pago de Los Capellanes,Reserva Tinto,2015,4.3,2295,Ribera del Duero,80.35,Ribera Del Duero Red,red,5,3,True
+w1428,Pago de Los Capellanes,Reserva Tinto,2016,4.3,1638,Ribera del Duero,34.5,Ribera Del Duero Red,red,5,3,False
+w1429,Pago de Los Capellanes,Reserva Tinto,2017,4.4,1040,Ribera del Duero,35.7,Ribera Del Duero Red,red,5,3,False
+w1430,Pago de Los Capellanes,Reserva Tinto,2018,4.3,287,Ribera del Duero,30.99,Ribera Del Duero Red,red,5,3,True
+w1431,Pago de Vallegarcia,Hipperia Red Blend,2016,4.3,184,Castilla,36.11,Red,red,4,3,False
+w1432,Pago de Vallegarcia,Hipperia Red Blend,2018,4.4,79,Castilla,24.9,Red,red,4,3,False
+w1433,Pago de Vallegarcia,Montes de Toledo Syrah,2018,4.3,344,Castilla,25.31,Syrah,red,4,3,False
+w1434,Pago de Vallegarcia,Montes de Toledo Syrah,2019,4.4,97,Castilla,19.5,Syrah,red,4,3,False
+w1435,Pago de Vallegarcia,Vallegarcia Viognier,2019,4.3,114,Castilla,18.5,,unknown,4,3,True
+w1436,Pago del Vostal,Crianza Vendimia Seleccionada,2018,4.3,130,Ribera del Duero,18.95,Ribera Del Duero Red,red,5,3,False
+w1437,Palacios Remondo,Propiedad  Rioja,2017,4.2,527,Rioja,25.9,Rioja Red,red,4,3,False
+w1438,Palmeri Sicilia,Palmeri Navalta Garnacha,2016,4.2,151,Campo de Borja,28.9,Grenache,red,5,3,False
+w1439,Particular,Garnacha Vinas Centenarias,2015,4.4,25,Carinena,13.95,Grenache,red,5,3,False
+w1440,Pazo Barrantes,Gran Vino Albarino,2019,4.5,188,Rias Baixas,34.9,Albarino,white,3,3,False
+w1441,Pazo Barrantes,La Comtesse de Pazo Barrantes Albarino,2017,4.4,69,Rias Baixas,59.95,Albarino,white,3,3,False
+w1442,Pazo Senorans,Seleccion de Anada Albarino Rias Baixas,2008,4.2,459,Rias Baixas,37.9,Albarino,white,3,3,False
+w1443,Pazo Senorans,Seleccion de Anada Albarino Rias Baixas,2011,4.3,582,Rias Baixas,30.89,Albarino,white,3,3,False
+w1444,Pazo Senorans,Seleccion de Anada Albarino Rias Baixas,2012,4.4,130,Rias Baixas,34.25,Albarino,white,3,3,False
+w1445,Pazo Senorans,Tras Los Muros Albarino,2017,4.3,42,Rias Baixas,38.0,Albarino,white,3,3,False
+w1446,Pazo de Rubianes,Albarino,2020,4.3,281,Rias Baixas,13.75,Albarino,white,3,3,True
+w1447,Pedralonga,Albarino Pedralonga,2019,4.3,86,Rias Baixas,15.71,Albarino,white,3,3,True
+w1448,Pedralonga,Albarino Pedralonga,2020,4.3,74,Rias Baixas,15.0,Albarino,white,3,3,False
+w1449,Pedralonga,Vendetta,2013,4.5,25,Rias Baixas,38.0,Albarino,white,3,3,True
+w1450,Penafiel,Alba de Miros Rueda Verdejo,2019,4.5,49,Rueda,9.9,Verdejo,white,3,3,False
+w1451,Penafiel,Mironia Black Edition Tempranillo,2015,4.5,73,Ribera del Duero,49.5,Ribera Del Duero Red,red,5,3,False
+w1452,Penafiel,Silencio de Miros Ribera Del Duero,2015,4.3,239,Ribera del Duero,42.35,Ribera Del Duero Red,red,5,3,False
+w1453,Pepe Mendoza Casa Agricola,Giro de Abargues,2019,4.3,167,Alicante,23.5,Red,red,4,3,True
+w1454,Perez Barquero,Gran Barquero Palo Cortado Solera 25 Anos,,4.3,108,Montilla-Moriles,34.9,,unknown,4,3,True
+w1455,Perinet,1194,2016,4.4,64,Priorato,105.81,Red,red,4,3,False
+w1456,Perinet,Priorat,2016,4.4,309,Priorato,65.0,Priorat Red,red,4,3,False
+w1457,Pinea,17,2018,4.4,115,Ribera del Duero,57.9,Tempranillo,red,4,2,False
+w1458,Pinea,Tinto,2017,4.3,89,Ribera del Duero,145.0,Ribera Del Duero Red,red,5,3,False
+w1459,Pinna Fidelis,Ribera del Duero Vendimia Seleccionada,2016,4.3,26,Ribera del Duero,19.86,Ribera Del Duero Red,red,5,3,False
+w1460,Pintia,Toro,2001,4.3,315,Toro,189.45,Toro Red,red,5,3,False
+w1461,Pintia,Toro,2003,4.3,422,Toro,107.0,Toro Red,red,5,3,False
+w1462,Pintia,Toro,2004,4.3,760,Toro,116.9,Toro Red,red,5,3,False
+w1463,Pintia,Toro,2006,4.2,1665,Toro,98.9,Toro Red,red,5,3,False
+w1464,Pintia,Toro,2007,4.3,2575,Toro,93.5,Toro Red,red,5,3,True
+w1465,Pintia,Toro,2009,4.3,2062,Toro,150.0,Toro Red,red,5,3,True
+w1466,Pintia,Toro,2010,4.3,6345,Toro,79.75,Toro Red,red,5,3,False
+w1467,Pintia,Toro,2011,4.4,5732,Toro,39.5,Toro Red,red,5,3,True
+w1468,Pintia,Toro,2012,4.4,5614,Toro,89.9,Toro Red,red,5,3,True
+w1469,Pintia,Toro,2013,4.4,5204,Toro,76.8,Toro Red,red,5,3,True
+w1470,Pintia,Toro,2014,4.5,5863,Toro,69.0,Toro Red,red,5,3,False
+w1471,Pintia,Toro,2015,4.5,4979,Toro,69.8,Toro Red,red,5,3,False
+w1472,Pintia,Toro,2016,4.5,3118,Toro,40.41,Toro Red,red,5,3,False
+w1473,Pintia,Toro,2017,4.5,178,Toro,54.09,Toro Red,red,5,3,False
+w1474,Pittacum,Aurea,2012,4.3,133,Bierzo,28.5,Mencia,red,3,3,False
+w1475,Portal del Priorat,Clos del Portal Negre de Negres,2017,4.2,612,Priorato,21.85,Priorat Red,red,4,3,False
+w1476,Portal del Priorat,Clos del Portal Negre de Negres,2018,4.2,429,Priorato,21.7,Priorat Red,red,4,3,False
+w1477,Portal del Priorat,Clos del Portal Somni,2008,4.3,55,Priorato,36.3,Priorat Red,red,4,3,False
+w1478,Portal del Priorat,Clos del Portal Somni,2014,4.2,404,Priorato,77.36,Priorat Red,red,4,3,True
+w1479,Portal del Priorat,Clos del Portal Somni,2016,4.4,98,Priorato,33.03,Priorat Red,red,4,3,False
+w1480,Portal del Priorat,Clos del Portal Tros de Clos,2016,4.4,109,Priorato,56.95,Priorat Red,red,4,3,False
+w1481,Portia,Summa Edicion Limitada,2015,4.4,56,Ribera del Duero,89.97,Ribera Del Duero Red,red,5,3,False
+w1482,Pradorey,Adaro,2017,4.2,436,Ribera del Duero,16.45,Ribera Del Duero Red,red,5,3,False
+w1483,Pradorey,El Cuentista,2018,4.3,57,Ribera del Duero,17.9,,unknown,4,3,True
+w1484,Pradorey,Elite,2017,4.3,301,Ribera del Duero,35.51,Ribera Del Duero Red,red,5,3,True
+w1485,Pradorey,Elite,2018,4.3,145,Ribera del Duero,30.92,Ribera Del Duero Red,red,5,3,False
+w1486,Protos,27 Ribera del Duero,2016,4.2,3725,Ribera del Duero,21.0,Ribera Del Duero Red,red,5,3,False
+w1487,Protos,27 Ribera del Duero,2017,4.2,3545,Ribera del Duero,23.75,Ribera Del Duero Red,red,5,3,False
+w1488,Protos,27 Ribera del Duero,2018,4.2,1981,Ribera del Duero,23.74,Ribera Del Duero Red,red,5,3,False
+w1489,Protos,Gran Reserva,2012,4.2,1921,Ribera del Duero,38.84,Ribera Del Duero Red,red,5,3,False
+w1490,Protos,Gran Reserva,2014,4.3,553,Ribera del Duero,41.95,Ribera Del Duero Red,red,5,3,False
+w1491,Protos,Reserva 5 Ano,2014,4.2,855,Ribera del Duero,19.53,Ribera Del Duero Red,red,5,3,False
+w1492,Protos,Reserva 5 Ano,2015,4.2,1040,Ribera del Duero,22.95,Ribera Del Duero Red,red,5,3,False
+w1493,Protos,Seleccion Finca el Grajo Viejo,2010,4.3,427,Ribera del Duero,62.74,Ribera Del Duero Red,red,5,3,False
+w1494,Protos,Seleccion Finca el Grajo Viejo,2014,4.3,530,Ribera del Duero,59.87,Ribera Del Duero Red,red,5,3,False
+w1495,Protos,Seleccion Finca el Grajo Viejo,2016,4.4,162,Ribera del Duero,59.95,Ribera Del Duero Red,red,5,3,False
+w1496,Protos,Seleccion Finca el Grajo Viejo,2017,4.4,65,Ribera del Duero,59.9,Ribera Del Duero Red,red,5,3,False
+w1497,Proyecto Garnachas de Espana,El Garnacho Viejo de la Familia Acha,2014,4.6,45,Rioja,79.9,Rioja Red,red,4,3,False
+w1498,Pujanza,Rioja,2005,4.3,34,Rioja,29.0,Rioja Red,red,4,3,False
+w1499,Pujanza,Rioja Anadas Frias,2016,4.3,49,Rioja,75.0,Rioja White,white,3,3,False
+w1500,Pujanza,Rioja Cisma,2009,4.4,34,Rioja,132.4,Rioja Red,red,4,3,False
+w1501,Pujanza,Rioja Cisma,2012,4.4,37,Rioja,130.5,Rioja Red,red,4,3,False
+w1502,Pujanza,Rioja Cisma,2014,4.4,50,Rioja,140.0,Rioja Red,red,4,3,False
+w1503,Pujanza,Rioja Norte,2006,4.3,67,Rioja,75.0,Rioja Red,red,4,3,False
+w1504,Pujanza,Rioja Norte,2010,4.3,138,Rioja,75.0,Rioja Red,red,4,3,False
+w1505,Pujanza,Rioja Norte,2011,4.3,106,Rioja,46.9,Rioja Red,red,4,3,False
+w1506,Quinta Sardonia,QS,2007,4.2,707,Castilla y Leon,37.5,Red,red,4,3,False
+w1507,Quinta Sardonia,QS,2010,4.2,900,Castilla y Leon,40.76,Red,red,4,3,False
+w1508,Quinta Sardonia,QS,2014,4.3,358,Castilla y Leon,35.85,Red,red,4,3,False
+w1509,Quinta Sardonia,QS,2017,4.3,93,Castilla y Leon,37.49,Red,red,4,3,False
+w1510,Quinta de la Quietud,La Mula de la Quietud,2015,4.7,256,Toro,63.75,Toro Red,red,5,3,False
+w1511,Quinta de la Quietud,La Mula de la Quietud,2016,4.5,99,Toro,62.0,Toro Red,red,5,3,False
+w1512,R. Lopez de Heredia,Gran Reserva Rosado,2011,4.4,206,Rioja Alta,49.95,,unknown,4,3,True
+w1513,R. Lopez de Heredia,Vina Bosconia Reserva,2007,4.2,2820,Rioja Alta,20.95,Rioja Red,red,4,3,False
+w1514,R. Lopez de Heredia,Vina Bosconia Reserva,2008,4.2,2901,Rioja Alta,22.58,Rioja Red,red,4,3,False
+w1515,R. Lopez de Heredia,Vina Bosconia Reserva,2009,4.2,1611,Rioja Alta,23.52,Rioja Red,red,4,3,False
+w1516,R. Lopez de Heredia,Vina Tondonia Gran Reserva,1981,4.3,66,Rioja,199.0,Rioja Red,red,4,3,False
+w1517,R. Lopez de Heredia,Vina Tondonia Gran Reserva,1995,4.5,292,Rioja,170.0,Rioja Red,red,4,3,False
+w1518,R. Lopez de Heredia,Vina Tondonia Gran Reserva,2001,4.5,33,Rioja,187.91,Rioja Red,red,4,3,False
+w1519,R. Lopez de Heredia,Vina Tondonia Gran Reserva Blanco,1981,4.5,78,Rioja Alta,274.95,Rioja White,white,3,3,False
+w1520,R. Lopez de Heredia,Vina Tondonia Reserva,1964,4.3,101,Rioja,249.0,Rioja Red,red,4,3,False
+w1521,R. Lopez de Heredia,Vina Tondonia Reserva,2008,4.3,6521,Rioja,37.9,Rioja Red,red,4,3,False
+w1522,R. Lopez de Heredia,Vina Tondonia Reserva,2009,4.3,2423,Rioja,35.09,Rioja Red,red,4,3,True
+w1523,R. Lopez de Heredia,Vina Tondonia Reserva,2014,4.3,35,Rioja,47.95,Rioja Red,red,4,3,False
+w1524,R. Lopez de Heredia,Vina Tondonia Reserva Blanco,2005,4.2,1043,Rioja Alta,26.9,Rioja White,white,3,3,False
+w1525,Rafael Palacios,As Sortes Val do Bibei Godello,2018,4.4,412,Valdeorras,55.71,,unknown,4,3,True
+w1526,Rafael Palacios,As Sortes Val do Bibei Godello,2019,4.4,333,Valdeorras,46.5,,unknown,4,3,True
+w1527,Rafael Palacios,As Sortes Val do Bibei Godello,2020,4.5,115,Valdeorras,55.0,,unknown,4,3,True
+w1528,Rafael Palacios,Louro Godello,2019,4.2,2685,Valdeorras,19.7,,unknown,4,3,True
+w1529,Rafael Palacios,Sorte O Soro Val do Bibei,2019,4.7,37,Valdeorras,194.86,,unknown,4,3,True
+w1530,Ramon Bilbao,Lalomba Finca Ladero,2016,4.3,40,Rioja,58.25,Rioja Red,red,4,3,False
+w1531,Ramon Bilbao,Lalomba Finca Valhonta,2017,4.4,61,Rioja,56.75,Rioja Red,red,4,3,False
+w1532,Ramon Bilbao,Mirto,2011,4.2,402,Rioja,28.53,Rioja Red,red,4,3,True
+w1533,Ramon Bilbao,Mirto,2012,4.2,776,Rioja,35.0,Rioja Red,red,4,3,False
+w1534,Ramon Bilbao,Mirto,2014,4.3,473,Rioja,48.34,Rioja Red,red,4,3,False
+w1535,Ramon Bilbao,Mirto,2015,4.3,297,Rioja,33.9,Rioja Red,red,4,3,True
+w1536,Ramon do Casar,Treixadura,2020,4.2,407,Ribeiro,11.95,,unknown,4,3,True
+w1537,Ramos-Paul,Tinto,2006,4.4,443,Malaga,34.0,Red,red,4,3,True
+w1538,Raul Perez,Rara Avis Prieto Picudo,2013,4.3,45,Castilla y Leon,39.95,Red,red,4,3,False
+w1539,Raul Perez,Sketch,2019,4.3,56,Rias Baixas,44.95,Albarino,white,3,3,False
+w1540,Raul Perez,Ultreia Valtuille Mencia,2019,4.3,83,Bierzo,45.9,Mencia,red,3,3,True
+w1541,Real de Asua,Tinto,2000,4.3,36,Rioja,60.4,Rioja Red,red,4,3,False
+w1542,Real de Asua,Tinto,2016,4.3,64,Rioja,78.95,Rioja Red,red,4,3,False
+w1543,Recaredo,Corpinnat Enoteca Reserva Particular de Recaredo,2004,4.6,25,Cataluna,130.0,Sparkling,sparkling,2,3,False
+w1544,Recaredo,Corpinnat Terrers Brut Nature,2016,4.2,611,Cava,21.8,Cava,sparkling,2,3,False
+w1545,Recaredo,Corpinnat Terrers Brut Nature,2017,4.2,667,Cava,25.0,Cava,sparkling,2,3,False
+w1546,Recaredo,Reserva Particular de Recaredo Brut Nature,2008,4.6,69,Cava,74.9,Cava,sparkling,2,3,False
+w1547,Recaredo,Reserva Particular de Recaredo Brut Nature,2011,4.7,35,Cava,65.05,Cava,sparkling,2,3,False
+w1548,Recaredo,Serral del Vell Brut Nature,2013,4.3,149,Cava,44.41,Cava,sparkling,2,3,True
+w1549,Recaredo,Serral del Vell Brut Nature,2014,4.4,166,Cava,44.41,Cava,sparkling,2,3,False
+w1550,Recaredo,Serral del Vell Brut Nature,2015,4.4,54,Cava,33.78,Cava,sparkling,2,3,False
+w1551,Recaredo,Serral del Vell Brut Nature,2016,4.4,60,Cava,34.56,Cava,sparkling,2,3,False
+w1552,Recaredo,Turo d'en Mota,2005,4.5,161,Cava,90.0,Cava,sparkling,2,3,False
+w1553,Recaredo,Turo d'en Mota,2006,4.5,142,Cava,110.0,Cava,sparkling,2,3,False
+w1554,Recaredo,Turo d'en Mota,2007,4.7,64,Cava,99.0,Cava,sparkling,2,3,False
+w1555,Remelluri,Granja Gran Reserva Rioja,2009,4.3,682,Rioja,57.8,Rioja Red,red,4,3,False
+w1556,Remelluri,Granja Gran Reserva Rioja,2011,4.4,313,Rioja,43.9,Rioja Red,red,4,3,False
+w1557,Remelluri,Granja Gran Reserva Rioja,2012,4.4,194,Rioja,45.95,Rioja Red,red,4,3,False
+w1558,Remelluri,Granja Gran Reserva Rioja,2013,4.4,63,Rioja,53.9,Rioja Red,red,4,3,False
+w1559,Remelluri,Rioja Blanco,2011,4.3,123,Rioja,77.9,Rioja White,white,3,3,False
+w1560,Remelluri,Rioja Blanco,2013,4.3,131,Rioja,63.53,Rioja White,white,3,3,False
+w1561,Remelluri,Rioja Blanco,2014,4.3,196,Rioja,60.25,Rioja White,white,3,3,False
+w1562,Remelluri,Rioja Blanco,2015,4.3,146,Rioja,56.89,Rioja White,white,3,3,False
+w1563,Remelluri,Rioja Blanco,2016,4.3,227,Rioja,55.0,Rioja White,white,3,3,False
+w1564,Remelluri,Rioja Blanco,2017,4.4,201,Rioja,49.2,Rioja White,white,3,3,False
+w1565,Remelluri,Rioja Blanco,2018,4.4,130,Rioja,52.0,Rioja White,white,3,3,False
+w1566,Remelluri,Rioja Reserva,2012,4.2,3453,Rioja,15.83,Rioja Red,red,4,3,False
+w1567,Remelluri,Rioja Reserva,2013,4.2,1768,Rioja,21.5,Rioja Red,red,4,3,False
+w1568,Remirez de Ganuza,Gran Reserva,2007,4.5,529,Rioja,121.84,Rioja Red,red,4,3,False
+w1569,Remirez de Ganuza,Gran Reserva,2011,4.5,65,Rioja,88.5,Rioja Red,red,4,3,False
+w1570,Remirez de Ganuza,Maria Remirez de Ganuza,2005,4.6,136,Rioja,159.0,Rioja Red,red,4,3,False
+w1571,Remirez de Ganuza,Maria Remirez de Ganuza,2006,4.7,240,Rioja,234.9,Rioja Red,red,4,3,False
+w1572,Remirez de Ganuza,Rioja Blanco,2017,4.2,421,Rioja,29.15,Rioja White,white,3,3,False
+w1573,Remirez de Ganuza,Rioja Blanco,2018,4.3,495,Rioja,23.83,Rioja White,white,3,3,False
+w1574,Remirez de Ganuza,Rioja Blanco,2019,4.4,27,Rioja,26.45,Rioja White,white,3,3,False
+w1575,Remirez de Ganuza,Rioja Blanco Reserva,2012,4.5,66,Rioja,65.5,Rioja White,white,3,3,False
+w1576,Remirez de Ganuza,Rioja Reserva,2006,4.3,1493,Rioja,58.0,Rioja Red,red,4,3,False
+w1577,Remirez de Ganuza,Rioja Reserva,2009,4.4,1172,Rioja,74.0,Rioja Red,red,4,3,False
+w1578,Remirez de Ganuza,Rioja Reserva,2010,4.4,1255,Rioja,73.65,Rioja Red,red,4,3,False
+w1579,Remirez de Ganuza,Rioja Reserva,2011,4.5,1012,Rioja,59.9,Rioja Red,red,4,3,False
+w1580,Remirez de Ganuza,Rioja Reserva,2012,4.5,1089,Rioja,49.75,Rioja Red,red,4,3,False
+w1581,Remirez de Ganuza,Rioja Reserva,2013,4.4,550,Rioja,54.83,Rioja Red,red,4,3,False
+w1582,Remirez de Ganuza,Rioja Reserva,2014,4.4,142,Rioja,49.9,Rioja Red,red,4,3,False
+w1583,Remirez de Ganuza,Rioja Reserva Fincas de Ganuza,2014,4.2,684,Rioja,29.5,Rioja Red,red,4,3,False
+w1584,Remirez de Ganuza,Rioja Vina Coqueta,2008,4.3,429,Rioja,56.76,Rioja Red,red,4,3,False
+w1585,Remirez de Ganuza,Trasnocho,2006,4.5,229,Rioja,95.0,Rioja Red,red,4,3,False
+w1586,Remirez de Ganuza,Trasnocho,2010,4.4,258,Rioja,133.75,Rioja Red,red,4,3,False
+w1587,Remirez de Ganuza,Trasnocho,2011,4.5,301,Rioja,110.5,Rioja Red,red,4,3,False
+w1588,Remirez de Ganuza,Trasnocho,2012,4.5,499,Rioja,118.89,Rioja Red,red,4,3,False
+w1589,Remirez de Ganuza,Trasnocho,2013,4.6,91,Rioja,82.5,Rioja Red,red,4,3,False
+w1590,Remirez de Ganuza,Trasnocho,2014,4.4,164,Rioja,82.75,Rioja Red,red,4,3,False
+w1591,Resalte,Gran Ribera del Duero,2010,4.4,122,Ribera del Duero,41.92,Ribera Del Duero Red,red,5,3,False
+w1592,Resalte,Resalte Expresion,2015,4.3,80,Ribera del Duero,28.5,Ribera Del Duero Red,red,5,3,True
+w1593,Rimarts,Cava Reserva Especial Chardonnay Brut Nature,2016,4.3,27,Cava,18.5,Cava,sparkling,2,3,False
+w1594,Rodriguez Sanzo,Whisba Tempranillo Aged 18 Months in Whisky Barrels,2019,4.4,363,Toro,20.9,Toro Red,red,5,3,False
+w1595,Rodriguez de Vera,Tinto,2015,4.3,122,Almansa,12.19,Red,red,4,3,False
+w1596,Rodriguez de Vera,Tinto,2017,4.3,27,Almansa,15.45,Red,red,4,3,False
+w1597,Roig Parals,Cami de Cormes,2018,4.4,65,Emporda,14.18,Red,red,4,3,False
+w1598,Romate,Cayetano del Pino Viejisimo Palo Cortado,,4.5,61,Jerez Palo Cortado,25.92,Sherry,fortified,4,3,False
+w1599,Romate,Old & Plus Amontillado,,4.4,28,Jerez Amontillado,15.84,Sherry,fortified,4,3,False
+w1600,Romate,Old & Plus Oloroso,,4.3,28,Jerez Oloroso,45.0,Sherry,fortified,4,3,False
+w1601,Romate,Old & Plus Pedro Ximenez,,4.4,64,Jerez Pedro Ximenes (PX),42.12,Sherry,fortified,4,3,False
+w1602,Sacristia AB,Amontillado Saca,,4.4,74,Jerez-Xeres-Sherry,62.02,Sherry,fortified,4,3,False
+w1603,Sacristia AB,Saca Unica,,4.5,39,Jerez-Xeres-Sherry,96.38,Sherry,fortified,4,3,False
+w1604,Samsara,Ronda,2015,4.3,25,Sierras de Malaga,32.5,Red,red,4,3,False
+w1605,San Cobate,San Cucufate Monasterio,2017,4.3,42,Ribera del Duero,33.0,Ribera Del Duero Red,red,5,3,False
+w1606,Sangenis I Vaque,Clos Monlleo,2007,4.3,68,Priorato,54.95,Priorat Red,red,4,3,False
+w1607,Sangenis I Vaque,Clos Monlleo,2011,4.4,94,Priorato,50.0,Priorat Red,red,4,3,False
+w1608,Santa Petronila,Oloroso En Rama,,4.3,40,Jerez-Xeres-Sherry,24.9,Sherry,fortified,4,3,False
+w1609,Santiago Ruiz,Albarino (O Rosal),2021,4.3,35,Rias Baixas,13.45,Albarino,white,3,3,False
+w1610,Sara Perez y Rene Barbier,Gratallops Partida Bellvisos,2005,4.5,59,Priorato,266.81,Priorat Red,red,4,3,False
+w1611,Sara Perez y Rene Barbier,Gratallops Partida Bellvisos,2007,4.4,69,Priorato,241.4,Priorat Red,red,4,3,False
+w1612,Scala Dei,Heretge Priorat,2017,4.4,120,Priorato,91.03,Priorat Red,red,4,3,False
+w1613,Scala Dei,Heretge Priorat,2018,4.4,33,Priorato,39.99,Priorat Red,red,4,3,False
+w1614,Scala Dei,Masdeu,2013,4.3,242,Priorato,84.9,Priorat Red,red,4,3,False
+w1615,Scala Dei,Masdeu,2014,4.3,64,Priorato,84.9,Priorat Red,red,4,3,False
+w1616,Scala Dei,Masdeu,2016,4.3,51,Priorato,81.35,Priorat Red,red,4,3,False
+w1617,Scala Dei,Massipa de Scala Dei Garnatxa Blanca - Xenin,2018,4.3,79,Priorato,36.78,,unknown,4,3,True
+w1618,Scala Dei,Massipa de Scala Dei Garnatxa Blanca - Xenin,2019,4.3,62,Priorato,36.95,,unknown,4,3,True
+w1619,Scala Dei,Pla dels Angels Rosado,2019,4.3,160,Priorato,23.0,,unknown,4,3,True
+w1620,Scala Dei,Pla dels Angels Rosado,2020,4.3,74,Priorato,23.95,,unknown,4,3,True
+w1621,Scala Dei,St Antoni de Scala Dei Priorat,2017,4.5,30,Priorato,75.04,Priorat Red,red,4,3,False
+w1622,Sebio,Heaven & Hell,2017,4.3,32,Galicia,18.5,,unknown,4,3,True
+w1623,Sebio,Salvaxe,2017,4.3,31,Ribeiro,28.35,,unknown,4,3,True
+w1624,Sebio,Salvaxe,2018,4.3,35,Ribeiro,26.75,,unknown,4,3,True
+w1625,Sei Solo,Preludio,2016,4.2,388,Ribera del Duero,31.63,Ribera Del Duero Red,red,5,3,True
+w1626,Sei Solo,Preludio,2017,4.2,591,Ribera del Duero,24.9,Ribera Del Duero Red,red,5,3,False
+w1627,Sei Solo,Preludio,2018,4.2,488,Ribera del Duero,24.5,Ribera Del Duero Red,red,5,3,False
+w1628,Sei Solo,Tinto,2012,4.5,70,Ribera del Duero,63.5,Ribera Del Duero Red,red,5,3,False
+w1629,Sei Solo,Tinto,2016,4.3,137,Ribera del Duero,52.8,Ribera Del Duero Red,red,5,3,False
+w1630,Sei Solo,Tinto,2018,4.4,99,Ribera del Duero,52.9,Ribera Del Duero Red,red,5,3,False
+w1631,Senorio de San Vicente,San Vicente Rioja,2007,4.3,724,Rioja,77.7,Rioja Red,red,4,3,False
+w1632,Senorio de San Vicente,San Vicente Rioja,2011,4.4,925,Rioja,33.5,Rioja Red,red,4,3,False
+w1633,Senorio de San Vicente,San Vicente Rioja,2014,4.3,811,Rioja,36.0,Rioja Red,red,4,3,False
+w1634,Senorio de San Vicente,San Vicente Rioja,2016,4.4,609,Rioja,42.7,Rioja Red,red,4,3,False
+w1635,Senorio de San Vicente,San Vicente Rioja,2017,4.5,505,Rioja,34.8,Rioja Red,red,4,3,False
+w1636,Senorio de San Vicente,San Vicente Rioja,2018,4.3,77,Rioja,32.9,Rioja Red,red,4,3,False
+w1637,Shaya,Habis,2018,4.3,62,Rueda,21.5,Verdejo,white,3,3,False
+w1638,Sierra Cantabria,Amancio,2002,4.3,27,Rioja,110.0,Rioja Red,red,4,3,False
+w1639,Sierra Cantabria,Amancio,2007,4.6,70,Rioja,399.6,Rioja Red,red,4,3,False
+w1640,Sierra Cantabria,Amancio,2012,4.5,246,Rioja,90.0,Rioja Red,red,4,3,False
+w1641,Sierra Cantabria,Amancio,2013,4.4,172,Rioja,91.43,Rioja Red,red,4,3,False
+w1642,Sierra Cantabria,Amancio,2014,4.5,140,Rioja,75.0,Rioja Red,red,4,3,False
+w1643,Sierra Cantabria,Amancio,2015,4.5,156,Rioja,89.95,Rioja Red,red,4,3,False
+w1644,Sierra Cantabria,Amancio,2016,4.3,80,Rioja,84.5,Rioja Red,red,4,3,True
+w1645,Sierra Cantabria,Amancio,2017,4.6,40,Rioja,85.95,Rioja Red,red,4,3,False
+w1646,Sierra Cantabria,Coleccion Privada,2012,4.2,420,Rioja,28.3,Rioja Red,red,4,3,True
+w1647,Sierra Cantabria,Coleccion Privada,2017,4.3,366,Rioja,29.01,Rioja Red,red,4,3,False
+w1648,Sierra Cantabria,Finca el Bosque,2002,4.6,38,Rioja,128.0,Rioja Red,red,4,3,False
+w1649,Sierra Cantabria,Finca el Bosque,2012,4.4,158,Rioja,78.9,Rioja Red,red,4,3,False
+w1650,Sierra Cantabria,Finca el Bosque,2014,4.4,162,Rioja,80.95,Rioja Red,red,4,3,False
+w1651,Sierra Cantabria,Finca el Bosque,2015,4.6,214,Rioja,79.9,Rioja Red,red,4,3,False
+w1652,Sierra Cantabria,Finca el Bosque,2016,4.5,173,Rioja,80.95,Rioja Red,red,4,3,False
+w1653,Sierra Cantabria,Finca el Bosque,2017,4.5,103,Rioja,84.36,Rioja Red,red,4,3,False
+w1654,Sierra Cantabria,Finca el Bosque,2018,4.5,81,Rioja,85.95,Rioja Red,red,4,3,False
+w1655,Sierra Cantabria,Magico,2016,4.8,40,Rioja,544.5,Rioja Red,red,4,3,False
+w1656,Sierra Salinas,Salinas 1237,2014,4.5,28,Alicante,53.25,Red,red,4,3,False
+w1657,Sonsierra,Perfume de Sonsierra,2014,4.3,227,Rioja Alta,28.5,Rioja Red,red,4,3,False
+w1658,Sota els Angels,Tinto,2007,4.4,30,Emporda,33.4,Red,red,4,3,False
+w1659,St. Petroni,Branco Vermu,,4.3,148,Galicia,13.95,,unknown,4,3,True
+w1660,St. Petroni,Vermello Vermu,,4.3,424,Galicia,10.89,,unknown,4,3,True
+w1661,Taron,Pantocrator,2010,4.3,241,Rioja Alta,19.9,Rioja Red,red,4,3,False
+w1662,Taron,Reserva,2014,4.3,35,Rioja Alta,10.2,Rioja Red,red,4,3,False
+w1663,Tarsus,Finca El Canto,2015,4.5,58,Ribera del Duero,89.66,Tempranillo,red,4,2,False
+w1664,Tarsus,T3rno Seleccion de 3 Parcelas Ribera del Duero,2017,4.3,44,Ribera del Duero,38.5,Ribera Del Duero Red,red,5,3,False
+w1665,Telmo Rodriguez,El Velado Tinto,2017,4.3,30,Rioja,73.95,Rioja Red,red,4,3,False
+w1666,Telmo Rodriguez,Matallana,2014,4.3,138,Ribera del Duero,42.0,Ribera Del Duero Red,red,5,3,False
+w1667,Telmo Rodriguez,Matallana,2016,4.3,128,Ribera del Duero,39.75,Ribera Del Duero Red,red,5,3,False
+w1668,Telmo Rodriguez,Molino Real,2015,4.3,38,Malaga,53.3,,unknown,4,3,True
+w1669,Telmo Rodriguez,Molino Real,2016,4.6,28,Malaga,41.69,,unknown,4,3,True
+w1670,Telmo Rodriguez,Tabuerniga,2018,4.3,31,Rioja,65.22,Rioja Red,red,4,3,False
+w1671,Terra Remota,Clos Adrien,2013,4.3,82,Emporda,47.0,Red,red,4,3,True
+w1672,Terra Remota,Clos Adrien,2016,4.3,40,Emporda,48.91,Red,red,4,3,False
+w1673,Terra Remota,Usted,2009,4.4,33,Emporda,159.8,Red,red,4,3,False
+w1674,Terra Remota,Usted,2010,4.7,31,Emporda,379.0,Red,red,4,3,False
+w1675,Terra d'Uro,Uro,2015,4.3,155,Toro,31.45,Toro Red,red,5,3,True
+w1676,Terras Gauda,La Mar,2018,4.3,301,Rias Baixas,27.7,Albarino,white,3,3,True
+w1677,Terras Gauda,La Mar,2019,4.3,45,Rias Baixas,21.5,Albarino,white,3,3,False
+w1678,Terras Gauda,Terras Gauda O Rosal,2020,4.2,3648,Rias Baixas,12.29,Albarino,white,3,3,False
+w1679,Terras Gauda,Terras Gauda O Rosal,2021,4.2,466,Rias Baixas,11.9,Albarino,white,3,3,False
+w1680,Territorio Luthier,Hispania,2015,4.3,73,Ribera del Duero,52.0,Ribera Del Duero Red,red,5,3,False
+w1681,Territorio Luthier,Hispania,2018,4.4,43,Ribera del Duero,28.9,Ribera Del Duero Red,red,5,3,False
+w1682,Territorio Luthier,Luthier Gran Reserva,2012,4.7,40,Ribera del Duero,248.0,Ribera Del Duero Red,red,5,3,False
+w1683,Territorio Luthier,Territorio Luthier Reserva,2016,4.5,128,Ribera del Duero,54.0,Ribera Del Duero Red,red,5,3,False
+w1684,Terroir Al Limit Soc. Lda,Les Manyes,2011,4.3,56,Priorato,348.85,Priorat Red,red,4,3,False
+w1685,Terroir Al Limit Soc. Lda,Les Manyes,2012,4.3,46,Priorato,348.85,Priorat Red,red,4,3,False
+w1686,Terroir Al Limit Soc. Lda,Les Manyes,2013,4.3,74,Priorato,348.85,Priorat Red,red,4,3,False
+w1687,Terroir Al Limit Soc. Lda,Les Manyes,2014,4.3,99,Priorato,158.88,Priorat Red,red,4,3,False
+w1688,Terroir Al Limit Soc. Lda,Les Manyes,2015,4.4,98,Priorato,189.0,Priorat Red,red,4,3,False
+w1689,Terroir Al Limit Soc. Lda,Les Manyes,2017,4.3,35,Priorato,180.0,Priorat Red,red,4,3,False
+w1690,Terroir Al Limit Soc. Lda,Les Tosses,2013,4.4,59,Priorato,158.88,Priorat Red,red,4,3,False
+w1691,Terroir Al Limit Soc. Lda,Les Tosses,2014,4.4,113,Priorato,158.88,Priorat Red,red,4,3,False
+w1692,Terroir Al Limit Soc. Lda,Les Tosses,2016,4.6,33,Priorato,205.95,Priorat Red,red,4,3,False
+w1693,Terroir Al Limit Soc. Lda,Pedra de Guix,2017,4.3,73,Priorato,57.9,,unknown,4,3,True
+w1694,Teso La Monja,Alabaster,2016,4.7,264,Toro,135.0,Toro Red,red,5,3,False
+w1695,Teso La Monja,Alabaster,2017,4.6,131,Toro,147.85,Toro Red,red,5,3,False
+w1696,Teso La Monja,Alabaster,2018,4.7,45,Toro,123.89,Toro Red,red,5,3,False
+w1697,Teso La Monja,Tinto,2008,4.6,87,Toro,1260.0,Toro Red,red,5,3,False
+w1698,Teso La Monja,Tinto,2009,4.8,50,Toro,950.0,Toro Red,red,5,3,False
+w1699,Teso La Monja,Tinto,2010,4.7,102,Toro,1325.0,Toro Red,red,5,3,False
+w1700,Teso La Monja,Tinto,2011,4.8,32,Toro,1295.0,Toro Red,red,5,3,False
+w1701,Teso La Monja,Tinto,2012,4.8,56,Toro,1190.0,Toro Red,red,5,3,False
+w1702,Teso La Monja,Tinto,2013,4.9,58,Toro,995.0,Toro Red,red,5,3,False
+w1703,Teso La Monja,Tinto,2015,4.8,28,Toro,1289.44,Toro Red,red,5,3,False
+w1704,Teso La Monja,Victorino,2011,4.3,517,Toro,47.01,Toro Red,red,5,3,False
+w1705,Teso La Monja,Victorino,2013,4.3,878,Toro,34.22,Toro Red,red,5,3,False
+w1706,Teso La Monja,Victorino,2014,4.3,1178,Toro,38.0,Toro Red,red,5,3,False
+w1707,Teso La Monja,Victorino,2016,4.4,812,Toro,38.7,Toro Red,red,5,3,False
+w1708,Teso La Monja,Victorino,2017,4.4,481,Toro,38.5,Toro Red,red,5,3,True
+w1709,Teso La Monja,Victorino,2018,4.3,298,Toro,35.51,Toro Red,red,5,3,True
+w1710,Teso La Monja,Victorino,2019,4.4,71,Toro,33.9,Toro Red,red,5,3,False
+w1711,Tinto Pesquera,Crianza,2019,4.2,599,Ribera del Duero,17.25,Ribera Del Duero Red,red,5,3,False
+w1712,Tinto Pesquera,Gran Reserva,1994,4.4,34,Ribera del Duero,138.0,Ribera Del Duero Red,red,5,3,False
+w1713,Tinto Pesquera,Gran Reserva,1995,4.3,142,Ribera del Duero,146.05,Ribera Del Duero Red,red,5,3,False
+w1714,Tinto Pesquera,Gran Reserva,2015,4.4,35,Ribera del Duero,74.5,Ribera Del Duero Red,red,5,3,False
+w1715,Tinto Pesquera,Millenium Gran Reserva,2015,4.5,213,Ribera del Duero,77.5,Ribera Del Duero Red,red,5,3,False
+w1716,Tinto Pesquera,Millenium Reserva,1996,4.5,106,Ribera del Duero,199.45,Ribera Del Duero Red,red,5,3,False
+w1717,Tinto Pesquera,Millenium Reserva,2008,4.4,527,Ribera del Duero,74.0,Ribera Del Duero Red,red,5,3,True
+w1718,Tinto Pesquera,Millenium Reserva,2015,4.4,160,Ribera del Duero,75.0,Ribera Del Duero Red,red,5,3,False
+w1719,Tinto Pesquera,Reserva,1986,4.5,29,Ribera del Duero,90.0,Ribera Del Duero Red,red,5,3,False
+w1720,Tinto Pesquera,Reserva,1995,4.3,81,Ribera del Duero,73.0,Ribera Del Duero Red,red,5,3,True
+w1721,Tinto Pesquera,Reserva,2002,4.3,144,Ribera del Duero,65.0,Ribera Del Duero Red,red,5,3,False
+w1722,Tinto Pesquera,Reserva,2012,4.2,6567,Ribera del Duero,27.0,Ribera Del Duero Red,red,5,3,False
+w1723,Tinto Pesquera,Reserva,2015,4.2,1688,Ribera del Duero,29.95,Ribera Del Duero Red,red,5,3,False
+w1724,Tinto Pesquera,Reserva,2016,4.3,1230,Ribera del Duero,26.76,Ribera Del Duero Red,red,5,3,False
+w1725,Tio Pepe,Cuatro Palmas Amontillado,,4.5,186,Jerez Amontillado,112.26,Sherry,fortified,4,3,False
+w1726,Tobia,Alma Tobia Blanco,2016,4.4,26,Rioja,33.0,Rioja White,white,3,3,False
+w1727,Tobia,Alma Tobia Rioja,2015,4.5,72,Rioja,40.0,Rioja Red,red,4,3,False
+w1728,Tobia,Oscar Tobia Gran Reserva Rioja,2014,4.4,31,Rioja,28.0,Rioja Red,red,4,3,False
+w1729,Tobia,Oscar Tobia Reserva Rioja,2015,4.2,633,Rioja,20.0,Rioja Red,red,4,3,False
+w1730,Tomas Postigo,3er Ano Ribera del Duero Tinto,2016,4.3,1914,Ribera del Duero,27.29,Ribera Del Duero Red,red,5,3,False
+w1731,Tomas Postigo,3er Ano Ribera del Duero Tinto,2017,4.4,2080,Ribera del Duero,27.4,Ribera Del Duero Red,red,5,3,False
+w1732,Tomas Postigo,3er Ano Ribera del Duero Tinto,2018,4.4,1842,Ribera del Duero,27.75,Ribera Del Duero Red,red,5,3,False
+w1733,Tomas Postigo,5o Ano Ribera del Duero Tinto,2011,4.5,264,Ribera del Duero,69.9,Ribera Del Duero Red,red,5,3,False
+w1734,Tomas Postigo,5o Ano Ribera del Duero Tinto,2014,4.5,165,Ribera del Duero,57.96,Ribera Del Duero Red,red,5,3,False
+w1735,Tomas Postigo,5o Ano Ribera del Duero Tinto,2016,4.6,113,Ribera del Duero,44.0,Ribera Del Duero Red,red,5,3,False
+w1736,Tomas Postigo,5o Ano Ribera del Duero Tinto,2017,4.6,27,Ribera del Duero,46.45,Ribera Del Duero Red,red,5,3,False
+w1737,Tomas Postigo,Fermentado En Barrica Blanco,2017,4.3,193,Castilla y Leon,24.5,Verdejo,white,3,3,False
+w1738,Ton Rimbau,Porcellanic VI Xarel-lo Sur Lie,2011,4.3,33,Penedes,110.47,,unknown,4,3,True
+w1739,Toro Albala,Don PX Convento Seleccion,1929,4.8,69,Montilla-Moriles,227.95,Pedro Ximenez,fortified,5,1,False
+w1740,Toro Albala,Don PX Convento Seleccion,1931,4.8,139,Montilla-Moriles,244.85,Pedro Ximenez,fortified,5,1,False
+w1741,Toro Albala,Don PX Convento Seleccion,1946,4.8,398,Montilla-Moriles,350.0,Pedro Ximenez,fortified,5,1,False
+w1742,Toro Albala,Don PX Convento Seleccion,1955,4.7,117,Montilla-Moriles,185.0,Pedro Ximenez,fortified,5,1,False
+w1743,Toro Albala,Don PX Convento Seleccion,1958,4.7,47,Montilla-Moriles,191.61,Pedro Ximenez,fortified,5,1,False
+w1744,Toro Albala,Don PX Convento Seleccion,1968,4.4,28,Montilla-Moriles,173.0,Pedro Ximenez,fortified,5,1,False
+w1745,Toro Albala,Don PX Gran Reserva,1988,4.3,104,Montilla-Moriles,19.8,Pedro Ximenez,fortified,5,1,False
+w1746,Toro Albala,Don PX Gran Reserva,1990,4.4,73,Montilla-Moriles,35.9,Pedro Ximenez,fortified,5,1,False
+w1747,Toro Albala,Don PX Gran Reserva,1994,4.4,36,Montilla-Moriles,33.23,Pedro Ximenez,fortified,5,1,False
+w1748,Toro Albala,Don PX Pedro Ximenez,1946,4.8,103,Montilla-Moriles,285.86,Pedro Ximenez,fortified,5,1,False
+w1749,Toro Albala,Don PX Pedro Ximenez,1955,4.7,50,Montilla-Moriles,250.0,Pedro Ximenez,fortified,5,1,False
+w1750,Toro Albala,Don PX Pedro Ximenez,1968,4.6,25,Montilla-Moriles,181.5,Pedro Ximenez,fortified,5,1,False
+w1751,Toro Albala,Don PX Pedro Ximenez,1973,4.4,37,Montilla-Moriles,109.76,Pedro Ximenez,fortified,5,1,False
+w1752,Toro Albala,Don PX Pedro Ximenez,1986,4.4,95,Montilla-Moriles,225.0,Pedro Ximenez,fortified,5,1,False
+w1753,Toro Albala,Don PX Pedro Ximenez,1994,4.4,306,Montilla-Moriles,35.9,Pedro Ximenez,fortified,5,1,False
+w1754,Toro Albala,Don PX Pedro Ximenez,1999,4.3,52,Montilla-Moriles,36.9,Pedro Ximenez,fortified,5,1,False
+w1755,Toro Albala,Don PX Seleccion,1949,4.5,34,Montilla-Moriles,295.0,Pedro Ximenez,fortified,5,1,False
+w1756,Toro Albala,Don PX Seleccion,1962,4.6,34,Montilla-Moriles,207.0,Pedro Ximenez,fortified,5,1,False
+w1757,Toro Albala,Don PX Seleccion,1965,4.6,65,Montilla-Moriles,144.99,Pedro Ximenez,fortified,5,1,False
+w1758,Toro Albala,Don PX Seleccion,1968,4.4,45,Montilla-Moriles,165.0,Pedro Ximenez,fortified,5,1,False
+w1759,Toro Albala,Don PX Vieja Cosecha,1973,4.5,95,Montilla-Moriles,113.0,Pedro Ximenez,fortified,5,1,False
+w1760,Toro Albala,Gines Liebana Pedro Ximenez,1910,4.6,70,Montilla-Moriles,701.05,Pedro Ximenez,fortified,5,1,False
+w1761,Toro Albala,Marques de Poley Amontillado Seleccion 1951,1951,4.5,53,Montilla-Moriles,169.95,Pedro Ximenez,fortified,5,1,False
+w1762,Torre de Ona,Baron de Ona Rioja Reserva,1995,4.4,46,Rioja,50.0,Rioja Red,red,4,3,False
+w1763,Torre de Ona,Finca Martelo,2015,4.3,512,Rioja,21.15,Rioja Red,red,4,3,False
+w1764,Torre de Ona,Martelo Reserva,2014,4.2,600,Rioja,20.5,Rioja Red,red,4,3,False
+w1765,Torre de Ona,Martelo Reserva,2015,4.3,119,Rioja,23.43,Rioja Red,red,4,3,False
+w1766,Traslascuestas,Valcavado de Traslascuestas,2014,4.4,31,Ribera del Duero,35.48,Ribera Del Duero Red,red,5,3,False
+w1767,Tres Piedras,Nobbis,2019,4.3,45,Ribera del Duero,12.8,Tempranillo,red,4,2,False
+w1768,Tresmano - Tr3smano,Tm,2016,4.5,71,Ribera del Duero,100.0,Tempranillo,red,4,2,False
+w1769,Tresmano - Tr3smano,Vendimia,2016,4.3,930,Ribera del Duero,28.65,Ribera Del Duero Red,red,5,3,False
+w1770,Tresmano - Tr3smano,Vendimia,2017,4.4,581,Ribera del Duero,28.73,Ribera Del Duero Red,red,5,3,False
+w1771,Tresmano - Tr3smano,Vendimia,2018,4.3,215,Ribera del Duero,34.25,Ribera Del Duero Red,red,5,3,False
+w1772,Tridente,Prieto Picudo,2016,4.3,198,Castilla y Leon,21.4,Red,red,4,3,False
+w1773,Tridente,Prieto Picudo,2018,4.3,57,Castilla y Leon,21.95,Red,red,4,3,False
+w1774,Tridente,Rejon Tempranillo,2012,4.2,485,Castilla y Leon,36.97,Tempranillo,red,4,2,False
+w1775,Tridente,Rejon Tempranillo,2015,4.4,664,Castilla y Leon,35.75,Tempranillo,red,4,2,False
+w1776,Tridente,Rejon Tempranillo,2017,4.4,54,Castilla y Leon,34.9,Tempranillo,red,4,2,False
+w1777,Tridente,Rejon Tempranillo,2018,4.4,70,Castilla y Leon,31.94,Tempranillo,red,4,2,False
+w1778,Trus,Pico de Luyas,2016,4.5,103,Ribera del Duero,47.95,Ribera Del Duero Red,red,5,3,False
+w1779,Trus,Pico de Luyas,2018,4.3,30,Ribera del Duero,48.9,Ribera Del Duero Red,red,5,3,False
+w1780,Ukan Winery,Tinto,2018,4.3,145,Rioja Alavesa,39.9,Rioja Red,red,4,3,False
+w1781,Ukan Winery,Tinto,2019,4.6,38,Rioja Alavesa,40.5,Rioja Red,red,4,3,False
+w1782,Uvaguilera Aguilera,Palomero,2010,4.5,38,Ribera del Duero,44.95,Ribera Del Duero Red,red,5,3,False
+w1783,VALENCISO,Rioja Blanco,2018,4.2,540,Rioja,17.75,Rioja White,white,3,3,False
+w1784,VALENCISO,Rioja Reserva,2014,4.2,696,Rioja,19.4,Rioja Red,red,4,3,False
+w1785,VALENCISO,Rioja Reserva 10 Anos Despues Edicion Limitada,2011,4.4,88,Rioja,57.9,Rioja Red,red,4,3,False
+w1786,Valdecuevas,Cuvee Verdejo,2018,4.3,31,Rueda,12.0,Verdejo,white,3,3,False
+w1787,Valdelosfrailes,Pago de Las Costanas,2005,4.4,27,Castilla y Leon,40.2,Tempranillo,red,4,2,False
+w1788,Valderiz,Juegabolos,2017,4.3,56,Ribera del Duero,28.6,Ribera Del Duero Red,red,5,3,False
+w1789,Valderiz,Tinto,2018,4.2,481,Ribera del Duero,21.5,Ribera Del Duero Red,red,5,3,False
+w1790,Valderiz,Tomas Esteban,2010,4.3,57,Ribera del Duero,68.99,Ribera Del Duero Red,red,5,3,False
+w1791,Valderiz,Tomas Esteban,2011,4.5,32,Ribera del Duero,71.3,Ribera Del Duero Red,red,5,3,False
+w1792,Valdespino,Cardenal Palo Cortado VORS,,4.3,116,Jerez Palo Cortado,176.5,Sherry,fortified,4,3,False
+w1793,Valdespino,Coliseo Amontillado VORS,,4.5,81,Jerez Amontillado,199.0,Sherry,fortified,4,3,False
+w1794,Valdespino,Toneles Moscatel,,4.8,174,Jerez-Xeres-Sherry,253.0,Sherry,fortified,4,3,False
+w1795,Valdubon,Honoris,2005,4.3,37,Ribera del Duero,35.0,Ribera Del Duero Red,red,5,3,False
+w1796,Vall Llach,Idus,2017,4.4,180,Priorato,36.95,Priorat Red,red,4,3,False
+w1797,Vall Llach,Idus,2018,4.4,141,Priorato,35.5,Priorat Red,red,4,3,False
+w1798,Vall Llach,Idus,2020,4.6,41,Priorato,34.3,Priorat Red,red,4,3,False
+w1799,Vall Llach,Mas de la Rosa,2016,4.4,53,Priorato,367.39,Priorat Red,red,4,3,False
+w1800,Vall Llach,Porrera Vi de Vila,2012,4.3,364,Priorato,40.5,Priorat Red,red,4,3,False
+w1801,Vall Llach,Porrera Vi de Vila,2016,4.3,205,Priorato,50.67,Priorat Red,red,4,3,False
+w1802,Vall Llach,Porrera Vi de Vila,2017,4.4,122,Priorato,43.95,Priorat Red,red,4,3,False
+w1803,Vall Llach,Porrera Vi de Vila,2018,4.3,56,Priorato,49.95,Priorat Red,red,4,3,False
+w1804,Valquejigoso,V2 Tinto,2007,4.3,140,Madrid,48.54,Red,red,4,3,False
+w1805,Valquejigoso,V2 Tinto,2008,4.4,293,Madrid,45.89,Red,red,4,3,False
+w1806,Valquejigoso,V2 Tinto,2009,4.5,49,Madrid,43.68,Red,red,4,3,False
+w1807,Valserrano,Finca Monteviejo,2017,4.3,62,Rioja,32.0,Rioja Red,red,4,3,False
+w1808,Valtravieso,Finca la Atalaya Reserva,2017,4.3,114,Ribera del Duero,23.5,Ribera Del Duero Red,red,5,3,False
+w1809,Valtravieso,Ribera del Duero Vendimia Seleccionada VT,2018,4.3,34,Ribera del Duero,27.9,Ribera Del Duero Red,red,5,3,False
+w1810,Vega Sicilia,Unico,1953,4.7,89,Ribera del Duero,1207.6,Ribera Del Duero Red,red,5,3,False
+w1811,Vega Sicilia,Unico,1961,4.6,50,Ribera del Duero,1099.28,Ribera Del Duero Red,red,5,3,False
+w1812,Vega Sicilia,Unico,1962,4.8,295,Ribera del Duero,1620.0,Ribera Del Duero Red,red,5,3,False
+w1813,Vega Sicilia,Unico,1964,4.7,214,Ribera del Duero,1384.54,Ribera Del Duero Red,red,5,3,False
+w1814,Vega Sicilia,Unico,1965,4.6,218,Ribera del Duero,2884.04,Ribera Del Duero Red,red,5,3,False
+w1815,Vega Sicilia,Unico,1967,4.6,123,Ribera del Duero,1106.24,Ribera Del Duero Red,red,5,3,False
+w1816,Vega Sicilia,Unico,1968,4.7,225,Ribera del Duero,2087.25,Ribera Del Duero Red,red,5,3,False
+w1817,Vega Sicilia,Unico,1969,4.5,60,Ribera del Duero,976.83,Ribera Del Duero Red,red,5,3,False
+w1818,Vega Sicilia,Unico,1970,4.8,417,Ribera del Duero,925.0,Ribera Del Duero Red,red,5,3,False
+w1819,Vega Sicilia,Unico,1972,4.7,110,Ribera del Duero,698.95,Ribera Del Duero Red,red,5,3,False
+w1820,Vega Sicilia,Unico,1973,4.6,157,Ribera del Duero,932.3,Ribera Del Duero Red,red,5,3,False
+w1821,Vega Sicilia,Unico,1974,4.7,173,Ribera del Duero,932.3,Ribera Del Duero Red,red,5,3,False
+w1822,Vega Sicilia,Unico,1975,4.6,115,Ribera del Duero,769.9,Ribera Del Duero Red,red,5,3,False
+w1823,Vega Sicilia,Unico,1979,4.8,118,Ribera del Duero,815.0,Ribera Del Duero Red,red,5,3,False
+w1824,Vega Sicilia,Unico,1980,4.7,116,Ribera del Duero,911.43,Ribera Del Duero Red,red,5,3,False
+w1825,Vega Sicilia,Unico,1981,4.7,308,Ribera del Duero,873.86,Ribera Del Duero Red,red,5,3,False
+w1826,Vega Sicilia,Unico,1982,4.7,205,Ribera del Duero,820.98,Ribera Del Duero Red,red,5,3,False
+w1827,Vega Sicilia,Unico,1983,4.7,118,Ribera del Duero,700.0,Ribera Del Duero Red,red,5,3,False
+w1828,Vega Sicilia,Unico,1985,4.7,254,Ribera del Duero,827.94,Ribera Del Duero Red,red,5,3,False
+w1829,Vega Sicilia,Unico,1986,4.7,292,Ribera del Duero,812.63,Ribera Del Duero Red,red,5,3,False
+w1830,Vega Sicilia,Unico,1987,4.7,593,Ribera del Duero,787.59,Ribera Del Duero Red,red,5,3,False
+w1831,Vega Sicilia,Unico,1989,4.7,675,Ribera del Duero,679.72,Ribera Del Duero Red,red,5,3,False
+w1832,Vega Sicilia,Unico,1990,4.7,690,Ribera del Duero,827.94,Ribera Del Duero Red,red,5,3,False
+w1833,Vega Sicilia,Unico,1991,4.7,1141,Ribera del Duero,698.9,Ribera Del Duero Red,red,5,3,False
+w1834,Vega Sicilia,Unico,1994,4.7,940,Ribera del Duero,872.47,Ribera Del Duero Red,red,5,3,False
+w1835,Vega Sicilia,Unico,1995,4.8,926,Ribera del Duero,810.89,Ribera Del Duero Red,red,5,3,False
+w1836,Vega Sicilia,Unico,1996,4.8,1309,Ribera del Duero,778.06,Ribera Del Duero Red,red,5,3,False
+w1837,Vega Sicilia,Unico,1998,4.8,1209,Ribera del Duero,490.0,Ribera Del Duero Red,red,5,3,False
+w1838,Vega Sicilia,Unico,1999,4.8,1705,Ribera del Duero,692.96,Ribera Del Duero Red,red,5,3,False
+w1839,Vega Sicilia,Unico,2000,4.7,3127,Ribera del Duero,555.2,Ribera Del Duero Red,red,5,3,False
+w1840,Vega Sicilia,Unico,2002,4.7,1199,Ribera del Duero,500.94,Ribera Del Duero Red,red,5,3,False
+w1841,Vega Sicilia,Unico,2003,4.7,2419,Ribera del Duero,325.0,Ribera Del Duero Red,red,5,3,False
+w1842,Vega Sicilia,Unico,2004,4.7,3164,Ribera del Duero,584.43,Ribera Del Duero Red,red,5,3,False
+w1843,Vega Sicilia,Unico,2005,4.7,3437,Ribera del Duero,381.15,Ribera Del Duero Red,red,5,3,False
+w1844,Vega Sicilia,Unico,2006,4.7,2765,Ribera del Duero,362.25,Ribera Del Duero Red,red,5,3,False
+w1845,Vega Sicilia,Unico,2007,4.7,2935,Ribera del Duero,445.28,Ribera Del Duero Red,red,5,3,False
+w1846,Vega Sicilia,Unico,2008,4.7,2480,Ribera del Duero,289.0,Ribera Del Duero Red,red,5,3,False
+w1847,Vega Sicilia,Unico,2009,4.8,1793,Ribera del Duero,324.95,Ribera Del Duero Red,red,5,3,False
+w1848,Vega Sicilia,Unico,2010,4.8,1201,Ribera del Duero,349.0,Ribera Del Duero Red,red,5,3,False
+w1849,Vega Sicilia,Unico,2011,4.8,630,Ribera del Duero,315.0,Ribera Del Duero Red,red,5,3,False
+w1850,Vega Sicilia,Unico,2012,4.6,98,Ribera del Duero,359.9,Ribera Del Duero Red,red,5,3,False
+w1851,Vega Sicilia,Unico Reserva Especial Edicion,1982,4.6,39,Ribera del Duero,1238.43,Ribera Del Duero Red,red,5,3,False
+w1852,Vega Sicilia,Unico Reserva Especial Edicion,1985,4.8,70,Ribera del Duero,1182.77,Ribera Del Duero Red,red,5,3,False
+w1853,Vega Sicilia,Unico Reserva Especial Edicion,1986,4.7,63,Ribera del Duero,1113.2,Ribera Del Duero Red,red,5,3,False
+w1854,Vega Sicilia,Unico Reserva Especial Edicion,1987,4.7,100,Ribera del Duero,1071.45,Ribera Del Duero Red,red,5,3,False
+w1855,Vega Sicilia,Unico Reserva Especial Edicion,1989,4.6,133,Ribera del Duero,895.4,Ribera Del Duero Red,red,5,3,False
+w1856,Vega Sicilia,Unico Reserva Especial Edicion,1995,4.7,196,Ribera del Duero,1500.0,Ribera Del Duero Red,red,5,3,False
+w1857,Vega Sicilia,Unico Reserva Especial Edicion,1996,4.7,442,Ribera del Duero,290.0,Ribera Del Duero Red,red,5,3,False
+w1858,Vega Sicilia,Unico Reserva Especial Edicion,2000,4.7,935,Ribera del Duero,877.85,Ribera Del Duero Red,red,5,3,False
+w1859,Vega Sicilia,Unico Reserva Especial Edicion,2004,4.8,211,Ribera del Duero,824.43,Ribera Del Duero Red,red,5,3,False
+w1860,Vega Sicilia,Unico Reserva Especial Edicion,2005,4.8,87,Ribera del Duero,813.96,Ribera Del Duero Red,red,5,3,False
+w1861,Vega Sicilia,Unico Reserva Especial Edicion,2006,4.7,72,Ribera del Duero,813.96,Ribera Del Duero Red,red,5,3,False
+w1862,Vega Sicilia,Unico Reserva Especial Edicion,2007,4.7,303,Ribera del Duero,774.4,Ribera Del Duero Red,red,5,3,False
+w1863,Vega Sicilia,Unico Reserva Especial Edicion,2009,4.6,111,Ribera del Duero,747.17,Ribera Del Duero Red,red,5,3,False
+w1864,Vega Sicilia,Unico Reserva Especial Edicion,2010,4.8,125,Ribera del Duero,719.34,Ribera Del Duero Red,red,5,3,False
+w1865,Vega Sicilia,Unico Reserva Especial Edicion,2011,4.7,131,Ribera del Duero,340.49,Ribera Del Duero Red,red,5,3,False
+w1866,Vega Sicilia,Unico Reserva Especial Edicion,2012,4.7,136,Ribera del Duero,660.96,Ribera Del Duero Red,red,5,3,False
+w1867,Vega Sicilia,Unico Reserva Especial Edicion,2013,4.8,172,Ribera del Duero,570.51,Ribera Del Duero Red,red,5,3,False
+w1868,Vega Sicilia,Unico Reserva Especial Edicion,2015,4.8,643,Ribera del Duero,345.0,Ribera Del Duero Red,red,5,3,False
+w1869,Vega Sicilia,Unico Reserva Especial Edicion,2016,4.8,591,Ribera del Duero,514.85,Ribera Del Duero Red,red,5,3,False
+w1870,Vega Sicilia,Unico Reserva Especial Edicion,2017,4.7,560,Ribera del Duero,480.06,Ribera Del Duero Red,red,5,3,False
+w1871,Vega Sicilia,Unico Reserva Especial Edicion,2018,4.8,438,Ribera del Duero,430.0,Ribera Del Duero Red,red,5,3,False
+w1872,Vega Sicilia,Unico Reserva Especial Edicion,2019,4.8,250,Ribera del Duero,431.36,Ribera Del Duero Red,red,5,3,False
+w1873,Vega Sicilia,Unico Reserva Especial Edicion,2020,4.8,84,Ribera del Duero,435.75,Ribera Del Duero Red,red,5,3,False
+w1874,Vega Sicilia,Unico Reserva Especial Edicion,,4.7,12421,Ribera del Duero,423.5,Ribera Del Duero Red,red,5,3,False
+w1875,Vega Sicilia,Valbuena 5o,1975,4.5,31,Ribera del Duero,195.0,Ribera Del Duero Red,red,5,3,False
+w1876,Vega Sicilia,Valbuena 5o,1976,4.5,37,Ribera del Duero,195.0,Ribera Del Duero Red,red,5,3,False
+w1877,Vega Sicilia,Valbuena 5o,1979,4.6,46,Ribera del Duero,195.0,Ribera Del Duero Red,red,5,3,False
+w1878,Vega Sicilia,Valbuena 5o,1980,4.6,84,Ribera del Duero,195.0,Ribera Del Duero Red,red,5,3,False
+w1879,Vega Sicilia,Valbuena 5o,1982,4.4,56,Ribera del Duero,225.0,Ribera Del Duero Red,red,5,3,False
+w1880,Vega Sicilia,Valbuena 5o,1983,4.6,66,Ribera del Duero,247.75,Ribera Del Duero Red,red,5,3,False
+w1881,Vega Sicilia,Valbuena 5o,1985,4.6,146,Ribera del Duero,285.0,Ribera Del Duero Red,red,5,3,False
+w1882,Vega Sicilia,Valbuena 5o,1987,4.5,221,Ribera del Duero,312.0,Ribera Del Duero Red,red,5,3,False
+w1883,Vega Sicilia,Valbuena 5o,1988,4.5,126,Ribera del Duero,228.63,Ribera Del Duero Red,red,5,3,False
+w1884,Vega Sicilia,Valbuena 5o,1989,4.6,143,Ribera del Duero,228.57,Ribera Del Duero Red,red,5,3,False
+w1885,Vega Sicilia,Valbuena 5o,1992,4.6,176,Ribera del Duero,195.0,Ribera Del Duero Red,red,5,3,False
+w1886,Vega Sicilia,Valbuena 5o,1994,4.4,218,Ribera del Duero,249.8,Ribera Del Duero Red,red,5,3,False
+w1887,Vega Sicilia,Valbuena 5o,1995,4.4,512,Ribera del Duero,299.0,Ribera Del Duero Red,red,5,3,True
+w1888,Vega Sicilia,Valbuena 5o,1996,4.5,488,Ribera del Duero,290.4,Ribera Del Duero Red,red,5,3,False
+w1889,Vega Sicilia,Valbuena 5o,1999,4.6,595,Ribera del Duero,276.8,Ribera Del Duero Red,red,5,3,False
+w1890,Vega Sicilia,Valbuena 5o,2000,4.6,1015,Ribera del Duero,252.0,Ribera Del Duero Red,red,5,3,False
+w1891,Vega Sicilia,Valbuena 5o,2002,4.6,936,Ribera del Duero,232.0,Ribera Del Duero Red,red,5,3,False
+w1892,Vega Sicilia,Valbuena 5o,2003,4.5,1346,Ribera del Duero,239.2,Ribera Del Duero Red,red,5,3,False
+w1893,Vega Sicilia,Valbuena 5o,2004,4.6,1608,Ribera del Duero,249.0,Ribera Del Duero Red,red,5,3,False
+w1894,Vega Sicilia,Valbuena 5o,2005,4.7,1892,Ribera del Duero,234.0,Ribera Del Duero Red,red,5,3,False
+w1895,Vega Sicilia,Valbuena 5o,2006,4.7,3929,Ribera del Duero,194.0,Ribera Del Duero Red,red,5,3,False
+w1896,Vega Sicilia,Valbuena 5o,2007,4.6,5116,Ribera del Duero,195.59,Ribera Del Duero Red,red,5,3,False
+w1897,Vega Sicilia,Valbuena 5o,2008,4.6,5545,Ribera del Duero,187.3,Ribera Del Duero Red,red,5,3,False
+w1898,Vega Sicilia,Valbuena 5o,2009,4.6,4685,Ribera del Duero,225.2,Ribera Del Duero Red,red,5,3,False
+w1899,Vega Sicilia,Valbuena 5o,2010,4.7,5266,Ribera del Duero,239.5,Ribera Del Duero Red,red,5,3,False
+w1900,Vega Sicilia,Valbuena 5o,2011,4.6,6803,Ribera del Duero,218.0,Ribera Del Duero Red,red,5,3,False
+w1901,Vega Sicilia,Valbuena 5o,2012,4.6,5938,Ribera del Duero,177.0,Ribera Del Duero Red,red,5,3,False
+w1902,Vega Sicilia,Valbuena 5o,2013,4.6,4747,Ribera del Duero,135.0,Ribera Del Duero Red,red,5,3,False
+w1903,Vega Sicilia,Valbuena 5o,2014,4.7,4350,Ribera del Duero,175.5,Ribera Del Duero Red,red,5,3,False
+w1904,Vega Sicilia,Valbuena 5o,2015,4.7,2826,Ribera del Duero,189.0,Ribera Del Duero Red,red,5,3,False
+w1905,Vega Sicilia,Valbuena 5o,2016,4.7,2177,Ribera del Duero,107.57,Ribera Del Duero Red,red,5,3,False
+w1906,Vega Sicilia,Valbuena 5o,2017,4.7,133,Ribera del Duero,134.89,Ribera Del Duero Red,red,5,3,False
+w1907,Vegalfaro,Pago de los Balagueses Syrah,2017,4.2,559,Utiel-Requena,17.7,Syrah,red,4,3,False
+w1908,Veigamoura,Blanco,2013,4.5,45,Rias Baixas,14.96,,unknown,4,3,True
+w1909,Venta Las Vacas,La Cuartilleja Reserva,2015,4.3,46,Ribera del Duero,39.7,Ribera Del Duero Red,red,5,3,False
+w1910,Venta Las Vacas,La Cuartilleja Reserva,2016,4.4,39,Ribera del Duero,39.9,Ribera Del Duero Red,red,5,3,False
+w1911,Venus la Universal,Venus,2009,4.3,207,Montsant,59.55,Montsant Red,red,4,3,False
+w1912,Venus la Universal,Venus,2017,4.3,47,Montsant,35.35,Montsant Red,red,4,3,False
+w1913,Venus la Universal,Venus de la Figuera,2017,4.5,26,Montsant,51.5,Montsant Red,red,4,3,True
+w1914,Veronica Salgado,Capricho Crianza,2017,4.4,41,Ribera del Duero,15.44,Ribera Del Duero Red,red,5,3,False
+w1915,Vina Pedrosa,40 Aniversario Gran Reserva,2012,4.6,25,Ribera del Duero,95.0,Ribera Del Duero Red,red,5,3,False
+w1916,Vina Pedrosa,Gran Reserva,2009,4.3,159,Ribera del Duero,67.0,Ribera Del Duero Red,red,5,3,True
+w1917,Vina Pedrosa,Gran Reserva,2011,4.2,410,Ribera del Duero,51.35,Ribera Del Duero Red,red,5,3,True
+w1918,Vina Pedrosa,Gran Reserva,2014,4.4,60,Ribera del Duero,122.67,Ribera Del Duero Red,red,5,3,False
+w1919,Vina Pedrosa,La Navilla,2017,4.4,27,Ribera del Duero,24.9,Ribera Del Duero Red,red,5,3,False
+w1920,Vina Pedrosa,Perez Pascuas Gran Reserva Seleccion,2010,4.4,305,Ribera del Duero,210.5,Ribera Del Duero Red,red,5,3,False
+w1921,Vina Pedrosa,Perez Pascuas Gran Reserva Seleccion,2011,4.3,370,Ribera del Duero,498.61,Ribera Del Duero Red,red,5,3,False
+w1922,Vina Pedrosa,Perez Pascuas Gran Reserva Seleccion,2012,4.3,211,Ribera del Duero,259.0,Ribera Del Duero Red,red,5,3,False
+w1923,Vina Pedrosa,Perez Pascuas Gran Reserva Seleccion,2014,4.3,171,Ribera del Duero,245.53,Ribera Del Duero Red,red,5,3,True
+w1924,Vina Pedrosa,Perez Pascuas Gran Reserva Seleccion,2015,4.4,55,Ribera del Duero,55.25,Ribera Del Duero Red,red,5,3,False
+w1925,Vina Pedrosa,Reserva,2012,4.2,628,Ribera del Duero,29.93,Ribera Del Duero Red,red,5,3,False
+w1926,Vina Pomal,Alto de la Caseta,2008,4.3,70,Rioja,55.45,Rioja Red,red,4,3,False
+w1927,Vina Pomal,Alto de la Caseta,2015,4.4,54,Rioja,82.5,Rioja Red,red,4,3,False
+w1928,Vina Pomal,Reserva,1970,4.4,25,Rioja,72.0,Rioja Red,red,4,3,False
+w1929,Vina Pomal,Vinos Singulares Tempranillo Blanco Reserva,2014,4.4,141,Rioja,34.9,Rioja White,white,3,3,False
+w1930,Vina Real,Rioja Gran Reserva,1986,4.6,35,Rioja,123.0,Rioja Red,red,4,3,False
+w1931,Vina Sastre,Pago de Santa Cruz,2014,4.4,499,Ribera del Duero,54.9,Ribera Del Duero Red,red,5,3,True
+w1932,Vina Sastre,Pago de Santa Cruz,2015,4.5,420,Ribera del Duero,82.95,Ribera Del Duero Red,red,5,3,False
+w1933,Vina Sastre,Pago de Santa Cruz,2016,4.5,501,Ribera del Duero,75.95,Ribera Del Duero Red,red,5,3,False
+w1934,Vina Sastre,Pago de Santa Cruz,2017,4.5,217,Ribera del Duero,40.9,Ribera Del Duero Red,red,5,3,False
+w1935,Vina Sastre,Pago de Santa Cruz,2018,4.6,211,Ribera del Duero,68.7,Ribera Del Duero Red,red,5,3,False
+w1936,Vina Sastre,Pago de Santa Cruz,2019,4.4,109,Ribera del Duero,48.69,Ribera Del Duero Red,red,5,3,False
+w1937,Vina Sastre,Pago de Santa Cruz Gran Reserva Ribera del Duero,2014,4.5,115,Ribera del Duero,54.9,Ribera Del Duero Red,red,5,3,False
+w1938,Vina Sastre,Pago de Santa Cruz Gran Reserva Ribera del Duero,2015,4.4,116,Ribera del Duero,71.95,Ribera Del Duero Red,red,5,3,False
+w1939,Vina Sastre,Pesus Ribera del Duero,2003,4.4,59,Ribera del Duero,509.25,Ribera Del Duero Red,red,5,3,False
+w1940,Vina Sastre,Pesus Ribera del Duero,2004,4.7,32,Ribera del Duero,472.5,Ribera Del Duero Red,red,5,3,False
+w1941,Vina Sastre,Pesus Ribera del Duero,2007,4.8,68,Ribera del Duero,360.0,Ribera Del Duero Red,red,5,3,False
+w1942,Vina Sastre,Pesus Ribera del Duero,2009,4.5,75,Ribera del Duero,312.6,Ribera Del Duero Red,red,5,3,False
+w1943,Vina Sastre,Pesus Ribera del Duero,2011,4.4,114,Ribera del Duero,465.0,Ribera Del Duero Red,red,5,3,False
+w1944,Vina Sastre,Pesus Ribera del Duero,2012,4.4,150,Ribera del Duero,379.0,Ribera Del Duero Red,red,5,3,False
+w1945,Vina Sastre,Pesus Ribera del Duero,2014,4.5,189,Ribera del Duero,315.0,Ribera Del Duero Red,red,5,3,False
+w1946,Vina Sastre,Pesus Ribera del Duero,2015,4.5,134,Ribera del Duero,298.0,Ribera Del Duero Red,red,5,3,False
+w1947,Vina Sastre,Regina Vides Ribera del Duero,1998,4.7,30,Ribera del Duero,94.2,Ribera Del Duero Red,red,5,3,False
+w1948,Vina Sastre,Regina Vides Ribera del Duero,2001,4.3,50,Ribera del Duero,121.5,Ribera Del Duero Red,red,5,3,False
+w1949,Vina Sastre,Regina Vides Ribera del Duero,2010,4.4,96,Ribera del Duero,101.1,Ribera Del Duero Red,red,5,3,False
+w1950,Vina Sastre,Regina Vides Ribera del Duero,2011,4.5,213,Ribera del Duero,116.0,Ribera Del Duero Red,red,5,3,False
+w1951,Vina Sastre,Regina Vides Ribera del Duero,2012,4.4,148,Ribera del Duero,65.34,Ribera Del Duero Red,red,5,3,False
+w1952,Vina Sastre,Regina Vides Ribera del Duero,2014,4.5,189,Ribera del Duero,104.9,Ribera Del Duero Red,red,5,3,False
+w1953,Vina Sastre,Regina Vides Ribera del Duero,2015,4.5,154,Ribera del Duero,92.8,Ribera Del Duero Red,red,5,3,False
+w1954,Vina Sastre,Regina Vides Ribera del Duero,2016,4.5,144,Ribera del Duero,70.55,Ribera Del Duero Red,red,5,3,False
+w1955,Vina Sastre,Regina Vides Ribera del Duero,2018,4.3,71,Ribera del Duero,69.9,Ribera Del Duero Red,red,5,3,False
+w1956,Vina al Lado de la Casa,Altos de Las Gateras Monastrell,2013,4.5,51,Vino de Espana,58.19,Monastrell,red,5,3,False
+w1957,Vinas del Cenit,Cenit,2012,4.5,92,Tierra del Vino de Zamora,37.5,Tempranillo,red,4,2,False
+w1958,Vinas del Vero,Blecua Somontano,2004,4.4,88,Somontano,69.0,Red,red,4,3,False
+w1959,Vinas del Vero,Blecua Somontano,2011,4.3,112,Somontano,73.9,Red,red,4,3,False
+w1960,Vinas del Vero,Blecua Somontano,2013,4.6,135,Somontano,69.9,Red,red,4,3,False
+w1961,Vinas del Vero,Blecua Somontano,2014,4.4,43,Somontano,74.95,Red,red,4,3,False
+w1962,Vinedos Hermanos Hernaiz,Finca La Emperatriz Vinedo Singular Tinto,2017,4.4,41,Rioja Alta,33.55,Rioja Red,red,4,3,False
+w1963,Vinedos Hermanos Hernaiz,Las Cenizas Tempranillo,2018,4.4,43,Rioja Alta,19.95,Rioja Red,red,4,3,False
+w1964,Vinedos de Paganos,El Puntido,2005,4.2,384,Rioja,73.0,Rioja Red,red,4,3,True
+w1965,Vinedos de Paganos,El Puntido,2013,4.2,879,Rioja,34.41,Rioja Red,red,4,3,False
+w1966,Vinedos de Paganos,El Puntido,2014,4.3,1067,Rioja,86.15,Rioja Red,red,4,3,False
+w1967,Vinedos de Paganos,El Puntido,2015,4.3,929,Rioja,33.82,Rioja Red,red,4,3,False
+w1968,Vinedos de Paganos,El Puntido,2016,4.3,474,Rioja,33.0,Rioja Red,red,4,3,False
+w1969,Vinedos de Paganos,El Puntido,2017,4.3,371,Rioja,35.95,Rioja Red,red,4,3,False
+w1970,Vinedos de Paganos,El Puntido Gran Reserva,2006,4.3,754,Rioja,40.0,Rioja Red,red,4,3,False
+w1971,Vinedos de Paganos,El Puntido Gran Reserva,2007,4.4,267,Rioja,49.65,Rioja Red,red,4,3,False
+w1972,Vinedos de Paganos,La Nieta,2015,4.7,312,Rioja,82.58,Rioja Red,red,4,3,False
+w1973,Vinedos de Paganos,La Nieta,2017,4.6,286,Rioja,108.21,Rioja Red,red,4,3,False
+w1974,Vinedos de Paganos,La Nieta,2018,4.7,220,Rioja,89.9,Rioja Red,red,4,3,False
+w1975,Vinedos de Paganos,La Nieta,2019,4.7,49,Rioja,88.9,Rioja Red,red,4,3,False
+w1976,Vinicola Real,200 Monges Edicion Exclusiva Blanco Reserva,2010,4.3,38,Rioja,51.45,Rioja White,white,3,3,False
+w1977,Vinicola Real,200 Monges Rioja Gran Reserva,2001,4.4,349,Rioja,52.0,Rioja Red,red,4,3,False
+w1978,Vinicola Real,200 Monges Rioja Gran Reserva,2005,4.3,40,Rioja,52.5,Rioja Red,red,4,3,False
+w1979,Vinicola Real,200 Monges Rioja Reserva,2005,4.2,499,Rioja,48.0,Rioja Red,red,4,3,False
+w1980,Vinicola Real,200 Monges Rioja Reserva,2009,4.3,760,Rioja,39.5,Rioja Red,red,4,3,False
+w1981,Vinicola Real,200 Monges Rioja Reserva,2010,4.3,1230,Rioja,35.0,Rioja Red,red,4,3,False
+w1982,Vinicola Real,200 Monges Rioja Reserva,2011,4.4,1098,Rioja,37.57,Rioja Red,red,4,3,False
+w1983,Vinicola Real,200 Monges Rioja Reserva,2012,4.4,62,Rioja,38.5,Rioja Red,red,4,3,False
+w1984,Vinicola Real,200 Monges Rioja Reserva Seleccion Especial,2006,4.5,32,Rioja,59.25,Rioja Red,red,4,3,False
+w1985,Vinicola Real,200 Monges Rioja Seleccion Especial Reserva Blanco,2008,4.4,36,Rioja,61.5,Rioja White,white,3,3,False
+w1986,Vinicola Real,Confesor Rioja,2004,4.5,42,Rioja,107.5,Rioja Red,red,4,3,False
+w1987,Vinos Guerra,Reserva Vermouth Rojo,,4.3,166,Bierzo,8.95,,unknown,4,3,True
+w1988,Vinos Sanz,Finca La Colina Sauvignon Blanc,2021,4.5,27,Rueda,13.45,Sauvignon Blanc,white,3,3,False
+w1989,Vins Miquel Gelabert,Chardonnay Roure,2018,4.3,221,Pla i Llevant,30.3,Chardonnay,white,4,3,False
+w1990,Vinyes Domenech,Teixar,2012,4.3,171,Montsant,42.25,Montsant Red,red,4,3,True
+w1991,Vinyes Domenech,Teixar,2014,4.3,151,Montsant,39.5,Montsant Red,red,4,3,True
+w1992,Vinyes Domenech,Teixar,2015,4.4,99,Montsant,51.05,Montsant Red,red,4,3,False
+w1993,Vinyes Domenech,Vinyes Velles de Samso,2016,4.3,73,Montsant,36.93,Montsant Red,red,4,3,False
+w1994,Vinyes del Terrer,Nus del Terrer,2016,4.3,28,Tarragona,25.9,Red,red,4,3,False
+w1995,Vinyes dels Aspres,S'Alou,2018,4.3,64,Emporda,31.5,Red,red,4,3,False
+w1996,Virgen de la Asuncion,El Canto del Angel,2014,4.5,66,Ribera del Duero,59.95,Ribera Del Duero Red,red,5,3,False
+w1997,Vivaltus,Tinto,2016,4.4,52,Ribera del Duero,119.0,Ribera Del Duero Red,red,5,3,False
+w1998,Vivanco,4 Varietales Coleccion Rioja,2017,4.4,37,Rioja,24.0,Rioja Red,red,4,3,False
+w1999,Vivanco,Parcelas de Maturana Tinta Coleccion Rioja,2017,4.3,44,Rioja,36.5,Rioja Red,red,4,3,False
+w2000,Vizcarra,Celia,2011,4.5,44,Ribera del Duero,60.06,Ribera Del Duero Red,red,5,3,False
+w2001,Vizcarra,Celia,2014,4.3,50,Ribera del Duero,79.98,Ribera Del Duero Red,red,5,3,False
+w2002,Vizcarra,Ines,2010,4.3,37,Ribera del Duero,76.87,Ribera Del Duero Red,red,5,3,False
+w2003,Vizcarra,Ines,2014,4.3,37,Ribera del Duero,79.98,Ribera Del Duero Red,red,5,3,False
+w2004,Vizcarra,Ribera del Duero Torralvo,2015,4.3,128,Ribera del Duero,40.95,Ribera Del Duero Red,red,5,3,False
+w2005,Vizcarra,Ribera del Duero Torralvo,2016,4.3,153,Ribera del Duero,45.48,Ribera Del Duero Red,red,5,3,True
+w2006,Vizcarra,Ribera del Duero Torralvo,2018,4.4,80,Ribera del Duero,32.45,Ribera Del Duero Red,red,5,3,False
+w2007,Volver,Alicante Bouschet by Tarima,2017,4.3,658,Alicante,17.15,Red,red,4,3,False
+w2008,Volver,Alicante Bouschet by Tarima,2018,4.3,27,Alicante,14.9,Red,red,4,3,False
+w2009,Volver,Cuvee Old Vines Unfiltered,2017,4.4,241,Jumilla,19.99,Red,red,4,3,False
+w2010,Volver,Triga,2014,4.3,1114,Alicante,30.67,Red,red,4,3,False
+w2011,Volver,Triga,2016,4.4,852,Alicante,34.9,Red,red,4,3,False
+w2012,Volver,Triga,2017,4.4,243,Alicante,29.9,Red,red,4,3,False
+w2013,Williams & Humbert,Canasta 20 Anos Cream,,4.3,49,Jerez-Xeres-Sherry,29.25,Pedro Ximenez,fortified,5,1,False
+w2014,Williams & Humbert,Don Guido Pedro Ximenez Solera Especial Aged 20 Years,,4.3,1057,Jerez-Xeres-Sherry,32.9,Pedro Ximenez,fortified,5,1,False
+w2015,Williams & Humbert,Dos Cortados Palo Cortado Solera Especial Aged 20 Years,,4.2,666,Jerez Palo Cortado,32.16,Sherry,fortified,4,3,False
+w2016,Williams & Humbert,Jalifa Amontillado Rare Old Dry Solera Especial Aged 30 Years,,4.2,487,Jerez Amontillado,33.5,Sherry,fortified,4,3,False
+w2017,Xaloc,Monada,2013,4.4,33,Mallorca,35.4,Red,red,4,3,False
+w2018,Ysios,Finca Las Naves,2016,4.6,63,Rioja,126.64,Rioja Red,red,4,3,False
+w2019,Ysios,Grano a Grano,2017,4.5,37,Rioja,75.0,Rioja Red,red,4,3,False
+w2020,Ysios,Seleccion,2016,4.3,28,Rioja,30.0,Rioja Red,red,4,3,False
+w2021,Zarate,Tras da Vina Albarino,2018,4.3,155,Rias Baixas,33.67,Albarino,white,3,3,True
+w2022,Zifar,Pago de las Sabinas,2016,4.3,28,Ribera del Duero,39.55,Ribera Del Duero Red,red,5,3,False
+w2023,Zifar,Senda de Los Olivos Roble,2020,4.3,25,Ribera del Duero,8.9,Ribera Del Duero Red,red,5,3,False
+w2024,l'Infernal Combier Fischer Gerin,Vinas Viejas Aguilera,2010,4.3,76,Priorato,69.0,Priorat Red,red,4,3,False
