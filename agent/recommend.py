@@ -1,21 +1,25 @@
 """The recommender: preferences in, ranked picks and search diagnostics out.
 
-See DEVELOPMENT_PLAN.md task 5.3. Two entry points share one search:
+See DEVELOPMENT_PLAN.md task 5.3. Three entry points share one search:
 
 * :func:`solve_candidates` — every CSP solution as a scored ``Candidate``, best first
-  (bounded to the best ``limit``); the "sommelier vs. you" game plays over these.
+  (bounded to the best ``limit``).
 * :func:`recommend` — the same list cut down to ``top_k`` rows with at most
   ``MAX_PER_VENUE`` per venue, which is what the results tab shows.
+* :func:`sommelier_candidates` — every solution at the best venues, with no limit; the
+  "sommelier vs. you" game plays over these.
 """
 
 from __future__ import annotations
 
+import sys
 import time
 from collections.abc import Iterable
 
 from agent.config import MAX_PER_VENUE
 from agent.csp_solver import Assignment, SearchStats, SolverOptions, solve_all
 from agent.data_loader import AgentData
+from agent.minimax import DEFAULT_MAX_VENUES
 from agent.models import Candidate, Diagnostics, RecommendationResult
 from agent.preferences import Preferences, validate
 from agent.scoring import Scorer, ScoringContext, evaluate, features, format_distance, reasons
@@ -38,6 +42,7 @@ __all__ = [
     "cap_per_venue",
     "recommend",
     "solve_candidates",
+    "sommelier_candidates",
 ]
 
 #: How many of the best solutions are kept (and ranked) by default.
@@ -254,6 +259,31 @@ def solve_candidates(
         for _, wine_id, venue_id, dish_id in ranked
     ]
     return candidates, diagnostics
+
+
+def sommelier_candidates(
+    prefs: Preferences, data: AgentData, max_venues: int = DEFAULT_MAX_VENUES
+) -> list[Candidate]:
+    """Return **every** solution at the ``max_venues`` best venues, best first.
+
+    A venue ranks by its best solution (ties by ``venue_id``), as in ``WineGame``. The
+    game needs all of a venue's wines: the expensive ones it upsells rank low, so any
+    limit on the ranked list would cut them. Only these venues' solutions are turned
+    into ``Candidate`` objects.
+
+    Raises ``ValueError`` listing the problems if ``prefs`` is invalid.
+    """
+    ranked, _, ctx = _solve_ranked(prefs, data, None, sys.maxsize)
+    # ``ranked`` is best first, so venues appear in order of their best solution.
+    best: dict[str, float] = {}
+    for negated, _, venue_id, _ in ranked:
+        best.setdefault(venue_id, negated)
+    playable = set(sorted(best, key=lambda venue_id: (best[venue_id], venue_id))[:max_venues])
+    return [
+        _candidate(wine_id, venue_id, dish_id, prefs, data, ctx)
+        for _, wine_id, venue_id, dish_id in ranked
+        if venue_id in playable
+    ]
 
 
 def _capped_indices(pairs: Iterable[tuple[str, str]], top_k: int, max_per_venue: int) -> list[int]:

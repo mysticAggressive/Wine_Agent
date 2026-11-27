@@ -2,6 +2,9 @@
 
 from __future__ import annotations
 
+import datetime as dt
+from zoneinfo import ZoneInfo
+
 import pytest
 
 from agent.config import DATA, ROOT
@@ -69,3 +72,30 @@ def test_impossible_preferences_show_hints_not_a_crash():
     assert at.warning
     assert "No wine, venue and dish" in at.warning[0].value
     assert any("What would help" in m.value for m in at.markdown)
+
+
+def test_picked_date_and_time_survive_the_clock_moving(monkeypatch):
+    from streamlit.testing.v1 import AppTest
+
+    import ui.sidebar
+
+    madrid = ZoneInfo("Europe/Madrid")
+    clock = [dt.datetime(2026, 11, 27, 13, 0, tzinfo=madrid)]
+    monkeypatch.setattr(ui.sidebar, "now_madrid", lambda: clock[0])
+
+    def sidebar_only():
+        import streamlit as st
+
+        from agent.data_loader import load_all
+        from ui.sidebar import render_sidebar
+
+        st.session_state["at_time"] = render_sidebar(load_all())[0].at_time
+
+    at = AppTest.from_function(sidebar_only, default_timeout=TIMEOUT).run()
+    at.sidebar.radio[1].set_value("Pick a time").run()
+    at.sidebar.date_input[0].set_value(dt.date(2026, 12, 5))
+    at.sidebar.time_input[0].set_value(dt.time(22, 0)).run()
+    clock[0] = dt.datetime(2026, 11, 28, 0, 1, tzinfo=madrid)  # new minute and new day
+    at.sidebar.slider[0].set_value(70).run()
+    assert not at.exception, [e.value for e in at.exception]
+    assert at.session_state["at_time"] == dt.datetime(2026, 12, 5, 22, 0, tzinfo=madrid)

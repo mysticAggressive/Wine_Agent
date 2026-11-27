@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import dataclasses
 import itertools
+import sys
 import time
 from collections import Counter
 from datetime import datetime
@@ -14,9 +15,16 @@ import pytest
 from agent.config import DATA, FEATURES, MAX_PER_VENUE
 from agent.csp_solver import SolverOptions
 from agent.data_loader import load_all
+from agent.minimax import analyse
 from agent.models import Candidate, Style
 from agent.preferences import default_preferences
-from agent.recommend import cap_per_venue, recommend, solve_candidates
+from agent.recommend import (
+    DEFAULT_CANDIDATE_LIMIT,
+    cap_per_venue,
+    recommend,
+    solve_candidates,
+    sommelier_candidates,
+)
 from agent.scoring import evaluate
 from tests.test_wine_csp import brute_force
 
@@ -160,3 +168,13 @@ def test_performance_on_real_data():
     elapsed = time.perf_counter() - started
     assert result.candidates
     assert elapsed < 2.0, f"recommend took {elapsed:.2f} s"
+
+
+@needs_real_data
+def test_sommelier_sees_every_solution_beyond_the_candidate_limit():
+    data = load_all()
+    prefs = default_preferences(datetime(2026, 11, 11, 20, 0, tzinfo=ZoneInfo("Europe/Madrid")))
+    everything, diagnostics = solve_candidates(prefs, data, limit=sys.maxsize)
+    assert diagnostics.solutions_found > DEFAULT_CANDIDATE_LIMIT
+    game = analyse(sommelier_candidates(prefs, data), prefs.budget_eur)
+    assert game == analyse(everything, prefs.budget_eur)

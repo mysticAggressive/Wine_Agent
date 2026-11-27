@@ -16,7 +16,7 @@ from agent.data_loader import AgentData, load_all
 from agent.minimax import SommelierAnalysis, analyse
 from agent.models import RecommendationResult, Style, VenueKind
 from agent.preferences import Preferences
-from agent.recommend import recommend, solve_candidates
+from agent.recommend import recommend, sommelier_candidates
 from agent.search_route import NoRouteError, RouteResult, load_graph, route
 from ui.map_view import render_map
 from ui.results_view import (
@@ -81,10 +81,9 @@ def cached_recommend(key: PrefsKey, options: tuple[bool, ...]) -> Recommendation
 
 @st.cache_data(max_entries=32, show_spinner=False)
 def cached_sommelier(key: PrefsKey) -> SommelierAnalysis | None:
-    """The minimax game over every CSP solution for these preferences."""
+    """The minimax game over every CSP solution at the best venues."""
     prefs = prefs_from_key(key)
-    candidates, _ = solve_candidates(prefs, get_data())
-    return analyse(candidates, prefs.budget_eur)
+    return analyse(sommelier_candidates(prefs, get_data()), prefs.budget_eur)
 
 
 @st.cache_data(max_entries=256, show_spinner=False)
@@ -138,7 +137,7 @@ def main() -> None:
     key = prefs_key(prefs)
     result = cached_recommend(key, options_tuple(options))
 
-    selected = selected_index(len(result.candidates))
+    selected = selected_index(result)
     route_result: RouteResult | None = None
     target = None
     if result.candidates:

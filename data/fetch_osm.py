@@ -31,6 +31,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from agent.config import CENTER, DATA, RADIUS_M  # noqa: E402
+from agent.preferences import haversine_m  # noqa: E402
 
 OUT_PATH = DATA / "venues_madrid.json"
 RAW_CACHE_PATH = ROOT / "cache" / "overpass_venues_raw.json"
@@ -125,16 +126,6 @@ def merge_payloads(payloads: list[dict[str, Any]]) -> dict[str, Any]:
     merged = {k: v for k, v in payloads[0].items() if k != "elements"} if payloads else {}
     merged["elements"] = elements
     return merged
-
-
-def haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
-    """Great-circle distance in metres between two WGS84 points."""
-    r = 6_371_008.8
-    p1, p2 = math.radians(lat1), math.radians(lat2)
-    dp = p2 - p1
-    dl = math.radians(lon2 - lon1)
-    a = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
-    return 2 * r * math.asin(math.sqrt(a))
 
 
 def _try_once(url: str, query: str) -> tuple[dict[str, Any] | None, str]:
