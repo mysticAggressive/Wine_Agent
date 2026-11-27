@@ -125,7 +125,7 @@ def _popup_html(
 
 
 MAP_HEIGHT_PX = 520
-MAP_WIDTH_PX = 900  # a conservative guess at the wide-layout map width
+MAP_WIDTH_PX = 450  # a conservative guess at the map column's width (half the page)
 
 
 def view_for(

@@ -14,6 +14,7 @@ from agent.data_loader import AgentData
 from agent.models import Candidate, RecommendationResult
 from agent.preferences import Preferences
 from agent.scoring import _effective_weights
+from agent.search_route import RouteResult
 from ui.map_view import KIND_LABELS
 from ui.sidebar import FEATURE_LABELS, TECHNIQUES
 
@@ -48,20 +49,43 @@ def results_frame(result: RecommendationResult, data: AgentData) -> pd.DataFrame
         rows.append(
             {
                 "Rank": rank,
-                "Wine": wine.name,
-                "Winery": wine.winery,
-                "Region": wine.region,
-                "Year": str(wine.year) if wine.year is not None else "N.V.",
-                "Style": wine.style.value.capitalize(),
+                "Wine": f"{wine.name} ({_year(wine)})",
                 "Venue": venue.name,
-                "Kind": KIND_LABELS[venue.kind],
                 "Dish": data.pairing_rules.dishes[c.dish_id].label,
                 "Price (€)": c.price_at_venue,
-                "Distance (m)": round(c.distance_m),
                 "Score": c.score,
             }
         )
     return pd.DataFrame(rows)
+
+
+def _year(wine) -> str:
+    return str(wine.year) if wine.year is not None else "N.V."
+
+
+def render_pick_card(
+    result: RecommendationResult, data: AgentData, selected: int, route: RouteResult | None
+) -> None:
+    """The selected pick at a glance: wine, venue, dish, price, walk and score."""
+    if not result.candidates:
+        return
+    cand = result.candidates[selected]
+    wine, venue = data.wines[cand.wine_id], data.venues[cand.venue_id]
+    dish = data.pairing_rules.dishes[cand.dish_id].label
+    with st.container(border=True):
+        text, price, walk, score = st.columns([4, 1, 1, 1], vertical_alignment="center")
+        text.markdown(
+            f"**#{selected + 1} · {wine.name}** ({_year(wine)}) — "
+            f"{wine.style.value.capitalize()}, {wine.winery}, {wine.region}  \n"
+            f"at **{venue.name}** ({KIND_LABELS[venue.kind].lower()}) with {dish.lower()}"
+        )
+        price.metric("Price", f"€{cand.price_at_venue:.2f}")
+        walk.metric(
+            "Walk",
+            f"{route.walk_minutes:.0f} min" if route is not None else "—",
+            help=f"{route.length_m:,.0f} m on foot" if route is not None else "No route found",
+        )
+        score.metric("Score", f"{cand.score:.2f}")
 
 
 def render_hints(result: RecommendationResult) -> None:
@@ -78,9 +102,8 @@ def render_results_tab(result: RecommendationResult, data: AgentData) -> None:
         render_hints(result)
         return
     st.caption(
-        f"Top {len(result.candidates)} of {result.diagnostics.solutions_found:,} "
-        "combinations that pass every hard constraint (at most 2 per venue). "
-        "Select a row to route to it."
+        f"Top {len(result.candidates)} of {result.diagnostics.solutions_found:,} matches "
+        "(at most 2 per venue). Select a row to route to it."
     )
     st.dataframe(
         results_frame(result, data),
@@ -90,8 +113,15 @@ def render_results_tab(result: RecommendationResult, data: AgentData) -> None:
         selection_mode="single-row",
         key=table_key(result),
         column_config={
-            "Price (€)": st.column_config.NumberColumn(format="€%.2f"),
-            "Score": st.column_config.ProgressColumn(min_value=0.0, max_value=1.0, format="%.2f"),
+            "Rank": st.column_config.NumberColumn("#", width=30),
+            # Narrow text columns so price and score stay visible; hover shows the full text.
+            "Wine": st.column_config.TextColumn(width=125),
+            "Venue": st.column_config.TextColumn(width=95),
+            "Dish": st.column_config.TextColumn(width=80),
+            "Price (€)": st.column_config.NumberColumn("Price", format="€%.0f", width=50),
+            "Score": st.column_config.ProgressColumn(
+                min_value=0.0, max_value=1.0, format="%.2f", width=70
+            ),
         },
     )
 
