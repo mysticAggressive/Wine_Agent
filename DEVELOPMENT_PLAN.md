@@ -168,7 +168,7 @@ solver returns the top `k` by `Eval` (default `k = 10`), with at most
 `requirements.txt` (minimum versions; these were current when the plan was written):
 
 ```
-streamlit>=1.50
+streamlit>=1.67
 streamlit-folium>=0.25
 folium>=0.19
 osmnx>=2.0

@@ -1,7 +1,7 @@
 """Folium map: start point, distance circle, ranked venues, ruled-out venues, route.
 
-DEVELOPMENT_PLAN.md task 7.3. All OSM-derived text is escaped before it goes into
-popup HTML.
+DEVELOPMENT_PLAN.md task 7.3. All OSM and dataset text goes through ``_safe`` before
+it reaches popup or tooltip HTML.
 """
 
 from __future__ import annotations
@@ -69,6 +69,15 @@ def use_local_assets(fmap: folium.Map) -> None:
 ROUTE_COLOUR = "#2166ac"
 
 
+def _safe(text: str) -> str:
+    """Escape text for a popup or tooltip.
+
+    Folium pastes both into a JavaScript template literal, so ``\\``, backtick and ``$``
+    must be neutralised as well as HTML.
+    """
+    return escape(text).replace("\\", "&#92;").replace("`", "&#96;").replace("$", "&#36;")
+
+
 def _rank_icon(rank: int, colour: str, selected: bool) -> folium.DivIcon:
     size = 30 if selected else 24
     ring = "3px solid #111" if selected else "2px solid #fff"
@@ -90,25 +99,25 @@ def _popup_html(
     venue = data.venues[venue_id]
     state = open_state(venue.opening_hours, prefs.at_time)
     parts = [
-        f"<b>{escape(venue.name)}</b><br>",
-        f"{escape(KIND_LABELS[venue.kind])}",
-        f" · {escape(venue.address)}" if venue.address else "",
-        f"<br><i>{escape(OPEN_LABELS[state])}</i>",
+        f"<b>{_safe(venue.name)}</b><br>",
+        f"{_safe(KIND_LABELS[venue.kind])}",
+        f" · {_safe(venue.address)}" if venue.address else "",
+        f"<br><i>{_safe(OPEN_LABELS[state])}</i>",
     ]
     if venue.opening_hours:
-        parts.append(f" <small>({escape(venue.opening_hours)})</small>")
+        parts.append(f" <small>({_safe(venue.opening_hours)})</small>")
     for rank, cand in picks:
         wine = data.wines[cand.wine_id]
         year = wine.year if wine.year is not None else "N.V."
         dish = data.pairing_rules.dishes[cand.dish_id].label
         parts.append(
             "<hr style='margin:6px 0'>"
-            f"<b>#{rank} {escape(wine.name)}</b> ({escape(str(year))})<br>"
-            f"{escape(wine.winery)} · {escape(wine.region)}<br>"
-            f"€{cand.price_at_venue:.2f} · with {escape(dish.lower())} · "
+            f"<b>#{rank} {_safe(wine.name)}</b> ({_safe(str(year))})<br>"
+            f"{_safe(wine.winery)} · {_safe(wine.region)}<br>"
+            f"€{cand.price_at_venue:.2f} · with {_safe(dish.lower())} · "
             f"score <b>{cand.score:.2f}</b>"
             "<ul style='margin:4px 0;padding-left:16px'>"
-            + "".join(f"<li>{escape(line)}</li>" for line in cand.reasons)
+            + "".join(f"<li>{_safe(line)}</li>" for line in cand.reasons)
             + "</ul>"
         )
     parts.append("<small><i>Wine list simulated — not the venue's real list.</i></small>")
@@ -187,7 +196,7 @@ def build_map(
                 fill=True,
                 fill_color="#999",
                 fill_opacity=0.6,
-                tooltip=f"{escape(venue.name)} — ruled out by: {escape(excluded[venue_id])}",
+                tooltip=f"{_safe(venue.name)} — ruled out by: {_safe(excluded[venue_id])}",
             ).add_to(fmap)
 
     by_venue: dict[str, list[tuple[int, Candidate]]] = {}
@@ -203,7 +212,7 @@ def build_map(
         folium.Marker(
             (venue.lat, venue.lon),
             icon=_rank_icon(picks[0][0], KIND_COLOURS[venue.kind], is_selected),
-            tooltip=f"#{picks[0][0]} {escape(venue.name)}",
+            tooltip=f"#{picks[0][0]} {_safe(venue.name)}",
             popup=folium.Popup(_popup_html(venue_id, picks, data, prefs), max_width=320),
         ).add_to(fmap)
 

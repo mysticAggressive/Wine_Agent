@@ -9,7 +9,7 @@ from agent.models import Venue
 from agent.recommend import recommend
 from agent.search_route import RouteResult
 from ui.map_view import MAX_RULED_OUT_MARKERS, build_map, view_for
-from ui.results_view import results_frame, score_breakdown
+from ui.results_view import results_frame, score_breakdown, table_key
 
 
 def _html(fmap) -> str:
@@ -18,12 +18,16 @@ def _html(fmap) -> str:
 
 def test_map_escapes_osm_text_and_uses_local_assets(prefs, agent_data: AgentData):
     venues = dict(agent_data.venues)
-    venues["node/1"] = dataclasses.replace(venues["node/1"], name="<script>alert(1)</script>")
+    hostile = "<script>alert(1)</script> Evil\\u`${window.PWNED=1}"
+    venues["node/1"] = dataclasses.replace(venues["node/1"], name=hostile)
     data = dataclasses.replace(agent_data, venues=venues)
     result = recommend(prefs, data)
     assert any(c.venue_id == "node/1" for c in result.candidates)
     html = _html(build_map(result, data, prefs, None, 0, show_ruled_out=False))
     assert "<script>alert(1)</script>" not in html
+    # Popup and tooltip are JavaScript template literals.
+    assert "${window.PWNED" not in html
+    assert "Evil\\u" not in html and "Evil&#92;u&#96;&#36;{window.PWNED=1}" in html
     assert "cdn.jsdelivr.net" not in html and "/app/static/vendor/leaflet-1.9.3/leaflet.js" in html
     assert "Wine list simulated" in html
 
@@ -59,3 +63,10 @@ def test_results_frame_and_breakdown(prefs, agent_data):
     breakdown, formula = score_breakdown(best, prefs.weights)
     assert abs(breakdown["weighted"].sum() - best.score) < 1e-9
     assert formula.endswith(f"= {best.score:.2f}")
+
+
+def test_table_key_changes_only_when_the_picks_change(prefs, agent_data):
+    result = recommend(prefs, agent_data)
+    assert table_key(result) == table_key(recommend(prefs, agent_data))
+    reordered = dataclasses.replace(result, candidates=result.candidates[::-1])
+    assert table_key(reordered) != table_key(result)

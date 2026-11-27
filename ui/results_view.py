@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Callable
+from hashlib import sha1
 
 import pandas as pd
 import streamlit as st
@@ -12,22 +13,29 @@ from agent.csp_solver import SolverOptions
 from agent.data_loader import AgentData
 from agent.models import Candidate, RecommendationResult
 from agent.preferences import Preferences
+from agent.scoring import _effective_weights
 from ui.map_view import KIND_LABELS
 from ui.sidebar import FEATURE_LABELS, TECHNIQUES
 
-#: Widget key of the results table; its selection says where the route goes.
+#: Widget key prefix of the results table; its selection says where the route goes.
 TABLE_KEY = "results_table"
 VARIABLES = ("wine", "venue", "dish")
 
 
-def selected_index(n_candidates: int) -> int:
+def table_key(result: RecommendationResult) -> str:
+    """Widget key for this list of picks, so a new list starts with no row selected."""
+    picks = [(c.wine_id, c.venue_id, c.dish_id) for c in result.candidates]
+    return f"{TABLE_KEY}_{sha1(repr(picks).encode()).hexdigest()[:12]}"
+
+
+def selected_index(result: RecommendationResult) -> int:
     """Row selected in the results table (from session state), default 0."""
-    state = st.session_state.get(TABLE_KEY)
+    state = st.session_state.get(table_key(result))
     rows = []
     if state is not None:
         selection = state.get("selection", {}) if isinstance(state, dict) else state.selection
         rows = selection.get("rows", []) if isinstance(selection, dict) else selection.rows
-    if rows and 0 <= rows[0] < n_candidates:
+    if rows and 0 <= rows[0] < len(result.candidates):
         return int(rows[0])
     return 0
 
@@ -80,7 +88,7 @@ def render_results_tab(result: RecommendationResult, data: AgentData) -> None:
         width="stretch",
         on_select="rerun",
         selection_mode="single-row",
-        key=TABLE_KEY,
+        key=table_key(result),
         column_config={
             "Price (€)": st.column_config.NumberColumn(format="€%.2f"),
             "Score": st.column_config.ProgressColumn(min_value=0.0, max_value=1.0, format="%.2f"),
@@ -90,9 +98,7 @@ def render_results_tab(result: RecommendationResult, data: AgentData) -> None:
 
 def score_breakdown(cand: Candidate, weights: dict[str, float]) -> tuple[pd.DataFrame, str]:
     """Weighted contribution per feature and the formula with the actual numbers."""
-    used = {n: float(weights.get(n, 0.0)) for n in FEATURES}
-    if not any(used.values()):
-        used = dict.fromkeys(FEATURES, 1.0)
+    used = dict(zip(FEATURES, _effective_weights(weights, FEATURES), strict=True))
     total_w = sum(used.values())
     frame = pd.DataFrame(
         {

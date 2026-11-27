@@ -22,7 +22,6 @@ from __future__ import annotations
 
 import argparse
 import hashlib
-import math
 import re
 import sys
 from collections.abc import Iterable
@@ -37,6 +36,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from agent.config import CENTER, RADIUS_M  # noqa: E402
+from agent.preferences import haversine_m  # noqa: E402
 
 EXTRACT_URL = "https://download.openstreetmap.fr/extracts/europe/spain/comunidad_de_madrid.osm.pbf"
 EXTRACT_PATH = ROOT / "cache" / "osm_extract" / "comunidad_de_madrid.osm.pbf"
@@ -46,15 +46,6 @@ SHOP_RE = re.compile(r"^(wine|alcohol)$")
 AMENITY_RE = re.compile(r"^(restaurant|bar|pub)$")
 
 Bbox = tuple[float, float, float, float]  # (south, west, north, east)
-
-
-def haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
-    """Great-circle distance in metres between two WGS84 points."""
-    r = 6_371_008.8
-    p1, p2 = math.radians(lat1), math.radians(lat2)
-    dp, dl = p2 - p1, math.radians(lon2 - lon1)
-    a = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
-    return 2 * r * math.asin(math.sqrt(a))
 
 
 def osm_timestamp(path: Path) -> str:

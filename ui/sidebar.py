@@ -103,8 +103,11 @@ def render_sidebar(data: AgentData) -> tuple[Preferences, SolverOptions]:
     when = sb.radio("Time", ["Now", "Pick a time"], horizontal=True, disabled=not open_only)
     at_time = now_madrid()
     if when == "Pick a time" and open_only:
-        day = sb.date_input("Date", value=at_time.date())
-        clock = sb.time_input("Time of day", value=time(at_time.hour, at_time.minute), step=900)
+        # The key keeps the user's pick: without it the moving default resets the widget.
+        day = sb.date_input("Date", value=at_time.date(), key="pick_date")
+        clock = sb.time_input(
+            "Time of day", value=time(at_time.hour, at_time.minute), step=900, key="pick_time"
+        )
         at_time = datetime.combine(day, clock, tzinfo=ZoneInfo(TIMEZONE))
     exclude_unknown = sb.checkbox(
         "Exclude venues with unknown hours", value=False, disabled=not open_only
