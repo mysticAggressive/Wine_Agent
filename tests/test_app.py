@@ -33,13 +33,15 @@ def app():
 
 
 def test_defaults_render_results(app):
-    assert len(app.tabs) == 4
+    assert len(app.tabs) == 3
     assert len(app.dataframe) >= 1
     results = app.dataframe[0].value
     assert 1 <= len(results) <= 10
     assert list(results["Rank"]) == list(range(1, len(results) + 1))
     assert not app.warning
-    assert any(m.value.startswith("**Route to ") for m in app.markdown)
+    walk = next(m for m in app.metric if m.label == "Walk")
+    assert walk.value.endswith(" min")
+    assert any(c.value.startswith("Walk to ") for c in app.caption)
     assert any("OpenStreetMap" in c.value for c in app.caption)
     assert any("simulated" in c.value for c in app.caption)
 

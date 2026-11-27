@@ -1,8 +1,9 @@
 """Madrid Wine Agent — Streamlit entry point. Run with: ``streamlit run app.py``
 
 Layout (DEVELOPMENT_PLAN.md phase 7): the sidebar holds the preferences; the main
-area shows the map, then tabs for the results, the score breakdown, the solver
-diagnostics and the "sommelier vs. you" game. Every widget change re-runs the CSP.
+area shows the selected pick, the map beside the ranked list, then tabs for the score
+breakdown, the "sommelier vs. you" game and the solver diagnostics.
+Every widget change re-runs the CSP.
 """
 
 from __future__ import annotations
@@ -21,6 +22,7 @@ from agent.search_route import NoRouteError, RouteResult, load_graph, route
 from ui.map_view import render_map
 from ui.results_view import (
     render_diagnostics_tab,
+    render_pick_card,
     render_results_tab,
     render_why_tab,
     selected_index,
@@ -126,11 +128,13 @@ def main() -> None:
     """Render the whole app."""
     st.set_page_config(page_title="Madrid Wine Agent", page_icon="🍷", layout="wide")
     st.title("🍷 Madrid Wine Agent")
-    st.caption(
-        "Finds the best wine, venue and dish for you in central Madrid by solving a "
-        "constraint satisfaction problem, ranks the answers with an evaluation function, "
-        "and walks you there with A*."
-    )
+    st.caption("The best wine, venue and dish near you in central Madrid, and how to walk there.")
+    with st.expander("How it works"):
+        st.markdown(
+            "The agent solves a constraint satisfaction problem over wines, venues and "
+            "dishes, ranks the answers with an evaluation function, and plans the walk "
+            "with A* on the street graph. The tabs below show each step."
+        )
 
     data = get_data()
     prefs, options = render_sidebar(data)
@@ -144,27 +148,32 @@ def main() -> None:
         target = data.venues[result.candidates[selected].venue_id]
         route_result = cached_route((prefs.user_lat, prefs.user_lon), (target.lat, target.lon))
 
-    show_ruled_out = st.checkbox("Show venues the agent ruled out (grey, up to 300 nearest)")
-    output = render_map(result, data, prefs, route_result, selected, show_ruled_out)
-    if target is not None and route_result is not None:
-        st.markdown(
-            f"**Route to {target.name}:** {route_result.length_m:,.0f} m, about "
-            f"{route_result.walk_minutes:.0f} min on foot — A* expanded "
-            f"{route_result.nodes_expanded:,} nodes"
+    render_pick_card(result, data, selected, route_result)
+
+    map_col, list_col = st.columns(2)
+    with map_col:
+        show_ruled_out = st.toggle(
+            "Show ruled-out venues", help="Grey dots, up to the 300 nearest. Hover for the reason."
         )
-    elif target is not None:
-        st.markdown(f"No walking route found to {target.name}.")
+        output = render_map(result, data, prefs, route_result, selected, show_ruled_out)
+        if target is not None and route_result is not None:
+            st.caption(
+                f"Walk to {target.name}: {route_result.length_m:,.0f} m — A* expanded "
+                f"{route_result.nodes_expanded:,} nodes"
+            )
+        elif target is not None:
+            st.caption(f"No walking route found to {target.name}.")
+    with list_col:
+        render_results_tab(result, data)
     handle_map_click(output)
 
-    tabs = st.tabs(["Results", "Why these picks", "Solver diagnostics", "Sommelier vs. you"])
+    tabs = st.tabs(["Why this pick", "Sommelier vs. you", "Solver diagnostics"])
     with tabs[0]:
-        render_results_tab(result, data)
-    with tabs[1]:
         render_why_tab(result, data, prefs, selected)
+    with tabs[1]:
+        render_sommelier_tab(cached_sommelier(key), result, data)
     with tabs[2]:
         render_diagnostics_tab(result, lambda opts: cached_recommend(key, options_tuple(opts)))
-    with tabs[3]:
-        render_sommelier_tab(cached_sommelier(key), result, data)
 
     st.divider()
     st.caption(ATTRIBUTION)
