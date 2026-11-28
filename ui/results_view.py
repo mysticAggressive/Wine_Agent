@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Callable
 from hashlib import sha1
+from html import escape
 
 import pandas as pd
 import streamlit as st
@@ -17,6 +18,7 @@ from agent.scoring import _effective_weights
 from agent.search_route import RouteResult
 from ui.map_view import KIND_LABELS
 from ui.sidebar import FEATURE_LABELS, TECHNIQUES
+from ui.styles import score_ring
 
 #: Widget key prefix of the results table; its selection says where the route goes.
 TABLE_KEY = "results_table"
@@ -72,20 +74,25 @@ def render_pick_card(
     cand = result.candidates[selected]
     wine, venue = data.wines[cand.wine_id], data.venues[cand.venue_id]
     dish = data.pairing_rules.dishes[cand.dish_id].label
-    with st.container(border=True):
-        text, price, walk, score = st.columns([4, 1, 1, 1], vertical_alignment="center")
-        text.markdown(
-            f"**#{selected + 1} · {wine.name}** ({_year(wine)}) — "
-            f"{wine.style.value.capitalize()}, {wine.winery}, {wine.region}  \n"
-            f"at **{venue.name}** ({KIND_LABELS[venue.kind].lower()}) with {dish.lower()}"
-        )
+    with st.container(key="pick"):
+        ring, text, price, walk = st.columns([0.8, 4, 1.5, 1.2], vertical_alignment="center")
+        with ring:
+            st.html(score_ring(cand.score))
+        with text:
+            st.html(
+                f'<div class="wa-rank">Pick #{selected + 1} of {len(result.candidates)}</div>'
+                f'<div class="wa-pick-title">{escape(wine.name)} <span style="opacity:.6">'
+                f"{_year(wine)}</span></div>"
+                f'<div class="wa-pick-sub">{escape(wine.style.value.capitalize())} · '
+                f"{escape(wine.winery)} · {escape(wine.region)}<br>at <b>{escape(venue.name)}</b> "
+                f"({KIND_LABELS[venue.kind].lower()}) with {escape(dish.lower())}</div>"
+            )
         price.metric("Price", f"€{cand.price_at_venue:.2f}")
         walk.metric(
             "Walk",
             f"{route.walk_minutes:.0f} min" if route is not None else "—",
             help=f"{route.length_m:,.0f} m on foot" if route is not None else "No route found",
         )
-        score.metric("Score", f"{cand.score:.2f}")
 
 
 def render_hints(result: RecommendationResult) -> None:

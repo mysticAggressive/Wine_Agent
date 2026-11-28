@@ -30,6 +30,7 @@ def test_map_escapes_osm_text_and_uses_local_assets(prefs, agent_data: AgentData
     assert "Evil\\u" not in html and "Evil&#92;u&#96;&#36;{window.PWNED=1}" in html
     assert "cdn.jsdelivr.net" not in html and "/app/static/vendor/leaflet-1.9.3/leaflet.js" in html
     assert "Wine list simulated" in html
+    assert "invert(1)" in html and "wa-pulse" in html  # darkened tiles, selected pulse
 
 
 def test_ruled_out_markers_are_capped(prefs, agent_data: AgentData):

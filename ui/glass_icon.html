@@ -1,0 +1,77 @@
+<!-- Animated wine-glass logo: the wine surface is a row of damped springs, so sloshes
+     ripple and settle; at each wall the surface crests into a lip leaning inwards.
+     Loaded in a components.html iframe; a reload (new results) starts with a slosh. -->
+<style>html, body { margin: 0; background: transparent; overflow: hidden; }</style>
+<canvas id="glass" style="width:28px;height:52px;display:block" role="img"
+  aria-label="Wine glass logo"></canvas>
+<script>
+(() => {
+  const W = 160, H = 300, CREST = 0.8, REST = 100;
+  const GLASS = "#efe6e9", WINE = "#9e1f45", WINE_HI = "#b8325a";
+  const cv = document.getElementById("glass"), c = cv.getContext("2d");
+  const k = (28 / W) * (window.devicePixelRatio || 1);
+  cv.width = Math.round(W * k); cv.height = Math.round(H * k); c.scale(k, k);
+
+  function glass(p) {
+    p.beginPath(); p.moveTo(36, 18); p.lineTo(124, 18);
+    p.bezierCurveTo(132, 60, 144, 100, 136, 130); p.bezierCurveTo(128, 158, 98, 170, 85, 178);
+    p.lineTo(83.5, 246); p.bezierCurveTo(85, 262, 104, 268, 128, 272);
+    p.bezierCurveTo(134, 274, 134, 282, 126, 282); p.lineTo(34, 282);
+    p.bezierCurveTo(26, 282, 26, 274, 32, 272); p.bezierCurveTo(56, 268, 75, 262, 76.5, 246);
+    p.lineTo(75, 178); p.bezierCurveTo(62, 170, 32, 158, 24, 130);
+    p.bezierCurveTo(16, 100, 28, 60, 36, 18); p.closePath();
+  }
+  function inner(p) {
+    p.beginPath(); p.moveTo(43, 25); p.lineTo(117, 25);
+    p.bezierCurveTo(125, 62, 135, 100, 128, 127); p.bezierCurveTo(121, 151, 98, 162, 80, 164);
+    p.bezierCurveTo(62, 162, 39, 151, 32, 127); p.bezierCurveTo(25, 100, 35, 62, 43, 25);
+    p.closePath();
+  }
+
+  const N = 36, X0 = 24, X1 = 136, h = new Float32Array(N), v = new Float32Array(N);
+  let tilt = 0, tv = 0, t = 0, cL = 0, cR = 0, kick = -0.05;  // start with a slosh
+
+  function step() {
+    for (let i = 0; i < N; i++) { v[i] += -0.02 * h[i] - 0.035 * v[i]; h[i] += v[i]; }
+    for (let p = 0; p < 4; p++) for (let i = 0; i < N; i++) {
+      if (i > 0) v[i - 1] += 0.16 * (h[i] - h[i - 1]);
+      if (i < N - 1) v[i + 1] += 0.16 * (h[i] - h[i + 1]);
+    }
+    const target = 0.16 * Math.sin(t * 1.25) + 0.04 * Math.sin(t * 0.53);
+    tv += (target - tilt) * 0.018 + kick; kick = 0; tv *= 0.95;
+    const prev = tilt; tilt += tv;
+    v[0] += (tilt - prev) * 22; v[N - 1] -= (tilt - prev) * 22;
+  }
+  const surfY = (i) => REST + (X0 + (i * (X1 - X0)) / (N - 1) - 80) * tilt + h[i];
+
+  function draw() {
+    // Crest height follows how far the wine climbs each wall, eased so it never snaps.
+    cL += (Math.max(0, REST - surfY(1) - 3) * 0.55 * CREST - cL) * 0.12;
+    cR += (Math.max(0, REST - surfY(N - 2) - 3) * 0.55 * CREST - cR) * 0.12;
+    c.clearRect(0, 0, W, H);
+    c.fillStyle = GLASS; glass(c); c.fill();
+    c.save(); inner(c); c.clip();
+    const pts = [];
+    for (let s = 0; s <= 80; s++) {
+      const x = X0 - 6 + (s * (X1 - X0 + 12)) / 80;
+      const f = ((x - X0) / (X1 - X0)) * (N - 1);
+      const i = Math.max(0, Math.min(N - 2, Math.floor(f))), u = Math.max(0, Math.min(1, f - i));
+      let y = surfY(i) * (1 - u) + surfY(i + 1) * u;
+      const lx = 34 + (REST - y) * 0.25 + cL * 0.9, rx = 126 - (REST - y) * 0.25 - cR * 0.9;
+      const dl = x - lx, dr = x - rx;  // steep on the inner side, so the lip leans in
+      y -= cL * Math.exp(-(dl * dl) / (dl < 0 ? 140 : 28));
+      y -= cR * Math.exp(-(dr * dr) / (dr > 0 ? 140 : 28));
+      pts.push([x, y]);
+    }
+    c.fillStyle = WINE; c.beginPath(); c.moveTo(pts[0][0], 190);
+    pts.forEach((p) => c.lineTo(p[0], p[1]));
+    c.lineTo(pts[pts.length - 1][0], 190); c.closePath(); c.fill();
+    c.strokeStyle = WINE_HI; c.lineWidth = 2.5; c.lineJoin = "round"; c.beginPath();
+    pts.forEach((p, s) => (s ? c.lineTo(p[0], p[1]) : c.moveTo(p[0], p[1]))); c.stroke();
+    c.restore();
+  }
+
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  (function frame() { t += 1 / 60; step(); draw(); if (!still) requestAnimationFrame(frame); })();
+})();
+</script>
