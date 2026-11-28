@@ -50,12 +50,12 @@ def render_sommelier_tab(
 
     proof, fav = analysis.sommelier_proof, analysis.sommelier_favourite
     c1, c2 = st.columns(2)
-    c1.success(
+    c1.container(key="somm_proof").success(
         f"🛡️ **Sommelier-proof:** {data.venues[proof.venue_id].name} "
         f"(value {proof.value:.2f}) — order "
         f"{data.pairing_rules.dishes[proof.dish_id].label.lower()}."
     )
-    c2.error(
+    c2.container(key="somm_fav").error(
         f"💰 **Sommelier's favourite:** {data.venues[fav.venue_id].name} "
         f"(value {fav.value:.2f}). Optimal play over the whole game: "
         + " → ".join(

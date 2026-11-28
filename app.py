@@ -30,7 +30,7 @@ from ui.results_view import (
 )
 from ui.sidebar import CLICKED_POINT_KEY, PENDING_CLICK_KEY, render_sidebar
 from ui.sommelier_view import render_sommelier_tab
-from ui.styles import brand_header, glass_logo, inject_css
+from ui.styles import backdrop, brand_header, glass_logo, inject_css
 
 ATTRIBUTION = (
     "Venues and streets © [OpenStreetMap](https://www.openstreetmap.org/copyright) "
@@ -130,6 +130,7 @@ def main() -> None:
     """Render the whole app."""
     st.set_page_config(page_title="Madrid Wine Agent", page_icon="🍷", layout="wide")
     inject_css()
+    backdrop()
     logo = brand_header()
 
     data = get_data()
