@@ -1,11 +1,17 @@
-"""Preference panel (DEVELOPMENT_PLAN.md task 7.2).
+"""Preference panel (DEVELOPMENT_PLAN.md task 7.2), drawn as a bar of filter chips.
 
-There is no "Submit" button: every widget change re-runs the script, so the solver
-re-runs and the results redraw at once (the "Dynamic" rubric item).
+Each chip is a popover holding one group of widgets; its label summarises that group's
+current values. There is no "Submit" button: every widget change re-runs the script, so
+the solver re-runs and the results redraw at once (the "Dynamic" rubric item).
+
+Popover labels are fixed when the popover is created, before its widgets run, so every
+widget is keyed and the labels are built from session state (which already holds the
+new value when a widget change triggers the rerun).
 """
 
 from __future__ import annotations
 
+from collections.abc import Mapping
 from datetime import datetime, time
 from zoneinfo import ZoneInfo
 
@@ -51,6 +57,24 @@ TECHNIQUES = {
     "use_forward_checking": "Forward checking",
     "use_ac3": "AC-3 arc consistency",
 }
+NOW, PICK = "Now", "Pick a time"
+
+#: Every always-drawn widget's key and default (set in session state, not ``value=``,
+#: so the chip labels can read them before the widgets run).
+DEFAULTS = {
+    "styles": [],
+    "food": SURPRISE,
+    "body": "Full",
+    "budget": 50,
+    "where": "Anywhere",
+    START_KEY: next(iter(LANDMARKS)),
+    "max_distance": 2000,
+    "open_only": True,
+    "when": NOW,
+    "exclude_unknown": False,
+    **{f"w_{name}": DEFAULT_WEIGHT for name in FEATURES},
+    **{name: True for name in TECHNIQUES},
+}
 
 
 def now_madrid() -> datetime:
@@ -65,21 +89,32 @@ def start_point(choice: str) -> tuple[float, float]:
     return LANDMARKS[choice]
 
 
-def filter_summary(prefs: Preferences, start: str, food: str) -> str:
-    """One line describing the active filters, e.g. "Red · ≤ €50 · shop · 2 km from Sol"."""
-    parts = [
-        " / ".join(sorted(s.value.capitalize() for s in prefs.styles)) or "Any style",
-        f"≤ €{prefs.budget_eur:.0f}",
-    ]
-    where = next(k for k, v in WHERE.items() if v == prefs.venue_kinds)
-    if where != "Anywhere":
-        parts.append(where.lower())
-    if food != SURPRISE:
-        parts.append(f"with {food.lower()}")
-    parts.append(f"{prefs.max_distance_m / 1000:g} km from {start}")
-    if prefs.open_only:
-        parts.append(f"open {prefs.at_time:%a %H:%M}")
-    return " · ".join(parts)
+def chip_labels(state: Mapping) -> dict[str, str]:
+    """The label of each filter chip, from the widget values in ``state``."""
+    what = [" / ".join(state["styles"]) or "Any wine", state["body"].lower()]
+    what.append(f"≤ €{state['budget']}")
+    if state["where"] != "Anywhere":
+        what.append(state["where"].lower())
+    if state["food"] != SURPRISE:
+        what.append(f"with {state['food'].lower()}")
+    start = "clicked point" if state[START_KEY] == CLICKED else state[START_KEY]
+    if not state["open_only"]:
+        when = "Any time"
+    elif state["when"] == NOW:
+        when = "Open now"
+    elif "pick_date" not in state:  # the date widget has not run yet
+        when = "Open at a picked time"
+    else:
+        when = f"Open {datetime.combine(state['pick_date'], state['pick_time']):%a %d %b, %H:%M}"
+    custom = any(state[f"w_{n}"] != DEFAULT_WEIGHT for n in FEATURES)
+    off = sum(not state[n] for n in TECHNIQUES)
+    return {
+        "what": " · ".join(what),
+        "where": f"{state['max_distance'] / 1000:g} km from {start}",
+        "when": when,
+        "ranking": "Ranking · custom" if custom else "Ranking",
+        "solver": f"Solver · {off} off" if off else "Solver",
+    }
 
 
 def reset_weights() -> None:
@@ -89,75 +124,80 @@ def reset_weights() -> None:
 
 
 def render_sidebar(data: AgentData) -> tuple[Preferences, SolverOptions]:
-    """Draw the preference panel and return what it describes."""
-    sb = st.sidebar
-    sb.header("Your preferences")
-    summary = sb.container()  # filled last, once every widget has a value
+    """Draw the filter chip bar and return the preferences it describes."""
+    state = st.session_state
+    for key, value in DEFAULTS.items():
+        state.setdefault(key, value)
+    if state.pop(PENDING_CLICK_KEY, False):
+        state[START_KEY] = CLICKED  # a map click moves the start point
+    labels = chip_labels(state)
+    dish_labels = {rule.label: dish_id for dish_id, rule in data.pairing_rules.dishes.items()}
 
-    with sb.expander("What", expanded=True, icon=":material/wine_bar:"):
-        style_names = st.multiselect(
-            "Wine style", list(STYLE_LABELS), help="Leave empty to accept any style."
+    bar = st.container(horizontal=True, horizontal_alignment="center", key="filters", gap="small")
+    with bar.popover(labels["what"], icon=":material/wine_bar:"):
+        style_names = st.pills(
+            "Wine style",
+            list(STYLE_LABELS),
+            selection_mode="multi",
+            key="styles",
+            help="Pick none to accept any style.",
         )
-        dish_labels = {rule.label: dish_id for dish_id, rule in data.pairing_rules.dishes.items()}
-        food = st.selectbox("Food", [SURPRISE, *dish_labels])
-        body = st.select_slider("Body", options=list(BODY), value="Full")
-        budget = st.slider("Budget per bottle (€)", 10, 300, 50, step=5)
-        where = st.radio("Venue type", list(WHERE), horizontal=True)
+        food = st.selectbox("Food", [SURPRISE, *dish_labels], key="food")
+        body = st.select_slider("Body", options=list(BODY), key="body")
+        budget = st.slider("Budget per bottle (€)", 10, 300, step=5, key="budget")
+        where = st.segmented_control("Venue type", list(WHERE), required=True, key="where")
 
-    with sb.expander("Where", icon=":material/location_on:"):
-        clicked = CLICKED_POINT_KEY in st.session_state
-        options = [*LANDMARKS, CLICKED]
-        if st.session_state.pop(PENDING_CLICK_KEY, False):
-            st.session_state[START_KEY] = CLICKED  # a map click moves the start point
+    with bar.popover(labels["where"], icon=":material/location_on:"):
         start = st.selectbox(
             "Starting point",
-            options,
+            [*LANDMARKS, CLICKED],
             key=START_KEY,
             help="Or click anywhere on the map to start from there.",
         )
-        if start == CLICKED and not clicked:
+        if start == CLICKED and CLICKED_POINT_KEY not in state:
             st.caption("No point clicked yet — using Puerta del Sol. Click on the map.")
-        user_lat, user_lon = start_point(start)
-        if haversine_m(user_lat, user_lon, *CENTER) > MAX_USER_OFFSET_M:
-            st.warning("That point is outside the mapped area; using Puerta del Sol instead.")
-            user_lat, user_lon = CENTER
-        max_distance = st.slider("Max walking distance (m)", 200, 4000, 2000, step=100)
+        max_distance = st.slider(
+            "Max walking distance (m)", 200, 4000, step=100, key="max_distance"
+        )
 
-    with sb.expander("When", icon=":material/schedule:"):
-        open_only = st.checkbox("Open venues only", value=True)
-        when = st.radio("Time", ["Now", "Pick a time"], horizontal=True, disabled=not open_only)
+    with bar.popover(labels["when"], icon=":material/schedule:"):
+        open_only = st.toggle("Open venues only", key="open_only")
+        when = st.segmented_control(
+            "Time", [NOW, PICK], required=True, disabled=not open_only, key="when"
+        )
         at_time = now_madrid()
-        if when == "Pick a time" and open_only:
+        if when == PICK and open_only:
             # The key keeps the user's pick: without it the moving default resets the widget.
             day = st.date_input("Date", value=at_time.date(), key="pick_date")
             clock = st.time_input(
                 "Time of day", value=time(at_time.hour, at_time.minute), step=900, key="pick_time"
             )
             at_time = datetime.combine(day, clock, tzinfo=ZoneInfo(TIMEZONE))
-        exclude_unknown = st.checkbox(
-            "Exclude venues with unknown hours", value=False, disabled=not open_only
+        exclude_unknown = st.toggle(
+            "Exclude venues with unknown hours", disabled=not open_only, key="exclude_unknown"
         )
 
-    with sb.expander("Fine-tune ranking", icon=":material/tune:"):
+    with bar.popover(labels["ranking"], icon=":material/tune:"):
         st.caption("How much each factor counts towards the score.")
-        for name in FEATURES:
-            # Defaults live in session state (not value=) so the reset callback can set them.
-            st.session_state.setdefault(f"w_{name}", DEFAULT_WEIGHT)
         weights = {
             name: float(st.slider(FEATURE_LABELS[name], 0, 10, key=f"w_{name}"))
             for name in FEATURES
         }
         st.button("Reset weights", on_click=reset_weights)
 
-    with sb.expander("Advanced: solver techniques", icon=":material/science:"):
+    with bar.popover(labels["solver"], icon=":material/science:"):
         st.caption(
             "Switching these off changes the search statistics, never the answer. "
             "Without forward checking the search tries millions more values and takes "
             "about half a minute on the full data."
         )
-        flags = {
-            name: st.checkbox(label, value=True, key=name) for name, label in TECHNIQUES.items()
-        }
+        flags = {name: st.toggle(label, key=name) for name, label in TECHNIQUES.items()}
+
+    # Outside the popovers, so it shows without opening one.
+    user_lat, user_lon = start_point(start)
+    if haversine_m(user_lat, user_lon, *CENTER) > MAX_USER_OFFSET_M:
+        st.warning("That point is outside the mapped area; using Puerta del Sol instead.")
+        user_lat, user_lon = CENTER
 
     prefs = Preferences(
         styles=frozenset(STYLE_LABELS[name] for name in style_names),
@@ -173,5 +213,4 @@ def render_sidebar(data: AgentData) -> tuple[Preferences, SolverOptions]:
         exclude_unknown_hours=exclude_unknown and open_only,
         weights=weights,
     )
-    summary.caption(filter_summary(prefs, start, food))
     return prefs, SolverOptions(**flags)

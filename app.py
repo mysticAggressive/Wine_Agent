@@ -1,7 +1,7 @@
 """Madrid Wine Agent — Streamlit entry point. Run with: ``streamlit run app.py``
 
-Layout (DEVELOPMENT_PLAN.md phase 7): the sidebar holds the preferences; the main
-area shows the selected pick, the map beside the ranked list, then tabs for the score
+Layout (DEVELOPMENT_PLAN.md phase 7): a bar of filter chips holds the preferences; below
+it come the selected pick, the map beside the ranked list, then tabs for the score
 breakdown, the "sommelier vs. you" game and the solver diagnostics.
 Every widget change re-runs the CSP.
 """
@@ -26,9 +26,11 @@ from ui.results_view import (
     render_results_tab,
     render_why_tab,
     selected_index,
+    table_key,
 )
 from ui.sidebar import CLICKED_POINT_KEY, PENDING_CLICK_KEY, render_sidebar
 from ui.sommelier_view import render_sommelier_tab
+from ui.styles import brand_header, glass_logo, inject_css
 
 ATTRIBUTION = (
     "Venues and streets © [OpenStreetMap](https://www.openstreetmap.org/copyright) "
@@ -127,20 +129,15 @@ def handle_map_click(output: dict | None) -> None:
 def main() -> None:
     """Render the whole app."""
     st.set_page_config(page_title="Madrid Wine Agent", page_icon="🍷", layout="wide")
-    st.title("🍷 Madrid Wine Agent")
-    st.caption("The best wine, venue and dish near you in central Madrid, and how to walk there.")
-    with st.expander("How it works"):
-        st.markdown(
-            "The agent solves a constraint satisfaction problem over wines, venues and "
-            "dishes, ranks the answers with an evaluation function, and plans the walk "
-            "with A* on the street graph. The tabs below show each step."
-        )
+    inject_css()
+    logo = brand_header()
 
     data = get_data()
     prefs, options = render_sidebar(data)
     key = prefs_key(prefs)
     result = cached_recommend(key, options_tuple(options))
 
+    glass_logo(logo, table_key(result))  # new picks reload it, so the wine sloshes
     selected = selected_index(result)
     route_result: RouteResult | None = None
     target = None
@@ -150,8 +147,8 @@ def main() -> None:
 
     render_pick_card(result, data, selected, route_result)
 
-    map_col, list_col = st.columns(2)
-    with map_col:
+    map_col, list_col = st.columns([3, 2], gap="medium")
+    with map_col.container(key="map_panel"):
         show_ruled_out = st.toggle(
             "Show ruled-out venues", help="Grey dots, up to the 300 nearest. Hover for the reason."
         )
@@ -163,7 +160,7 @@ def main() -> None:
             )
         elif target is not None:
             st.caption(f"No walking route found to {target.name}.")
-    with list_col:
+    with list_col.container(key="list_panel"):
         render_results_tab(result, data)
     handle_map_click(output)
 
@@ -175,7 +172,12 @@ def main() -> None:
     with tabs[2]:
         render_diagnostics_tab(result, lambda opts: cached_recommend(key, options_tuple(opts)))
 
-    st.divider()
+    with st.expander("How it works", icon=":material/info:"):
+        st.markdown(
+            "The agent solves a constraint satisfaction problem over wines, venues and "
+            "dishes, ranks the answers with an evaluation function, and plans the walk "
+            "with A* on the street graph. The tabs above show each step."
+        )
     st.caption(ATTRIBUTION)
 
 

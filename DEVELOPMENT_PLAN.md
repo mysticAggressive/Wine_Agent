@@ -891,6 +891,10 @@ area = map on top, then tabs "Results", "Why these picks", "Solver diagnostics",
 5. Footer: data attribution (rule 10) and the note "Venue wine lists are simulated".
 
 ### Task 7.2 — Preference panel (`ui/sidebar.py`)
+_Since the "Cellar Night" redesign the panel is a bar of filter chips (popovers) above
+the results, and some widgets are pills, segmented controls or toggles; the fields and
+the function signature below are unchanged._
+
 `render_sidebar(data) -> tuple[Preferences, SolverOptions]`. Widgets, top to bottom:
 
 | Widget | Type | Maps to |

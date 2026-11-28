@@ -6,3 +6,21 @@ enableStaticServing = true
 
 [browser]
 gatherUsageStats = false
+
+# "Cellar Night": dark aubergine, burgundy primary, gold accents. System font
+# stacks only, so nothing is fetched at run time.
+[theme]
+base = "dark"
+primaryColor = "#c2375a"
+backgroundColor = "#140d12"
+secondaryBackgroundColor = "#22161e"
+textColor = "#efe6e9"
+borderColor = "#3a2832"
+linkColor = "#e3b35b"
+baseRadius = "0.75rem"
+font = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, sans-serif"
+headingFont = "'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif"
+chartCategoricalColors = ["#c2375a", "#e3b35b", "#8e6bbf", "#4fa3a5", "#d9785b"]
+
+[theme.sidebar]
+backgroundColor = "#1a1117"

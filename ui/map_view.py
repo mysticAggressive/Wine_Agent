@@ -19,10 +19,10 @@ from agent.opening import open_state
 from agent.preferences import Preferences, haversine_m
 from agent.search_route import RouteResult
 
-KIND_COLOURS = {
-    VenueKind.SHOP: "#6a3d9a",  # purple
-    VenueKind.RESTAURANT: "#b2182b",  # wine red
-    VenueKind.BAR: "#e08214",  # amber
+KIND_COLOURS = {  # bright enough to read on the dark tiles
+    VenueKind.SHOP: "#9b72d0",  # violet
+    VenueKind.RESTAURANT: "#d8436a",  # wine red
+    VenueKind.BAR: "#e8963a",  # amber
 }
 KIND_LABELS = {
     VenueKind.SHOP: "Wine shop",
@@ -66,7 +66,20 @@ def use_local_assets(fmap: folium.Map) -> None:
     fmap.default_css = [(name, f"{STATIC_URL}/{rel}") for name, rel in LOCAL_CSS]
 
 
-ROUTE_COLOUR = "#2166ac"
+ROUTE_COLOUR = "#e3b35b"  # gold
+TILES = "OpenStreetMap"  # darkened by MAP_CSS; free, no API key (CARTO now needs one)
+#: Added to the map's page: the route's marching dashes and the selected marker's pulse.
+MAP_CSS = """<style>
+.leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg) brightness(.8) contrast(.9) saturate(.5); }
+.wa-route { stroke-dasharray: 10 14; animation: wa-march 1.2s linear infinite;
+  filter: drop-shadow(0 0 4px rgba(227,179,91,.8)); }
+@keyframes wa-march { to { stroke-dashoffset: -24; } }
+.wa-pulse { animation: wa-pulse 1.8s ease-out infinite; }
+@keyframes wa-pulse { 0% { box-shadow: 0 0 0 0 rgba(227,179,91,.7); }
+  100% { box-shadow: 0 0 0 14px rgba(227,179,91,0); } }
+@media (prefers-reduced-motion: reduce) { .wa-route, .wa-pulse { animation: none; } }
+</style>"""
 
 
 def _safe(text: str) -> str:
@@ -80,9 +93,10 @@ def _safe(text: str) -> str:
 
 def _rank_icon(rank: int, colour: str, selected: bool) -> folium.DivIcon:
     size = 30 if selected else 24
-    ring = "3px solid #111" if selected else "2px solid #fff"
+    ring = "3px solid #e3b35b" if selected else "2px solid #140d12"
+    pulse = ' class="wa-pulse"' if selected else ""
     html = (
-        f'<div style="width:{size}px;height:{size}px;border-radius:50%;background:{colour};'
+        f'<div{pulse} style="width:{size}px;height:{size}px;border-radius:50%;background:{colour};'
         f"border:{ring};color:#fff;font:bold 12px/1 sans-serif;display:flex;"
         f'align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,.4)">'
         f"{rank}</div>"
@@ -125,7 +139,7 @@ def _popup_html(
 
 
 MAP_HEIGHT_PX = 520
-MAP_WIDTH_PX = 450  # a conservative guess at the map column's width (half the page)
+MAP_WIDTH_PX = 600  # a conservative guess at the map column's width (3/5 of the page)
 
 
 def view_for(
@@ -164,8 +178,9 @@ def build_map(
 ) -> folium.Map:
     """Build the Folium map (separate from rendering, so it can be tested)."""
     user = (prefs.user_lat, prefs.user_lon)
-    fmap = folium.Map(location=user, zoom_start=15, tiles="OpenStreetMap", control_scale=True)
+    fmap = folium.Map(location=user, zoom_start=15, tiles=TILES, control_scale=True)
     use_local_assets(fmap)
+    fmap.get_root().header.add_child(folium.Element(MAP_CSS))
 
     folium.Circle(
         user,
@@ -221,7 +236,8 @@ def build_map(
             route.path_latlon,
             color=ROUTE_COLOUR,
             weight=5,
-            opacity=0.85,
+            opacity=0.95,
+            className="wa-route",
             tooltip=f"Walking route: {route.length_m:.0f} m",
         ).add_to(fmap)
 
