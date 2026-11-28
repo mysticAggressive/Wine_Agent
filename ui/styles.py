@@ -31,22 +31,58 @@ CSS = f"""
 .wa-brand h1 span {{ color: {GOLD}; font-style: italic; }}
 .wa-tagline {{ margin: 0; opacity: .65; text-align: center; }}
 
-/* Filter chips: popover buttons as pills */
-.st-key-filters button {{
-  border-radius: 999px !important;
-  border: 1px solid #3a2832 !important;
-  background: #22161e !important;
+/* Marbled backdrop: its iframe is pinned behind everything; the app layers go clear. */
+.st-key-backdrop {{ position: absolute; }}
+.st-key-backdrop iframe {{
+  position: fixed !important; inset: 0; width: 100vw !important; height: 100vh !important;
+  z-index: -1; pointer-events: none; border: 0;
+}}
+.stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"],
+[data-testid="stHeader"], [data-testid="stBottomBlockContainer"] {{
+  background: transparent !important;
+}}
+
+/* Frosted glass: buttons, popovers, the pick card and the tables */
+.st-key-filters button, .stButton button, [data-testid="stPopoverBody"],
+.st-key-pick, [data-testid="stDataFrame"] {{
+  background: rgba(34, 22, 30, .42) !important;
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid rgba(255, 235, 240, .12) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .07), 0 8px 24px -14px rgba(0, 0, 0, .6);
+}}
+.st-key-filters button, .stButton button {{
   transition: border-color .15s, background .15s, transform .15s;
 }}
-.st-key-filters button:hover {{
-  border-color: {WINE} !important; background: #2c1c26 !important; transform: translateY(-1px);
+.st-key-filters button {{ border-radius: 999px !important; }}
+.st-key-filters button:hover, .stButton button:hover {{
+  border-color: {WINE} !important; background: rgba(60, 28, 44, .55) !important;
+  transform: translateY(-1px);
 }}
+[data-testid="stDataFrame"] {{ border-radius: .75rem; overflow: hidden; }}
+
+/* Sommelier cards: frosted glass tinted with the alert's green or red */
+.st-key-somm_proof [data-testid="stAlertContainer"],
+.st-key-somm_fav [data-testid="stAlertContainer"] {{
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .07), 0 8px 24px -14px rgba(0, 0, 0, .6);
+}}
+.st-key-somm_proof [data-testid="stAlertContainer"] {{
+  /* Stronger than the red: green over the wine backdrop otherwise reads grey. */
+  background: rgba(40, 190, 120, .38) !important; border: 1px solid rgba(126, 213, 176, .5);
+}}
+.st-key-somm_fav [data-testid="stAlertContainer"] {{
+  background: rgba(242, 145, 154, .14) !important; border: 1px solid rgba(242, 145, 154, .3);
+}}
+/* The grid paints opaque dark cells on a canvas; "lighten" lets the glass show through
+   them while the light text and lines stay on top. */
+[data-testid="stDataFrame"] canvas {{ mix-blend-mode: lighten; }}
 
 /* Pick card */
 .st-key-pick {{
-  background: radial-gradient(120% 140% at 0% 0%, #3b1426 0%, #22161e 55%, #1a1117 100%);
-  border: 1px solid #4a2a3a; border-radius: 1.1rem; padding: 1rem 1.25rem;
-  box-shadow: 0 10px 30px -12px rgba(194, 55, 90, .35);
+  border-radius: 1.1rem; padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, rgba(120, 24, 58, .38), rgba(34, 22, 30, .38)) !important;
   animation: wa-rise .45s ease-out;
 }}
 .st-key-pick [data-testid="stMetricValue"] {{ color: {GOLD}; }}
@@ -105,6 +141,13 @@ def brand_header() -> DeltaGenerator:
 
 
 GLASS_ICON = (Path(__file__).parent / "glass_icon.html").read_text(encoding="utf-8")
+BACKDROP = (Path(__file__).parent / "backdrop.html").read_text(encoding="utf-8")
+
+
+def backdrop() -> None:
+    """The animated marbled backdrop; CSS pins its iframe behind the whole page."""
+    with st.container(key="backdrop"):
+        components.html(BACKDROP, height=0)
 
 
 def glass_logo(slot: DeltaGenerator, signature: str) -> None:
